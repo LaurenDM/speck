@@ -54,7 +54,7 @@ int main(int argc, char* argv[]){
   // word pt[2] = {0x20796c, 0x6c6172};
   // word key[m] = {0x020100, 0x0a0908, 0x121110};
   // Speck 48/96 -> CT = 735e10 b6445d
-  word pt[2] = {0x6d2073, 0x696874};
+  word pt[2] = {0x6d2073, 0x696874}; // pt[0] = MSB = x, pt[1] = LSB = y 
   word key[m] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
 
 
@@ -69,4 +69,3 @@ int main(int argc, char* argv[]){
   }
   printf("\n");
 }
-//2bf31072228a 7ae440252ee6
