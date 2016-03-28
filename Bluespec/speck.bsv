@@ -1,7 +1,8 @@
 
-import FIFOF::*;
-import GetPut::*;
+import FIFOF::*; // for inputfifo, to check if empty
+import FIFO::*; // for outputfifo 
 import Vector::*;
+
 
 
 interface EncryptDecrypt#(numeric type n, numeric type m, numeric type T);
