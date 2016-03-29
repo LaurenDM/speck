@@ -30,7 +30,7 @@ module mkEncrypt(EncryptDecrypt#(n,m,T));
     FIFO#(Block#(n)) ciphertextFIFO <- mkFIFO(); //outputfifo
 
     // Round function
-    function Block#(n) roundfuninv(Block#(n) xy, UInt#(n) k);
+    function Block#(n) roundfun(Block#(n) xy, UInt#(n) k);
         let x = tpl_1(xy); // x is most significant word
         let y = tpl_2(xy); // y is least significant word
         let x_new = (rotateBitsBy(x,fromInteger(valueof(n))-ALPHA)+y)^k;
@@ -48,8 +48,8 @@ module mkEncrypt(EncryptDecrypt#(n,m,T));
         else begin
             xy = xyReg;
         end
-        let xy_new = roundfuninv(xy,roundkey);
-        let lk = roundfuninv(tuple2(l[round],roundkey),round);
+        let xy_new = roundfun(xy,roundkey);
+        let lk = roundfun(tuple2(l[round],roundkey),round);
         l[round+valueof(m)-1] <= tpl_1(lk);
         if(round == fromInteger(valueof(T)-1)) begin
             roundkey <= k0;
