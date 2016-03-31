@@ -1,0 +1,677 @@
+checking package dependencies
+compiling ../../scemi/ResetXactor.bsv
+compiling ../../common/AudioProcessorTypes.bsv
+compiling ../../common/ComplexMP.bsv
+compiling ../../common/Chunker.bsv
+compiling ../../fft/FFT.bsv
+compiling ../../common/Splitter.bsv
+compiling ../../common/FilterCoefficients.bsv
+compiling ../../common/Multiplier.bsv
+code generation for mkMultiplier starts
+Elaborated module file created: bdir_dut/mkMultiplier.ba
+compiling ../../fir/FIRFilter.bsv
+Warning: "../../fir/FIRFilter.bsv", line 8, column 62: (T0054)
+  Field not defined: `setfactor'
+compiling ../../common/Cordic.bsv
+code generation for mkCordicTest starts
+Elaborated module file created: bdir_dut/mkCordicTest.ba
+Warning: "../../common/Cordic.bsv", line 20, column 10: (T0127)
+  Exporting orphan typeclass instance FShow#(Real). The instance's typeclass
+  as well as all of the instance's source type parameters are defined in other
+  packages. This can lead to confusing and inconsistent instance resolution if
+  the orphan instance is not imported everywhere it could be used.
+compiling ../../pitch/PitchAdjust.bsv
+compiling ../../common/ConvertToMP.bsv
+compiling ../../common/ConvertFromMP.bsv
+compiling ../../common/AudioPipeline.bsv
+Warning: "../../common/AudioPipeline.bsv", line 62, column 24: (T0054)
+  Field not defined: `setfactor'
+code generation for mkSynthesizedFIRFilter starts
+Elaborated module file created: bdir_dut/mkSynthesizedFIRFilter.ba
+code generation for mkSynthesizedFFT starts
+Elaborated module file created: bdir_dut/mkSynthesizedFFT.ba
+code generation for mkSynthesizedIFFT starts
+Elaborated module file created: bdir_dut/mkSynthesizedIFFT.ba
+code generation for mkSynthesizedToMP starts
+Warning: "../../common/AudioPipeline.bsv", line 38, column 8: (G0117)
+  Rule `to_mp_loadInitialData' shadows the effects of `to_mp_conversion' when
+  they execute in the same clock cycle. Affected method calls:
+    to_mp_continueConvert.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Elaborated module file created: bdir_dut/mkSynthesizedToMP.ba
+code generation for mkSynthesizedFromMP starts
+Warning: "../../common/AudioPipeline.bsv", line 44, column 8: (G0117)
+  Rule `from_mp_loadInitialData' shadows the effects of `from_mp_conversion'
+  when they execute in the same clock cycle. Affected method calls:
+    from_mp_continueConvert.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Elaborated module file created: bdir_dut/mkSynthesizedFromMP.ba
+code generation for mkSynthesizedSettablePitchAdjust starts
+Elaborated module file created: bdir_dut/mkSynthesizedSettablePitchAdjust.ba
+compiling ../../scemi/SceMiLayer.bsv
+code generation for mkDutWrapper starts
+Elaborated module file created: bdir_dut/mkDutWrapper.ba
+compiling ../Bridge.bsv
+code generation for mkBridge starts
+Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_dut_prb_control_data_out_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_dut_prb_control_data_out_in_reset_uclk.read
+    Reset 2
+    (scemi_settabledut_dut_prb_control_data_out_nocResetUClock.gen_rst):
+      scemi_settabledut_dut_prb_control_data_out_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 496,
+  column 9.
+  During elaboration of `data_out' at "../SceMiSerialProbe.bsv", line 247,
+  column 44.
+  During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
+  column 8.
+  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  column 28.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_dut_prb_control_data_out_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_dut_prb_control_data_out_in_reset_uclk.read
+      scemi_settabledut_dut_prb_control_data_out_prev_reset_uclk.read
+      scemi_settabledut_dut_prb_control_data_out_prev_reset_uclk.write
+    Reset 2
+    (scemi_settabledut_dut_prb_control_data_out_nocResetUClock.gen_rst):
+      scemi_settabledut_dut_prb_control_data_out_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 501, column 9.
+  During elaboration of `data_out' at "../SceMiSerialProbe.bsv", line 247,
+  column 44.
+  During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
+  column 8.
+  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  column 28.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_dut_prb_control_control_in_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_dut_prb_control_control_in_in_reset_uclk.read
+    Reset 2
+    (scemi_settabledut_dut_prb_control_control_in_nocResetUClock.gen_rst):
+      scemi_settabledut_dut_prb_control_control_in_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 316,
+  column 9.
+  During elaboration of `control_in' at "../SceMiSerialProbe.bsv", line 248,
+  column 42.
+  During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
+  column 8.
+  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  column 28.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_dut_prb_control_control_in_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_dut_prb_control_control_in_in_reset_uclk.read
+      scemi_settabledut_dut_prb_control_control_in_prev_reset_uclk.read
+      scemi_settabledut_dut_prb_control_control_in_prev_reset_uclk.write
+    Reset 2
+    (scemi_settabledut_dut_prb_control_control_in_nocResetUClock.gen_rst):
+      scemi_settabledut_dut_prb_control_control_in_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 321, column 9.
+  During elaboration of `control_in' at "../SceMiSerialProbe.bsv", line 248,
+  column 42.
+  During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
+  column 8.
+  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  column 28.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_softrst_req_inport_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_softrst_req_inport_in_reset_uclk.read
+    Reset 2 (scemi_settabledut_softrst_req_inport_nocResetUClock.gen_rst):
+      scemi_settabledut_softrst_req_inport_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 316,
+  column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
+  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  column 11.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_softrst_req_inport_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_softrst_req_inport_in_reset_uclk.read
+      scemi_settabledut_softrst_req_inport_prev_reset_uclk.read
+      scemi_settabledut_softrst_req_inport_prev_reset_uclk.write
+    Reset 2 (scemi_settabledut_softrst_req_inport_nocResetUClock.gen_rst):
+      scemi_settabledut_softrst_req_inport_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 321, column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
+  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  column 11.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_softrst_resp_outport_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_softrst_resp_outport_in_reset_uclk.read
+    Reset 2 (scemi_settabledut_softrst_resp_outport_nocResetUClock.gen_rst):
+      scemi_settabledut_softrst_resp_outport_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 496,
+  column 9.
+  During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
+  32.
+  During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
+  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  column 11.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_settabledut_softrst_resp_outport_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_settabledut_softrst_resp_outport_in_reset_uclk.read
+      scemi_settabledut_softrst_resp_outport_prev_reset_uclk.read
+      scemi_settabledut_softrst_resp_outport_prev_reset_uclk.write
+    Reset 2 (scemi_settabledut_softrst_resp_outport_nocResetUClock.gen_rst):
+      scemi_settabledut_softrst_resp_outport_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 501, column 9.
+  During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
+  32.
+  During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
+  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  column 11.
+  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
+  66, column 25.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_processor_req_inport_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_processor_req_inport_in_reset_uclk.read
+    Reset 2 (scemi_processor_req_inport_nocResetUClock.gen_rst):
+      scemi_processor_req_inport_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 316,
+  column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 68,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_processor_req_inport_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_processor_req_inport_in_reset_uclk.read
+      scemi_processor_req_inport_prev_reset_uclk.read
+      scemi_processor_req_inport_prev_reset_uclk.write
+    Reset 2 (scemi_processor_req_inport_nocResetUClock.gen_rst):
+      scemi_processor_req_inport_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 321, column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 68,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_processor_resp_outport_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_processor_resp_outport_in_reset_uclk.read
+    Reset 2 (scemi_processor_resp_outport_nocResetUClock.gen_rst):
+      scemi_processor_resp_outport_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 496,
+  column 9.
+  During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
+  32.
+  During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 68,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_processor_resp_outport_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_processor_resp_outport_in_reset_uclk.read
+      scemi_processor_resp_outport_prev_reset_uclk.read
+      scemi_processor_resp_outport_prev_reset_uclk.write
+    Reset 2 (scemi_processor_resp_outport_nocResetUClock.gen_rst):
+      scemi_processor_resp_outport_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 501, column 9.
+  During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
+  32.
+  During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 68,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_setfactor_inport_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_setfactor_inport_in_reset_uclk.read
+    Reset 2 (scemi_setfactor_inport_nocResetUClock.gen_rst):
+      scemi_setfactor_inport_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 316,
+  column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `setfactor' at "../../scemi/SceMiLayer.bsv", line 69,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_setfactor_inport_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_setfactor_inport_in_reset_uclk.read
+      scemi_setfactor_inport_prev_reset_uclk.read
+      scemi_setfactor_inport_prev_reset_uclk.write
+    Reset 2 (scemi_setfactor_inport_nocResetUClock.gen_rst):
+      scemi_setfactor_inport_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 321, column 9.
+  During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
+  31.
+  During elaboration of `setfactor' at "../../scemi/SceMiLayer.bsv", line 69,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_shutdown_ctrl_in_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_shutdown_ctrl_in_in_reset_uclk.read
+    Reset 2 (scemi_shutdown_ctrl_in_nocResetUClock.gen_rst):
+      scemi_shutdown_ctrl_in_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 316,
+  column 9.
+  During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
+  34.
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 71,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_shutdown_ctrl_in_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_shutdown_ctrl_in_in_reset_uclk.read
+      scemi_shutdown_ctrl_in_prev_reset_uclk.read
+      scemi_shutdown_ctrl_in_prev_reset_uclk.write
+    Reset 2 (scemi_shutdown_ctrl_in_nocResetUClock.gen_rst):
+      scemi_shutdown_ctrl_in_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 321, column 9.
+  During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
+  34.
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 71,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_shutdown_ctrl_out_detect_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_shutdown_ctrl_out_in_reset_uclk.read
+    Reset 2 (scemi_shutdown_ctrl_out_nocResetUClock.gen_rst):
+      scemi_shutdown_ctrl_out_starting_reset.send
+  During elaboration of rule `detect_scemi_reset' at "SceMiNoC.bsv", line 496,
+  column 9.
+  During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
+  34.
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 71,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
+  Multiple reset signals influence rule
+  `scemi_shutdown_ctrl_out_detect_end_of_scemi_reset'.
+  This can lead to inconsistent, non-atomic results when not all of these
+  signals are asserted.
+  Method calls by reset:
+    Reset 1 (scemi_rstgen_final_reset.reset_out):
+      scemi_shutdown_ctrl_out_in_reset_uclk.read
+      scemi_shutdown_ctrl_out_prev_reset_uclk.read
+      scemi_shutdown_ctrl_out_prev_reset_uclk.write
+    Reset 2 (scemi_shutdown_ctrl_out_nocResetUClock.gen_rst):
+      scemi_shutdown_ctrl_out_ending_reset.send
+  During elaboration of rule `detect_end_of_scemi_reset' at "SceMiNoC.bsv",
+  line 501, column 9.
+  During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
+  34.
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 71,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Compilation message: "../SceMiClocks.bsv", line 103, column 13: 
+(SCE-MI) Begin clock generation
+Compilation message: "../SceMiClocks.bsv", line 140, column 51: 
+(SCE-MI) Default clock group
+(SCE-MI) Clock #0
+  Numerator: 1
+  Denominator: 1
+  DutyHi: 0
+  DutyLo: 100
+  Phase: 0
+  Reset Cycles: 8
+(SCE-MI) Found 1 controllers for clock #0
+Compilation message: "../SceMiClocks.bsv", line 210, column 16: 
+(SCE-MI) Common clock time scale = 1
+(SCE-MI)    Group    Clock   Period     Rise     Fall     Freq
+(SCE-MI)  default        0        1         uclock      50.00 MHz
+(SCE-MI) Note: clock frequencies assume 100 MHz reference clock
+Compilation message: "../SceMiClocks.bsv", line 463, column 47: 
+(SCE-MI) Max reset count = 16
+Warning: "CommitIfc.bsv", line 68, column 12: (G0023)
+  The condition for rule
+  `scemi_settabledut_dut_prb_control_contextToPrbStr_connectData' is always
+  false. Removing...
+Warning: "SceMiNoC.bsv", line 1697, column 12: (G0023)
+  The condition for rule `scemi_msg_sink_noc_active_decode_noc_header_8bpb' is
+  always false. Removing...
+Warning: "SceMiNoC.bsv", line 1814, column 15: (G0023)
+  The condition for rule
+  `scemi_msg_sink_noc_active_scemi1_process_outport_ack_lt4bpb' is always
+  false. Removing...
+Warning: "SceMiNoC.bsv", line 1956, column 9: (G0023)
+  The condition for rule `scemi_msg_sink_noc_inactive' is always false.
+  Removing...
+Warning: "SceMiNoC.bsv", line 2183, column 9: (G0023)
+  The condition for rule `scemi_msg_source_noc_inactive' is always false.
+  Removing...
+Warning: "SceMiNoC.bsv", line 2281, column 12: (G0023)
+  The condition for rule `scemi_msg_source_noc_inactive_inports' is always
+  false. Removing...
+Warning: "CommitIfc.bsv", line 72, column 12: (G0023)
+  The body of rule
+  `scemi_settabledut_dut_prb_control_contextToPrbStr_connectCommitAck' has no
+  actions. Removing...
+Warning: "../SceMiSerialProbe.bsv", line 409, column 9: (G0023)
+  The body of rule `scemi_settabledut_dut_prb_control_announceCclock' has no
+  actions. Removing...
+Warning: "MsgFormat.bsv", line 195, column 12: (G0023)
+  The body of rule `scemi_never_be_ready' has no actions. Removing...
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
+  urgent than "scemi_settabledut_dut_prb_control_setSample". Conflicts:
+    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_setSample":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+    "scemi_settabledut_dut_prb_control_setSample" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_setSample" was treated as more
+  urgent than "scemi_settabledut_dut_prb_control_unsetFlag". Conflicts:
+    "scemi_settabledut_dut_prb_control_setSample" cannot fire before "scemi_settabledut_dut_prb_control_unsetFlag":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+    "scemi_settabledut_dut_prb_control_unsetFlag" cannot fire before "scemi_settabledut_dut_prb_control_setSample":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+	scemi_settabledut_dut_prb_control_nextSample.write vs. scemi_settabledut_dut_prb_control_nextSample.read
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
+  urgent than "scemi_settabledut_dut_prb_control_respondToPing". Conflicts:
+    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_respondToPing":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
+	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
+	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
+    "scemi_settabledut_dut_prb_control_respondToPing" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
+	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
+	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
+  urgent than "scemi_settabledut_dut_prb_control_sendAck". Conflicts:
+    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_sendAck":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
+	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
+	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
+    "scemi_settabledut_dut_prb_control_sendAck" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
+	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
+	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_unsetFlag" was treated as more
+  urgent than "scemi_settabledut_dut_prb_control_receiveControl". Conflicts:
+    "scemi_settabledut_dut_prb_control_unsetFlag" cannot fire before "scemi_settabledut_dut_prb_control_receiveControl":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+    "scemi_settabledut_dut_prb_control_receiveControl" cannot fire before "scemi_settabledut_dut_prb_control_unsetFlag":
+      calls to
+	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
+	scemi_settabledut_dut_prb_control_sampleIntervalV.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV.read
+	scemi_settabledut_dut_prb_control_sampleIntervalV_1.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_1.read
+	scemi_settabledut_dut_prb_control_sampleIntervalV_2.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_2.read
+	scemi_settabledut_dut_prb_control_sampleIntervalV_3.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_3.read
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_receiveMoreData" was treated as more
+  urgent than "scemi_shutdown_ack". Conflicts:
+    "scemi_settabledut_dut_prb_control_receiveMoreData" cannot fire before "scemi_shutdown_ack":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_dut_prb_control_receiveMoreData":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_dut_prb_control_receiveFirstData" was treated as
+  more urgent than "scemi_shutdown_ack". Conflicts:
+    "scemi_settabledut_dut_prb_control_receiveFirstData" cannot fire before "scemi_shutdown_ack":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_dut_prb_control_receiveFirstData":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut" was
+  treated as more urgent than "scemi_shutdown_ack". Conflicts:
+    "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut" cannot fire before "scemi_shutdown_ack":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+Warning: "../Bridge.bsv", line 7, column 8: (G0010)
+  Rule "scemi_processor_resp_connect_res_mkConnectionGetPut" was treated as
+  more urgent than "scemi_shutdown_ack". Conflicts:
+    "scemi_processor_resp_connect_res_mkConnectionGetPut" cannot fire before "scemi_shutdown_ack":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+    "scemi_shutdown_ack" cannot fire before "scemi_processor_resp_connect_res_mkConnectionGetPut":
+      calls to
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
+	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
+Warning: "../Bridge.bsv", line 7, column 8: (G0036)
+  Rule "scemi_settabledut_dut_prb_control_receiveControl" will appear to fire
+  before "scemi_settabledut_dut_prb_control_receiveMoreData" when both fire in
+  the same clock cycle, affecting:
+    calls to
+      scemi_settabledut_dut_prb_control_pinged.write vs. scemi_settabledut_dut_prb_control_pinged.write
+Warning: "../Bridge.bsv", line 7, column 8: (G0036)
+  Rule "scemi_settabledut_dut_prb_control_receiveControl" will appear to fire
+  before "scemi_settabledut_dut_prb_control_receiveFirstData" when both fire
+  in the same clock cycle, affecting:
+    calls to
+      scemi_settabledut_dut_prb_control_pinged.write vs. scemi_settabledut_dut_prb_control_pinged.write
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
+  of `scemi_settabledut_dut_prb_control_receiveMoreData' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_data_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
+  of `scemi_settabledut_dut_prb_control_receiveFirstData' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_data_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
+  of `scemi_settabledut_dut_prb_control_receiveTrigger' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_data_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
+  of `scemi_settabledut_dut_prb_control_sendAck' when they execute in the same
+  clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_data_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
+  of `scemi_settabledut_dut_prb_control_respondToPing' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_data_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_receiveMoreData' shadows the effects
+  of `scemi_settabledut_dut_prb_control_receiveControl' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_pinged.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_receiveFirstData' shadows the
+  effects of `scemi_settabledut_dut_prb_control_receiveControl' when they
+  execute in the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_pinged.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_shutdown_ctrl_out_setOK' shadows the effects of
+  `scemi_shutdown_ack' when they execute in the same clock cycle. Affected
+  method calls:
+    scemi_shutdown_ctrl_out_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_processor_resp_outport_setOK' shadows the effects of
+  `scemi_processor_resp_connect_res_mkConnectionGetPut' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_processor_resp_outport_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_softrst_resp_outport_setOK' shadows the effects of
+  `scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut' when they
+  execute in the same clock cycle. Affected method calls:
+    scemi_settabledut_softrst_resp_outport_ok.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_dut_prb_control_receiveControl' shadows the effects
+  of `scemi_settabledut_dut_prb_control_respondToPing' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_prb_control_pinged.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Warning: "../Bridge.bsv", line 7, column 8: (G0117)
+  Rule `scemi_settabledut_softrst_req_connect_put_mkConnectionGetPut' shadows
+  the effects of `scemi_settabledut_dut_dutIfc_donerest' when they execute in
+  the same clock cycle. Affected method calls:
+    scemi_settabledut_dut_dutIfc_resetting.write
+  To silence this warning, use the `-no-warn-action-shadowing' flag.
+Elaborated Bluesim module file created: bdir_dut/mkBridge.ba
+All packages are up to date.
