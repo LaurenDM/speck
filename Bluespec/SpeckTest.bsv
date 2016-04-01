@@ -2,9 +2,9 @@ import Speck::*;
 import Vector::*;
 import Printf::*;
 
-typedef 24 N
-typedef 4 M
-typedef 23 T
+typedef 24 N;
+typedef 4 M;
+typedef 23 T;
 
 typedef enum {keyset, encrypt, decrypt, check, finish} Status deriving (Bits);
 
