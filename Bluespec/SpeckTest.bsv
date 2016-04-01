@@ -47,8 +47,8 @@ module mkSpeckTest(Empty);
         if(ciphertext2 != ciphertext) begin
             $display("ct should be: ");
             $display("%h %h", tpl_1(ciphertext), tpl_2(ciphertext));
-            #display("ct is: ");
-            #display("%h %h", tpl_1(ciphertext2), tpl_2(ciphertext2));
+            $display("ct is: ");
+            $display("%h %h", tpl_1(ciphertext2), tpl_2(ciphertext2));
             passed <= False;
         end
         dec.inputMessage(ciphertext2);
@@ -60,8 +60,8 @@ module mkSpeckTest(Empty);
         if(plaintext2 != plaintext) begin
             $display("pt should be: ");
             $display("%h %h", tpl_1(plaintext), tpl_2(plaintext));
-            #display("pt is: ");
-            #display("%h %h", tpl_1(plaintext2), tpl_2(plaintext2));
+            $display("pt is: ");
+            $display("%h %h", tpl_1(plaintext2), tpl_2(plaintext2));
             passed <= False;
         end
         status <= Finish;
