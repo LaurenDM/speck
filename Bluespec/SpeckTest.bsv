@@ -12,18 +12,18 @@ module mkSpeckTest(Empty);
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
 
-    Block#(N) plaintext = tuple2(0x6d2073, 0x696874);
-    Block#(N) ciphertext = tuple2(0x735e10, 0xb6445d);
+    Block#(N) plaintext = tuple2('h6d2073, 'h696874);
+    Block#(N) ciphertext = tuple2('h735e10, 'hb6445d);
     Vector#(M, UInt#(N)) key = newVector();
-    key[0] = 0x020100;
-    key[1] = 0x0a0908;
-    key[2] = 0x121110;
-    key[3] = 0x1a1918;
+    key[0] = 'h020100;
+    key[1] = 'h0a0908;
+    key[2] = 'h121110;
+    key[3] = 'h1a1918;
     Vector#(M, UInt#(N)) dec_key = newVector();
-    dec_key[0] = 0xcb6915;
-    dec_key[1] = 0xc6cbb1;
-    dec_key[2] = 0x4a5369;
-    dec_key[3] = 0x7f5a9d;
+    dec_key[0] = 'hcb6915;
+    dec_key[1] = 'hc6cbb1;
+    dec_key[2] = 'h4a5369;
+    dec_key[3] = 'h7f5a9d;
 
     Reg#(Status) status <- mkReg(Keyset);
     Reg#(Bool) passed <- mkReg(True);
