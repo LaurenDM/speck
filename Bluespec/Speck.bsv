@@ -3,7 +3,7 @@ import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
 
-typedef Tuple2#(UInt#(n), UIInt#(n)) Block#(numeric type n)
+typedef Tuple2#(UInt#(n), UIInt#(n)) Block#(numeric type n);
 
 define ALPHA 8;
 define BETA 3;
