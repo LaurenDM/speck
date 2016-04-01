@@ -5,8 +5,8 @@ import Vector::*;
 
 typedef Tuple2#(UInt#(n), UIInt#(n)) Block#(numeric type n);
 
-#define ALPHA 8;
-#define BETA 3;
+typedef 8 ALPHA;
+typedef 3 BETA;
 //TODO: make alpha/beta dynamic? how to change when n=16?
 
 interface EncryptDecrypt#(numeric type n, numeric type m, numeric type T);
