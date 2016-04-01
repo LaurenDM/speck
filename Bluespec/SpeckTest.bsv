@@ -6,7 +6,7 @@ typedef 24 N;
 typedef 4 M;
 typedef 23 T;
 
-typedef enum {keyset, encrypt, decrypt, check, finish} Status deriving (Bits);
+typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
 
 module mkSpeckTest(Empty);
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
@@ -25,24 +25,24 @@ module mkSpeckTest(Empty);
     dec_key[2] = 0x4a5369;
     dec_key[3] = 0x7f5a9d;
 
-    Reg#(Status) status <- mkReg(keyset);
+    Reg#(Status) status <- mkReg(Keyset);
     Reg#(Bool) passed <- mkReg(True);
 
-    rule setEncKey(status==keyset);
+    rule setEncKey(status==Keyset);
         enc.setKey(key);
-        status <= encrypt;
+        status <= Encrypt;
     endrule
 
-    rule setDecKey(status==keyset);
+    rule setDecKey(status==Keyset);
         dec.setKey(dec_key);
     endrule
 
-    rule encrypt(status==encrypt);
+    rule encrypt(status==Encrypt);
         enc.inputMessage(plaintext);
-        status <= decrypt;
+        status <= Decrypt;
     endrule
 
-    rule decrypt(status==decrypt);
+    rule decrypt(status==Decrypt);
         let ciphertext2 <- enc.getResult();
         if(ciphertext2 != ciphertext) begin
             $display("ct should be: ");
@@ -52,10 +52,10 @@ module mkSpeckTest(Empty);
             passed <= False;
         end
         dec.inputMessage(ciphertext2);
-        status <= check;
+        status <= Check;
     endrule
 
-    rule check(status==check);
+    rule check(status==Check);
         let plaintext2 <- dec.getResult();
         if(plaintext2 != plaintext) begin
             $display("pt should be: ");
@@ -64,10 +64,10 @@ module mkSpeckTest(Empty);
             #display("%h %h", tpl_1(plaintext2), tpl_2(plaintext2));
             passed <= False;
         end
-        status <= finish;
+        status <= Finish;
     endrule
 
-    rule finish(status==finish);
+    rule finish(status==Finish);
         if(passed) begin
             $display("PASSED");
         end else begin
