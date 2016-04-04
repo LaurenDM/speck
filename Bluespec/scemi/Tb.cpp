@@ -66,50 +66,40 @@ void runtest(InportProxyT<BitT<16> >& inport)
 
 int main(int argc, char* argv[])
 {
-  //setup scemi
-  int sceMiVersion = SceMi::Version( SCEMI_VERSION_STRING );
-  SceMiParameters params("scemi.params");
-  SceMi *sceMi = SceMi::Init(sceMiVersion, &params);
+    int sceMiVersion = SceMi::Version( SCEMI_VERSION_STRING );
+    SceMiParameters params("scemi.params");
+    SceMi *sceMi = SceMi::Init(sceMiVersion, &params);
 
-  // Initialize the SceMi inport
-  InportProxyT<BitT<16> > inport ("", "scemi_processor_req_inport", sceMi);
+    // Initialize the SceMi inport
+    InportProxyT<Block_Flag > inport ("", "scemi_processor_req_inport", sceMi);
+    InportProxyT<Key_Flag> setkey ("", "scemi_setkey_inport", sceMi);
 
-  // Initialize the SceMi outport
-  OutportProxyT<BitT<16> > outport ("", "scemi_processor_resp_outport", sceMi);
-  outport.setCallBack(out_cb, NULL);
+    // Initialize the SceMi outport
+    OutportProxyT<Block_Flag > outport ("", "scemi_processor_resp_outport", sceMi);
+    outport.setCallBack(out_cb, NULL);
 
-  // Get FactorType from command-line
-  int pf = atof(argv[1]);
-  FactorType factor;
-  factor.m_i = (int)floor(pf);
-  factor.m_f = (int)(pow(2, factor.m_f.getBitSize()) * (pf - floor(pf)));
+    // Initialize the reset port.
+    ResetXactor reset("", "scemi", sceMi);
 
-  //send factor type
-  InportProxyT<BitT<32> > setfactor ("", "scemi_setfactor_inport", sceMi);
-  setfactor.sendMessage(factor);
+    ShutdownXactor shutdown("", "scemi_shutdown", sceMi);
 
-  // Initialize the reset port.
-  ResetXactor reset("", "scemi", sceMi);
+    // Service SceMi requests
+    SceMiServiceThread *scemi_service_thread = new SceMiServiceThread (sceMi);
 
-  ShutdownXactor shutdown("", "scemi_shutdown", sceMi);
+    // Reset the dut.
+    reset.reset();
 
-  // Service SceMi requests
-  SceMiServiceThread *scemi_service_thread = new SceMiServiceThread (sceMi);
+    setkey.sendMessage({0,0,0,0}); //TODO set key
 
-  // Reset the dut.
-  reset.reset();
+    // Send in all the data.
+    runtest(inport);
 
-  // Send in all the data.
-  runtest(inport);
+    std::cout << "shutting down..." << std::endl;
+    shutdown.blocking_send_finish();
+    scemi_service_thread->stop();
+    scemi_service_thread->join();
+    SceMi::Shutdown(sceMi);
+    std::cout << "finished" << std::endl;
 
-
-  std::cout << "shutting down..." << std::endl;
-  shutdown.blocking_send_finish();
-  scemi_service_thread->stop();
-  scemi_service_thread->join();
-  SceMi::Shutdown(sceMi);
-  std::cout << "finished" << std::endl;
-  
-  return 0;
+    return 0;
 }
-
