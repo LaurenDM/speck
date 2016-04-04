@@ -14,11 +14,26 @@ import Vector::*;
 
 
 typedef Vector#(M, UInt#(N)) KeyType;
+typedef enum {Encrypt, Decrypt} FlagType deriving (Bits, Eq);
+typedef Block#(N) BlockType; //not prettiest format
+// but much easier to define this up here so we don't need params for Block_Flag, toApSyncQ, fromApSyncQ, etc.
+// I'll look at a nicer way of writing this
+
+typedef struct{ 
+   KeyType key;
+   FlagType flag;
+} Key_Flag deriving(Bits, Eq);
+
+typedef struct{ 
+   BlockType block;
+   FlagType flag;
+} Block_Flag deriving(Bits, Eq);
+
 typedef Server#(Block#(N), Block#(N)) DutInterface;
 
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(KeyType) setkey;
+   interface Put#(Key_Flag) setkey;
 endinterface
 
 (* synthesize *)
@@ -28,35 +43,47 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    //cross clock domains. Thus we must wrap our DUT using synchronization primitives (SyncFIFOs). 
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
-   SyncFIFOIfc#(Block#(N)) toApSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Block#(N)) fromApSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
+   SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   // SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
+   //TODO: synthesized
    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
    
    //-- two rules below will be good place to decide on storage approach---//   
-   // rule enqAPRequest;
-   //    p.putSampleInput(toApSyncQ.first);
-   //    toApSyncQ.deq;
-   // endrule
+   rule enqAPRequest;
+      let x = toSyncQ.first;
+      toApSyncQ.deq;
+      
+      if (x.flag == Encrypt) begin
+	 encrypt.inputMessage(x.block);
+      end
+      else if (x.flag == Decrypt) begin
+	 decrypt.inputMessage(x.block);
+      end
+   endrule
 
    // rule getAPResponse;
    //    let x <- p.getSampleOutput();
-   //    fromApSyncQ.enq(x);
+   //    fromSyncQ.enq(x);
    // endrule
    
    interface DutInterface dut;
-      interface Put request = toPut(toApSyncQ);
-      interface Get response = toGet(fromApSyncQ);
+      interface Put request = toPut(toSyncQ);
+      interface Get response = toGet(fromSyncQ);
    endinterface
    
    interface Put setkey;
-      method Action put(KeyType x);
-   	 encrypt.setfactor.put(x);
-      	 decrypt.setfactor.put(x); //we want both here, yes?
+      method Action put(Key_Flag x);
+	 if (x.flag == Encrypt) begin
+   	    encrypt.setKey(x.key);
+	 end
+	 else if (x.flag == Decrypt) begin
+   	    decrypt.setKey(x.key);
+	 end
       endmethod 
-   endinterface   
+   endinterface
 endmodule
 
 module [SceMiModule] mkSceMiLayer#(Clock clk_usr)();
