@@ -16,7 +16,7 @@ import Vector::*;
 typedef Vector#(M, UInt#(N)) KeyType;
 typedef enum {Encrypt, Decrypt} FlagType deriving (Bits, Eq);
 typedef Block#(N) BlockType; //not prettiest format
-// but much easier to define this up here so we don't need params for Block_Flag, toApSyncQ, fromApSyncQ, etc.
+// but much easier to define this up here so we don't need params for Block_Flag, toSyncQ, fromSyncQ, etc.
 // I'll look at a nicer way of writing this
 
 typedef struct{ 
@@ -29,12 +29,25 @@ typedef struct{
    FlagType flag;
 } Block_Flag deriving(Bits, Eq);
 
-typedef Server#(Block#(N), Block#(N)) DutInterface;
-
+typedef Server#(Block_Flag, Block_Flag) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
    interface Put#(Key_Flag) setkey;
 endinterface
+
+/* define synthesize for encrypt and decrypt */
+(* synthesize *)
+module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
+   EncryptDecrypt#(N,M,T) e <- mkEncrypt();
+   return e;
+endmodule
+
+(* synthesize *)
+module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
+   EncryptDecrypt#(N,M,T) d <- mkDecrypt();
+   return d;
+endmodule
+/* end define synthesize for encrypt and decrypt */
 
 (* synthesize *)
 module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
@@ -44,17 +57,30 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   // SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   //SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   // SyncFIFOIfc#(KeyType) toFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
-   //TODO: synthesized
-   EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
-   EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
+   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt();
+   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt();
    
-   //-- two rules below will be good place to decide on storage approach---//   
-   rule enqAPRequest;
+   //enqRequest gives a timing issue:
+   /*
+   Reference across clock domain in rule `enqRequest'.
+   Method calls by clock domain:
+    Clock domain 1:
+      default_clock:
+        decrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        decrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        encrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        encrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
+    Clock domain 2:
+      clk_usr:
+        toSyncQ.RDY_deq toSyncQ.RDY_first toSyncQ.deq toSyncQ.first
+   */
+   
+   rule enqRequest;
       let x = toSyncQ.first;
-      toApSyncQ.deq;
+      toSyncQ.deq;
       
       if (x.flag == Encrypt) begin
 	 encrypt.inputMessage(x.block);
@@ -64,14 +90,14 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
       end
    endrule
 
-   // rule getAPResponse;
+   // rule getResponse;
    //    let x <- p.getSampleOutput();
    //    fromSyncQ.enq(x);
    // endrule
    
    interface DutInterface dut;
       interface Put request = toPut(toSyncQ);
-      interface Get response = toGet(fromSyncQ);
+      //interface Get response = toGet(fromSyncQ);
    endinterface
    
    interface Put setkey;
