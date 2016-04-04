@@ -3,14 +3,6 @@ import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
 
-typedef Tuple2#(UInt#(n), UInt#(n)) Block#(numeric type n);
-
-interface EncryptDecrypt#(numeric type n, numeric type m, numeric type t);
-    method Action setKey(Vector#(m,UInt#(n)) key);
-    method Action inputMessage(Block#(n) text);
-    method ActionValue#(Block#(n)) getResult();
-endinterface
-
 module mkEncrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
@@ -176,4 +168,16 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
         plaintextFIFO.deq();
         return plaintextFIFO.first();
     endmethod
+endmodule
+
+(* synthesize *)
+module mkSynthEncrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
+    return enc;
+endmodule
+
+(* synthesize *)
+module mkSynthDecrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
+    return dec;
 endmodule
