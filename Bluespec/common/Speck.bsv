@@ -2,6 +2,7 @@
 import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
+import SpeckTypes::*;
 
 typedef Tuple2#(UInt#(n), UInt#(n)) Block#(numeric type n);
 
@@ -177,3 +178,17 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
         return plaintextFIFO.first();
     endmethod
 endmodule
+
+/* define synthesize for encrypt and decrypt */
+(* synthesize *)
+module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
+   EncryptDecrypt#(N,M,T) e <- mkEncrypt();
+   return e;
+endmodule
+
+(* synthesize *)
+module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
+   EncryptDecrypt#(N,M,T) d <- mkDecrypt();
+   return d;
+endmodule
+/* end define synthesize for encrypt and decrypt */
