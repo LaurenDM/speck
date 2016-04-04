@@ -32,14 +32,10 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    SyncFIFOIfc#(Block#(N)) fromApSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
    SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
-   // AudioProcessor#(I_SIZE, F_SIZE) p <- mkAudioPipeline(clocked_by clk_usr, reset_by rst_usr);
    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
    
-   // rule setEncryptKey;
-   //    encrypt.setKey();
-   // endrule
-   
+   //-- two rules below will be good place to decide on storage approach---//   
    // rule enqAPRequest;
    //    p.putSampleInput(toApSyncQ.first);
    //    toApSyncQ.deq;
@@ -50,17 +46,17 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    //    fromApSyncQ.enq(x);
    // endrule
    
-   // interface DutInterface dut;
-   //    interface Put request = toPut(toApSyncQ);
-   //    interface Get response = toGet(fromApSyncQ);
-   // endinterface
+   interface DutInterface dut;
+      interface Put request = toPut(toApSyncQ);
+      interface Get response = toGet(fromApSyncQ);
+   endinterface
    
-   // interface Put setfactor;
-   //    method Action put(FactorType x);
-   // 	 p.setfactor.put(x);
-   //    endmethod 
-   // endinterface
-   
+   interface Put setkey;
+      method Action put(KeyType x);
+   	 encrypt.setfactor.put(x);
+      	 decrypt.setfactor.put(x); //we want both here, yes?
+      endmethod 
+   endinterface   
 endmodule
 
 module [SceMiModule] mkSceMiLayer#(Clock clk_usr)();
