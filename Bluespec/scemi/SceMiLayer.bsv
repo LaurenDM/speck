@@ -12,42 +12,11 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
-
-typedef Vector#(M, UInt#(N)) KeyType;
-typedef enum {Encrypt, Decrypt} FlagType deriving (Bits, Eq);
-typedef Block#(N) BlockType; //not prettiest format
-// but much easier to define this up here so we don't need params for Block_Flag, toSyncQ, fromSyncQ, etc.
-// I'll look at a nicer way of writing this
-
-typedef struct{ 
-   KeyType key;
-   FlagType flag;
-} Key_Flag deriving(Bits, Eq);
-
-typedef struct{ 
-   BlockType block;
-   FlagType flag;
-} Block_Flag deriving(Bits, Eq);
-
 typedef Server#(Block_Flag, Block_Flag) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
    interface Put#(Key_Flag) setkey;
 endinterface
-
-/* define synthesize for encrypt and decrypt */
-(* synthesize *)
-module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-   EncryptDecrypt#(N,M,T) e <- mkEncrypt();
-   return e;
-endmodule
-
-(* synthesize *)
-module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-   EncryptDecrypt#(N,M,T) d <- mkDecrypt();
-   return d;
-endmodule
-/* end define synthesize for encrypt and decrypt */
 
 (* synthesize *)
 module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
