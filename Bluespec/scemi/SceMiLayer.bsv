@@ -12,13 +12,10 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
-
-typedef Vector#(M, UInt#(N)) KeyType;
-typedef Server#(Block#(N), Block#(N)) DutInterface;
-
+typedef Server#(Block_Flag, Block_Flag) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(KeyType) setkey;
+   interface Put#(Key_Flag) setkey;
 endinterface
 
 (* synthesize *)
@@ -28,35 +25,60 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    //cross clock domains. Thus we must wrap our DUT using synchronization primitives (SyncFIFOs). 
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
-   SyncFIFOIfc#(Block#(N)) toApSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Block#(N)) fromApSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
+   //SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   // SyncFIFOIfc#(KeyType) toFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
-   EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
-   EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
+   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt();
+   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt();
    
-   //-- two rules below will be good place to decide on storage approach---//   
-   // rule enqAPRequest;
-   //    p.putSampleInput(toApSyncQ.first);
-   //    toApSyncQ.deq;
-   // endrule
+   //enqRequest gives a timing issue:
+   /*
+   Reference across clock domain in rule `enqRequest'.
+   Method calls by clock domain:
+    Clock domain 1:
+      default_clock:
+        decrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        decrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        encrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
+        encrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
+    Clock domain 2:
+      clk_usr:
+        toSyncQ.RDY_deq toSyncQ.RDY_first toSyncQ.deq toSyncQ.first
+   */
+   
+   rule enqRequest;
+      let x = toSyncQ.first;
+      toSyncQ.deq;
+      
+      if (x.flag == Encrypt) begin
+	 encrypt.inputMessage(x.block);
+      end
+      else if (x.flag == Decrypt) begin
+	 decrypt.inputMessage(x.block);
+      end
+   endrule
 
-   // rule getAPResponse;
+   // rule getResponse;
    //    let x <- p.getSampleOutput();
-   //    fromApSyncQ.enq(x);
+   //    fromSyncQ.enq(x);
    // endrule
    
    interface DutInterface dut;
-      interface Put request = toPut(toApSyncQ);
-      interface Get response = toGet(fromApSyncQ);
+      interface Put request = toPut(toSyncQ);
+      //interface Get response = toGet(fromSyncQ);
    endinterface
    
    interface Put setkey;
-      method Action put(KeyType x);
-   	 encrypt.setfactor.put(x);
-      	 decrypt.setfactor.put(x); //we want both here, yes?
+      method Action put(Key_Flag x);
+	 if (x.flag == Encrypt) begin
+   	    encrypt.setKey(x.key);
+	 end
+	 else if (x.flag == Decrypt) begin
+   	    decrypt.setKey(x.key);
+	 end
       endmethod 
-   endinterface   
+   endinterface
 endmodule
 
 module [SceMiModule] mkSceMiLayer#(Clock clk_usr)();

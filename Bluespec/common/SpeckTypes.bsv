@@ -14,3 +14,17 @@ interface EncryptDecrypt#(numeric type n, numeric type m, numeric type t);
     method Action inputMessage(Block#(n) text);
     method ActionValue#(Block#(n)) getResult();
 endinterface
+
+typedef Vector#(M, UInt#(N)) KeyType;
+typedef enum {Encrypt, Decrypt} FlagType deriving (Bits, Eq);
+typedef Block#(N) BlockType;
+
+typedef struct{
+   KeyType key;
+   FlagType flag;
+} Key_Flag deriving(Bits, Eq);
+
+typedef struct{
+   BlockType block;
+   FlagType flag;
+} Block_Flag deriving(Bits, Eq);

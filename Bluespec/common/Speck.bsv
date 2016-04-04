@@ -2,6 +2,7 @@
 import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
+import SpeckTypes::*;
 
 module mkEncrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
