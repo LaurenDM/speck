@@ -7,16 +7,18 @@ import Clocks::*;
 import ResetXactor::*;
 import Xilinx::*;
 
-import AudioPipeline::*;
-import AudioProcessorTypes::*;
+import Speck::*;
+import SpeckTypes::*;
 import FixedPoint::*;
+import Vector::*;
 
-typedef FixedPoint#(I_SIZE, F_SIZE) FactorType;
-typedef Server#(Sample, Sample) DutInterface;
+
+typedef Vector#(M, UInt#(N)) KeyType;
+typedef Server#(Block#(N), Block#(N)) DutInterface;
 
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(FactorType) setfactor;
+   interface Put#(KeyType) setkey;
 endinterface
 
 (* synthesize *)
@@ -26,32 +28,38 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    //cross clock domains. Thus we must wrap our DUT using synchronization primitives (SyncFIFOs). 
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
-   SyncFIFOIfc#(Sample) toApSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Sample) fromApSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(FactorType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(Block#(N)) toApSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
+   SyncFIFOIfc#(Block#(N)) fromApSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   SyncFIFOIfc#(KeyType) toApFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
-   AudioProcessor#(I_SIZE, F_SIZE) p <- mkAudioPipeline(clocked_by clk_usr, reset_by rst_usr);
+   // AudioProcessor#(I_SIZE, F_SIZE) p <- mkAudioPipeline(clocked_by clk_usr, reset_by rst_usr);
+   EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
+   EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
    
-   rule enqAPRequest;
-      p.putSampleInput(toApSyncQ.first);
-      toApSyncQ.deq;
-   endrule
+   // rule setEncryptKey;
+   //    encrypt.setKey();
+   // endrule
+   
+   // rule enqAPRequest;
+   //    p.putSampleInput(toApSyncQ.first);
+   //    toApSyncQ.deq;
+   // endrule
 
-   rule getAPResponse;
-      let x <- p.getSampleOutput();
-      fromApSyncQ.enq(x);
-   endrule
+   // rule getAPResponse;
+   //    let x <- p.getSampleOutput();
+   //    fromApSyncQ.enq(x);
+   // endrule
    
-   interface DutInterface dut;
-      interface Put request = toPut(toApSyncQ);
-      interface Get response = toGet(fromApSyncQ);
-   endinterface
+   // interface DutInterface dut;
+   //    interface Put request = toPut(toApSyncQ);
+   //    interface Get response = toGet(fromApSyncQ);
+   // endinterface
    
-   interface Put setfactor;
-      method Action put(FactorType x);
-	 p.setfactor.put(x);
-      endmethod 
-   endinterface
+   // interface Put setfactor;
+   //    method Action put(FactorType x);
+   // 	 p.setfactor.put(x);
+   //    endmethod 
+   // endinterface
    
 endmodule
 
@@ -66,7 +74,7 @@ module [SceMiModule] mkSceMiLayer#(Clock clk_usr)();
    SettableDutInterface settabledut <- buildDutWithSoftReset(mkDutWrapper(clk_usr), clk_port_scemi);
 
    Empty processor <- mkServerXactor(settabledut.dut, clk_port_scemi);
-   Empty setfactor <- mkPutXactor(settabledut.setfactor, clk_port_scemi);
+   Empty setkey <- mkPutXactor(settabledut.setkey, clk_port_scemi);
    
    Empty shutdown <- mkShutdownXactor();
 endmodule
