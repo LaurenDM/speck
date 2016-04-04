@@ -171,13 +171,13 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
 endmodule
 
 (* synthesize *)
-module mkSynthEncrypt(EncryptDecrypt#(N,M,T));
+module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
     return enc;
 endmodule
 
 (* synthesize *)
-module mkSynthDecrypt(EncryptDecrypt#(N,M,T));
+module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
     return dec;
 endmodule
