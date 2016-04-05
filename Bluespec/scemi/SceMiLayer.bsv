@@ -26,47 +26,41 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   //SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   // SyncFIFOIfc#(KeyType) toFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   SyncFIFOIfc#(KeyType) toFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
-   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt();
-   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt();
-   
-   //enqRequest gives a timing issue:
-   /*
-   Reference across clock domain in rule `enqRequest'.
-   Method calls by clock domain:
-    Clock domain 1:
-      default_clock:
-        decrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
-        decrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
-        encrypt.RDY_inputMessage at "../../common/Speck.bsv", line 10, column 19,
-        encrypt.inputMessage at "../../common/Speck.bsv", line 10, column 19,
-    Clock domain 2:
-      clk_usr:
-        toSyncQ.RDY_deq toSyncQ.RDY_first toSyncQ.deq toSyncQ.first
-   */
+   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
+   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);
    
    rule enqRequest;
-      let x = toSyncQ.first;
+      Block_Flag x = toSyncQ.first;
       toSyncQ.deq;
       
       if (x.flag == Encrypt) begin
 	 encrypt.inputMessage(x.block);
       end
       else if (x.flag == Decrypt) begin
-	 decrypt.inputMessage(x.block);
+      	 decrypt.inputMessage(x.block);
       end
    endrule
 
-   // rule getResponse;
-   //    let x <- p.getSampleOutput();
-   //    fromSyncQ.enq(x);
-   // endrule
+   rule getResponseEncrypt;
+      Block_Flag response;
+      response.flag = Encrypt;
+      response.block <- encrypt.getResult();
+      fromSyncQ.enq(response);
+   endrule
+
+   rule getResponseDecrypt;
+      Block_Flag response;
+      response.flag = Decrypt;
+      response.block <- decrypt.getResult();
+      fromSyncQ.enq(response);
+   endrule
    
    interface DutInterface dut;
       interface Put request = toPut(toSyncQ);
-      //interface Get response = toGet(fromSyncQ);
+      interface Get response = toGet(fromSyncQ);
    endinterface
    
    interface Put setkey;
