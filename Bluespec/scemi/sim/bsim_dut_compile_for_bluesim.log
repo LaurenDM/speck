@@ -1,13 +1,27 @@
 checking package dependencies
 compiling ../../scemi/ResetXactor.bsv
-compiling ../../common/Speck.bsv
 compiling ../../common/SpeckTypes.bsv
+compiling ../../common/Speck.bsv
+code generation for mkSynthesizedEncrypt starts
+Elaborated module file created: bdir_dut/mkSynthesizedEncrypt.ba
+code generation for mkSynthesizedDecrypt starts
+Elaborated module file created: bdir_dut/mkSynthesizedDecrypt.ba
 compiling ../../scemi/SceMiLayer.bsv
-Warning: "../../scemi/SceMiLayer.bsv", line 25, column 46: (T0054)
-  Field not defined: `setkey'
-Warning: "../../scemi/SceMiLayer.bsv", line 25, column 46: (T0054)
-  Field not defined: `dut'
 code generation for mkDutWrapper starts
+Warning: "../../scemi/SceMiLayer.bsv", line 22, column 17: (G0046)
+  Reset information for method `setkey_put' is lost because the reset is not
+  available at the module boundary.
+  During elaboration of the interface method `setkey_put' at
+  "../../scemi/SceMiLayer.bsv", line 22, column 17.
+  During elaboration of `mkDutWrapper' at "../../scemi/SceMiLayer.bsv", line
+  22, column 17.
+Warning: "../../scemi/SceMiLayer.bsv", line 22, column 17: (G0010)
+  Rule "getResponseEncrypt" was treated as more urgent than
+  "getResponseDecrypt". Conflicts:
+    "getResponseEncrypt" cannot fire before "getResponseDecrypt":
+      calls to fromSyncQ.enq vs. fromSyncQ.enq
+    "getResponseDecrypt" cannot fire before "getResponseEncrypt":
+      calls to fromSyncQ.enq vs. fromSyncQ.enq
 Elaborated module file created: bdir_dut/mkDutWrapper.ba
 compiling ../Bridge.bsv
 code generation for mkBridge starts
@@ -31,7 +45,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
   column 28.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
@@ -56,7 +70,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
   column 28.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
@@ -79,7 +93,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
   column 28.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
@@ -104,7 +118,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
   column 28.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
@@ -125,7 +139,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
   column 11.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
@@ -148,7 +162,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
   column 11.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
@@ -169,7 +183,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
   column 11.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
@@ -192,7 +206,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
   column 11.
   During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  76, column 25.
+  86, column 25.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
 Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
@@ -210,7 +224,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 78,
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 88,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -231,7 +245,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 78,
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 88,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -250,7 +264,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 78,
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 88,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -271,7 +285,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 78,
+  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 88,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -289,7 +303,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   column 9.
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
-  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 79,
+  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -309,7 +323,29 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   line 321, column 9.
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
-  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 79,
+  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 89,
+  column 10.
+  During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
+  During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
+Error: "GetPut.bs", line 337, column 9: (G0007)
+  Reference across clock domain in rule
+  `scemi_setkey_connect_put_mkConnectionGetPut'.
+  Method calls by clock domain:
+    Clock domain 1:
+      default_clock:
+	scemi_settabledut_dut_dutIfc_m_dut.RDY_setkey_put
+	scemi_settabledut_dut_dutIfc_m_dut.setkey_put
+    Clock domain 2:
+      scemi_clk_port_scemi_clkgen.new_clk:
+	scemi_setkey_res_fifo.RDY_deq
+	scemi_setkey_res_fifo.RDY_first
+	scemi_setkey_res_fifo.deq
+	scemi_setkey_res_fifo.first
+  During elaboration of rule `mkConnectionGetPut' at "GetPut.bs", line 337,
+  column 9.
+  During elaboration of `connect_put' at "../SceMiXactors.bsv", line 264,
+  column 14.
+  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -327,7 +363,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   column 9.
   During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 81,
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 91,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -347,7 +383,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   line 321, column 9.
   During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 81,
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 91,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -365,7 +401,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   column 9.
   During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 81,
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 91,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -385,7 +421,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   line 501, column 9.
   During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 81,
+  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 91,
   column 10.
   During elaboration of `scemi' at "../Bridge.bsv", line 9, column 10.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 7, column 8.
@@ -408,228 +444,3 @@ Compilation message: "../SceMiClocks.bsv", line 210, column 16:
 (SCE-MI) Note: clock frequencies assume 100 MHz reference clock
 Compilation message: "../SceMiClocks.bsv", line 463, column 47: 
 (SCE-MI) Max reset count = 16
-Warning: "CommitIfc.bsv", line 68, column 12: (G0023)
-  The condition for rule
-  `scemi_settabledut_dut_prb_control_contextToPrbStr_connectData' is always
-  false. Removing...
-Warning: "SceMiNoC.bsv", line 1697, column 12: (G0023)
-  The condition for rule `scemi_msg_sink_noc_active_decode_noc_header_8bpb' is
-  always false. Removing...
-Warning: "SceMiNoC.bsv", line 1814, column 15: (G0023)
-  The condition for rule
-  `scemi_msg_sink_noc_active_scemi1_process_outport_ack_lt4bpb' is always
-  false. Removing...
-Warning: "SceMiNoC.bsv", line 1956, column 9: (G0023)
-  The condition for rule `scemi_msg_sink_noc_inactive' is always false.
-  Removing...
-Warning: "SceMiNoC.bsv", line 2183, column 9: (G0023)
-  The condition for rule `scemi_msg_source_noc_inactive' is always false.
-  Removing...
-Warning: "SceMiNoC.bsv", line 2281, column 12: (G0023)
-  The condition for rule `scemi_msg_source_noc_inactive_inports' is always
-  false. Removing...
-Warning: "CommitIfc.bsv", line 72, column 12: (G0023)
-  The body of rule
-  `scemi_settabledut_dut_prb_control_contextToPrbStr_connectCommitAck' has no
-  actions. Removing...
-Warning: "../SceMiSerialProbe.bsv", line 409, column 9: (G0023)
-  The body of rule `scemi_settabledut_dut_prb_control_announceCclock' has no
-  actions. Removing...
-Warning: "MsgFormat.bsv", line 195, column 12: (G0023)
-  The body of rule `scemi_never_be_ready' has no actions. Removing...
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
-  urgent than "scemi_settabledut_dut_prb_control_setSample". Conflicts:
-    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_setSample":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-    "scemi_settabledut_dut_prb_control_setSample" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_setSample" was treated as more
-  urgent than "scemi_settabledut_dut_prb_control_unsetFlag". Conflicts:
-    "scemi_settabledut_dut_prb_control_setSample" cannot fire before "scemi_settabledut_dut_prb_control_unsetFlag":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-    "scemi_settabledut_dut_prb_control_unsetFlag" cannot fire before "scemi_settabledut_dut_prb_control_setSample":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-	scemi_settabledut_dut_prb_control_nextSample.write vs. scemi_settabledut_dut_prb_control_nextSample.read
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
-  urgent than "scemi_settabledut_dut_prb_control_respondToPing". Conflicts:
-    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_respondToPing":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
-	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
-	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
-    "scemi_settabledut_dut_prb_control_respondToPing" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
-	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
-	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_receiveTrigger" was treated as more
-  urgent than "scemi_settabledut_dut_prb_control_sendAck". Conflicts:
-    "scemi_settabledut_dut_prb_control_receiveTrigger" cannot fire before "scemi_settabledut_dut_prb_control_sendAck":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
-	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
-	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
-    "scemi_settabledut_dut_prb_control_sendAck" cannot fire before "scemi_settabledut_dut_prb_control_receiveTrigger":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-	scemi_settabledut_dut_prb_control_data_out_beats._write vs. scemi_settabledut_dut_prb_control_data_out_beats._write
-	scemi_settabledut_dut_prb_control_data_out_next.send vs. scemi_settabledut_dut_prb_control_data_out_next.send
-	scemi_settabledut_dut_prb_control_data_out_ok.write vs. scemi_settabledut_dut_prb_control_data_out_ok.read
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_unsetFlag" was treated as more
-  urgent than "scemi_settabledut_dut_prb_control_receiveControl". Conflicts:
-    "scemi_settabledut_dut_prb_control_unsetFlag" cannot fire before "scemi_settabledut_dut_prb_control_receiveControl":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-    "scemi_settabledut_dut_prb_control_receiveControl" cannot fire before "scemi_settabledut_dut_prb_control_unsetFlag":
-      calls to
-	scemi_settabledut_dut_prb_control_enff.enq vs. scemi_settabledut_dut_prb_control_enff.enq
-	scemi_settabledut_dut_prb_control_sampleIntervalV.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV.read
-	scemi_settabledut_dut_prb_control_sampleIntervalV_1.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_1.read
-	scemi_settabledut_dut_prb_control_sampleIntervalV_2.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_2.read
-	scemi_settabledut_dut_prb_control_sampleIntervalV_3.write vs. scemi_settabledut_dut_prb_control_sampleIntervalV_3.read
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_receiveMoreData" was treated as more
-  urgent than "scemi_shutdown_ack". Conflicts:
-    "scemi_settabledut_dut_prb_control_receiveMoreData" cannot fire before "scemi_shutdown_ack":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_dut_prb_control_receiveMoreData":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_dut_prb_control_receiveFirstData" was treated as
-  more urgent than "scemi_shutdown_ack". Conflicts:
-    "scemi_settabledut_dut_prb_control_receiveFirstData" cannot fire before "scemi_shutdown_ack":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_dut_prb_control_receiveFirstData":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut" was
-  treated as more urgent than "scemi_shutdown_ack". Conflicts:
-    "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut" cannot fire before "scemi_shutdown_ack":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-    "scemi_shutdown_ack" cannot fire before "scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-Warning: "../Bridge.bsv", line 7, column 8: (G0010)
-  Rule "scemi_processor_resp_connect_res_mkConnectionGetPut" was treated as
-  more urgent than "scemi_shutdown_ack". Conflicts:
-    "scemi_processor_resp_connect_res_mkConnectionGetPut" cannot fire before "scemi_shutdown_ack":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-    "scemi_shutdown_ack" cannot fire before "scemi_processor_resp_connect_res_mkConnectionGetPut":
-      calls to
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.enq
-	scemi_init_state_msgFIFO.enq vs. scemi_init_state_msgFIFO.notFull
-Warning: "../Bridge.bsv", line 7, column 8: (G0036)
-  Rule "scemi_settabledut_dut_prb_control_receiveControl" will appear to fire
-  before "scemi_settabledut_dut_prb_control_receiveMoreData" when both fire in
-  the same clock cycle, affecting:
-    calls to
-      scemi_settabledut_dut_prb_control_pinged.write vs. scemi_settabledut_dut_prb_control_pinged.write
-Warning: "../Bridge.bsv", line 7, column 8: (G0036)
-  Rule "scemi_settabledut_dut_prb_control_receiveControl" will appear to fire
-  before "scemi_settabledut_dut_prb_control_receiveFirstData" when both fire
-  in the same clock cycle, affecting:
-    calls to
-      scemi_settabledut_dut_prb_control_pinged.write vs. scemi_settabledut_dut_prb_control_pinged.write
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
-  of `scemi_settabledut_dut_prb_control_receiveMoreData' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_data_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
-  of `scemi_settabledut_dut_prb_control_receiveFirstData' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_data_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
-  of `scemi_settabledut_dut_prb_control_receiveTrigger' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_data_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
-  of `scemi_settabledut_dut_prb_control_sendAck' when they execute in the same
-  clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_data_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_data_out_setOK' shadows the effects
-  of `scemi_settabledut_dut_prb_control_respondToPing' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_data_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_receiveMoreData' shadows the effects
-  of `scemi_settabledut_dut_prb_control_receiveControl' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_pinged.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_receiveFirstData' shadows the
-  effects of `scemi_settabledut_dut_prb_control_receiveControl' when they
-  execute in the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_pinged.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_shutdown_ctrl_out_setOK' shadows the effects of
-  `scemi_shutdown_ack' when they execute in the same clock cycle. Affected
-  method calls:
-    scemi_shutdown_ctrl_out_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_processor_resp_outport_setOK' shadows the effects of
-  `scemi_processor_resp_connect_res_mkConnectionGetPut' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_processor_resp_outport_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_softrst_resp_outport_setOK' shadows the effects of
-  `scemi_settabledut_softrst_resp_connect_res_mkConnectionGetPut' when they
-  execute in the same clock cycle. Affected method calls:
-    scemi_settabledut_softrst_resp_outport_ok.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_dut_prb_control_receiveControl' shadows the effects
-  of `scemi_settabledut_dut_prb_control_respondToPing' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_prb_control_pinged.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Warning: "../Bridge.bsv", line 7, column 8: (G0117)
-  Rule `scemi_settabledut_softrst_req_connect_put_mkConnectionGetPut' shadows
-  the effects of `scemi_settabledut_dut_dutIfc_donerest' when they execute in
-  the same clock cycle. Affected method calls:
-    scemi_settabledut_dut_dutIfc_resetting.write
-  To silence this warning, use the `-no-warn-action-shadowing' flag.
-Elaborated Bluesim module file created: bdir_dut/mkBridge.ba
-All packages are up to date.
