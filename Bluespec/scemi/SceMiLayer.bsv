@@ -27,7 +27,7 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
    SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(KeyType) toFactorSyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(KeyType) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    
    EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
    EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);

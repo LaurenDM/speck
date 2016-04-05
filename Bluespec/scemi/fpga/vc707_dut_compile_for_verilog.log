@@ -1,0 +1,1 @@
+/opt/bluespec/Bluespec-2014.07.A/lib/bin/linux64/bsc: error while loading shared libraries: libgmp.so.3: cannot open shared object file: No such file or directory

@@ -1,5 +1,4 @@
 ../Tb.cpp: In function ‘int main(int, char**)’:
-../Tb.cpp:88:33: error: no matching function for call to ‘InportProxyT<BitT<32u> >::sendMessage(FactorType&)’
-../Tb.cpp:88:33: note: candidate is:
-/opt/bluespec/Bluespec-2014.07.A/lib/SceMi/BlueNoC/../bsvxactors/InportProxyT.h:130:8: note: void InportProxyT<T>::sendMessage(const T&) [with T = BitT<32u>]
-/opt/bluespec/Bluespec-2014.07.A/lib/SceMi/BlueNoC/../bsvxactors/InportProxyT.h:130:8: note:   no known conversion for argument 1 from ‘FactorType {aka FixedPoint_16_16}’ to ‘const BitT<32u>&’
+../Tb.cpp:83:3: error: ‘FactorType’ was not declared in this scope
+../Tb.cpp:83:14: error: expected ‘;’ before ‘factor’
+../Tb.cpp:84:3: error: ‘factor’ was not declared in this scope
