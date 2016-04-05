@@ -4,14 +4,6 @@ import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
 
-typedef Tuple2#(UInt#(n), UInt#(n)) Block#(numeric type n);
-
-interface EncryptDecrypt#(numeric type n, numeric type m, numeric type t);
-    method Action setKey(Vector#(m,UInt#(n)) key);
-    method Action inputMessage(Block#(n) text);
-    method ActionValue#(Block#(n)) getResult();
-endinterface
-
 module mkEncrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
@@ -179,16 +171,14 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
     endmethod
 endmodule
 
-/* define synthesize for encrypt and decrypt */
 (* synthesize *)
 module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-   EncryptDecrypt#(N,M,T) e <- mkEncrypt();
-   return e;
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
+    return enc;
 endmodule
 
 (* synthesize *)
 module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-   EncryptDecrypt#(N,M,T) d <- mkDecrypt();
-   return d;
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
+    return dec;
 endmodule
-/* end define synthesize for encrypt and decrypt */
