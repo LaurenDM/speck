@@ -27,7 +27,7 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
    SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(KeyType) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   SyncFIFOIfc#(Key_Flag) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
 
    EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
    EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);
@@ -58,6 +58,17 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
       fromSyncQ.enq(response);
    endrule
 
+   rule putKey;
+      let x = toKeySyncQ.first;
+      toKeySyncQ.deq;
+      if (x.flag == Encrypt) begin
+          encrypt.setKey(x.key);
+      end
+      else if (x.flag == Decrypt) begin
+          decrypt.setKey(x.key);
+      end
+   endrule
+
    interface DutInterface dut;
       interface Put request = toPut(toSyncQ);
       interface Get response = toGet(fromSyncQ);
@@ -65,12 +76,7 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
 
    interface Put setkey;
       method Action put(Key_Flag x);
-	       if (x.flag == Encrypt) begin
-   	        encrypt.setKey(x.key);
-	       end
-	       else if (x.flag == Decrypt) begin
-   	        decrypt.setKey(x.key);
-	       end
+	         toKeySyncQ.enq(x);
       endmethod
    endinterface
 endmodule
