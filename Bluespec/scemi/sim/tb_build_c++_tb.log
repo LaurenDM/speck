@@ -1,4 +1,0 @@
-../Tb.cpp: In function ‘int main(int, char**)’:
-../Tb.cpp:83:3: error: ‘FactorType’ was not declared in this scope
-../Tb.cpp:83:14: error: expected ‘;’ before ‘factor’
-../Tb.cpp:84:3: error: ‘factor’ was not declared in this scope

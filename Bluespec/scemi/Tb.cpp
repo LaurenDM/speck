@@ -7,7 +7,10 @@
 #include "SceMiHeaders.h"
 #include "ResetXactor.h"
 
-typedef BitT<24> word;
+#define u24 unsigned long
+
+typedef u24 word;
+typedef BitT<24> scemiword;
 
 FILE* outfile = NULL;
 FlagType flag;
@@ -17,12 +20,10 @@ long int putcount = 0;
 long int gotcount = 0;
 
 
-void out_cb(void* x, const Block_Flag& res)
+void out_cb(void* x, const Block_Flag& block)
 {
     if (gotcount < putcount) {
-        Block_Flag block = res.get();
-
-        fprintf(outfile,"%lx %lx \n",block.m_block.m_tpl_1,block.m_block.m_tpl_2);
+        fprintf(outfile,"%x %x \n",block.m_block.m_tpl_1.get(),block.m_block.m_tpl_2.get());
         gotcount++;
     } else if (indone && outfile) {
         word end = 0x0;
@@ -32,7 +33,7 @@ void out_cb(void* x, const Block_Flag& res)
     }
 }
 
-void runtest(InportProxyT<BlockType >& inport, FILE* infile)
+void runtest(InportProxyT<Block_Flag >& inport, FILE* infile)
 {
     word in1, in2;
     while (outfile) {
@@ -46,9 +47,9 @@ void runtest(InportProxyT<BlockType >& inport, FILE* infile)
             } else {
                 Block_Flag bf;
                 // again, no idea here
-                bf.m_block.m_tpl1 = in1;
-                bf.m_block.m_tpl2 = in2;
-                bc.m_flag = flag;
+                bf.m_block.m_tpl_1 = BitT<24>(in1);
+                bf.m_block.m_tpl_2 = BitT<24>(in2);
+                bf.m_flag = flag;
                 putcount++;
                 inport.sendMessage(bf);
             }
@@ -83,22 +84,23 @@ int main(int argc, char* argv[])
     reset.reset();
 
     /********************************* DECRYPT *****************************************/
-    flag = FlagType(e_Encrypt);
-    word[4] key = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
+    flag.m_val = FlagType::e_Encrypt;
+    Key_Flag kf;
+    word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
     for (int i=0; i<4; i++){
-        kf.m_key[i]=key[i];
+        kf.m_key[i]=enkey[i];
     }
     kf.m_flag = flag;
-    setkey.sendMessage(0); //TODO set key 0x020100, 0x0a0908, 0x121110, 0x1a1918
+    setkey.sendMessage(kf);
     FILE* infile = fopen("pt_in.txt", "rb");
     if (infile == NULL) {
         std::cerr << "couldn't open pt_in.txt" << std::endl;
-        return;
+        return 1;
     }
     outfile = fopen("ct_out.txt", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open ct_out.txt" << std::endl;
-        return;
+        return 1;
     }
     // Send in all the data.
     runtest(inport,infile);
@@ -108,23 +110,22 @@ int main(int argc, char* argv[])
     indone = false;
     putcount = 0;
     gotcount = 0;
-    flag = FlagType(e_Decrypt);
-    Key_Flag kf;
-    key = {0xcb6915, 0xc6cbb1, 0x4a5369, 0x7f5a9d};
+    flag.m_val = FlagType::e_Decrypt;
+    word dekey[4] = {0xcb6915, 0xc6cbb1, 0x4a5369, 0x7f5a9d};
     for (int i=0; i<4; i++){
-        kf.m_key[i]=key[i];
+        kf.m_key[i]=dekey[i];
     }
     kf.m_flag = flag;
-    setkey.sendMessage(0); //TODO set decryption key 0xcb6915, 0xc6cbb1, 0x4a5369, 0x7f5a9d
+    setkey.sendMessage(kf);
     infile = fopen("ct_out.txt", "rb");
     if (infile == NULL) {
         std::cerr << "couldn't open ct_out.txt" << std::endl;
-        return;
+        return 1;
     }
     outfile = fopen("pt_out.txt", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open pt_out.txt" << std::endl;
-        return;
+        return 1;
     }
     runtest(inport,infile);
 
