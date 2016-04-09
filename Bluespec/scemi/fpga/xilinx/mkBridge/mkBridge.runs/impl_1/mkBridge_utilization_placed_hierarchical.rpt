@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date         : Sat Apr  9 16:52:07 2016
+| Date         : Sat Apr  9 17:15:45 2016
 | Host         : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_utilization -hierarchical -file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge_utilization_placed_hierarchical.rpt
 | Design       : mkBridge
@@ -21,16 +21,16 @@ Table of Contents
 +----------------------------------------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
 |                            Instance                            |                 Module                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP48 Blocks |
 +----------------------------------------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
-| mkBridge                                                       |                                  (top) |      21062 |      20723 |     338 |    1 | 14493 |     14 |      0 |            0 |
-|   (mkBridge)                                                   |                                  (top) |        393 |        393 |       0 |    0 |  3439 |      0 |      0 |            0 |
+| mkBridge                                                       |                                  (top) |      21067 |      20728 |     338 |    1 | 14493 |     14 |      0 |            0 |
+|   (mkBridge)                                                   |                                  (top) |        394 |        394 |       0 |    0 |  3439 |      0 |      0 |            0 |
 |   scemi_1_outFifo                                              |                                  FIFO2 |        298 |        298 |       0 |    0 |   148 |      0 |      0 |            0 |
 |   scemi_bridge                                                 |                    mkPCIEtoBNoCSceMi_4 |      12653 |      12649 |       4 |    0 |  4159 |      6 |      0 |            0 |
-|     (scemi_bridge)                                             |                    mkPCIEtoBNoCSceMi_4 |       5726 |       5726 |       0 |    0 |  2054 |      0 |      0 |            0 |
-|     pbb_arbiter                                                |                           mkTLPArbiter |        870 |        870 |       0 |    0 |   851 |      0 |      0 |            0 |
+|     (scemi_bridge)                                             |                    mkPCIEtoBNoCSceMi_4 |       5725 |       5725 |       0 |    0 |  2054 |      0 |      0 |            0 |
+|     pbb_arbiter                                                |                           mkTLPArbiter |        869 |        869 |       0 |    0 |   851 |      0 |      0 |            0 |
 |       (pbb_arbiter)                                            |                           mkTLPArbiter |          0 |          0 |       0 |    0 |     4 |      0 |      0 |            0 |
 |       tlp_out_cfg_fifo                                         |              FIFO2__parameterized0_138 |        340 |        340 |       0 |    0 |   281 |      0 |      0 |            0 |
 |       tlp_out_dma_fifo                                         |              FIFO2__parameterized0_139 |        368 |        368 |       0 |    0 |   277 |      0 |      0 |            0 |
-|       tlp_out_fifo                                             |              FIFO2__parameterized0_140 |        162 |        162 |       0 |    0 |   289 |      0 |      0 |            0 |
+|       tlp_out_fifo                                             |              FIFO2__parameterized0_140 |        161 |        161 |       0 |    0 |   289 |      0 |      0 |            0 |
 |     pbb_csr_clock_control                                      |              FIFO2__parameterized1_131 |         16 |         16 |       0 |    0 |    46 |      0 |      0 |            0 |
 |     pbb_csr_clock_status                                       |              FIFO2__parameterized1_132 |         51 |         51 |       0 |    0 |    34 |      0 |      0 |            0 |
 |     pbb_csr_intr_info                                          |                  FIFO2__parameterized2 |        141 |        141 |       0 |    0 |   190 |      0 |      0 |            0 |
@@ -86,16 +86,16 @@ Table of Contents
 |           pipe_lane[0].pipe_user_i                             |                pcie_7x_v1_10_pipe_user |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
 |           pipe_lane[1].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_79 |          2 |          2 |       0 |    0 |     0 |      0 |      0 |            0 |
 |           pipe_lane[1].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_80 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
-|           pipe_lane[1].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_81 |        128 |        128 |       0 |    0 |    84 |      0 |      0 |            0 |
-|             (pipe_lane[1].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_81 |         78 |         78 |       0 |    0 |    50 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_81 |        126 |        126 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[1].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_81 |         76 |         76 |       0 |    0 |    50 |      0 |      0 |            0 |
 |             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_128 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
 |           pipe_lane[1].pipe_rate.pipe_rate_i                   |             pcie_7x_v1_10_pipe_rate_82 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
 |           pipe_lane[1].pipe_sync_i                             |             pcie_7x_v1_10_pipe_sync_83 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
 |           pipe_lane[1].pipe_user_i                             |             pcie_7x_v1_10_pipe_user_84 |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
 |           pipe_lane[2].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_85 |          4 |          4 |       0 |    0 |     0 |      0 |      0 |            0 |
 |           pipe_lane[2].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_86 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
-|           pipe_lane[2].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_87 |        122 |        122 |       0 |    0 |    84 |      0 |      0 |            0 |
-|             (pipe_lane[2].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_87 |         72 |         72 |       0 |    0 |    50 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_87 |        126 |        126 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[2].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_87 |         76 |         76 |       0 |    0 |    50 |      0 |      0 |            0 |
 |             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_127 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
 |           pipe_lane[2].pipe_rate.pipe_rate_i                   |             pcie_7x_v1_10_pipe_rate_88 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
 |           pipe_lane[2].pipe_sync_i                             |             pcie_7x_v1_10_pipe_sync_89 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
@@ -209,12 +209,12 @@ Table of Contents
 |   scemi_setkey_inport_wait_sp                                  |                       SyncHandshake_17 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
 |   scemi_setkey_res_fifo                                        |               SyncFIFO__parameterized1 |        176 |        108 |      68 |    0 |   119 |      0 |      0 |            0 |
 |   scemi_settabledut_dut_dutIfc_didreset                        |                  FIFO2__parameterized4 |          4 |          4 |       0 |    0 |     3 |      0 |      0 |            0 |
-|   scemi_settabledut_dut_dutIfc_m_dut                           |                           mkDutWrapper |       2717 |       2576 |     140 |    1 |  2156 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |                           mkDutWrapper |       2716 |       2575 |     140 |    1 |  2156 |      0 |      0 |            0 |
 |     decrypt                                                    |                   mkSynthesizedDecrypt |       1253 |       1253 |       0 |    0 |   941 |      0 |      0 |            0 |
 |       (decrypt)                                                |                   mkSynthesizedDecrypt |        348 |        348 |       0 |    0 |   745 |      0 |      0 |            0 |
 |       dec_ciphertextFIFO                                       |               FIFO2__parameterized8_48 |        737 |        737 |       0 |    0 |    98 |      0 |      0 |            0 |
 |       dec_plaintextFIFO                                        |               FIFO2__parameterized8_49 |        168 |        168 |       0 |    0 |    98 |      0 |      0 |            0 |
-|     encrypt                                                    |                   mkSynthesizedEncrypt |       1266 |       1266 |       0 |    0 |   941 |      0 |      0 |            0 |
+|     encrypt                                                    |                   mkSynthesizedEncrypt |       1265 |       1265 |       0 |    0 |   941 |      0 |      0 |            0 |
 |       (encrypt)                                                |                   mkSynthesizedEncrypt |        347 |        347 |       0 |    0 |   745 |      0 |      0 |            0 |
 |       enc_ciphertextFIFO                                       |                  FIFO2__parameterized8 |        251 |        251 |       0 |    0 |    98 |      0 |      0 |            0 |
 |       enc_plaintextFIFO                                        |               FIFO2__parameterized8_47 |        669 |        669 |       0 |    0 |    98 |      0 |      0 |            0 |
@@ -225,7 +225,7 @@ Table of Contents
 |   scemi_settabledut_dut_dutIfc_myrst                           |             MakeResetA__parameterized1 |          3 |          3 |       0 |    0 |     8 |      0 |      0 |            0 |
 |     (scemi_settabledut_dut_dutIfc_myrst)                       |             MakeResetA__parameterized1 |          1 |          1 |       0 |    0 |     1 |      0 |      0 |            0 |
 |     rstSync                                                    |             SyncResetA__parameterized4 |          2 |          2 |       0 |    0 |     7 |      0 |      0 |            0 |
-|   scemi_settabledut_dut_prb_control_ackFifo                    |                  FIFO2__parameterized1 |        137 |        137 |       0 |    0 |    34 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_ackFifo                    |                  FIFO2__parameterized1 |        147 |        147 |       0 |    0 |    34 |      0 |      0 |            0 |
 |   scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |                       SyncHandshake_18 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
 |   scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |                       SyncHandshake_19 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
 |   scemi_settabledut_dut_prb_control_control_in_ending_reset    |                           SyncPulse_20 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |

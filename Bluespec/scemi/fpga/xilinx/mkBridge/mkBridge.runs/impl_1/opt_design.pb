@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2u
-aTime (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.70 . Memory (MB): peak = 1842.484 ; gain = 4.0202default:default
+aTime (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.70 . Memory (MB): peak = 1842.484 ; gain = 4.0202default:default
 X
 
 Starting %s Task
@@ -74,7 +74,7 @@ B
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
 l
 
 Phase %s%s
@@ -96,7 +96,7 @@ C
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
 ]
 
 Phase %s%s
@@ -118,7 +118,7 @@ $Phase 3 Sweep | Checksum: 2cf846b25
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.484 ; gain = 0.0002default:default
 A
 5Ending Logic Optimization Task | Checksum: 2cf846b25
 *common
@@ -194,7 +194,7 @@ A
 
 %s
 *constraints2q
-]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1971.508 ; gain = 129.0232default:default
+]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1972.508 ; gain = 130.0232default:default
 Q
 Releasing license: %s
 83*common2"
@@ -217,8 +217,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 opt_design: 2default:default2
 00:00:222default:default2
 00:00:202default:default2
-1971.5082default:default2
-133.0432default:defaultZ17-268
+1972.5082default:default2
+134.0432default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -233,8 +233,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
 00:00:00.532default:default2
-00:00:00.612default:default2
-1972.5082default:default2
+00:00:00.622default:default2
+1973.5082default:default2
 0.0002default:defaultZ17-268
 
 
