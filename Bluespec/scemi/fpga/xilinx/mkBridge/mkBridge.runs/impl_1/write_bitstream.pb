@@ -16,7 +16,7 @@ o
 G
 Running DRC with %s threads
 24*drc2
-22default:defaultZ23-27
+82default:defaultZ23-27
 k
 DRC finished with %s
 1905*	planAhead26
@@ -52,12 +52,6 @@ V
 j
 QWebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 118*projectZ1-118
- 
-†Unable to write the webtalk settings file.  Please check that the appropriate environment variable (APPDATA or HOME) is properly set.
-383*commonZ17-570
- 
-†Unable to write the webtalk settings file.  Please check that the appropriate environment variable (APPDATA or HOME) is properly set.
-383*commonZ17-570
 s
 ZWebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
 185*commonZ17-185
@@ -69,10 +63,10 @@ Q
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2%
 write_bitstream: 2default:default2
-00:04:362default:default2
-00:04:572default:default2
-2796.7732default:default2
-431.2582default:defaultZ17-268
+00:01:542default:default2
+00:01:512default:default2
+2927.2152default:default2
+434.2502default:defaultZ17-268
 
 
 End Record

@@ -6,50 +6,45 @@ file delete -force ./mkBridge.bit
 
 create_project mkBridge ./mkBridge -part xc7vx485t-ffg1761-2
 set_property design_mode RTL [current_fileset -srcset]
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFIRFilter.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedIFFT.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedToMP.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkDutWrapper.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFFT.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFromMP.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkBridge.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkMultiplier.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkDutWrapper.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedPitchAdjust.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkSynthesizedDecrypt.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkBridge.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkSynthesizedEncrypt.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFOL1.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegUN.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegUN.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockInverter.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegUN.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFOL1.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/SizedFIFO.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockInverter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncHandshake.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegA.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegUN.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegN.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BypassWire.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire0.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CRegN5.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegN.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetEither.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegN.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegN.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CRegN5.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegA.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingBypassWire.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockGen.v}
-add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingBypassWire.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire0.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BypassWire.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/BRAM2.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v}
@@ -85,7 +80,7 @@ add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_qpll_reset.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_qpll_wrapper.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_rxeq_scan.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkBridge.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkBridge.v}
 read_xdc ./default.xdc
 
 set_property top mkBridge [get_property srcset [current_run]]

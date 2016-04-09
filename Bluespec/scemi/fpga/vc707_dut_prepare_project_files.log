@@ -1,54 +1,44 @@
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 *****
 Subcommand: /opt/bluespec/Bluespec-2014.07.A/lib/tcllib/bluespec/listVlogFiles.tcl -bdir bdir_dut -vdir vlog_dut -p bdir_dut:vlog_dut:/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado:%/Libraries/Xactors:%/Libraries/TLM3:%/Libraries/Axi:%/Libraries/Axi4:%/Libraries/Ahb:%/Libraries/Apb:+ mkBridge mkBridge
 *****
 Writing xilinx/mkBridge.files.
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFIRFilter.v (mkSynthesizedFIRFilter/virtex7)
-
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedIFFT.v (mkSynthesizedIFFT/virtex7)
-
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v (mkPCIEtoBNoCSceMi_4/virtex7)
 
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedToMP.v (mkSynthesizedToMP/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkDutWrapper.v (mkDutWrapper/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v (mkTLPDispatcher/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v (mkSceMiUInt32Parameter/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v (mkTLPArbiter/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v (mkSceMiLinkTypeParameter/virtex7)
 
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFFT.v (mkSynthesizedFFT/virtex7)
-
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedFromMP.v (mkSynthesizedFromMP/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v (mkSceMiUInt32Parameter/virtex7)
-
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v (mkSceMiUInt64Parameter/virtex7)
 
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkBridge.v (mkBridge/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkSynthesizedDecrypt.v (mkSynthesizedDecrypt/virtex7)
 
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkMultiplier.v (mkMultiplier/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkBridge.v (mkBridge/virtex7)
 
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkDutWrapper.v (mkDutWrapper/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v (mkTLPDispatcher/virtex7)
-
-Examining /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vlog_dut/mkSynthesizedPitchAdjust.v (mkSynthesizedPitchAdjust/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/vlog_dut/mkSynthesizedEncrypt.v (mkSynthesizedEncrypt/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v (ProbeHook/virtex7)
 
@@ -56,57 +46,57 @@ Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v (ResetInv
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v (SyncWire/virtex7)
 
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v (SyncReset0/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFOL1.v (FIFOL1/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegUN.v (RegUN/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegUN.v (CrossingRegUN/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire.v (RWire/virtex7)
+
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v (SyncResetA/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeClock.v (MakeClock/virtex7)
 
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockInverter.v (ClockInverter/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v (FIFO2/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v (SyncPulse/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v (SyncBit05/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v (ConfigRegN/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegUN.v (RegUN/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFOL1.v (FIFOL1/virtex7)
-
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SizedFIFO.v (SizedFIFO/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockInverter.v (ClockInverter/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncHandshake.v (SyncHandshake/virtex7)
 
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegA.v (RegA/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v (MakeReset0/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegUN.v (CrossingRegUN/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegN.v (RegN/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BypassWire.v (BypassWire/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire0.v (RWire0/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v (MakeResetA/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v (SyncReset0/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire.v (RWire/virtex7)
-
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CRegN5.v (CRegN5/virtex7)
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetEither.v (ResetEither/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingRegN.v (CrossingRegN/virtex7)
 
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetEither.v (ResetEither/virtex7)
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegN.v (RegN/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CRegN5.v (CRegN5/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v (SyncPulse/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v (FIFO2/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RegA.v (RegA/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingBypassWire.v (CrossingBypassWire/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v (SyncBit05/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v (SyncFIFO/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ClockGen.v (ClockGen/virtex7)
 
-Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/CrossingBypassWire.v (CrossingBypassWire/virtex7)
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v (MakeReset0/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RWire0.v (RWire0/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BypassWire.v (BypassWire/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v (ConfigRegN/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v (MakeResetA/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BRAM2.v (BRAM2/virtex7)
 
