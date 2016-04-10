@@ -229,7 +229,7 @@ module mkEncrypt_unfold1(EncryptDecrypt#(n,m,t));
         let xy_new = roundfun(xy,roundkey);
         let lk = roundfun(tuple2(l[round],roundkey),round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round+1<valueof(t)) begin
+        if(round+1<fromInteger(valueof(t))) begin
             xy_new = roundfun(xy_new,tpl_2(lk));
             lk = roundfun(tuple2(l[round+1],tpl_2(lk)),round+1);
             l[round+fromInteger(valueof(m))] <= tpl_1(lk);
@@ -316,7 +316,7 @@ module mkDecrypt_unfold1(EncryptDecrypt#(n,m,t));
         let xy_new = roundfuninv(xy,roundkey);
         let lk = roundfuninv(tuple2(l[round],roundkey),fromInteger(valueof(t))-2-round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round+1<valueof(t)) begin
+        if(round+1<fromInteger(valueof(t))) begin
             xy_new = roundfuninv(xy_new,tpl_2(lk));
             lk = roundfuninv(tuple2(l[round+1],tpl_2(lk)),fromInteger(valueof(t))-3-round);
             l[round+fromInteger(valueof(m))] <= tpl_1(lk);

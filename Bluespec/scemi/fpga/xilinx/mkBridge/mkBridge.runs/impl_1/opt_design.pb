@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2u
-aTime (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.69 . Memory (MB): peak = 1842.488 ; gain = 4.0202default:default
+aTime (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.71 . Memory (MB): peak = 1842.488 ; gain = 4.0202default:default
 X
 
 Starting %s Task
@@ -216,7 +216,7 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
 00:00:222default:default2
-00:00:192default:default2
+00:00:202default:default2
 1972.5122default:default2
 134.0432default:defaultZ17-268
 4
