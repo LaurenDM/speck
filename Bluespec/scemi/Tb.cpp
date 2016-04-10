@@ -23,13 +23,13 @@ long int gotcount = 0;
 
 void out_cb(void* x, const Block_Flag& block)
 {
-    printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
+    //printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
     if (gotcount < putcount) {
-        printf("printing out \n");
+        //printf("printing out \n");
         fprintf(outfile,"%x %x \n",block.m_block.m_tpl_1.get(),block.m_block.m_tpl_2.get());
         gotcount++;
     } else if (indone && outfile) {
-        printf("closing outfile \n");
+        //printf("closing outfile \n");
         word end = 0x0;
         fprintf(outfile,"%lx %lx \n",end,end);
         fclose(outfile);
@@ -43,16 +43,16 @@ void runtest(InportProxyT<Block_Flag >& inport, FILE* infile)
     word in1, in2;
     while (outfile) {
         if (!indone) {
-            printf("scanning, gotcount = %ld, putcount= %ld  \n",gotcount,putcount);
+            //printf("scanning, gotcount = %ld, putcount= %ld  \n",gotcount,putcount);
             fscanf(infile,"%lx %lx",&in1, &in2);
 
             if (in1 == 0 && in2 == 0) { // we will use 0's to indicate end of plaintexts/ciphertexts
-                printf("end of file \n");
+                //printf("end of file \n");
                 indone = true;
                 fclose(infile);
                 infile = NULL;
             } else {
-                printf("sending input \n");
+                //printf("sending input \n");
                 Block_Flag bf;
                 bf.m_block.m_tpl_1 = BitT<24>(in1);
                 bf.m_block.m_tpl_2 = BitT<24>(in2);
@@ -103,7 +103,7 @@ int main(int argc, char* argv[])
     }
     kf.m_flag = flag;
     setkey.sendMessage(kf);
-    printf("enc key = set \n");
+    //printf("enc key = set \n");
     FILE* infile = fopen("pt_in.txt", "rb");
     if (infile == NULL) {
         std::cerr << "couldn't open pt_in.txt" << std::endl;
