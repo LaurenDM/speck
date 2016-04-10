@@ -4,6 +4,18 @@ import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
 
+(* synthesize *)
+module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
+    return enc;
+endmodule
+
+(* synthesize *)
+module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
+    return dec;
+endmodule
+
 module mkEncrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
@@ -171,18 +183,6 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
     endmethod
 endmodule
 
-(* synthesize *)
-module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
-    return enc;
-endmodule
-
-(* synthesize *)
-module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
-    return dec;
-endmodule
-
 module mkEncrypt_unfold1(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
@@ -229,7 +229,7 @@ module mkEncrypt_unfold1(EncryptDecrypt#(n,m,t));
         let xy_new = roundfun(xy,roundkey);
         let lk = roundfun(tuple2(l[round],roundkey),round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round+1<valueof(t)) begin
+        if(round+1<fromInteger(valueof(t))) begin
             xy_new = roundfun(xy_new,tpl_2(lk));
             lk = roundfun(tuple2(l[round+1],tpl_2(lk)),round+1);
             l[round+fromInteger(valueof(m))] <= tpl_1(lk);
@@ -316,7 +316,7 @@ module mkDecrypt_unfold1(EncryptDecrypt#(n,m,t));
         let xy_new = roundfuninv(xy,roundkey);
         let lk = roundfuninv(tuple2(l[round],roundkey),fromInteger(valueof(t))-2-round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round+1<valueof(t)) begin
+        if(round+1<fromInteger(valueof(t))) begin
             xy_new = roundfuninv(xy_new,tpl_2(lk));
             lk = roundfuninv(tuple2(l[round+1],tpl_2(lk)),fromInteger(valueof(t))-3-round);
             l[round+fromInteger(valueof(m))] <= tpl_1(lk);
