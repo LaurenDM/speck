@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cmath>
+#include <time.h>
 
 #include "bsv_scemi.h"
 #include "SceMiHeaders.h"
@@ -114,8 +115,11 @@ int main(int argc, char* argv[])
         return 1;
     }
     // Send in all the data.
+    clock_t starttime,endtime;
+    starttime = clock();
     runtest(inport,infile);
-    printf("first test done \n");
+    endtime = clock();
+    printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 
     /********************************* DECRYPT *****************************************/
     // reset
@@ -141,8 +145,10 @@ int main(int argc, char* argv[])
         std::cerr << "couldn't open pt_out.txt" << std::endl;
         return 1;
     }
+    starttime =clock();
     runtest(inport,infile);
-
+    endtime=clock();
+    printf("decryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
     /********************************* FINISH *****************************************/
     std::cout << "shutting down..." << std::endl;
     shutdown.blocking_send_finish();
