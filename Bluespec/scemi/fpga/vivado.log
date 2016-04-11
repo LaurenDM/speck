@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Tue Mar  1 15:58:50 2016
+# Process ID: 27515
+# Log file: /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vivado.log
+# Journal file: /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vivado.jou
+#-----------------------------------------------------------
+source /mit/6.375//install/scripts/program.tcl
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2014.1
+  **** Build date : Apr  4 2014-13:55:47
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+INFO: [Labtools 27-2286] Connecting to vcse_server host localhost port 60001
+INFO: [Labtools 27-109] Started Vivado Cse Server instance on port: 60001
+INFO: [Labtools 27-2286] Connecting to vcse_server host localhost port 60001
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+# open_hw_target 
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+# set vc707fpga [lindex [get_hw_devices] 0] 
+# set file [lindex $argv 0]
+# set_property PROGRAM.FILE $file $vc707fpga
+# puts "fpga is $vc707fpga, bit file size is [exec ls -sh $file], PROGRAM BEGIN"
+fpga is xc7vx485t_0, bit file size is 20M xilinx/mkBridge.bit, PROGRAM BEGIN
+# program_hw_devices $vc707fpga
+INFO: [Labtools 27-2154] Reading 20273528 bytes from file xilinx/mkBridge.bit...
+INFO: [Labtools 27-32] Done pin status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 959.129 ; gain = 171.578
+# refresh_hw_device $vc707fpga
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  1 15:59:25 2016...
