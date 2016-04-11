@@ -1,24 +1,12 @@
-
 import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
+import Speck::*;
 
-(* synthesize *)
-module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
-    return enc;
-endmodule
-
-(* synthesize *)
-module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
-    return dec;
-endmodule
-
-module mkEncrypt(EncryptDecrypt#(n,m,t));
+module mkEncrypt_unfold1(EncryptDecrypt#(n,m,t));
     // Permanent Regs
-    Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
+    Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
 
     Reg#(UInt#(TLog#(n))) alpha <- mkReg(8);
@@ -62,7 +50,12 @@ module mkEncrypt(EncryptDecrypt#(n,m,t));
         let xy_new = roundfun(xy,roundkey);
         let lk = roundfun(tuple2(l[round],roundkey),round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round == fromInteger(valueof(t)-1)) begin
+        if(round+1<fromInteger(valueof(t))) begin
+            xy_new = roundfun(xy_new,tpl_2(lk));
+            lk = roundfun(tuple2(l[round+1],tpl_2(lk)),round+1);
+            l[round+fromInteger(valueof(m))] <= tpl_1(lk);
+        end
+        if(round > fromInteger(valueof(t)-3)) begin
             roundkey <= k0;
             round <= 0;
             ciphertextFIFO.enq(xy_new);
@@ -70,17 +63,15 @@ module mkEncrypt(EncryptDecrypt#(n,m,t));
         end
         else begin
             roundkey <= tpl_2(lk);
-            round <= round + 1;
+            round <= round + 2;
             xyReg <= xy_new;
         end
     endrule
 
     method Action setKey(Vector#(m,UInt#(n)) key) if(!plaintextFIFO.notEmpty());
-        Vector#(TSub#(TAdd#(t,m),1), UInt#(n)) l_initial = replicate(0);
         for(Integer i=0; i<valueof(m)-1; i=i+1) begin
-            l_initial[i] = key[i+1];
+            l[i] <= key[i+1];
         end
-        l <= l_initial;
         k0 <= key[0];
         roundkey <= key[0];
         if(valueof(n)==16) begin
@@ -100,9 +91,9 @@ module mkEncrypt(EncryptDecrypt#(n,m,t));
 endmodule
 
 
-module mkDecrypt(EncryptDecrypt#(n,m,t));
+module mkDecrypt_unfold1(EncryptDecrypt#(n,m,t));
     // Permanent Regs
-    Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
+    Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
 
     Reg#(UInt#(TLog#(n))) alpha <- mkReg(8);
@@ -146,7 +137,12 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
         let xy_new = roundfuninv(xy,roundkey);
         let lk = roundfuninv(tuple2(l[round],roundkey),fromInteger(valueof(t))-2-round);
         l[round+fromInteger(valueof(m))-1] <= tpl_1(lk);
-        if(round == fromInteger(valueof(t)-1)) begin
+        if(round+1<fromInteger(valueof(t))) begin
+            xy_new = roundfuninv(xy_new,tpl_2(lk));
+            lk = roundfuninv(tuple2(l[round+1],tpl_2(lk)),fromInteger(valueof(t))-3-round);
+            l[round+fromInteger(valueof(m))] <= tpl_1(lk);
+        end
+        if(round > fromInteger(valueof(t)-3)) begin
             roundkey <= k0;
             round <= 0;
             plaintextFIFO.enq(xy_new);
@@ -160,11 +156,9 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
     endrule
 
     method Action setKey(Vector#(m,UInt#(n)) key) if(!ciphertextFIFO.notEmpty());
-        Vector#(TSub#(TAdd#(t,m),1), UInt#(n)) l_initial = replicate(0);
         for(Integer i=0; i<valueof(m)-1; i=i+1) begin
-            l_initial[i] = key[i+1];
+            l[i] <= key[i+1];
         end
-        l <= l_initial;
         k0 <= key[0];
         roundkey <= key[0];
         if(valueof(n)==16) begin
