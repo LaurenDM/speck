@@ -217,8 +217,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 get_clocks: 2default:default2
 00:00:192default:default2
 00:00:172default:default2
-1837.4692default:default2
-570.0472default:defaultZ17-268
+1830.4882default:default2
+567.1562default:defaultZ17-268
 ™
 Finished Parsing XDC File [%s]
 178*designutils2Z
@@ -240,8 +240,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 link_design: 2default:default2
 00:00:422default:default2
 00:00:422default:default2
-1837.4692default:default2
-1083.4382default:defaultZ17-268
+1831.4882default:default2
+1077.4612default:defaultZ17-268
 
 
 End Record
