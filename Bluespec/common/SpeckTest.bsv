@@ -1,16 +1,14 @@
 import Speck::*;
+import SpeckTypes::*;
+import Unfolding::*;
 import Vector::*;
 import Printf::*;
-
-typedef 24 N;
-typedef 4 M;
-typedef 23 T;
 
 typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
 
 module mkSpeckTest(Empty);
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
-    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold(2);
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold(2);
 
     Block#(N) plaintext = tuple2('h6d2073, 'h696874);
     Block#(N) ciphertext = tuple2('h735e10, 'hb6445d);
