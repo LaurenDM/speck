@@ -102,7 +102,6 @@ module mkEncrypt_unfold(Integer stages ,EncryptDecrypt#(n,m,t) ifc);
             l[i] <= key[i+1];
         end
         k0 <= key[0];
-        roundkey <= key[0];
         if(valueof(n)==16) begin
             alpha <= 7;
             beta <= 2;
@@ -219,7 +218,6 @@ module mkDecrypt_unfold(Integer stages, EncryptDecrypt#(n,m,t) ifc);
             l[i] <= key[i+1];
         end
         k0 <= key[0];
-        roundkey <= key[0];
         if(valueof(n)==16) begin
             alpha <= 7;
             beta <= 2;
