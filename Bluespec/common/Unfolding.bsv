@@ -3,7 +3,9 @@ import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
 
-module mkEncrypt_unfold(Integer stages ,EncryptDecrypt#(n,m,t) ifc);
+typedef 2 STAGES;
+
+module mkEncrypt_unfold(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
@@ -12,9 +14,9 @@ module mkEncrypt_unfold(Integer stages ,EncryptDecrypt#(n,m,t) ifc);
     Reg#(UInt#(TLog#(n))) beta <- mkReg(3);
 
     // Regs between rounds/stages
-    Vector#(stages,Reg#(UInt#(n))) round <- replicateM(mkReg(0));
-    Vector#(stages,Reg#(UInt#(n))) roundkey <- replicateM(mkReg(0));
-    Vector#(stages,Reg#(Block#(n))) xyReg <- replicateM(mkReg(tuple2(0,0)));
+    Vector#(STAGES,Reg#(UInt#(n))) round <- replicateM(mkReg(0));
+    Vector#(STAGES,Reg#(UInt#(n))) roundkey <- replicateM(mkReg(0));
+    Vector#(STAGES,Reg#(Block#(n))) xyReg <- replicateM(mkReg(tuple2(0,0)));
 
     // Input/outputFIFO's
     FIFOF#(Block#(n)) plaintextFIFO <- mkFIFOF(); // inputfifo
@@ -43,55 +45,38 @@ module mkEncrypt_unfold(Integer stages ,EncryptDecrypt#(n,m,t) ifc);
 
     // function to determine if busy (encryptmode) or we can set key, making rules and setkey mutually exclusive
     function Bool isBusy();
-        return (plaintextFIFO.notEmpty | any(isNonZero, round));
+        return (plaintextFIFO.notEmpty || any(isNonZero, readVReg(round)));
     endfunction
-
-    rule stage0(isBusy());
-        Block#(n) xy = ?;
-        if(round[0]==0 & !plaintextFIFO.notEmpty()) begin
-            round[1] <= 0;
-        end
-        else begin
-            if(round[0]==0) begin
-                xy = plaintextFIFO.first();
-                plaintextFIFO.deq;
-            end
-            else begin
-                xy = xyReg[0];
-            end
-            let xynew = roundfun(xy,k[0]);
-            let lk = roundfun(tuple2(l[0],k[0]),0);
-            l[fromInteger(valueof(m))-1] <= tpl_1(lk);
-            if(round[0] == fromInteger(valueof(t)-1)) begin
-                round[1] <= 0;
-                ciphertextFIFO.enq(xy_new);
-            end
-            else begin
-                roundkey[1] <= tpl_2(lk);
-                round[1] <= 1;
-                xyReg[1] <= xy_new;
-            end
-        end
-    endrule
 
     rule pipeline(isBusy());
         Block#(n) xy = ?;
-        for(Integer s=1; s<stages; s=s+1) begin
-            if(round[s]==0) begin //round = 0 is equivalent to tagged Invalid for xyReg
-                round[mod(s+1,stages)] <= 0;
+        UInt#(n) key = ?;
+        for(Integer s=0; s<valueof(STAGES); s=s+1) begin
+            if(round[s]==0 && (s!=0 || !plaintextFIFO.notEmpty())) begin //round = 0 is equivalent to tagged Invalid for xyReg
+                round[mod(s+1,valueof(STAGES))] <= 0;
             end
-            else begin // if round not 0 then the xyReg is valid
-                let xy_new = roundfun(xyReg[s],roundkey[s]);
-                let lk = roundfun(tuple2(l[round[s]],roundkey[s]),round[s]);
-                l[round[s]+fromInteger(valueof(m))-1] <= tpl_1(lk);
-                if(round[s] == fromInteger(valueof(t)-1)) begin // compiler smart enough to only add extra hardware to one stage or do we need extra if s==mod(valueof(t),stages)-1
-                    round[mod(s+1,stages)] <= 0;
+            else begin
+                if(round[s]==0) begin
+                    xy = plaintextFIFO.first();
+                    plaintextFIFO.deq();
+                    key = k0;
+                end
+                else begin
+                    xy = xyReg[s];
+                    key = roundkey[s];
+                end
+                let xy_new = roundfun(xy,key);
+                let lk = roundfun(tuple2(l[round[s]],key),round[s]);
+                if(round[s]==0 || countElem(round[s],readVReg(round))==1) // should always be true, just testing to make compiler happy
+                    l[round[s]+fromInteger(valueof(m))-1] <= tpl_1(lk);
+                if(mod(valueof(t),valueof(STAGES))-1==s && round[s] == fromInteger(valueof(t)-1)) begin
+                    round[mod(s+1,valueof(STAGES))] <= 0;
                     ciphertextFIFO.enq(xy_new);
                 end
                 else begin
-                    roundkey[mod(s+1,stages)] <= tpl_2(lk);
-                    round[mod(s+1,stages)] <= round[s]+1;
-                    xyReg[mod(s+1,stages)] <= xy_new;
+                    roundkey[mod(s+1,valueof(STAGES))] <= tpl_2(lk);
+                    round[mod(s+1,valueof(STAGES))] <= round[s]+1;
+                    xyReg[mod(s+1,valueof(STAGES))] <= xy_new;
                 end
             end
         end
@@ -119,7 +104,7 @@ module mkEncrypt_unfold(Integer stages ,EncryptDecrypt#(n,m,t) ifc);
 endmodule
 
 
-module mkDecrypt_unfold(Integer stages, EncryptDecrypt#(n,m,t) ifc);
+module mkDecrypt_unfold(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
@@ -128,9 +113,9 @@ module mkDecrypt_unfold(Integer stages, EncryptDecrypt#(n,m,t) ifc);
     Reg#(UInt#(TLog#(n))) beta <- mkReg(3);
 
     // Regs between rounds/stages
-    Vector#(stages,Reg#(UInt#(n))) round <- replicateM(mkReg(0));
-    Vector#(stages,Reg#(UInt#(n))) roundkey <- replicateM(mkReg(0));
-    Vector#(stages,Reg#(Block#(n))) xyReg <- replicateM(mkReg(tuple2(0,0)));
+    Vector#(STAGES,Reg#(UInt#(n))) round <- replicateM(mkReg(0));
+    Vector#(STAGES,Reg#(UInt#(n))) roundkey <- replicateM(mkReg(0));
+    Vector#(STAGES,Reg#(Block#(n))) xyReg <- replicateM(mkReg(tuple2(0,0)));
 
     // Input/outputFIFO's
     FIFOF#(Block#(n)) ciphertextFIFO <- mkFIFOF(); // inputfifo
@@ -159,55 +144,38 @@ module mkDecrypt_unfold(Integer stages, EncryptDecrypt#(n,m,t) ifc);
 
     // function to determine if busy (encryptmode) or we can set key, making rules and setkey mutually exclusive
     function Bool isBusy();
-        return (ciphertextFIFO.notEmpty | any(isNonZero, round));
+        return (ciphertextFIFO.notEmpty || any(isNonZero, readVReg(round)));
     endfunction
-
-    rule stage0(isBusy());
-        Block#(n) xy = ?;
-        if(round[0]==0 & !ciphertextFIFO.notEmpty()) begin
-            round[1] <= 0;
-        end
-        else begin
-            if(round[0]==0) begin
-                xy = ciphertextFIFO.first();
-                ciphertextFIFO.deq;
-            end
-            else begin
-                xy = xyReg[0];
-            end
-            let xynew = roundfuninv(xy,k[0]);
-            let lk = roundfuninv(tuple2(l[0],k[0]),0);
-            l[fromInteger(valueof(m))-1] <= tpl_1(lk);
-            if(round[0] == fromInteger(valueof(t)-1)) begin
-                round[1] <= 0;
-                plaintextFIFO.enq(xy_new);
-            end
-            else begin
-                roundkey[1] <= tpl_2(lk);
-                round[1] <= 1;
-                xyReg[1] <= xy_new;
-            end
-        end
-    endrule
 
     rule pipeline(isBusy());
         Block#(n) xy = ?;
-        for(Integer s=1; s<stages; s=s+1) begin
-            if(round[s]==0) begin //round = 0 is equivalent to tagged Invalid for xyReg
-                round[mod(s+1,stages)] <= 0;
+        UInt#(n) key = ?;
+        for(Integer s=0; s<valueof(STAGES); s=s+1) begin
+            if(round[s]==0 && (s!=0 || !ciphertextFIFO.notEmpty())) begin //round = 0 is equivalent to tagged Invalid for xyReg
+                round[mod(s+1,valueof(STAGES))] <= 0;
             end
-            else begin // if round not 0 then the xyReg is valid
-                let xy_new = roundfuninv(xyReg[s],roundkey[s]);
-                let lk = roundfuninv(tuple2(l[round[s]],roundkey[s]),round[s]);
-                l[round[s]+fromInteger(valueof(m))-1] <= tpl_1(lk);
-                if(round[s] == fromInteger(valueof(t)-1)) begin // compiler smart enough to only add extra hardware to one stage or do we need extra if s==mod(valueof(t),stages)-1
-                    round[mod(s+1,stages)] <= 0;
+            else begin
+                if(round[s]==0) begin
+                    xy = ciphertextFIFO.first();
+                    ciphertextFIFO.deq();
+                    key = k0;
+                end
+                else begin
+                    xy = xyReg[s];
+                    key = roundkey[s];
+                end
+                let xy_new = roundfuninv(xy,key);
+                let lk = roundfuninv(tuple2(l[round[s]],key),fromInteger(valueof(t))-2-round[s]);
+                if(round[s]==0 || countElem(round[s],readVReg(round))==1)
+                    l[round[s]+fromInteger(valueof(m))-1] <= tpl_1(lk);
+                if(mod(valueof(t),valueof(STAGES))-1==s && round[s] == fromInteger(valueof(t)-1)) begin
+                    round[mod(s+1,valueof(STAGES))] <= 0;
                     plaintextFIFO.enq(xy_new);
                 end
                 else begin
-                    roundkey[mod(s+1,stages)] <= tpl_2(lk);
-                    round[mod(s+1,stages)] <= round[s]+1;
-                    xyReg[mod(s+1,stages)] <= xy_new;
+                    roundkey[mod(s+1,valueof(STAGES))] <= tpl_2(lk);
+                    round[mod(s+1,valueof(STAGES))] <= round[s]+1;
+                    xyReg[mod(s+1,valueof(STAGES))] <= xy_new;
                 end
             end
         end
