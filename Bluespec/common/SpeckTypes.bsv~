@@ -1,7 +1,0 @@
-
-
-typedef 16 WORD_SIZE;
-typedef 4 KEY_WORD;
-typedef 22 NUM_ROUNDS;
-
-typedef block Block#(N);
