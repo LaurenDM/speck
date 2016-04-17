@@ -1,0 +1,11 @@
+#!/bin/bash
+# This script cleans up the scemi/sim directory
+
+# remove logs
+rm -f *.log
+# remove folders
+rm -rf *_dut
+# remove executables
+rm -f *_dut *_dut.so tb
+# remove generated files
+rm -rf tbinclude scemi.params *.bspec

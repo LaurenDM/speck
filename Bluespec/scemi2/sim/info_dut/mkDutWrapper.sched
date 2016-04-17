@@ -1,0 +1,66 @@
+=== Generated schedule for mkDutWrapper ===
+
+Method schedule
+---------------
+Method: cpuToHost
+Ready signal: m.RDY_cpuToHost
+Conflict-free: hostToCpu,
+	       memInit_request_put,
+	       memInit_done,
+	       ddr3client_request_get,
+	       ddr3client_response_put
+Conflicts: cpuToHost
+ 
+Method: hostToCpu
+Ready signal: m.RDY_hostToCpu
+Conflict-free: cpuToHost,
+	       memInit_request_put,
+	       memInit_done,
+	       ddr3client_request_get,
+	       ddr3client_response_put
+Conflicts: hostToCpu
+ 
+Method: memInit_request_put
+Ready signal: m.RDY_memInit_request_put
+Conflict-free: cpuToHost,
+	       hostToCpu,
+	       ddr3client_request_get,
+	       ddr3client_response_put
+Sequenced after: memInit_done
+Conflicts: memInit_request_put
+ 
+Method: memInit_done
+Ready signal: True
+Conflict-free: cpuToHost,
+	       hostToCpu,
+	       memInit_done,
+	       ddr3client_request_get,
+	       ddr3client_response_put
+Sequenced before: memInit_request_put
+ 
+Method: ddr3client_request_get
+Ready signal: m.RDY_ddr3client_request_get
+Conflict-free: cpuToHost,
+	       hostToCpu,
+	       memInit_request_put,
+	       memInit_done,
+	       ddr3client_response_put
+Conflicts: ddr3client_request_get
+ 
+Method: ddr3client_response_put
+Ready signal: m.RDY_ddr3client_response_put
+Conflict-free: cpuToHost,
+	       hostToCpu,
+	       memInit_request_put,
+	       memInit_done,
+	       ddr3client_request_get
+Conflicts: ddr3client_response_put
+ 
+Logical execution order: cpuToHost,
+			 hostToCpu,
+			 memInit_done,
+			 memInit_request_put,
+			 ddr3client_request_get,
+			 ddr3client_response_put
+
+============================================

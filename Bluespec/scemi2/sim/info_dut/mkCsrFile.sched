@@ -1,0 +1,63 @@
+=== Generated schedule for mkCsrFile ===
+
+Method schedule
+---------------
+Method: start
+Ready signal: ! startReg.read
+Conflict-free: started, wr, cpuToHost
+Sequenced before (restricted): start
+Sequenced after: rd
+ 
+Method: started
+Ready signal: True
+Conflict-free: start, started, rd, wr, cpuToHost
+ 
+Method: rd
+Ready signal: True
+Conflict-free: started, rd, wr, cpuToHost
+Sequenced before: start
+ 
+Method: wr
+Ready signal: ! toHostFifo_full
+Conflict-free: start, started, rd, cpuToHost
+Conflicts: wr
+ 
+Method: cpuToHost
+Ready signal: ! toHostFifo_empty
+Conflict-free: start, started, rd, wr
+Conflicts: cpuToHost
+ 
+Rule schedule
+-------------
+Rule: toHostFifo_enqReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: toHostFifo_deqReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: toHostFifo_clearReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: toHostFifo_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: count
+Predicate: startReg.read
+Blocking rules: (none)
+ 
+Logical execution order: started,
+			 rd,
+			 start,
+			 wr,
+			 cpuToHost,
+			 count,
+			 toHostFifo_canonicalize,
+			 toHostFifo_enqReq_canonicalize,
+			 toHostFifo_deqReq_canonicalize,
+			 toHostFifo_clearReq_canonicalize
+
+=========================================

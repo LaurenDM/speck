@@ -1,0 +1,1698 @@
+=== Generated schedule for mkBridge ===
+
+Rule schedule
+-------------
+Rule: scemi_bridge_inReset_isResetAssertedUpdate
+Predicate: scemi_bridge_inReset_isInReset
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_recv_beat_from_tcp
+Predicate: scemi_bridge_fOutgoingData.i_notFull &&
+	   (! scemi_bridge_rFileHandle[31]) &&
+	   ((scemi_bridge_rBytesFromTCP == 8'd0) ||
+	    (scemi_bridge_rBytesFromTCP == 8'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_process_outgoing_data_beat
+Predicate: scemi_bridge_fOutgoingData.i_notEmpty &&
+	   scemi_bridge_pwOutgoingValid.whas
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_drive_outgoing_data
+Predicate: scemi_bridge_fOutgoingData.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_process_incoming_data_beat
+Predicate: scemi_bridge_fIncomingData.i_notFull &&
+	   scemi_bridge_pwIncomingBeat.whas
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_send_beat_to_tcp
+Predicate: scemi_bridge_fIncomingData.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_bridge_close_socket
+Predicate: (! scemi_bridge_rFileHandle[31]) && scemi_bridge_pwShutdown.whas
+Blocking rules: (none)
+ 
+Rule: scemi_open_port
+Predicate: (scemi_bridge_rFileHandle == 32'd4294967295) &&
+	   (! scemi_bridge_inReset_isInReset) &&
+	   scemi_bridge_rFileHandle[31]
+Blocking rules: (none)
+ 
+Rule: scemi_toggle_uclock
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_rstgen_trigger
+Predicate: ! scemi_rstgen_init
+Blocking rules: (none)
+ 
+Rule: scemi_init_state_track_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_clk_port_rstgen_trigger
+Predicate: ! scemi_clk_port_rstgen_init
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_deassert_after_reset
+Predicate: scemi_dut_dut_prb_control_data_out_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_detect_scemi_reset
+Predicate: scemi_dut_dut_prb_control_data_out_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_initiate_reset_sequence
+Predicate: (! scemi_dut_dut_prb_control_data_out_in_reset_noc) &&
+	   scemi_dut_dut_prb_control_data_out_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_complete_reset_sequence
+Predicate: scemi_dut_dut_prb_control_data_out_in_reset_noc &&
+	   scemi_dut_dut_prb_control_data_out_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_update_count
+Predicate: (! scemi_dut_dut_prb_control_data_out_in_reset_noc) &&
+	   (scemi_dut_dut_prb_control_data_out_decr.whas ||
+	    scemi_dut_dut_prb_control_data_out_next.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_pok_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_setOK
+Predicate: scemi_dut_dut_prb_control_data_out_finished.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_data_out_handle_scemi_reset
+Predicate: scemi_dut_dut_prb_control_data_out_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_deassert_after_reset
+Predicate: scemi_dut_dut_prb_control_control_in_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_detect_scemi_reset
+Predicate: scemi_dut_dut_prb_control_control_in_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_initiate_reset_sequence
+Predicate: (! scemi_dut_dut_prb_control_control_in_in_reset_noc) &&
+	   scemi_dut_dut_prb_control_control_in_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_complete_reset_sequence
+Predicate: scemi_dut_dut_prb_control_control_in_in_reset_noc &&
+	   scemi_dut_dut_prb_control_control_in_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_first_request
+Predicate: scemi_dut_dut_prb_control_control_in_next_sp.RDY_send &&
+	   scemi_dut_dut_prb_control_control_in_wait_sp.RDY_send &&
+	   (scemi_dut_dut_prb_control_control_in_status._read == 2'd0) &&
+	   scemi_dut_dut_prb_control_control_in_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_data_ready
+Predicate: (scemi_dut_dut_prb_control_control_in_status._read == 2'd1) &&
+	   scemi_dut_dut_prb_control_control_in_buffer_full_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_read_complete
+Predicate: scemi_dut_dut_prb_control_control_in_next_sp.RDY_send &&
+	   (scemi_dut_dut_prb_control_control_in_status._read == 2'd2) &&
+	   scemi_dut_dut_prb_control_control_in_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_port_reset
+Predicate: scemi_dut_dut_prb_control_control_in_wait_sp.RDY_send &&
+	   (scemi_dut_dut_prb_control_control_in_status._read == 2'd3) &&
+	   scemi_dut_dut_prb_control_control_in_buffer_empty_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_handle_scemi_reset
+Predicate: scemi_dut_dut_prb_control_control_in_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_update_remaining
+Predicate: (scemi_dut_dut_prb_control_control_in_got_beat_pw.whas
+	    ? (! scemi_dut_dut_prb_control_control_in_remaining) ||
+	      scemi_dut_dut_prb_control_control_in_buffer_full_sp.RDY_send
+	    : ((! scemi_dut_dut_prb_control_control_in_next_sp.pulse) ||
+	       scemi_dut_dut_prb_control_control_in_buffer_empty_sp.RDY_send)) &&
+	   (! scemi_dut_dut_prb_control_control_in_in_reset_noc) &&
+	   (scemi_dut_dut_prb_control_control_in_got_beat_pw.whas ||
+	    scemi_dut_dut_prb_control_control_in_next_sp.pulse ||
+	    scemi_dut_dut_prb_control_control_in_wait_sp.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_receive_ready
+Predicate: scemi_dut_dut_prb_control_control_in_requestF_rv.port0__read &&
+	   (! scemi_dut_dut_prb_control_control_in_dataF_rv.port0__read[17])
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_control_in_receive
+Predicate: (scemi_dut_dut_prb_control_control_in_status._read == 2'd2) &&
+	   scemi_dut_dut_prb_control_control_in_requestF_rv.port0__read &&
+	   (! scemi_dut_dut_prb_control_control_in_dataF_rv.port0__read[17])
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_setSample
+Predicate: scemi_dut_dut_prb_control_enff.i_notFull &&
+	   (! ({scemi_dut_dut_prb_control_sampleIntervalV_3, scemi_dut_dut_prb_control_sampleIntervalV_2, scemi_dut_dut_prb_control_sampleIntervalV_1, scemi_dut_dut_prb_control_sampleIntervalV} ==
+	       32'd0)) &&
+	   (scemi_init_state_cycle_stamp.crossed ==
+	    scemi_dut_dut_prb_control_nextSample)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_flagSample
+Predicate: (! scemi_dut_dut_prb_control_flag) &&
+	   (! ({scemi_dut_dut_prb_control_sampleIntervalV_3, scemi_dut_dut_prb_control_sampleIntervalV_2, scemi_dut_dut_prb_control_sampleIntervalV_1, scemi_dut_dut_prb_control_sampleIntervalV} ==
+	       32'd0)) &&
+	   (scemi_init_state_cycle_stamp.crossed ==
+	    scemi_dut_dut_prb_control_nextSample)
+Blocking rules: scemi_dut_dut_prb_control_setSample
+ 
+Rule: scemi_dut_dut_prb_control_unsetFlag
+Predicate: scemi_dut_dut_prb_control_enff.i_notFull &&
+	   scemi_dut_dut_prb_control_flag
+Blocking rules: scemi_dut_dut_prb_control_setSample
+ 
+Rule: scemi_dut_dut_prb_control_send_en
+Predicate: scemi_dut_dut_prb_control_enff.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_requestInput
+Predicate: ! scemi_dut_dut_prb_control_control_in_requestF_rv.port1__read
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_receiveControl
+Predicate: scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[17] &&
+	   (((! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd0)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd1)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd2)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd3)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd4)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd5)) &&
+	     (! (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		 3'd6)) &&
+	     (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[12:0] ==
+	      13'h1FFF)) ||
+	    ((((scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		3'd3) &&
+	       (! scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[12]) &&
+	       (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[11:10] ==
+		2'd2) &&
+	       (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[9:0] ==
+		10'd1023)) ||
+	      ((scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		3'd3) &&
+	       (! scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[12]) &&
+	       (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[11:10] ==
+		2'd2)) ||
+	      scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[16] ||
+	      scemi_dut_dut_prb_control_ackFifo.i_notFull) &&
+	     (((scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		3'd3) &&
+	       (! scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[12]) &&
+	       (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[11:10] ==
+		2'd2) &&
+	       (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[9:0] ==
+		10'd1023))
+	      ? scemi_dut_dut_prb_control_enff.i_notFull
+	      : (((scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[15:13] ==
+		   3'd3) &&
+		  (! scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[12]) &&
+		  (scemi_dut_dut_prb_control_control_in_dataF_rv.port1__read[11:10] ==
+		   2'd2)) ||
+		 scemi_dut_dut_prb_control_enff.i_notFull))))
+Blocking rules: scemi_dut_dut_prb_control_receiveTrigger,
+		scemi_dut_dut_prb_control_unsetFlag,
+		scemi_dut_dut_prb_control_setSample
+ 
+Rule: scemi_dut_dut_prb_control_prb_str_recv_doEnq
+Predicate: scemi_dut_dut_prb_control_prb_str.i_notFull &&
+	   scemi_dut_dut_prb_control_prb_str_recv_d.whas
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_receiveTrigger
+Predicate: scemi_dut_dut_prb_control_data_out_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_dut_prb_control_data_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd0) &&
+	   scemi_init_state_msgFIFO.notFull &&
+	   scemi_dut_dut_prb_control_enff.i_notFull &&
+	   scemi_dut_dut_prb_control_prb_str.i_notEmpty &&
+	   (scemi_dut_dut_prb_control_count == 16'd0) &&
+	   (scemi_dut_dut_prb_control_prb_str.first[15:3] == 13'd8191)
+Blocking rules: scemi_dut_dut_prb_control_unsetFlag,
+		scemi_dut_dut_prb_control_setSample
+ 
+Rule: scemi_dut_dut_prb_control_receiveFirstData
+Predicate: scemi_dut_dut_prb_control_data_out_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_dut_prb_control_data_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd0) &&
+	   scemi_init_state_msgFIFO.notFull &&
+	   scemi_dut_dut_prb_control_prb_str.i_notEmpty &&
+	   (scemi_dut_dut_prb_control_count == 16'd0)
+Blocking rules: scemi_dut_dut_prb_control_sendAck,
+		scemi_dut_dut_prb_control_respondToPing,
+		scemi_dut_dut_prb_control_receiveTrigger
+ 
+Rule: scemi_dut_dut_prb_control_receiveMoreData
+Predicate: scemi_dut_dut_prb_control_data_out_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_dut_prb_control_data_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd0) &&
+	   scemi_init_state_msgFIFO.notFull &&
+	   scemi_dut_dut_prb_control_prb_str.i_notEmpty &&
+	   (! (scemi_dut_dut_prb_control_count == 16'd0))
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_respondToPing
+Predicate: scemi_dut_dut_prb_control_data_out_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_dut_prb_control_data_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd0) &&
+	   scemi_init_state_msgFIFO.notFull &&
+	   (scemi_dut_dut_prb_control_count == 16'd0) &&
+	   scemi_dut_dut_prb_control_pinged
+Blocking rules: scemi_dut_dut_prb_control_receiveTrigger
+ 
+Rule: scemi_dut_dut_prb_control_sendAck
+Predicate: scemi_dut_dut_prb_control_data_out_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_dut_prb_control_data_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd0) &&
+	   scemi_init_state_msgFIFO.notFull &&
+	   scemi_dut_dut_prb_control_ackFifo.i_notEmpty &&
+	   (scemi_dut_dut_prb_control_count == 16'd0) &&
+	   (! scemi_dut_dut_prb_control_pinged)
+Blocking rules: scemi_dut_dut_prb_control_receiveTrigger
+ 
+Rule: scemi_dut_dut_prb_control_dutclkctrl_pconnect_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_prb_control_dutclkctrl_nconnect_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_dut_dutIfc_donerest
+Predicate: scemi_dut_dut_dutIfc_didreset.i_notFull &&
+	   scemi_dut_dut_dutIfc_resetting &&
+	   (! scemi_dut_dut_dutIfc_myrst.isAsserted)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_deassert_after_reset
+Predicate: scemi_dut_softrst_req_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_detect_scemi_reset
+Predicate: scemi_dut_softrst_req_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_initiate_reset_sequence
+Predicate: (! scemi_dut_softrst_req_inport_in_reset_noc) &&
+	   scemi_dut_softrst_req_inport_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_complete_reset_sequence
+Predicate: scemi_dut_softrst_req_inport_in_reset_noc &&
+	   scemi_dut_softrst_req_inport_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_first_request
+Predicate: scemi_dut_softrst_req_inport_next_sp.RDY_send &&
+	   scemi_dut_softrst_req_inport_wait_sp.RDY_send &&
+	   (scemi_dut_softrst_req_inport_status._read == 2'd0) &&
+	   scemi_dut_softrst_req_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_data_ready
+Predicate: (scemi_dut_softrst_req_inport_status._read == 2'd1) &&
+	   scemi_dut_softrst_req_inport_buffer_full_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_read_complete
+Predicate: scemi_dut_softrst_req_inport_next_sp.RDY_send &&
+	   (scemi_dut_softrst_req_inport_status._read == 2'd2) &&
+	   scemi_dut_softrst_req_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_port_reset
+Predicate: scemi_dut_softrst_req_inport_wait_sp.RDY_send &&
+	   (scemi_dut_softrst_req_inport_status._read == 2'd3) &&
+	   scemi_dut_softrst_req_inport_buffer_empty_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_handle_scemi_reset
+Predicate: scemi_dut_softrst_req_inport_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_update_remaining
+Predicate: (scemi_dut_softrst_req_inport_got_beat_pw.whas
+	    ? (! scemi_dut_softrst_req_inport_remaining) ||
+	      scemi_dut_softrst_req_inport_buffer_full_sp.RDY_send
+	    : ((! scemi_dut_softrst_req_inport_next_sp.pulse) ||
+	       scemi_dut_softrst_req_inport_buffer_empty_sp.RDY_send)) &&
+	   (! scemi_dut_softrst_req_inport_in_reset_noc) &&
+	   (scemi_dut_softrst_req_inport_got_beat_pw.whas ||
+	    scemi_dut_softrst_req_inport_next_sp.pulse ||
+	    scemi_dut_softrst_req_inport_wait_sp.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_receive_ready
+Predicate: scemi_dut_softrst_req_inport_requestF_rv.port0__read &&
+	   (! scemi_dut_softrst_req_inport_dataF_rv.port0__read[1])
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_inport_receive
+Predicate: (scemi_dut_softrst_req_inport_status._read == 2'd2) &&
+	   scemi_dut_softrst_req_inport_requestF_rv.port0__read &&
+	   (! scemi_dut_softrst_req_inport_dataF_rv.port0__read[1])
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_connect_res_mkConnectionGetPut
+Predicate: scemi_dut_softrst_req_inport_dataF_rv.port1__read[1] &&
+	   scemi_dut_softrst_req_res_fifo.RDY_enq
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_connect_put_mkConnectionGetPut
+Predicate: scemi_dut_softrst_req_res_fifo.RDY_deq
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_req_request
+Predicate: ! scemi_dut_softrst_req_inport_requestF_rv.port1__read
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_deassert_after_reset
+Predicate: scemi_dut_softrst_resp_outport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_detect_scemi_reset
+Predicate: scemi_dut_softrst_resp_outport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_initiate_reset_sequence
+Predicate: (! scemi_dut_softrst_resp_outport_in_reset_noc) &&
+	   scemi_dut_softrst_resp_outport_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_complete_reset_sequence
+Predicate: scemi_dut_softrst_resp_outport_in_reset_noc &&
+	   scemi_dut_softrst_resp_outport_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_update_count
+Predicate: (! scemi_dut_softrst_resp_outport_in_reset_noc) &&
+	   (scemi_dut_softrst_resp_outport_decr.whas ||
+	    scemi_dut_softrst_resp_outport_next.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_pok_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_setOK
+Predicate: scemi_dut_softrst_resp_outport_finished.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_outport_handle_scemi_reset
+Predicate: scemi_dut_softrst_resp_outport_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_connect_res_mkConnectionGetPut
+Predicate: scemi_dut_softrst_resp_outport_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_dut_softrst_resp_res_fifo.RDY_deq &&
+	   scemi_dut_softrst_resp_res_fifo.RDY_first &&
+	   scemi_dut_softrst_resp_outport_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd1) &&
+	   scemi_init_state_msgFIFO.notFull
+Blocking rules: (none)
+ 
+Rule: scemi_dut_softrst_resp_connect_get_mkConnectionGetPut
+Predicate: scemi_dut_softrst_resp_res_fifo.RDY_enq &&
+	   scemi_dut_dut_dutIfc_didreset.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_deassert_after_reset
+Predicate: scemi_mem_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_detect_scemi_reset
+Predicate: scemi_mem_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_initiate_reset_sequence
+Predicate: (! scemi_mem_inport_in_reset_noc) &&
+	   scemi_mem_inport_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_complete_reset_sequence
+Predicate: scemi_mem_inport_in_reset_noc &&
+	   scemi_mem_inport_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_first_request
+Predicate: scemi_mem_inport_next_sp.RDY_send &&
+	   scemi_mem_inport_wait_sp.RDY_send &&
+	   (scemi_mem_inport_status._read == 2'd0) &&
+	   scemi_mem_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_data_ready
+Predicate: (scemi_mem_inport_status._read == 2'd1) &&
+	   scemi_mem_inport_buffer_full_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_read_complete
+Predicate: scemi_mem_inport_next_sp.RDY_send &&
+	   (scemi_mem_inport_status._read == 2'd2) &&
+	   scemi_mem_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_port_reset
+Predicate: scemi_mem_inport_wait_sp.RDY_send &&
+	   (scemi_mem_inport_status._read == 2'd3) &&
+	   scemi_mem_inport_buffer_empty_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_handle_scemi_reset
+Predicate: scemi_mem_inport_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_update_remaining
+Predicate: (scemi_mem_inport_got_beat_pw.whas
+	    ? (! (scemi_mem_inport_remaining == 5'd1)) ||
+	      scemi_mem_inport_buffer_full_sp.RDY_send
+	    : ((! scemi_mem_inport_next_sp.pulse) ||
+	       scemi_mem_inport_buffer_empty_sp.RDY_send)) &&
+	   (! scemi_mem_inport_in_reset_noc) &&
+	   (scemi_mem_inport_got_beat_pw.whas ||
+	    scemi_mem_inport_next_sp.pulse ||
+	    scemi_mem_inport_wait_sp.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_receive_ready
+Predicate: scemi_mem_inport_requestF_rv.port0__read &&
+	   (! scemi_mem_inport_dataF_rv.port0__read[537])
+Blocking rules: (none)
+ 
+Rule: scemi_mem_inport_receive
+Predicate: (scemi_mem_inport_status._read == 2'd2) &&
+	   scemi_mem_inport_requestF_rv.port0__read &&
+	   (! scemi_mem_inport_dataF_rv.port0__read[537])
+Blocking rules: (none)
+ 
+Rule: scemi_mem_connect_res_mkConnectionGetPut
+Predicate: scemi_mem_inport_dataF_rv.port1__read[537] &&
+	   scemi_mem_res_fifo.RDY_enq
+Blocking rules: (none)
+ 
+Rule: scemi_mem_connect_put_mkConnectionGetPut
+Predicate: scemi_mem_res_fifo.RDY_deq &&
+	   scemi_mem_res_fifo.RDY_first &&
+	   scemi_dut_dut_dutIfc_m_dut.RDY_memInit_request_put
+Blocking rules: (none)
+ 
+Rule: scemi_mem_request
+Predicate: ! scemi_mem_inport_requestF_rv.port1__read
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_deassert_after_reset
+Predicate: scemi_tohost_outport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_detect_scemi_reset
+Predicate: scemi_tohost_outport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_initiate_reset_sequence
+Predicate: (! scemi_tohost_outport_in_reset_noc) &&
+	   scemi_tohost_outport_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_complete_reset_sequence
+Predicate: scemi_tohost_outport_in_reset_noc &&
+	   scemi_tohost_outport_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_update_count
+Predicate: (! scemi_tohost_outport_in_reset_noc) &&
+	   (scemi_tohost_outport_decr.whas || scemi_tohost_outport_next.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_pok_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_setOK
+Predicate: scemi_tohost_outport_finished.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_outport_handle_scemi_reset
+Predicate: scemi_tohost_outport_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_connect_res_mkConnectionGetPut
+Predicate: scemi_tohost_outport_next.RDY_send &&
+	   scemi_init_state_msgFIFO.RDY_enq &&
+	   scemi_tohost_res_fifo.RDY_deq &&
+	   scemi_tohost_res_fifo.RDY_first &&
+	   scemi_tohost_outport_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd2) &&
+	   scemi_init_state_msgFIFO.notFull
+Blocking rules: (none)
+ 
+Rule: scemi_tohost_connect_get_mkConnectionGetPut
+Predicate: scemi_tohost_res_fifo.RDY_enq &&
+	   scemi_dut_dut_dutIfc_m_dut.RDY_cpuToHost
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_deassert_after_reset
+Predicate: scemi_fromhost_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_detect_scemi_reset
+Predicate: scemi_fromhost_inport_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_initiate_reset_sequence
+Predicate: (! scemi_fromhost_inport_in_reset_noc) &&
+	   scemi_fromhost_inport_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_complete_reset_sequence
+Predicate: scemi_fromhost_inport_in_reset_noc &&
+	   scemi_fromhost_inport_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_first_request
+Predicate: scemi_fromhost_inport_next_sp.RDY_send &&
+	   scemi_fromhost_inport_wait_sp.RDY_send &&
+	   (scemi_fromhost_inport_status._read == 2'd0) &&
+	   scemi_fromhost_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_data_ready
+Predicate: (scemi_fromhost_inport_status._read == 2'd1) &&
+	   scemi_fromhost_inport_buffer_full_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_read_complete
+Predicate: scemi_fromhost_inport_next_sp.RDY_send &&
+	   (scemi_fromhost_inport_status._read == 2'd2) &&
+	   scemi_fromhost_inport_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_port_reset
+Predicate: scemi_fromhost_inport_wait_sp.RDY_send &&
+	   (scemi_fromhost_inport_status._read == 2'd3) &&
+	   scemi_fromhost_inport_buffer_empty_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_handle_scemi_reset
+Predicate: scemi_fromhost_inport_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_update_remaining
+Predicate: (scemi_fromhost_inport_got_beat_pw.whas
+	    ? (! scemi_fromhost_inport_remaining) ||
+	      scemi_fromhost_inport_buffer_full_sp.RDY_send
+	    : ((! scemi_fromhost_inport_next_sp.pulse) ||
+	       scemi_fromhost_inport_buffer_empty_sp.RDY_send)) &&
+	   (! scemi_fromhost_inport_in_reset_noc) &&
+	   (scemi_fromhost_inport_got_beat_pw.whas ||
+	    scemi_fromhost_inport_next_sp.pulse ||
+	    scemi_fromhost_inport_wait_sp.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_receive_ready
+Predicate: scemi_fromhost_inport_requestF_rv.port0__read &&
+	   (! scemi_fromhost_inport_dataF_rv.port0__read[32])
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_inport_receive
+Predicate: (scemi_fromhost_inport_status._read == 2'd2) &&
+	   scemi_fromhost_inport_requestF_rv.port0__read &&
+	   (! scemi_fromhost_inport_dataF_rv.port0__read[32])
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_connect_res_mkConnectionGetPut
+Predicate: scemi_fromhost_inport_dataF_rv.port1__read[32] &&
+	   scemi_fromhost_res_fifo.RDY_enq
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_connect_put_mkConnectionGetPut
+Predicate: scemi_fromhost_res_fifo.RDY_deq &&
+	   scemi_fromhost_res_fifo.RDY_first &&
+	   scemi_dut_dut_dutIfc_m_dut.RDY_hostToCpu
+Blocking rules: (none)
+ 
+Rule: scemi_fromhost_request
+Predicate: ! scemi_fromhost_inport_requestF_rv.port1__read
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_deassert_after_reset
+Predicate: scemi_shutdown_ctrl_in_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_detect_scemi_reset
+Predicate: scemi_shutdown_ctrl_in_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_initiate_reset_sequence
+Predicate: (! scemi_shutdown_ctrl_in_in_reset_noc) &&
+	   scemi_shutdown_ctrl_in_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_complete_reset_sequence
+Predicate: scemi_shutdown_ctrl_in_in_reset_noc &&
+	   scemi_shutdown_ctrl_in_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_first_request
+Predicate: scemi_shutdown_ctrl_in_next_sp.RDY_send &&
+	   scemi_shutdown_ctrl_in_wait_sp.RDY_send &&
+	   (scemi_shutdown_ctrl_in_status._read == 2'd0) &&
+	   scemi_shutdown_ctrl_in_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_data_ready
+Predicate: (scemi_shutdown_ctrl_in_status._read == 2'd1) &&
+	   scemi_shutdown_ctrl_in_buffer_full_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_read_complete
+Predicate: scemi_shutdown_ctrl_in_next_sp.RDY_send &&
+	   (scemi_shutdown_ctrl_in_status._read == 2'd2) &&
+	   scemi_shutdown_ctrl_in_request_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_port_reset
+Predicate: scemi_shutdown_ctrl_in_wait_sp.RDY_send &&
+	   (scemi_shutdown_ctrl_in_status._read == 2'd3) &&
+	   scemi_shutdown_ctrl_in_buffer_empty_sp.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_handle_scemi_reset
+Predicate: scemi_shutdown_ctrl_in_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_update_remaining
+Predicate: (scemi_shutdown_ctrl_in_got_beat_pw.whas
+	    ? (! scemi_shutdown_ctrl_in_remaining) ||
+	      scemi_shutdown_ctrl_in_buffer_full_sp.RDY_send
+	    : ((! scemi_shutdown_ctrl_in_next_sp.pulse) ||
+	       scemi_shutdown_ctrl_in_buffer_empty_sp.RDY_send)) &&
+	   (! scemi_shutdown_ctrl_in_in_reset_noc) &&
+	   (scemi_shutdown_ctrl_in_got_beat_pw.whas ||
+	    scemi_shutdown_ctrl_in_next_sp.pulse ||
+	    scemi_shutdown_ctrl_in_wait_sp.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_receive_ready
+Predicate: scemi_shutdown_ctrl_in_requestF_rv.port0__read &&
+	   (! scemi_shutdown_ctrl_in_dataF_rv.port0__read[1])
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_in_receive
+Predicate: (scemi_shutdown_ctrl_in_status._read == 2'd2) &&
+	   scemi_shutdown_ctrl_in_requestF_rv.port0__read &&
+	   (! scemi_shutdown_ctrl_in_dataF_rv.port0__read[1])
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_deassert_after_reset
+Predicate: scemi_shutdown_ctrl_out_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_detect_scemi_reset
+Predicate: scemi_shutdown_ctrl_out_in_reset_uclk
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_detect_end_of_scemi_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_initiate_reset_sequence
+Predicate: (! scemi_shutdown_ctrl_out_in_reset_noc) &&
+	   scemi_shutdown_ctrl_out_starting_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_complete_reset_sequence
+Predicate: scemi_shutdown_ctrl_out_in_reset_noc &&
+	   scemi_shutdown_ctrl_out_ending_reset.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_update_count
+Predicate: (! scemi_shutdown_ctrl_out_in_reset_noc) &&
+	   (scemi_shutdown_ctrl_out_decr.whas ||
+	    scemi_shutdown_ctrl_out_next.pulse)
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_pok_mkConnectionVtoAf
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_setOK
+Predicate: scemi_shutdown_ctrl_out_finished.pulse
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ctrl_out_handle_scemi_reset
+Predicate: scemi_shutdown_ctrl_out_in_reset_noc
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_request
+Predicate: ! scemi_shutdown_ctrl_in_requestF_rv.port1__read
+Blocking rules: (none)
+ 
+Rule: scemi_shutdown_ack
+Predicate: scemi_shutdown_ctrl_in_dataF_rv.port1__read[1] &&
+	   ((! scemi_shutdown_ctrl_in_dataF_rv.port1__read[0]) ||
+	    (scemi_shutdown_ctrl_out_next.RDY_send &&
+	     scemi_init_state_msgFIFO.RDY_enq &&
+	     scemi_shutdown_ctrl_out_ok &&
+	     (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	     (scemi_init_state_out_port == 10'd3) &&
+	     scemi_init_state_msgFIFO.notFull))
+Blocking rules: scemi_tohost_connect_res_mkConnectionGetPut,
+		scemi_dut_softrst_resp_connect_res_mkConnectionGetPut,
+		scemi_dut_dut_prb_control_receiveFirstData,
+		scemi_dut_dut_prb_control_sendAck,
+		scemi_dut_dut_prb_control_respondToPing,
+		scemi_dut_dut_prb_control_receiveMoreData,
+		scemi_dut_dut_prb_control_receiveTrigger
+ 
+Rule: scemi_shutdown_shutdown
+Predicate: scemi_shutdown_shutdown_pending &&
+	   scemi_shutdown_ctrl_out_ok &&
+	   (! scemi_init_state_any_in_reset_uclk.crossed) &&
+	   (scemi_init_state_out_port == 10'd3) &&
+	   scemi_init_state_msgFIFO.notFull
+Blocking rules: (none)
+ 
+Rule: scemi_ClientServerRequest
+Predicate: scemi_reqFifo.RDY_enq &&
+	   scemi_dut_dut_dutIfc_m_dut.RDY_ddr3client_request_get
+Blocking rules: (none)
+ 
+Rule: scemi_ClientServerResponse
+Predicate: scemi_respFifo.RDY_deq &&
+	   scemi_respFifo.RDY_first &&
+	   scemi_dut_dut_dutIfc_m_dut.RDY_ddr3client_response_put
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_1_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_1_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_1_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_1
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_2_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_2_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_2_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_2
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_3_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_3_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_3_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_3
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_4_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_4_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_4_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_4
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_5_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_5_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_5_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_5
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_6_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_6_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_6_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_6
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_7_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_7_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_7_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_7
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_8_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_8_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_8_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_8
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_enqReq_9_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_deqReq_9_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_clearReq_9_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_respQ_canonicalize_9
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_connect_requests
+Predicate: scemi_reqFifo.RDY_deq &&
+	   scemi_reqFifo.RDY_first &&
+	   (scemi_reqFifo.first[600] || scemi_read_results.i_notFull)
+Blocking rules: (none)
+ 
+Rule: scemi_connect_responses
+Predicate: (! scemi_respQ_full) && scemi_read_results.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_1_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty) && (! scemi_respQ_full_1)
+Blocking rules: (none)
+ 
+Rule: scemi_2_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_1) && (! scemi_respQ_full_2)
+Blocking rules: (none)
+ 
+Rule: scemi_3_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_2) && (! scemi_respQ_full_3)
+Blocking rules: (none)
+ 
+Rule: scemi_4_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_3) && (! scemi_respQ_full_4)
+Blocking rules: (none)
+ 
+Rule: scemi_5_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_4) && (! scemi_respQ_full_5)
+Blocking rules: (none)
+ 
+Rule: scemi_6_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_5) && (! scemi_respQ_full_6)
+Blocking rules: (none)
+ 
+Rule: scemi_7_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_6) && (! scemi_respQ_full_7)
+Blocking rules: (none)
+ 
+Rule: scemi_8_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_7) && (! scemi_respQ_full_8)
+Blocking rules: (none)
+ 
+Rule: scemi_9_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_8) && (! scemi_respQ_full_9)
+Blocking rules: (none)
+ 
+Rule: scemi_10_mkConnectionGetPut
+Predicate: (! scemi_respQ_empty_9) && scemi_respFifo.RDY_enq
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_counters_incr
+Predicate: ! scemi_clockGenerators_clock_gens_counters_stall_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_counters_do_stall
+Predicate: scemi_clockGenerators_clock_gens_stall_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_tick_clock
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_manage_reset
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_is_allowed_sync_clock_domain_crossing
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_do_stall_scemi
+Predicate: (! (scemi_clockGenerators_clock_gens_reset_counter == 32'd0)) &&
+	   (scemi_clockGenerators_clock_gens_out_of_reset_reg ||
+	    ((scemi_clockGenerators_clock_gens_reset_counter == 32'd16) &&
+	     (scemi_clockGenerators_clock_gens_counters_count == 32'd0))) &&
+	   (((scemi_clockGenerators_clock_gens_counters_count == 32'd0) &&
+	     (! scemi_clockGenerators_clock_gens_is_allowed_sync.wget[1]) &&
+	     (! scemi_clockGenerators_clock_gens_stalled) &&
+	     scemi_rising_uclock_pw.whas) ||
+	    (scemi_clockGenerators_clock_gens_stalled &&
+	     (((scemi_clockGenerators_clock_gens_counters_count == 32'd0) &&
+	       (! scemi_clockGenerators_clock_gens_is_allowed_sync.wget[1])) ||
+	      (! scemi_rising_uclock_pw.whas))))
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_update_stalled
+Predicate: (! (scemi_clockGenerators_clock_gens_reset_counter == 32'd0)) &&
+	   (scemi_clockGenerators_clock_gens_out_of_reset_reg ||
+	    ((scemi_clockGenerators_clock_gens_reset_counter == 32'd16) &&
+	     (scemi_clockGenerators_clock_gens_counters_count == 32'd0))) &&
+	   scemi_rising_uclock_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_clock_gens_do_ticks
+Predicate: ! scemi_dut_dut_prb_control_prb_str.notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_handle_reset
+Predicate: scemi_clockGenerators_clock_gens_in_reset_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_one_to_one_cclock_incr
+Predicate: ! scemi_clockGenerators_one_to_one_cclock_stall_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_track_reset
+Predicate: ! scemi_rising_uclock_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_stall_one_to_one_cclock
+Predicate: (! scemi_clockGenerators_free_stamp) ||
+	   scemi_clockGenerators_clock_gens_stall_pw.whas
+Blocking rules: (none)
+ 
+Rule: scemi_clockGenerators_incr_cycle_stamp
+Predicate: (scemi_clockGenerators_one_to_one_cclock_count == 32'd0) &&
+	   (! scemi_clockGenerators_one_to_one_cclock_stall_pw.whas)
+Blocking rules: (none)
+ 
+Rule: scemi_fFromBridgeBeat_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_fToContinueBeat_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_fS1OutPortAcks_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_receive_beat_from_bridge
+Predicate: (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd32) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataAvail < 6'd4)) &&
+	   scemi_pwFromBridgeReady.whas
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_decode_noc_header_4bpb
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   ((scemi_fFromBridgeBeat_ifc_rStorage[31:26] == 6'b101010) ||
+	    (scemi_fFromBridgeBeat_ifc_rStorage[31:26] == 6'b101011) ||
+	    (scemi_fToContinueBeat_ifc_rDataCount < 6'd32)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   (scemi_rInMsgBytes == 8'd0)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi1_decode_scemi_header
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   ((! (scemi_fFromBridgeBeat_ifc_rStorage[31:30] == 2'd3)) ||
+	    (scemi_fS1OutPortAcks_ifc_rDataCount < 5'd16)) &&
+	   scemi_rSceMi1MsgIn && (! scemi_rSceMi2MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   scemi_rDecodeSceMi &&
+	   (! scemi_rS1MsgInIsAck) &&
+	   (! scemi_rS1MsgInIsData) &&
+	   (! (scemi_fS1OutPortAcks_ifc_rDataAvail < 5'd2))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi1_process_inport_data
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rSceMi1MsgIn && (! scemi_rSceMi2MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   scemi_rS1MsgInIsData &&
+	   (! scemi_rS1MsgInIsAck) &&
+	   ((scemi_rS1InPortNum == 10'd0)
+	    ? scemi_dut_dut_prb_control_control_in_remaining
+	    : ((scemi_rS1InPortNum == 10'd1)
+	       ? scemi_dut_softrst_req_inport_remaining
+	       : ((scemi_rS1InPortNum == 10'd2)
+		  ? ! (scemi_mem_inport_remaining == 5'd0)
+		  : ((scemi_rS1InPortNum == 10'd3)
+		     ? scemi_fromhost_inport_remaining
+		     : ((scemi_rS1InPortNum == 10'd4)
+			? scemi_shutdown_ctrl_in_remaining
+			: (_ :: Bit 1))))))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi1_process_outport_ack_4bpb
+Predicate: (scemi_fS1OutPortAcks_ifc_rDataCount < 5'd16) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rSceMi1MsgIn && (! scemi_rSceMi2MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   (! scemi_rS1MsgInIsData) &&
+	   scemi_rS1MsgInIsAck &&
+	   (! (scemi_fS1OutPortAcks_ifc_rDataAvail < 5'd2))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi1_disregard_packet
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rSceMi1MsgIn && (! scemi_rSceMi2MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   (! scemi_rS1MsgInIsAck) &&
+	   (! scemi_rS1MsgInIsData) &&
+	   (! scemi_rDecodeSceMi)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_execute_outport_acks
+Predicate: (! (scemi_fS1OutPortAcks_ifc_rDataCount == 5'd0)) &&
+	   ((scemi_fS1OutPortAcks_ifc_rStorage[9:0] == 10'd0)
+	    ? scemi_dut_dut_prb_control_data_out_finished.RDY_send
+	    : ((scemi_fS1OutPortAcks_ifc_rStorage[9:0] == 10'd1)
+	       ? scemi_dut_softrst_resp_outport_finished.RDY_send
+	       : ((scemi_fS1OutPortAcks_ifc_rStorage[9:0] == 10'd2)
+		  ? scemi_tohost_outport_finished.RDY_send
+		  : ((! (scemi_fS1OutPortAcks_ifc_rStorage[9:0] == 10'd3)) ||
+		     scemi_shutdown_ctrl_out_finished.RDY_send))))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi2_decode_scemi_header_4bpb
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rSceMi2MsgIn && (! scemi_rSceMi1MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   scemi_rDecodeSceMi &&
+	   (! scemi_rS2MsgInIsData) &&
+	   (! scemi_rS2MsgInIsCred)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_scemi2_disregard_packet
+Predicate: (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rSceMi2MsgIn && (! scemi_rSceMi1MsgIn) &&
+	   (! scemi_rOtherMsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   (! scemi_rS2MsgInIsData) &&
+	   (! scemi_rS2MsgInIsCred) &&
+	   (! scemi_rDecodeSceMi)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_sink_noc_active_other_process_other_data
+Predicate: (scemi_fToContinueBeat_ifc_rDataCount < 6'd32) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_rOtherMsgIn && (! scemi_rSceMi1MsgIn) &&
+	   (! scemi_rSceMi2MsgIn) &&
+	   (! (scemi_rInMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromBridgeBeat_ifc_rDataCount < 6'd4)) &&
+	   (! (scemi_fToContinueBeat_ifc_rDataAvail < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_fFromContinueBeat_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_fS1MsgOut_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_fS2MsgOut_ifc_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_transmit_beat_to_bridge
+Predicate: scemi_fToBridgeBeat.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_move_to_next_output_beat
+Predicate: scemi_fToBridgeBeat.i_notEmpty && scemi_pwToBridgeReady.whas
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_arbitrate_transmit_messages
+Predicate: scemi_rOutMsgBytes == 8'd0
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_dispatch_next_granted_other
+Predicate: (! (scemi_fFromContinueBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rwNextOutMsgGrant.whas &&
+	   (scemi_rOutMsgBytes == 8'd0) &&
+	   (scemi_rwNextOutMsgGrant.wget == 2'd0) &&
+	   (! (scemi_fFromContinueBeat_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_dispatch_next_granted_scemi1
+Predicate: (! (scemi_fS1MsgOut_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rwNextOutMsgGrant.whas &&
+	   (scemi_rOutMsgBytes == 8'd0) &&
+	   (scemi_rwNextOutMsgGrant.wget == 2'd1) &&
+	   (! (scemi_fS1MsgOut_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_dispatch_next_granted_scemi2
+Predicate: (! (scemi_fS2MsgOut_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rwNextOutMsgGrant.whas &&
+	   (scemi_rOutMsgBytes == 8'd0) &&
+	   (scemi_rwNextOutMsgGrant.wget == 2'd2) &&
+	   (! (scemi_fS2MsgOut_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_continue_other
+Predicate: (! (scemi_fFromContinueBeat_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rOtherMsgOut && (! scemi_rSceMi1MsgOut) &&
+	   (! scemi_rSceMi2MsgOut) &&
+	   (! (scemi_rOutMsgBytes == 8'd0)) &&
+	   (! (scemi_fFromContinueBeat_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_continue_scemi1
+Predicate: (! (scemi_fS1MsgOut_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rSceMi1MsgOut && (! scemi_rSceMi2MsgOut) &&
+	   (! scemi_rOtherMsgOut) &&
+	   (! (scemi_rOutMsgBytes == 8'd0)) &&
+	   (! (scemi_fS1MsgOut_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_continue_scemi2
+Predicate: (! (scemi_fS2MsgOut_ifc_rDataCount == 6'd0)) &&
+	   scemi_fToBridgeBeat.i_notFull &&
+	   scemi_rSceMi2MsgOut && (! scemi_rSceMi1MsgOut) &&
+	   (! scemi_rOtherMsgOut) &&
+	   (! (scemi_rOutMsgBytes == 8'd0)) &&
+	   (! (scemi_fS2MsgOut_ifc_rDataCount < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_inports_load_new_request_group
+Predicate: (! scemi_lrS1ActiveRequests) &&
+	   (! scemi_lrS1ActiveRequests_1) &&
+	   (! scemi_lrS1ActiveRequests_2) &&
+	   (! scemi_lrS1ActiveRequests_3) && (! scemi_lrS1ActiveRequests_4) &&
+	   (! scemi_rS1MsgOutReqReq)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_inports_shift_new_request_vector
+Predicate: (scemi_lrS1ActiveRequests ||
+	    scemi_lrS1ActiveRequests_1 ||
+	    scemi_lrS1ActiveRequests_2 ||
+	    scemi_lrS1ActiveRequests_3 || scemi_lrS1ActiveRequests_4) &&
+	   (! scemi_rS1MsgOutReqReq) &&
+	   (! scemi_lrS1ActiveRequests)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_inports_accumulate_pending_requests
+Predicate: scemi_lrS1ActiveRequests ||
+	   scemi_lrS1ActiveRequests_1 ||
+	   scemi_lrS1ActiveRequests_2 ||
+	   scemi_lrS1ActiveRequests_3 || scemi_lrS1ActiveRequests_4 ||
+	   scemi_rS1MsgOutReqReq
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_inports_start_next_request
+Predicate: (! scemi_rS1MsgOutReqReq) && scemi_lrS1ActiveRequests
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_inports_send_request_message
+Predicate: (scemi_fS1MsgOut_ifc_rDataCount < 6'd32) &&
+	   scemi_rS1MsgOutReqReq && scemi_rS1MsgOutReqGrant &&
+	   (! (scemi_fS1MsgOut_ifc_rDataAvail < 6'd8))
+Blocking rules: (none)
+ 
+Rule: scemi_scan_output_ports
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_outports_start_data_message
+Predicate: scemi_init_state_msgFIFO.RDY_deq &&
+	   scemi_init_state_msgFIFO.RDY_first &&
+	   scemi_init_state_msgFIFO.notEmpty && (! scemi_rS1MsgOutDataReq) &&
+	   (! scemi_rS1OutDataHeader)
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_outports_send_data_message_header
+Predicate: (scemi_fS1MsgOut_ifc_rDataCount < 6'd32) &&
+	   scemi_rS1MsgOutDataReq && (! scemi_rS1MsgOutReqGrant) &&
+	   scemi_rS1OutDataHeader &&
+	   (! (scemi_fS1MsgOut_ifc_rDataAvail < 6'd16))
+Blocking rules: (none)
+ 
+Rule: scemi_msg_source_noc_active_outports_send_data_message_data
+Predicate: (scemi_fS1MsgOut_ifc_rDataCount < 6'd32) &&
+	   scemi_rS1MsgOutDataReq && (! scemi_rS1MsgOutReqGrant) &&
+	   (! scemi_rS1OutDataHeader) &&
+	   (! (scemi_fS1MsgOut_ifc_rDataAvail < 6'd4))
+Blocking rules: (none)
+ 
+Rule: scemi_swap_scemi1_outport_grant
+Predicate: (scemi_rS1MsgOutReqReq && (! scemi_rS1MsgOutReqGrant) &&
+	    (! scemi_rS1MsgOutDataReq)) ||
+	   (scemi_rS1MsgOutDataReq && scemi_rS1MsgOutReqGrant &&
+	    (! scemi_rS1MsgOutReqReq))
+Blocking rules: (none)
+ 
+Rule: scemi_connect_src_rdy
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_connect_dst_rdy
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_connect_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_1_connect_src_rdy
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_1_connect_dst_rdy
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_1_connect_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_send_whatever
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scemi_1_always_accept_beat
+Predicate: True
+Blocking rules: (none)
+ 
+Logical execution order: scemi_toggle_uclock,
+			 scemi_ClientServerRequest,
+			 scemi_ClientServerResponse,
+			 scemi_connect_responses,
+			 scemi_connect_requests,
+			 scemi_msg_sink_noc_active_decode_noc_header_4bpb,
+			 scemi_msg_sink_noc_active_scemi1_decode_scemi_header,
+			 scemi_msg_sink_noc_active_scemi1_process_inport_data,
+			 scemi_msg_sink_noc_active_scemi1_process_outport_ack_4bpb,
+			 scemi_msg_sink_noc_active_scemi1_disregard_packet,
+			 scemi_msg_sink_noc_active_execute_outport_acks,
+			 scemi_msg_sink_noc_active_scemi2_decode_scemi_header_4bpb,
+			 scemi_msg_sink_noc_active_scemi2_disregard_packet,
+			 scemi_msg_sink_noc_active_other_process_other_data,
+			 scemi_msg_source_noc_active_transmit_beat_to_bridge,
+			 scemi_msg_source_noc_active_arbitrate_transmit_messages,
+			 scemi_msg_source_noc_active_inports_load_new_request_group,
+			 scemi_msg_source_noc_active_inports_accumulate_pending_requests,
+			 scemi_msg_source_noc_active_inports_shift_new_request_vector,
+			 scemi_msg_source_noc_active_inports_send_request_message,
+			 scemi_msg_source_noc_active_outports_send_data_message_header,
+			 scemi_msg_source_noc_active_outports_send_data_message_data,
+			 scemi_swap_scemi1_outport_grant,
+			 scemi_msg_source_noc_active_inports_start_next_request,
+			 scemi_msg_source_noc_active_outports_start_data_message,
+			 scemi_connect_src_rdy,
+			 scemi_connect_dst_rdy,
+			 scemi_send_whatever,
+			 scemi_bridge_drive_outgoing_data,
+			 scemi_connect_data,
+			 scemi_msg_sink_noc_active_receive_beat_from_bridge,
+			 scemi_bridge_process_outgoing_data_beat,
+			 scemi_bridge_recv_beat_from_tcp,
+			 scemi_bridge_send_beat_to_tcp,
+			 scemi_bridge_inReset_isResetAssertedUpdate,
+			 scemi_rstgen_trigger,
+			 scemi_clk_port_rstgen_trigger,
+			 scemi_dut_dut_prb_control_setSample,
+			 scemi_dut_dut_prb_control_flagSample,
+			 scemi_dut_dut_prb_control_unsetFlag,
+			 scemi_dut_dut_prb_control_send_en,
+			 scemi_dut_dut_prb_control_data_out_detect_scemi_reset,
+			 scemi_dut_dut_prb_control_data_out_detect_end_of_scemi_reset,
+			 scemi_dut_dut_prb_control_data_out_deassert_after_reset,
+			 scemi_dut_dut_prb_control_data_out_update_count,
+			 scemi_dut_dut_prb_control_data_out_initiate_reset_sequence,
+			 scemi_dut_dut_prb_control_data_out_handle_scemi_reset,
+			 scemi_dut_dut_prb_control_data_out_complete_reset_sequence,
+			 scemi_dut_dut_prb_control_data_out_pok_mkConnectionVtoAf,
+			 scemi_dut_dut_prb_control_control_in_detect_scemi_reset,
+			 scemi_dut_dut_prb_control_control_in_detect_end_of_scemi_reset,
+			 scemi_dut_dut_prb_control_control_in_deassert_after_reset,
+			 scemi_dut_dut_prb_control_control_in_data_ready,
+			 scemi_dut_dut_prb_control_control_in_port_reset,
+			 scemi_dut_dut_prb_control_control_in_handle_scemi_reset,
+			 scemi_dut_dut_prb_control_control_in_complete_reset_sequence,
+			 scemi_dut_dut_prb_control_control_in_update_remaining,
+			 scemi_dut_dut_prb_control_control_in_initiate_reset_sequence,
+			 scemi_dut_dut_prb_control_control_in_receive_ready,
+			 scemi_dut_dut_prb_control_control_in_first_request,
+			 scemi_dut_dut_prb_control_control_in_receive,
+			 scemi_dut_dut_prb_control_requestInput,
+			 scemi_dut_dut_prb_control_control_in_read_complete,
+			 scemi_dut_dut_prb_control_dutclkctrl_pconnect_mkConnectionVtoAf,
+			 scemi_dut_dut_prb_control_dutclkctrl_nconnect_mkConnectionVtoAf,
+			 scemi_dut_dut_dutIfc_donerest,
+			 scemi_dut_softrst_req_inport_detect_scemi_reset,
+			 scemi_dut_softrst_req_inport_detect_end_of_scemi_reset,
+			 scemi_dut_softrst_req_inport_deassert_after_reset,
+			 scemi_dut_softrst_req_inport_data_ready,
+			 scemi_dut_softrst_req_inport_port_reset,
+			 scemi_dut_softrst_req_inport_handle_scemi_reset,
+			 scemi_dut_softrst_req_inport_complete_reset_sequence,
+			 scemi_dut_softrst_req_inport_update_remaining,
+			 scemi_dut_softrst_req_inport_initiate_reset_sequence,
+			 scemi_dut_softrst_req_inport_receive_ready,
+			 scemi_dut_softrst_req_inport_first_request,
+			 scemi_dut_softrst_req_inport_receive,
+			 scemi_dut_softrst_req_request,
+			 scemi_dut_softrst_req_inport_read_complete,
+			 scemi_dut_softrst_req_connect_res_mkConnectionGetPut,
+			 scemi_dut_softrst_req_connect_put_mkConnectionGetPut,
+			 scemi_dut_softrst_resp_outport_detect_scemi_reset,
+			 scemi_dut_softrst_resp_outport_detect_end_of_scemi_reset,
+			 scemi_dut_softrst_resp_outport_deassert_after_reset,
+			 scemi_dut_softrst_resp_outport_update_count,
+			 scemi_dut_softrst_resp_outport_initiate_reset_sequence,
+			 scemi_dut_softrst_resp_outport_handle_scemi_reset,
+			 scemi_dut_softrst_resp_outport_complete_reset_sequence,
+			 scemi_dut_softrst_resp_outport_pok_mkConnectionVtoAf,
+			 scemi_dut_softrst_resp_connect_get_mkConnectionGetPut,
+			 scemi_mem_inport_detect_scemi_reset,
+			 scemi_mem_inport_detect_end_of_scemi_reset,
+			 scemi_mem_inport_deassert_after_reset,
+			 scemi_mem_inport_data_ready,
+			 scemi_mem_inport_port_reset,
+			 scemi_mem_inport_handle_scemi_reset,
+			 scemi_mem_inport_complete_reset_sequence,
+			 scemi_mem_inport_update_remaining,
+			 scemi_mem_inport_initiate_reset_sequence,
+			 scemi_mem_inport_receive_ready,
+			 scemi_mem_inport_first_request,
+			 scemi_mem_inport_receive,
+			 scemi_mem_request,
+			 scemi_mem_inport_read_complete,
+			 scemi_mem_connect_res_mkConnectionGetPut,
+			 scemi_mem_connect_put_mkConnectionGetPut,
+			 scemi_tohost_outport_detect_scemi_reset,
+			 scemi_tohost_outport_detect_end_of_scemi_reset,
+			 scemi_tohost_outport_deassert_after_reset,
+			 scemi_tohost_outport_update_count,
+			 scemi_tohost_outport_initiate_reset_sequence,
+			 scemi_tohost_outport_handle_scemi_reset,
+			 scemi_tohost_outport_complete_reset_sequence,
+			 scemi_tohost_outport_pok_mkConnectionVtoAf,
+			 scemi_tohost_connect_get_mkConnectionGetPut,
+			 scemi_fromhost_inport_detect_scemi_reset,
+			 scemi_fromhost_inport_detect_end_of_scemi_reset,
+			 scemi_fromhost_inport_deassert_after_reset,
+			 scemi_fromhost_inport_data_ready,
+			 scemi_fromhost_inport_port_reset,
+			 scemi_fromhost_inport_handle_scemi_reset,
+			 scemi_fromhost_inport_complete_reset_sequence,
+			 scemi_fromhost_inport_update_remaining,
+			 scemi_fromhost_inport_initiate_reset_sequence,
+			 scemi_fromhost_inport_receive_ready,
+			 scemi_fromhost_inport_first_request,
+			 scemi_fromhost_inport_receive,
+			 scemi_fromhost_request,
+			 scemi_fromhost_inport_read_complete,
+			 scemi_fromhost_connect_res_mkConnectionGetPut,
+			 scemi_fromhost_connect_put_mkConnectionGetPut,
+			 scemi_shutdown_shutdown,
+			 scemi_shutdown_ctrl_in_detect_scemi_reset,
+			 scemi_shutdown_ctrl_in_detect_end_of_scemi_reset,
+			 scemi_shutdown_ctrl_in_deassert_after_reset,
+			 scemi_shutdown_ctrl_in_data_ready,
+			 scemi_shutdown_ctrl_in_port_reset,
+			 scemi_shutdown_ctrl_in_handle_scemi_reset,
+			 scemi_shutdown_ctrl_in_complete_reset_sequence,
+			 scemi_shutdown_ctrl_in_update_remaining,
+			 scemi_shutdown_ctrl_in_initiate_reset_sequence,
+			 scemi_shutdown_ctrl_in_receive_ready,
+			 scemi_shutdown_ctrl_in_first_request,
+			 scemi_shutdown_ctrl_in_receive,
+			 scemi_shutdown_request,
+			 scemi_shutdown_ctrl_in_read_complete,
+			 scemi_shutdown_ctrl_out_detect_scemi_reset,
+			 scemi_shutdown_ctrl_out_detect_end_of_scemi_reset,
+			 scemi_shutdown_ctrl_out_deassert_after_reset,
+			 scemi_shutdown_ctrl_out_update_count,
+			 scemi_shutdown_ctrl_out_initiate_reset_sequence,
+			 scemi_shutdown_ctrl_out_handle_scemi_reset,
+			 scemi_shutdown_ctrl_out_complete_reset_sequence,
+			 scemi_shutdown_ctrl_out_pok_mkConnectionVtoAf,
+			 scemi_dut_dut_prb_control_respondToPing,
+			 scemi_dut_dut_prb_control_sendAck,
+			 scemi_dut_dut_prb_control_receiveControl,
+			 scemi_dut_softrst_resp_connect_res_mkConnectionGetPut,
+			 scemi_dut_softrst_resp_outport_setOK,
+			 scemi_tohost_connect_res_mkConnectionGetPut,
+			 scemi_tohost_outport_setOK,
+			 scemi_shutdown_ack,
+			 scemi_shutdown_ctrl_out_setOK,
+			 scemi_1_mkConnectionGetPut,
+			 scemi_respQ_canonicalize,
+			 scemi_respQ_enqReq_canonicalize,
+			 scemi_respQ_deqReq_canonicalize,
+			 scemi_respQ_clearReq_canonicalize,
+			 scemi_2_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_1,
+			 scemi_respQ_enqReq_1_canonicalize,
+			 scemi_respQ_deqReq_1_canonicalize,
+			 scemi_respQ_clearReq_1_canonicalize,
+			 scemi_3_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_2,
+			 scemi_respQ_enqReq_2_canonicalize,
+			 scemi_respQ_deqReq_2_canonicalize,
+			 scemi_respQ_clearReq_2_canonicalize,
+			 scemi_4_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_3,
+			 scemi_respQ_enqReq_3_canonicalize,
+			 scemi_respQ_deqReq_3_canonicalize,
+			 scemi_respQ_clearReq_3_canonicalize,
+			 scemi_5_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_4,
+			 scemi_respQ_enqReq_4_canonicalize,
+			 scemi_respQ_deqReq_4_canonicalize,
+			 scemi_respQ_clearReq_4_canonicalize,
+			 scemi_6_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_5,
+			 scemi_respQ_enqReq_5_canonicalize,
+			 scemi_respQ_deqReq_5_canonicalize,
+			 scemi_respQ_clearReq_5_canonicalize,
+			 scemi_7_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_6,
+			 scemi_respQ_enqReq_6_canonicalize,
+			 scemi_respQ_deqReq_6_canonicalize,
+			 scemi_respQ_clearReq_6_canonicalize,
+			 scemi_8_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_7,
+			 scemi_respQ_enqReq_7_canonicalize,
+			 scemi_respQ_deqReq_7_canonicalize,
+			 scemi_respQ_clearReq_7_canonicalize,
+			 scemi_9_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_8,
+			 scemi_respQ_enqReq_8_canonicalize,
+			 scemi_respQ_deqReq_8_canonicalize,
+			 scemi_respQ_clearReq_8_canonicalize,
+			 scemi_10_mkConnectionGetPut,
+			 scemi_respQ_canonicalize_9,
+			 scemi_respQ_enqReq_9_canonicalize,
+			 scemi_respQ_deqReq_9_canonicalize,
+			 scemi_respQ_clearReq_9_canonicalize,
+			 scemi_clockGenerators_clock_gens_do_stall_scemi,
+			 scemi_clockGenerators_stall_one_to_one_cclock,
+			 scemi_clockGenerators_incr_cycle_stamp,
+			 scemi_clockGenerators_clock_gens_update_stalled,
+			 scemi_clockGenerators_clock_gens_manage_reset,
+			 scemi_clockGenerators_handle_reset,
+			 scemi_init_state_track_reset,
+			 scemi_clockGenerators_track_reset,
+			 scemi_clockGenerators_clock_gens_do_ticks,
+			 scemi_clockGenerators_clock_gens_counters_do_stall,
+			 scemi_clockGenerators_clock_gens_tick_clock,
+			 scemi_clockGenerators_clock_gens_counters_incr,
+			 scemi_clockGenerators_clock_gens_is_allowed_sync_clock_domain_crossing,
+			 scemi_dut_dut_prb_control_receiveTrigger,
+			 scemi_dut_dut_prb_control_receiveFirstData,
+			 scemi_dut_dut_prb_control_receiveMoreData,
+			 scemi_scan_output_ports,
+			 scemi_dut_dut_prb_control_data_out_setOK,
+			 scemi_dut_dut_prb_control_prb_str_recv_doEnq,
+			 scemi_clockGenerators_one_to_one_cclock_incr,
+			 scemi_fFromBridgeBeat_ifc_update,
+			 scemi_fToContinueBeat_ifc_update,
+			 scemi_fS1OutPortAcks_ifc_update,
+			 scemi_1_connect_src_rdy,
+			 scemi_1_connect_dst_rdy,
+			 scemi_open_port,
+			 scemi_msg_source_noc_active_move_to_next_output_beat,
+			 scemi_msg_source_noc_active_dispatch_next_granted_other,
+			 scemi_msg_source_noc_active_dispatch_next_granted_scemi1,
+			 scemi_msg_source_noc_active_dispatch_next_granted_scemi2,
+			 scemi_msg_source_noc_active_continue_other,
+			 scemi_msg_source_noc_active_continue_scemi1,
+			 scemi_msg_source_noc_active_continue_scemi2,
+			 scemi_bridge_close_socket,
+			 scemi_fFromContinueBeat_ifc_update,
+			 scemi_fS2MsgOut_ifc_update,
+			 scemi_fS1MsgOut_ifc_update,
+			 scemi_1_connect_data,
+			 scemi_bridge_process_incoming_data_beat,
+			 scemi_1_always_accept_beat
+
+========================================
