@@ -1,4 +1,4 @@
-import CacheTypes::*;
+import CacheTypes::*; //cache words, rows, etc.
 import SpeckTypes::*; //defines BlockType, FlagType, Addr, etc.
 import MemTypes::*; //defines MemReq, MemResp
 import MemInit::*;

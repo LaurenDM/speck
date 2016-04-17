@@ -1,22 +1,23 @@
 import MemTypes::*;
-import Vector::*;
 import SpeckTypes::*;
+import Vector::*;
 
+/* TODO: check all of these numbers */
 typedef 16 CacheLineWords; // to match DDR3 width
 typedef TMul#(CacheLineWords, 4) CacheLineBytes;
 typedef 8 CacheRows; // small size to improve compile times
 
-typedef Bit#( TSub#(TSub#(TSub#(AddrSz, 2), TLog#(CacheRows)), TLog#(CacheLineWords)) ) CacheTag;
-typedef Bit#( TLog#(CacheRows) ) CacheIndex;
-typedef Bit#( TLog#(CacheLineWords) ) CacheWordSelect;
-typedef Vector#(CacheLineWords, Data) CacheLine;
+typedef Bit#(TSub#(TSub#(TSub#(AddrSz, 2), TLog#(CacheRows)), TLog#(CacheLineWords))) CacheTag;
+typedef Bit#(TLog#(CacheRows)) CacheIndex;
+typedef Bit#(TLog#(CacheLineWords)) CacheWordSelect;
+typedef Vector#(CacheLineWords, BlockType) CacheLine;
 
 // Wide memory interface
 // This is defined here since it depends on the CacheLine type
 typedef struct{
     Bit#(CacheLineWords) write_en;  // Word write enable
     Addr                 addr;
-    CacheLine            data;      // Vector#(CacheLineWords, Data)
+    CacheLine            block;
 } WideMemReq deriving(Eq,Bits);
 
 typedef CacheLine WideMemResp;

@@ -28,3 +28,8 @@ typedef struct{
    BlockType block;
    FlagType flag;
 } Block_Flag deriving(Bits, Eq);
+
+/* TODO: what will our address size be here?*/
+typedef 32 AddrSz;
+typedef Bit#(AddrSz) Addr;
+typedef N BlockSz;
