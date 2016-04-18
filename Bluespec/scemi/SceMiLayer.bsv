@@ -12,6 +12,11 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
+/* for DRAM */
+import DRAM::*;
+import Connectable::*;
+import Dut::*;
+
 typedef Server#(Block_Flag, Block_Flag) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
@@ -31,6 +36,7 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
 
    EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
    EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);
+   DRAM#(N,M,T) dram <- mkDRAM(clocked_by clk_usr, reset_by rst_usr);
 
    rule enqRequest;
       Block_Flag x = toSyncQ.first;
