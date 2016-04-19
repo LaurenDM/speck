@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Sat Mar 12 14:07:23 2016
+# Process ID: 2068
+# Log file: /afs/athena.mit.edu/user/l/d/ldemeyer/6.375/ldemeyer/riscv-lab6b/scemi/fpga_vc707/xilinx/mkBridge/mkBridge.runs/synth_1/mkBridge.vds
+# Journal file: /afs/athena.mit.edu/user/l/d/ldemeyer/6.375/ldemeyer/riscv-lab6b/scemi/fpga_vc707/xilinx/mkBridge/mkBridge.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source mkBridge.tcl

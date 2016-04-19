@@ -18,7 +18,7 @@ endmodule
 
 module mkEncrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
-    Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
+    Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
 
     Reg#(UInt#(TLog#(n))) alpha <- mkReg(8);
@@ -76,11 +76,9 @@ module mkEncrypt(EncryptDecrypt#(n,m,t));
     endrule
 
     method Action setKey(Vector#(m,UInt#(n)) key) if(!plaintextFIFO.notEmpty());
-        Vector#(TSub#(TAdd#(t,m),1), UInt#(n)) l_initial = replicate(0);
         for(Integer i=0; i<valueof(m)-1; i=i+1) begin
-            l_initial[i] = key[i+1];
+            l[i] <= key[i+1];
         end
-        l <= l_initial;
         k0 <= key[0];
         roundkey <= key[0];
         if(valueof(n)==16) begin
@@ -102,7 +100,7 @@ endmodule
 
 module mkDecrypt(EncryptDecrypt#(n,m,t));
     // Permanent Regs
-    Reg#(Vector#(TSub#(TAdd#(t,m),1), UInt#(n))) l <- mkReg(replicate(0)); // for key expansion
+    Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
     Reg#(UInt#(n)) k0 <- mkReg(0); // first round key
 
     Reg#(UInt#(TLog#(n))) alpha <- mkReg(8);
@@ -160,11 +158,9 @@ module mkDecrypt(EncryptDecrypt#(n,m,t));
     endrule
 
     method Action setKey(Vector#(m,UInt#(n)) key) if(!ciphertextFIFO.notEmpty());
-        Vector#(TSub#(TAdd#(t,m),1), UInt#(n)) l_initial = replicate(0);
         for(Integer i=0; i<valueof(m)-1; i=i+1) begin
-            l_initial[i] = key[i+1];
+            l[i] <= key[i+1];
         end
-        l <= l_initial;
         k0 <= key[0];
         roundkey <= key[0];
         if(valueof(n)==16) begin
