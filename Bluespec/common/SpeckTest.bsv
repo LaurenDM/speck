@@ -3,6 +3,7 @@ import SpeckTypes::*;
 import Unfolding::*;
 import Vector::*;
 import Printf::*;
+import Throughput::*;
 
 typedef 4 NB;
 
@@ -10,6 +11,39 @@ typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, 
 
 
 module mkSpeckTest(Empty);
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
+    SetKey#(N,M,T) tp <- mkThroughputTest(enc);
+
+    Vector#(M, UInt#(N)) key = newVector();
+    key[0] = 'h020100;
+    key[1] = 'h0a0908;
+    key[2] = 'h121110;
+    key[3] = 'h1a1918;
+
+    Reg#(Status) status <- mkReg(Keyset);
+
+    rule setEncKey(status==Keyset);
+        tp.setKey(key);
+        status <= Check;
+        $display("set enc key");
+    endrule
+
+    rule check(status==Check);
+        let x <- tp.ready();
+        if(x) begin
+            status <= Finish;
+        end
+        $display("checking");
+    endrule
+
+    rule finish(status==Finish);
+        $display("Finished");
+        $finish();
+    endrule
+endmodule
+
+
+module mkSpeckTest2(Empty);
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
 
