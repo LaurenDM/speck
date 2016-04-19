@@ -16,8 +16,9 @@ module [m] mkDutWithSoftReset(m#(dutifc) dutmodule, DutWithSoftReset#(dutifc) if
         provisos(IsModule#(m, a__));
 
     Clock clk <- exposeCurrentClock;
-    //(mingliu): This reset should also be asserted when PCIe reset is asserted
-    MakeResetIfc myrst <- mkReset(6, True /*False*/, clk);
+    //(mingliu): startInRst set to True so that when currentReset (from PCIe)
+    //is asserted, myrst is also asserted. 
+    MakeResetIfc myrst <- mkReset(6, True/*False*/, clk); 
 
     Reg#(Bool) resetting <- mkReg(False);
     FIFO#(Bit#(1)) didreset <- mkFIFO();

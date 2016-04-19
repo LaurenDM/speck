@@ -13,9 +13,9 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
-typedef Server#(Block_Flag, Block_Flag) DutInterface;
+typedef Server#(Bool, Bool) DutInterface;
 interface SettableDutInterface;
-   interface Get#(Bool) dut;
+   interface DutInterface dut;
    interface Put#(Key_Flag) setkey;
 endinterface
 
@@ -27,10 +27,11 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Key_Flag) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
-   SyncFIFOIfc#(Bool) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr);
+   SyncFIFOIfc#(Bool) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
+   SyncFIFOIfc#(Bool) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr);
 
-   SetKey#(N,M,T) tpEnc <- mkThroughputEncrypt(encrypt, clocked_by clk_usr, reset_by rst_usr);
-   SetKey#(N,M,T) tpDec <- mkThroughputDecrypt(decrypt, clocked_by clk_usr, reset_by rst_usr);
+   SetKey#(N,M,T) tpEnc <- mkThroughputEncrypt(clocked_by clk_usr, reset_by rst_usr);
+   SetKey#(N,M,T) tpDec <- mkThroughputDecrypt(clocked_by clk_usr, reset_by rst_usr);
 
    rule putKey;
       let x = toKeySyncQ.first;
@@ -43,7 +44,10 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
       end
    endrule
 
-   interface Get response = toGet(fromSyncQ);
+   interface DutInterface dut;
+      interface Put request = toPut(toSyncQ);
+      interface Get response = toGet(fromSyncQ);
+   endinterface
 
    interface Put setkey;
       method Action put(Key_Flag x);

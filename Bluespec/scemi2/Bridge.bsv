@@ -1,146 +1,73 @@
-// Copyright Bluespec Inc. 2011-2012
+import SceMi      :: *;
+import SceMiLayer :: *;
 
-`ifdef SCEMI_PCIE_VIRTEX5
-  `ifdef BOARD_ML507
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_VIRTEX5_ML50X_DDR2.bsv"
-    `else
-      `include "Bridge_VIRTEX5_ML50X.bsv"
-     `endif
-  `endif
-  `ifdef BOARD_XUPV5
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_VIRTEX5_ML50X_DDR2.bsv"
-    `else
-      `include "Bridge_VIRTEX5_ML50X.bsv"
-    `endif
-   `endif
-`endif
+// TCP bridge for simulation only
+`ifdef SCEMI_TCP
+(* synthesize *)
+module mkBridge ();
+   Clock clk <- exposeCurrentClock;
+   Empty scemi <- buildSceMi(mkSceMiLayer(clk), TCP);
 
-`ifdef SCEMI_PCIE_VIRTEX6
-  `ifdef BOARD_ML605
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_VIRTEX6_ML605_DDR3.bsv"
-    `else
-      `include "Bridge_VIRTEX6_ML605.bsv"
-     `endif
-  `endif
-  `ifdef BOARD_10GHXTLL
-    `include "Bridge_DINI_10GHXTLL.bsv"
-  `endif
-`endif
+endmodule: mkBridge
+`endif //SCEMI_TCP
 
-`ifdef SCEMI_PCIE_KINTEX7
-  `ifdef BOARD_KC705
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_KINTEX7_KC705_DDR3.bsv"
-    `else
-      `include "Bridge_KINTEX7_KC705.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_10GK7LL
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_DINI_10GK7LL_DDR3.bsv"
-    `else
-      `include "Bridge_DINI_10GK7LL.bsv"
-    `endif
-  `endif
-`endif
 
 `ifdef SCEMI_PCIE_VIRTEX7
-  `ifdef BOARD_VC707
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_VIRTEX7_VC707_DDR3.bsv"
-    `else
-      `include "Bridge_VIRTEX7_VC707.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_DH2000TQ
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_VIRTEX7_DH2000TQ_DDR2.bsv"
-    `else
-      `include "Bridge_VIRTEX7_DH2000TQ.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_B2000T
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_VIRTEX7_B2000T_DDR3.bsv"
-    `else
-      `include "Bridge_VIRTEX7_B2000T.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_PDV72KR2
-    `include "Bridge_VIRTEX7_PDV72KR2.bsv"
-  `endif
-  `ifdef BOARD_DNV7F2A
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_DINI_DNV7F2A_DDR3.bsv"
-    `else
-      `include "Bridge_DINI_DNV7F2A.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_RPP2
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_DINI_RPP2_DDR3.bsv"
-    `else
-      `include "Bridge_DINI_RPP2.bsv"
-    `endif
-  `endif
-  `ifdef BOARD_RPP2SPLIT
-    `ifdef DDR3_SODIMM_STYLE
-      `include "Bridge_DINI_RPP2SPLIT_DDR3.bsv"
-    `else
-      `include "Bridge_DINI_RPP2SPLIT.bsv"
-    `endif
-  `endif
-`endif
+`ifdef BOARD_VC707
 
-`ifdef SCEMI_PCIE_DINI
-  `ifdef BOARD_7002
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_DINI_7002_DDR2.bsv"
-    `else
-      `ifdef SRAM_SODIMM_STYLE
-        `include "Bridge_DINI_7002_SRAM.bsv"
-      `else
-	`include "Bridge_DINI_7002.bsv"
-      `endif
-    `endif
-  `endif
-  `ifdef BOARD_7006
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_DINI_7006_DDR2.bsv"
-    `else
-      `ifdef SRAM_SODIMM_STYLE
-        `include "Bridge_DINI_7006_SRAM.bsv"
-      `else
-	`include "Bridge_DINI_7006.bsv"
-      `endif
-    `endif
-  `endif
-  `ifdef BOARD_7406
-    `ifdef DDR2_SODIMM_STYLE
-      `include "Bridge_DINI_7406_DDR2.bsv"
-    `else
-      `ifdef SRAM_SODIMM_STYLE
-        `include "Bridge_DINI_7406_SRAM.bsv"
-      `else
-	`include "Bridge_DINI_7406.bsv"
-      `endif
-    `endif
-  `endif
-`endif
+// Setup for SCE-MI over PCIE to a Virtex7
+import Xilinx       :: *;
+import XilinxPCIE   :: *;
+import Clocks       :: *;
+import DefaultValue :: *;
+import TieOff       :: *;
 
-`ifdef SCEMI_TCP
-  `include "Bridge_TCP.bsv"
-`endif
+(* synthesize, no_default_clock, no_default_reset *)
+module mkBridge #(Clock pci_sys_clk_p, Clock pci_sys_clk_n,
+                  Clock sys_clk_p, Clock sys_clk_n,
+                  Reset pci_sys_reset_n)
+                 (VC707_FPGA);
 
-`ifdef SCEMI_SCEMI
-`define SCEMI_LT SCEMI
-`include "Bridge_SCEMI.bsv"
-`endif
+   Clock sys_clk <- mkClockIBUFDS(defaultValue, sys_clk_p, sys_clk_n);
 
-`ifdef SCEMI_EVE
-`define SCEMI_LT EVE
-`include "Bridge_SCEMI.bsv"
-`endif
+   //(mingliu): Create user clock so we're not constrained by 50MHz SceMi clock
+   ClockGenerator7Params clk_params = defaultValue();
+   clk_params.clkin1_period     = 5.000;       // 200 MHz reference clock
+   clk_params.clkin_buffer      = False;       // IBUFDS above
+   clk_params.reset_stages      = 0;           // no sync on reset so input clock has pll as only load
+   clk_params.clkfbout_mult_f   = 5.000;      // 1000 MHz VCO
+   clk_params.clkout0_divide_f    = `USER_CLK_PERIOD;
+   ClockGenerator7 usrClk_mmcm <- mkClockGenerator7(clk_params, clocked_by sys_clk, reset_by noReset);   
+  
+   Clock clk_usr = usrClk_mmcm.clkout0;
+   //Reset rst_usr = mkAsyncReset(10, pci_sys_reset_n, clk_usr);
+
+   SceMiV7PCIEArgs pcie_args;
+   pcie_args.pci_sys_clk_p = pci_sys_clk_p;
+   pcie_args.pci_sys_clk_n = pci_sys_clk_n;
+   pcie_args.pci_sys_reset = pci_sys_reset_n;
+   pcie_args.clock_period  = `SCEMI_CLOCK_PERIOD;
+   pcie_args.link_type     = PCIE_VIRTEX7;
+
+   SceMiV7PCIEIfc#(Empty, 8) scemi <- buildSceMi(mkSceMiLayer(clk_usr), pcie_args);
+   
+   mkTieOff(scemi.noc_cont);
+   
+   ReadOnly#(Bool) _isLinkUp         <- mkNullCrossing(noClock, scemi.isLinkUp);
+   ReadOnly#(Bool) _isOutOfReset     <- mkNullCrossing(noClock, scemi.isOutOfReset);
+   ReadOnly#(Bool) _isClockAdvancing <- mkNullCrossing(noClock, scemi.isClockAdvancing);
+
+   rule drive_memory_calibration;
+      scemi.isDDRReady(False);
+   endrule
+
+   interface pcie = scemi.pcie;
+
+   method leds = zeroExtend({pack(_isClockAdvancing)
+                            ,pack(_isOutOfReset)
+                            ,pack(_isLinkUp)
+                            });
+endmodule: mkBridge
+
+`endif //SCEMI_PCIE_VIRTEX7
+`endif //BOARD_VC707

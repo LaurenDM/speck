@@ -26,7 +26,7 @@ void out_cb(void* x, const Bool& ready)
 
 void runtest()
 {
-    while (!ready) {
+    while (!outdone) {
         sleep(0);
     }
 }
@@ -38,6 +38,7 @@ int main(int argc, char* argv[])
     SceMi *sceMi = SceMi::Init(sceMiVersion, &params);
 
     // Initialize the SceMi inport
+    InportProxyT<Bool > inport ("", "scemi_processor_req_inport", sceMi);
     InportProxyT<Key_Flag> setkey ("", "scemi_setkey_inport", sceMi);
 
     // Initialize the SceMi outport

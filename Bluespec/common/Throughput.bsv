@@ -3,7 +3,7 @@ import Vector::*;
 import SpeckTypes::*;
 import Speck::*;
 
-typedef 1000 TESTAMOUNT;
+typedef 10000 TESTAMOUNT;
 typedef 10 INITAMOUNT;
 
 interface SetKey#(numeric type n, numeric type m, numeric type t);
@@ -25,7 +25,6 @@ module mkThroughputDecrypt(SetKey#(N,M,T));
     return tp;
 endmodule
 
-(* synthesize *)
 module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     FIFO#(Block#(N)) inputFIFO <- mkFIFO();
     Reg#(Bool) started <- mkReg(False);
