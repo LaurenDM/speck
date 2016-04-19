@@ -1,0 +1,17 @@
+[DEFAULT]
+# The verilog file containing the top module
+top-file: 
+
+# The name of the top module
+top-module: 
+
+# The target clock frequency (mhz) of the design
+design-clock-frequency: 10
+
+# Default verilog simulator
+verilog-simulator: cvc
+
+# Default c++ testbench options
+c++-files: $BLUESPECDIR/tcllib/include/bsdebug_common.cpp
+c++-libraries: $BLUESPECDIR/tcllib/lib.linux64/libdesign.a
+c++-options: -shared -fPIC -Ibuild/cpp

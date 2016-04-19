@@ -1,0 +1,52 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
+| Date         : Sun Apr 10 16:46:23 2016
+| Host         : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
+| Command      : report_drc
+-----------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+
+REPORT SUMMARY
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+           Max violations: <unlimited>
+         Violations found: 3
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net scemi_clk_port_scemi_rstgen_inv_rstgen/rstSync/scemi_clk_port_scemi_rstgen_final_reset$RST_OUT is a gated clock net sourced by a combinational pin scemi_clk_port_scemi_rstgen_inv_rstgen/rstSync/scemi_clk_port_scemi_cReset_i_1/O, cell scemi_clk_port_scemi_rstgen_inv_rstgen/rstSync/scemi_clk_port_scemi_cReset_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+RTSTAT-10#1 Advisory
+No routable loads  
+38 net(s) have no routable loads. The problem net(s) are scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[2].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[4].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[5].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[6].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[7].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[3].pipe_rate.pipe_rate_i/USER_RESETOVRD_START, scemi_clkgen_pll$CLKOUT0B, scemi_clkgen_pll$CLKOUT1, scemi_clkgen_pll$CLKOUT1B, scemi_clkgen_pll$CLKOUT2B, scemi_clkgen_pll$CLKOUT2, scemi_clkgen_pll$CLKOUT3B, scemi_clkgen_pll$CLKOUT3 (the first 15 of 38 listed).
+Related violations: <none>
+
+
