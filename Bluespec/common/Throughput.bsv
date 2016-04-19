@@ -1,6 +1,7 @@
 import FIFO::*;
 import Vector::*;
 import SpeckTypes::*;
+import Speck::*;
 
 typedef 1000 TESTAMOUNT;
 typedef 10 INITAMOUNT;
@@ -10,6 +11,21 @@ interface SetKey#(numeric type n, numeric type m, numeric type t);
     method ActionValue#(Bool) ready();
 endinterface
 
+(* synthesize *)
+module mkThroughputEncrypt(SetKey#(N,M,T));
+    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
+    SetKey#(N,M,T) tp <- mkThroughputTest(encrypt);
+    return tp;
+endmodule
+
+(* synthesize *)
+module mkThroughputDecrypt(SetKey#(N,M,T));
+    EncryptDecrypt#(N,M,T) decrypt <- mkEncrypt();
+    SetKey#(N,M,T) tp <- mkThroughputTest(decrypt);
+    return tp;
+endmodule
+
+(* synthesize *)
 module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     FIFO#(Block#(N)) inputFIFO <- mkFIFO();
     Reg#(Bool) started <- mkReg(False);
