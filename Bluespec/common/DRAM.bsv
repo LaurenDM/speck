@@ -14,12 +14,9 @@ import SpeckTypes::*;
 typedef 32 MAX_OUTSTANDING_READS;
 
 interface DRAM#(numeric type n, numeric type m, numeric type t);
+   interface EncryptDecrypt#(N,M,T) encrypt;
+   interface EncryptDecrypt#(N,M,T) decrypt;
 endinterface
-
-(* synthesize *)
-module mkSynthesizedDRAM(DRAM#(N,M,T));
-   DRAM#(N,M,T) dram <- mkDRAM();
-endmodule
 
 module mkConnectionOutstandingLimit#(DDR3_Client cli, DDR3_Server srv)(Empty);
    //Rate limit read requests so that we guarantee there is always space in the respbuf to
@@ -47,14 +44,20 @@ module mkConnectionOutstandingLimit#(DDR3_Client cli, DDR3_Server srv)(Empty);
    endrule
 endmodule
 
-module mkDRAM(DRAM#(n,m,t));
+
+
+(* synthesize *)
+module mkSynthesizedDRAM(DRAM#(N, M, T));
    /* this module populates the fifos in the encrypt/decrypt modules
     by reading directly from the DRAM */
    
    //DDR_Server ddr <- mkConnectionOutstandingLimit();
-   //TODO: removed synthesis boundary; is this okay
-   EncryptDecrypt#(n,m,t) encrypt <- mkEncrypt(); //mkSynthesizedEncrypt();
-   EncryptDecrypt#(n,m,t) decrypt <- mkDecrypt(); // mkSynthesizedDecrypt();
+   /*TODO: removed synthesis boundary; is this okay?
+   other route I went it making this mod synthesized and removing polymorphism
+   I think this works since this is reading directly from mem 
+    */
    
+   EncryptDecrypt#(N, M, T) encrypt <- mkSynthesizedEncrypt();
+   EncryptDecrypt#(N, M, T) decrypt <- mkSynthesizedEncrypt();
    
 endmodule
