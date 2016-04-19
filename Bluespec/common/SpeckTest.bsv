@@ -33,7 +33,6 @@ module mkSpeckTest(Empty);
         if(x) begin
             status <= Finish;
         end
-        $display("checking");
     endrule
 
     rule finish(status==Finish);
