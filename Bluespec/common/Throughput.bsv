@@ -47,13 +47,13 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
 
     rule feed if(started);
         let x = ?;
-        if(countout==0) begin // for the first 30 vectors, we take from testvector
-            x = testvector[countin];
-        end
-        else begin // afterwards, we'll have something in the fifo
+        if(inputFIFO.notEmpty()) begin
             x = inputFIFO.first();
             //$display("x = %h %h", tpl_1(x), tpl_2(x));
             inputFIFO.deq;
+        end
+        else begin
+            x = testvector[mod(countin,valueof(INITAMOUNT))];
         end
         engine.inputMessage(x);
         countin <= countin +1;
