@@ -5,12 +5,117 @@ import Vector::*;
 import Printf::*;
 import Throughput::*;
 
-typedef 4 NB;
+typedef 10 NB;
 
-typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
-
+typedef enum { Keyset, Encrypt, Decrypt, Check, CheckEncrypt, CheckDecrypt, Finish } Status deriving (Bits, Eq);
 
 module mkSpeckTest(Empty);
+    OperationMode#(N,M,T) ofb <- mkOFB();
+
+    Vector#(NB,Block#(N)) plaintext = newVector();
+    plaintext[0] = tuple2('h6d2073, 'h696874);
+    plaintext[1] = tuple2('h20796c, 'h6c6172);
+    plaintext[2] = tuple2('h83e5a0, 'h12d53f);
+    plaintext[3] = tuple2('h6574a8, 'h694c42);
+    plaintext[4] = tuple2('h746146, 'h736e61);
+    plaintext[5] = tuple2('h3b7265, 'h747543);
+    plaintext[6] = tuple2('h65776f, 'h68202c);
+    plaintext[7] = tuple2('h656761, 'h737520);
+    plaintext[8] = tuple2('h656d69, 'h74206e);
+    plaintext[9] = tuple2('h69202c, 'h726576);
+    Vector#(NB,Block#(N)) ciphertext = newVector();
+    ciphertext[0] = tuple2('hb5cdcb, 'hba36a5);
+    ciphertext[1] = tuple2('he3634c, 'h396bda);
+    ciphertext[2] = tuple2('h26061b, 'hc496ac);
+    ciphertext[3] = tuple2('h8e1493, 'he3f373);
+    ciphertext[4] = tuple2('hce014c, 'h256c1b);
+    ciphertext[5] = tuple2('h5ba2d8, 'hf12e4d);
+    ciphertext[6] = tuple2('hf506d4, 'h9c66ba);
+    ciphertext[7] = tuple2('h571eb4, 'h9bbb66);
+    ciphertext[8] = tuple2('h13c236, 'hfb4849);
+    ciphertext[9] = tuple2('h92ebc3, 'h62e379);
+    Vector#(M, UInt#(N)) key = newVector();
+    key[0] = 'h020100;
+    key[1] = 'h0a0908;
+    key[2] = 'h121110;
+    key[3] = 'h1a1918;
+    Block#(N) iv = tuple2('h735e10, 'hb6445d);
+
+    Reg#(Status) status <- mkReg(Keyset);
+    Reg#(Bool) passed <- mkReg(True);
+    Reg#(int) feedpt <- mkReg(0);
+    Reg#(int) recct <- mkReg(0);
+    Reg#(int) feedct <- mkReg(0);
+    Reg#(int) recpt <- mkReg(0);
+
+    rule setKey(status==Keyset);
+        ofb.setKeyIV(key,iv);
+        if(feedpt ==0 )
+            status <= Encrypt;
+        else
+            status <= Decrypt;
+        $display("set key");
+    endrule
+
+    rule encrypt(status==Encrypt);
+        ofb.inputMessage(plaintext[feedpt]);
+        feedpt <= feedpt+1;
+        if(feedpt == fromInteger(valueof(NB))-1)
+            status <= CheckEncrypt;
+        $display("encrypting");
+    endrule
+
+    rule check_encrypt(status==CheckEncrypt);
+        let ciphertext2 <- ofb.getResult();
+        if(ciphertext2 != ciphertext[recct]) begin
+            $display("ct should be: ");
+            $display("%h %h", tpl_1(ciphertext[feedct]), tpl_2(ciphertext[feedct]));
+            $display("ct is: ");
+            $display("%h %h", tpl_1(ciphertext2), tpl_2(ciphertext2));
+            passed <= False;
+        end
+        recct <= recct + 1;
+        if(recct == fromInteger(valueof(NB))-1)
+            status <= KeySet;
+        $display("checking encrypt");
+    endrule
+
+    rule decrypt(status==Decrypt);
+        ofb.inputMessage(ciphertext[feedct]);
+        feedct <= feedct +1;
+        if(feedct == fromInteger(valueof(NB))-1)
+            status <= CheckDecrypt;
+        $display("decrypting");
+    endrule
+
+    rule check_decrypt(status==CheckDecrypt);
+        let plaintext2 <- ofb.getResult();
+        if(plaintext2 != plaintext[recpt]) begin
+            $display("pt should be: ");
+            $display("%h %h", tpl_1(plaintext[rec]), tpl_2(plaintext[rec]));
+            $display("pt is: ");
+            $display("%h %h", tpl_1(plaintext2), tpl_2(plaintext2));
+            passed <= False;
+        end
+        recpt <= recpt +1;
+        if(recpt == fromInteger(valueof(NB))-1)
+            status <= Finish;
+        $display("checking decrypt");
+    endrule
+
+    rule finish(status==Finish);
+        if(passed) begin
+            $display("PASSED");
+        end else begin
+            $display("FAILED");
+        end
+        $finish();
+    endrule
+
+endmodule
+
+
+module mkSpeckTest2(Empty);
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
     SetKey#(N,M,T) tp <- mkThroughputTest(enc);
 
@@ -42,7 +147,7 @@ module mkSpeckTest(Empty);
 endmodule
 
 
-module mkSpeckTest2(Empty);
+module mkSpeckTest1(Empty);
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
 
