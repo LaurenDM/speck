@@ -4,10 +4,11 @@ import Unfolding::*;
 import Vector::*;
 import Printf::*;
 import Throughput::*;
+import OFB::*;
 
 typedef 10 NB;
 
-typedef enum { Keyset, Encrypt, Decrypt, Check, CheckEncrypt, CheckDecrypt, Finish } Status deriving (Bits, Eq);
+typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
 
 module mkSpeckTest(Empty);
     OperationMode#(N,M,T) ofb <- mkOFB();
@@ -57,42 +58,40 @@ module mkSpeckTest(Empty);
         $display("set key");
     endrule
 
-    rule encrypt(status==Encrypt);
+    rule encrypt(status==Encrypt && feedpt < fromInteger(valueof(NB)));
         ofb.inputMessage(plaintext[feedpt]);
         feedpt <= feedpt+1;
-        if(feedpt == fromInteger(valueof(NB))-1)
-            status <= CheckEncrypt;
         $display("encrypting");
     endrule
 
-    rule check_encrypt(status==CheckEncrypt);
+    rule check_encrypt(status==Encrypt);
         let ciphertext2 <- ofb.getResult();
         if(ciphertext2 != ciphertext[recct]) begin
             $display("ct should be: ");
-            $display("%h %h", tpl_1(ciphertext[feedct]), tpl_2(ciphertext[feedct]));
+            $display("%h %h", tpl_1(ciphertext[recct]), tpl_2(ciphertext[recct]));
             $display("ct is: ");
             $display("%h %h", tpl_1(ciphertext2), tpl_2(ciphertext2));
             passed <= False;
         end
         recct <= recct + 1;
-        if(recct == fromInteger(valueof(NB))-1)
-            status <= KeySet;
+        if(recct == fromInteger(valueof(NB))-1) begin
+            ofb.reset();
+            status <= Keyset;
+        end
         $display("checking encrypt");
     endrule
 
-    rule decrypt(status==Decrypt);
+    rule decrypt(status==Decrypt && feedct < fromInteger(valueof(NB)));
         ofb.inputMessage(ciphertext[feedct]);
         feedct <= feedct +1;
-        if(feedct == fromInteger(valueof(NB))-1)
-            status <= CheckDecrypt;
         $display("decrypting");
     endrule
 
-    rule check_decrypt(status==CheckDecrypt);
+    rule check_decrypt(status==Decrypt);
         let plaintext2 <- ofb.getResult();
         if(plaintext2 != plaintext[recpt]) begin
             $display("pt should be: ");
-            $display("%h %h", tpl_1(plaintext[rec]), tpl_2(plaintext[rec]));
+            $display("%h %h", tpl_1(plaintext[recpt]), tpl_2(plaintext[recpt]));
             $display("pt is: ");
             $display("%h %h", tpl_1(plaintext2), tpl_2(plaintext2));
             passed <= False;

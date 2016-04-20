@@ -1,28 +1,35 @@
 import FIFO::*;
 import Vector::*;
 import SpeckTypes::*;
+import Speck::*;
 
 module mkOFB(OperationMode#(n,m,t));
     EncryptDecrypt#(n,m,t) enc <- mkEncrypt();
+    Reg#(Bool) started <- mkReg(False);
 
     // Input/outputFIFO's
     FIFO#(Block#(n)) inputFIFO <- mkFIFO();
     FIFO#(Block#(n)) outputFIFO <- mkFIFO();
 
-    function xor(Block#(n) key, Block#(n) pt);
+    function Block#(n) blockxor(Block#(n) key, Block#(n) pt);
         return tuple2(tpl_1(key)^tpl_1(pt),tpl_2(key)^tpl_2(pt));
     endfunction
 
-    rule do_xor; // will only fire if enc result available and plaintext ready
+    rule do_xor if (started); // will only fire if enc result available and plaintext ready
         let xorkey <- enc.getResult();
-        outputFIFO.enq(xor(xorkey,inputFIFO.first()));
+        outputFIFO.enq(blockxor(xorkey,inputFIFO.first()));
         inputFIFO.deq;
         enc.inputMessage(xorkey);
     endrule
 
-    method Action setKeyIV(Vector#(m,UInt#(n)) key, Block#(n) iv);
+    rule empty if (!started); // empty outputfifo of encryption module 
+        let dummy <- enc.getResult();
+    endrule
+
+    method Action setKeyIV(Vector#(m,UInt#(n)) key, Block#(n) iv) if (!started);
         enc.setKey(key);
         enc.inputMessage(iv);
+        started <= True;
     endmethod
 
     method Action inputMessage(Block#(n) text);
@@ -34,5 +41,8 @@ module mkOFB(OperationMode#(n,m,t));
         return outputFIFO.first();
     endmethod
 
+    method Action reset();
+        started <= False;
+    endmethod
 
 endmodule

@@ -13,6 +13,7 @@ interface OperationMode#(numeric type n, numeric type m, numeric type t);
     method Action setKeyIV(Vector#(m,UInt#(n)) key, Block#(n) iv);
     method Action inputMessage(Block#(n) text);
     method ActionValue#(Block#(n)) getResult();
+    method Action reset();
 endinterface
 
 interface EncryptDecrypt#(numeric type n, numeric type m, numeric type t);

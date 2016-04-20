@@ -2,8 +2,8 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Tue Apr 19 20:27:32 2016
-# Process ID: 29330
+# Start of session at: Wed Apr 20 16:24:28 2016
+# Process ID: 6830
 # Log file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi2/fpga/vivado.log
 # Journal file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi2/fpga/vivado.jou
 #-----------------------------------------------------------
@@ -40,7 +40,7 @@ fpga is xc7vx485t_0, bit file size is 20M xilinx/mkBridge.bit, PROGRAM BEGIN
 # program_hw_devices $vc707fpga
 INFO: [Labtools 27-2154] Reading 20273528 bytes from file xilinx/mkBridge.bit...
 INFO: [Labtools 27-32] Done pin status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 960.477 ; gain = 172.953
+program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 960.473 ; gain = 172.953
 # refresh_hw_device $vc707fpga
 INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 19 20:28:06 2016...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 16:25:04 2016...
