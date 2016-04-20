@@ -73,6 +73,19 @@ void decrypt(word ct[], word pt[], word k[]){
   }
 }
 
+/******************** OFB ***********************/
+
+void ofb(FILE* in, FILE* out, word k[], word iv[]){
+    word in1, in2;
+    word xorkey[2];
+    for(int i=0; i<10; i++){
+        encrypt(iv,xorkey,k);
+        fscanf(in,"%llx %llx",&in1, &in2);
+        fprintf(out,"ciphertext[%d] = tuple2('h%llx, 'h%llx); \n",i,in1^xorkey[0],in2^xorkey[1]);
+        iv = xorkey;
+    }
+}
+
 /******************** TestBench ***********************/
 
 int main(int argc, char* argv[]){
@@ -100,7 +113,7 @@ int main(int argc, char* argv[]){
       printf("key mismatch at index %d ! \n",i);
     }
   }
-
+  /*
   encrypt(pt,ct,k);
   printf("encrypt: ");
   for(int i=0; i<2; i++){
@@ -114,4 +127,11 @@ int main(int argc, char* argv[]){
     printf("%llx ",pt2[i]);
   }
   printf("\n");
+  */
+
+  word iv[2] = {0x735e10, 0xb6445d};
+
+  FILE* in = fopen("pt_in.txt","r");
+  FILE* out = fopen("ct_out.txt","w");
+  ofb(in,out,k,iv);
 }
