@@ -53,7 +53,7 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
             inputFIFO.deq;
         end
         else begin
-            x = testvector[mod(countin,valueof(INITAMOUNT))];
+            x = testvector[0];
         end
         engine.inputMessage(x);
         countin <= countin +1;
