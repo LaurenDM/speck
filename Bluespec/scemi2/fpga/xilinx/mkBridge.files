@@ -5,9 +5,9 @@
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedDecrypt.v
+/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v
 /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedEncrypt.v
+/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v
@@ -38,6 +38,7 @@
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/BRAM2.v
+/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v
 /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v
 /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v
 /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_axi_basic_rx.v

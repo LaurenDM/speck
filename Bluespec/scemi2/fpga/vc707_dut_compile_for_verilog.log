@@ -1,5 +1,5 @@
 checking package dependencies
-compiling ../../scemi/ResetXactor.bsv
+compiling ../../scemi2/ResetXactor.bsv
 compiling ../../common/SpeckTypes.bsv
 compiling ../../common/Speck.bsv
 code generation for mkSynthesizedEncrypt starts
@@ -8,15 +8,17 @@ Elaborated module file created: bdir_dut/mkSynthesizedEncrypt.ba
 code generation for mkSynthesizedDecrypt starts
 Verilog file created: vlog_dut/mkSynthesizedDecrypt.v
 Elaborated module file created: bdir_dut/mkSynthesizedDecrypt.ba
-compiling ../../scemi/SceMiLayer.bsv
+compiling ../../common/includes/Ehr.bsv
+compiling ../../common/includes/Fifo.bsv
+compiling ../../common/Throughput.bsv
+code generation for mkThroughputEncrypt starts
+Verilog file created: vlog_dut/mkThroughputEncrypt.v
+Elaborated module file created: bdir_dut/mkThroughputEncrypt.ba
+code generation for mkThroughputDecrypt starts
+Verilog file created: vlog_dut/mkThroughputDecrypt.v
+Elaborated module file created: bdir_dut/mkThroughputDecrypt.ba
+compiling ../../scemi2/SceMiLayer.bsv
 code generation for mkDutWrapper starts
-Warning: "../../scemi/SceMiLayer.bsv", line 22, column 17: (G0010)
-  Rule "getResponseEncrypt" was treated as more urgent than
-  "getResponseDecrypt". Conflicts:
-    "getResponseEncrypt" cannot fire before "getResponseDecrypt":
-      calls to fromSyncQ.enq vs. fromSyncQ.enq
-    "getResponseDecrypt" cannot fire before "getResponseEncrypt":
-      calls to fromSyncQ.enq vs. fromSyncQ.enq
 Verilog file created: vlog_dut/mkDutWrapper.v
 Elaborated module file created: bdir_dut/mkDutWrapper.ba
 compiling ../Bridge.bsv
@@ -79,10 +81,10 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   column 44.
   During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
   column 8.
-  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  During elaboration of `dut' at "../../scemi2/ResetXactor.bsv", line 51,
   column 28.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -105,10 +107,10 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   column 44.
   During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
   column 8.
-  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  During elaboration of `dut' at "../../scemi2/ResetXactor.bsv", line 51,
   column 28.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -129,10 +131,10 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   column 42.
   During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
   column 8.
-  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  During elaboration of `dut' at "../../scemi2/ResetXactor.bsv", line 51,
   column 28.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -155,10 +157,10 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   column 42.
   During elaboration of `prb_control' at "../SceMiSerialProbe.bsv", line 1753,
   column 8.
-  During elaboration of `dut' at "../../scemi/ResetXactor.bsv", line 51,
+  During elaboration of `dut' at "../../scemi2/ResetXactor.bsv", line 51,
   column 28.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -177,10 +179,10 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  During elaboration of `softrst' at "../../scemi2/ResetXactor.bsv", line 52,
   column 11.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -201,10 +203,10 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  During elaboration of `softrst' at "../../scemi2/ResetXactor.bsv", line 52,
   column 11.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -223,10 +225,10 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  During elaboration of `softrst' at "../../scemi2/ResetXactor.bsv", line 52,
   column 11.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -247,10 +249,10 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `softrst' at "../../scemi/ResetXactor.bsv", line 52,
+  During elaboration of `softrst' at "../../scemi2/ResetXactor.bsv", line 52,
   column 11.
-  During elaboration of `settabledut' at "../../scemi/SceMiLayer.bsv", line
-  92, column 25.
+  During elaboration of `settabledut' at "../../scemi2/SceMiLayer.bsv", line
+  84, column 25.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
   During elaboration of `mkBridge' at "../Bridge.bsv", line 26, column 8.
@@ -269,7 +271,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 94,
+  During elaboration of `processor' at "../../scemi2/SceMiLayer.bsv", line 86,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -291,7 +293,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
   During elaboration of `req' at "../SceMiXactors.bsv", line 397, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 94,
+  During elaboration of `processor' at "../../scemi2/SceMiLayer.bsv", line 86,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -311,7 +313,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 94,
+  During elaboration of `processor' at "../../scemi2/SceMiLayer.bsv", line 86,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -333,7 +335,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   During elaboration of `outport' at "../SceMiXactors.bsv", line 329, column
   32.
   During elaboration of `resp' at "../SceMiXactors.bsv", line 398, column 8.
-  During elaboration of `processor' at "../../scemi/SceMiLayer.bsv", line 94,
+  During elaboration of `processor' at "../../scemi2/SceMiLayer.bsv", line 86,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -352,7 +354,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   column 9.
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
-  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 95,
+  During elaboration of `setkey' at "../../scemi2/SceMiLayer.bsv", line 87,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -373,7 +375,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   line 321, column 9.
   During elaboration of `inport' at "../SceMiXactors.bsv", line 251, column
   31.
-  During elaboration of `setkey' at "../../scemi/SceMiLayer.bsv", line 95,
+  During elaboration of `setkey' at "../../scemi2/SceMiLayer.bsv", line 87,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -392,7 +394,7 @@ Warning: "SceMiNoC.bsv", line 316, column 9: (G0043)
   column 9.
   During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 97,
+  During elaboration of `shutdown' at "../../scemi2/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -413,7 +415,7 @@ Warning: "SceMiNoC.bsv", line 321, column 9: (G0043)
   line 321, column 9.
   During elaboration of `ctrl_in' at "../SceMiXactors.bsv", line 597, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 97,
+  During elaboration of `shutdown' at "../../scemi2/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -432,7 +434,7 @@ Warning: "SceMiNoC.bsv", line 496, column 9: (G0043)
   column 9.
   During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 97,
+  During elaboration of `shutdown' at "../../scemi2/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.
@@ -453,7 +455,7 @@ Warning: "SceMiNoC.bsv", line 501, column 9: (G0043)
   line 501, column 9.
   During elaboration of `ctrl_out' at "../SceMiXactors.bsv", line 598, column
   34.
-  During elaboration of `shutdown' at "../../scemi/SceMiLayer.bsv", line 97,
+  During elaboration of `shutdown' at "../../scemi2/SceMiLayer.bsv", line 89,
   column 10.
   During elaboration of `_dut' at "SceMiVirtex7PCIE.bsv", line 213, column 20.
   During elaboration of `scemi' at "../Bridge.bsv", line 52, column 30.

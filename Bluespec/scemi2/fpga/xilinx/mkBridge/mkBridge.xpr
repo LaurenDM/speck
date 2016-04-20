@@ -6,7 +6,7 @@
 <Project Version="7" Minor="0" Path="/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b18c65fffef3458b9628950df1a44704"/>
+    <Option Name="Id" Val="d00f36eab3d14a15bbac3257449b60e9"/>
     <Option Name="Part" Val="xc7vx485tffg1761-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
@@ -226,6 +226,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../../../../../../../../opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../../../../../../../../../opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -296,14 +303,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../vlog_dut/mkSynthesizedEncrypt.v">
+      <File Path="$PPRDIR/../../vlog_dut/mkThroughputEncrypt.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../vlog_dut/mkSynthesizedDecrypt.v">
+      <File Path="$PPRDIR/../../vlog_dut/mkThroughputDecrypt.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -41,6 +41,7 @@ read_verilog -library xil_defaultlib {
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_7x.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_gt_rx_valid_filter_7x.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_axi_basic_top.v
+  /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_top.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_gt_top.v
@@ -51,8 +52,8 @@ read_verilog -library xil_defaultlib {
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v
-  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedEncrypt.v
-  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedDecrypt.v
+  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v
+  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v
