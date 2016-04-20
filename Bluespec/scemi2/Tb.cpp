@@ -11,7 +11,6 @@
 #define u24 unsigned long
 
 typedef u24 word;
-typedef BitT<24> scemiword;
 
 bool outdone = false;
 FlagType flag;
@@ -19,16 +18,25 @@ FlagType flag;
 
 void out_cb(void* x, const Bool& ready)
 {
-    if(ready){
+    if(ready && !outdone){
+        printf("ready \n");
         outdone = true;
     }
 }
 
-void runtest()
+void runtest(InportProxyT<Key_Flag>& keyport, Key_Flag kf)
 {
+    clock_t starttime,endtime;
+    int count = 0;
+    outdone=false;
+    keyport.sendMessage(kf);
+    starttime =clock();
     while (!outdone) {
         sleep(0);
+        count = count + 1;
     }
+    endtime=clock();
+    printf("done, duration = %f seconds, count = %d \n",((float) endtime-starttime)/CLOCKS_PER_SEC,count);
 }
 
 int main(int argc, char* argv[])
@@ -56,7 +64,7 @@ int main(int argc, char* argv[])
     // Reset the dut.
     reset.reset();
 
-    /********************************* DECRYPT *****************************************/
+    /********************************* ENCRYPT *****************************************/
     flag.m_val = FlagType::e_Encrypt;
     Key_Flag kf;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
@@ -66,27 +74,18 @@ int main(int argc, char* argv[])
     kf.m_flag = flag;
 
     // Send in all the data.
-    clock_t starttime,endtime;
-    starttime = clock();
-    setkey.sendMessage(kf);
-    endtime = clock();
-    printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
+    runtest(setkey,kf);
 
     /********************************* DECRYPT *****************************************/
-    // reset
-    // Reset the dut.
-    reset.reset();
     flag.m_val = FlagType::e_Decrypt;
     word dekey[4] = {0xcb6915, 0xc6cbb1, 0x4a5369, 0x7f5a9d};
     for (int i=0; i<4; i++){
         kf.m_key[i]=dekey[i];
     }
     kf.m_flag = flag;
-
-    starttime =clock();
-    setkey.sendMessage(kf);
-    endtime=clock();
-    printf("decryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
+    // Reset the dut.
+    reset.reset();
+    runtest(setkey,kf);
     /********************************* FINISH *****************************************/
     std::cout << "shutting down..." << std::endl;
     shutdown.blocking_send_finish();

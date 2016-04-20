@@ -44,6 +44,23 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
       end
    endrule
 
+   /*rule getResponseEncrypt;
+      let response <- tpEnc.ready();
+      fromSyncQ.enq(response);
+   endrule
+
+   rule getResponseDecrypt;
+      let response <- tpDec.ready();
+      fromSyncQ.enq(response);
+   endrule*/
+
+   rule getResponse;
+      let x <- tpEnc.ready();
+      let y <- tpDec.ready();
+      if(x || y)
+          fromSyncQ.enq(True);
+   endrule
+
    interface DutInterface dut;
       interface Put request = toPut(toSyncQ);
       interface Get response = toGet(fromSyncQ);

@@ -1,4 +1,4 @@
-import FIFO::*;
+import Fifo::*;
 import Vector::*;
 import SpeckTypes::*;
 import Speck::*;
@@ -20,13 +20,13 @@ endmodule
 
 (* synthesize *)
 module mkThroughputDecrypt(SetKey#(N,M,T));
-    EncryptDecrypt#(N,M,T) decrypt <- mkEncrypt();
+    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
     SetKey#(N,M,T) tp <- mkThroughputTest(decrypt);
     return tp;
 endmodule
 
 module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
-    FIFO#(Block#(N)) inputFIFO <- mkFIFO();
+    Fifo#(5,Block#(N)) inputFIFO <- mkPipelineFifo();
     Reg#(Bool) started <- mkReg(False);
     Reg#(int) countin <- mkReg(0);
     Reg#(int) countout <-mkReg(0);

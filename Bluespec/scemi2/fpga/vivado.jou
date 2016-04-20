@@ -2,9 +2,9 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Tue Mar  1 15:58:50 2016
-# Process ID: 27515
-# Log file: /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vivado.log
-# Journal file: /mnt/nfs/var/nfs/ccross/ccross/audio/scemi/fpga/vivado.jou
+# Start of session at: Tue Apr 19 20:27:32 2016
+# Process ID: 29330
+# Log file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi2/fpga/vivado.log
+# Journal file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi2/fpga/vivado.jou
 #-----------------------------------------------------------
 source /mit/6.375//install/scripts/program.tcl
