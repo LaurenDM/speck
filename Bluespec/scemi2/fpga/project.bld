@@ -8,7 +8,7 @@ bsv-define: USER_CLK_PERIOD=10
 hide-target
 top-module:            mkBridge
 top-file:              ../Bridge.bsv
-bsv-source-directories:  ../../scemi ../../common
+bsv-source-directories:  ../../scemi2 ../../common ../../common/includes
 verilog-directory:     vlog_dut
 binary-directory:      bdir_dut
 simulation-directory:  simdir_dut
@@ -39,4 +39,3 @@ c++-header-aliases
 c++-files: ../Tb.cpp ../ResetXactor.cpp
 exe-file: tb
 c++-options: -g
-
