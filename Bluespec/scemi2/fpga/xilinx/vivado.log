@@ -2,8 +2,8 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Wed Apr 20 15:44:39 2016
-# Process ID: 20391
+# Start of session at: Wed Apr 20 18:46:26 2016
+# Process ID: 21721
 # Log file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/vivado.log
 # Journal file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/vivado.jou
 #-----------------------------------------------------------
@@ -112,7 +112,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pci
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_lane with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_lane.v:103]
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_misc with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_misc.v:90]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 817.773 ; gain = 174.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 818.773 ; gain = 175.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v:37]
 INFO: [Synth 8-638] synthesizing module 'SyncWire' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
@@ -3049,10 +3049,10 @@ INFO: [Synth 8-638] synthesizing module 'RevertReg' [/opt/bluespec/Bluespec-2014
 	Parameter width bound to: 1 - type: integer 
 	Parameter init bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'RevertReg' (64#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v:30]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:496]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:501]
 INFO: [Synth 8-256] done synthesizing module 'mkThroughputDecrypt' (65#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:35]
 INFO: [Synth 8-638] synthesizing module 'mkThroughputEncrypt' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:35]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:495]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:500]
 INFO: [Synth 8-256] done synthesizing module 'mkThroughputEncrypt' (66#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:35]
 INFO: [Synth 8-256] done synthesizing module 'mkDutWrapper' (67#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkDutWrapper.v:39]
 INFO: [Synth 8-638] synthesizing module 'MakeResetA__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v:40]
@@ -3212,7 +3212,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1026.914 ; gain = 383.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1026.914 ; gain = 383.949
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -3251,15 +3251,15 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 1611.977 ; gain = 969.012
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 1613.023 ; gain = 970.059
 372 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1611.977 ; gain = 856.062
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1613.023 ; gain = 857.109
 # launch_runs synth_1
-[Wed Apr 20 15:45:34 2016] Launched synth_1...
+[Wed Apr 20 18:47:21 2016] Launched synth_1...
 Run output will be captured here: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/runme.log
 # wait_on_run synth_1
-[Wed Apr 20 15:45:35 2016] Waiting for synth_1 to finish...
+[Wed Apr 20 18:47:21 2016] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log mkBridge.vds -m64 -mode batch -messageDb vivado.pb -source mkBridge.tcl
@@ -3362,7 +3362,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pci
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_lane with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_lane.v:103]
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_gt_top with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_gt_top.v:244]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 808.883 ; gain = 171.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 808.891 ; gain = 171.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v:37]
 INFO: [Synth 8-638] synthesizing module 'SyncWire' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
@@ -6299,10 +6299,10 @@ INFO: [Synth 8-638] synthesizing module 'RevertReg' [/opt/bluespec/Bluespec-2014
 	Parameter width bound to: 1 - type: integer 
 	Parameter init bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'RevertReg' (64#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v:30]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:496]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:501]
 INFO: [Synth 8-256] done synthesizing module 'mkThroughputDecrypt' (65#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v:35]
 INFO: [Synth 8-638] synthesizing module 'mkThroughputEncrypt' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:35]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:495]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:500]
 INFO: [Synth 8-256] done synthesizing module 'mkThroughputEncrypt' (66#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v:35]
 INFO: [Synth 8-256] done synthesizing module 'mkDutWrapper' (67#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkDutWrapper.v:39]
 INFO: [Synth 8-638] synthesizing module 'MakeResetA__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v:40]
@@ -6462,7 +6462,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1020.023 ; gain = 382.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1021.031 ; gain = 383.949
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6511,7 +6511,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1605.086 ; gain = 968.012
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1606.141 ; gain = 969.059
 ---------------------------------------------------------------------------------
 
 
@@ -6553,11 +6553,11 @@ can't read "CLKOUT4": no such variable at line NOLINE of file NONE (auto generat
 can't read "CLKOUT5": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto generated)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1605.086 ; gain = 968.012
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1606.141 ; gain = 969.059
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1605.086 ; gain = 968.012
+Finished RTL Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1606.141 ; gain = 969.059
 ---------------------------------------------------------------------------------
 
 INFO: [Synth 8-4471] merging register 'pbb_dma_dma_read_req_tlp_valids_1_reg' into 'pbb_dma_dma_read_req_tlp_valids_0_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v:10205]
@@ -6664,11 +6664,12 @@ Report RTL Partitions:
 |1     |mkPCIEtoBNoCSceMi_4__GB0 |           1|     39317|
 |2     |mkPCIEtoBNoCSceMi_4__GB1 |           1|     14789|
 |3     |mkPCIEtoBNoCSceMi_4__GB2 |           1|     11550|
-|4     |mkBridge__GCB0           |           1|     39570|
-|5     |mkBridge__GCB1           |           1|     18667|
-|6     |mkBridge__GCB2           |           1|     22554|
-|7     |mkBridge__GCB3           |           1|     19681|
-|8     |mkBridge__GCB14          |           1|        14|
+|4     |mkBridge__GCB0           |           1|     39489|
+|5     |case__996__GD            |           1|        32|
+|6     |mkBridge__GCB4           |           1|     18219|
+|7     |mkBridge__GCB5           |           1|     23050|
+|8     |mkBridge__GCB6           |           1|     25787|
+|9     |mkBridge__GCB17          |           1|        14|
 +------+-------------------------+------------+----------+
 
 ---------------------------------------------------------------------------------
@@ -6677,8 +6678,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
-	   3 Input     32 Bit       Adders := 3     
 	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
 	   3 Input     24 Bit       Adders := 2     
 	   2 Input     24 Bit       Adders := 7     
@@ -6688,26 +6689,26 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
 	   2 Input     12 Bit       Adders := 3     
-	   3 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
-	   3 Input     10 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 6     
+	   3 Input     10 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 3     
 	   2 Input      9 Bit       Adders := 6     
 	   2 Input      8 Bit       Adders := 10    
 	   2 Input      7 Bit       Adders := 3     
 	   4 Input      6 Bit       Adders := 2     
-	   3 Input      6 Bit       Adders := 6     
 	   2 Input      6 Bit       Adders := 14    
-	   2 Input      5 Bit       Adders := 18    
-	   3 Input      5 Bit       Adders := 1     
-	  16 Input      5 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 6     
 	   4 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 18    
+	  16 Input      5 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 24    
 	   2 Input      3 Bit       Adders := 17    
-	   2 Input      2 Bit       Adders := 27    
 	   3 Input      2 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 27    
 	   2 Input      1 Bit       Adders := 13    
 +---XORs : 
 	   2 Input     24 Bit         XORs := 8     
@@ -6759,16 +6760,17 @@ Detailed RTL Component Info :
 	   2 Input    105 Bit        Muxes := 2     
 	   2 Input     98 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 4     
+	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     48 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 126   
-	  37 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 130   
+	  37 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 2     
-	   2 Input     24 Bit        Muxes := 210   
-	   6 Input     24 Bit        Muxes := 4     
+	   2 Input     24 Bit        Muxes := 214   
 	  27 Input     24 Bit        Muxes := 2     
+	   6 Input     24 Bit        Muxes := 4     
+	  11 Input     24 Bit        Muxes := 4     
 	   5 Input     22 Bit        Muxes := 8     
 	   2 Input     22 Bit        Muxes := 11    
 	   2 Input     20 Bit        Muxes := 3     
@@ -6788,50 +6790,50 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 10    
 	   4 Input      9 Bit        Muxes := 2     
-	  10 Input      9 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 27    
+	  10 Input      9 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2267  
 	   4 Input      8 Bit        Muxes := 18    
-	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 16    
-	   8 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 148   
+	   7 Input      6 Bit        Muxes := 40    
 	  37 Input      6 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 40    
-	   2 Input      6 Bit        Muxes := 148   
+	   8 Input      6 Bit        Muxes := 2     
 	   8 Input      5 Bit        Muxes := 8     
-	   2 Input      5 Bit        Muxes := 167   
 	   6 Input      5 Bit        Muxes := 8     
-	   5 Input      5 Bit        Muxes := 1     
 	   7 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 167   
+	   5 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
 	   4 Input      5 Bit        Muxes := 9     
-	   5 Input      4 Bit        Muxes := 8     
-	   7 Input      4 Bit        Muxes := 8     
 	   2 Input      4 Bit        Muxes := 175   
-	   4 Input      3 Bit        Muxes := 8     
-	   7 Input      3 Bit        Muxes := 16    
-	  10 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 8     
+	   5 Input      4 Bit        Muxes := 8     
 	  32 Input      3 Bit        Muxes := 8     
-	   9 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 8     
+	   7 Input      3 Bit        Muxes := 16    
 	   2 Input      3 Bit        Muxes := 114   
-	   2 Input      2 Bit        Muxes := 55    
-	   4 Input      2 Bit        Muxes := 14    
-	  32 Input      2 Bit        Muxes := 8     
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 8     
 	   7 Input      2 Bit        Muxes := 8     
-	   7 Input      1 Bit        Muxes := 151   
-	   3 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 67    
-	   4 Input      1 Bit        Muxes := 34    
-	  10 Input      1 Bit        Muxes := 6     
-	  18 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 1173  
+	   4 Input      2 Bit        Muxes := 14    
+	   2 Input      2 Bit        Muxes := 55    
+	  32 Input      2 Bit        Muxes := 8     
 	   6 Input      1 Bit        Muxes := 24    
-	  32 Input      1 Bit        Muxes := 152   
 	  13 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1173  
+	   7 Input      1 Bit        Muxes := 151   
+	  18 Input      1 Bit        Muxes := 7     
 	   8 Input      1 Bit        Muxes := 26    
+	  10 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 34    
+	  32 Input      1 Bit        Muxes := 152   
+	   5 Input      1 Bit        Muxes := 67    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -6855,9 +6857,9 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit       Adders := 3     
 	   4 Input      6 Bit       Adders := 2     
 	   3 Input      6 Bit       Adders := 5     
+	   4 Input      5 Bit       Adders := 2     
 	   3 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
-	   4 Input      5 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 4     
@@ -6894,26 +6896,28 @@ Detailed RTL Component Info :
 	   4 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 4     
 	   2 Input     18 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 4     
 	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      7 Bit        Muxes := 3     
 	   2 Input      6 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
 	   4 Input      5 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 8     
+	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 17    
 	   5 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 17    
 	   2 Input      1 Bit        Muxes := 26    
+Module SyncWire 
+Detailed RTL Component Info : 
 Module FIFO2__parameterized0__4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -7039,23 +7043,23 @@ Detailed RTL Component Info :
 Module mkPCIEtoBNoCSceMi_4 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     32 Bit       Adders := 3     
 	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
-	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
+	   2 Input     13 Bit       Adders := 12    
+	   2 Input     12 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 4     
 	   3 Input     10 Bit       Adders := 1     
-	   3 Input      9 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 4     
 	   2 Input      9 Bit       Adders := 3     
+	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 2     
-	   3 Input      6 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 8     
+	   3 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 5     
 	  16 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
@@ -7092,8 +7096,8 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 8     
-	   2 Input      9 Bit        Muxes := 11    
 	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 11    
 	   2 Input      8 Bit        Muxes := 2221  
 	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      7 Bit        Muxes := 3     
@@ -7104,8 +7108,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 6     
 	   4 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 8     
-	   2 Input      1 Bit        Muxes := 790   
 	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 790   
 Module mkSceMiUInt32Parameter 
 Detailed RTL Component Info : 
 Module mkSceMiUInt32Parameter__parameterized0 
@@ -7129,10 +7133,6 @@ Detailed RTL Component Info :
 Module ResetInverter 
 Detailed RTL Component Info : 
 Module SyncReset0 
-Detailed RTL Component Info : 
-Module SyncWire__1 
-Detailed RTL Component Info : 
-Module ResetInverter__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_clock 
 Detailed RTL Component Info : 
@@ -7402,14 +7402,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7423,17 +7423,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7448,19 +7448,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -7480,8 +7480,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -7560,14 +7560,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7581,17 +7581,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7606,19 +7606,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -7690,14 +7690,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7711,17 +7711,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7736,19 +7736,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -7820,14 +7820,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7841,17 +7841,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7866,19 +7866,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -7950,14 +7950,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7971,17 +7971,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7996,19 +7996,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -8028,8 +8028,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -8108,14 +8108,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8129,17 +8129,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8154,19 +8154,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -8238,14 +8238,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8259,17 +8259,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8284,19 +8284,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -8368,14 +8368,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8389,17 +8389,17 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8414,19 +8414,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
@@ -8563,7 +8563,26 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 8     
 Module xilinx_v7_pcie_wrapper 
 Detailed RTL Component Info : 
+Module ResetInverter__1 
+Detailed RTL Component Info : 
 Module ResetEither__1 
+Detailed RTL Component Info : 
+Module SyncReset0__1 
+Detailed RTL Component Info : 
+Module FIFO2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module MakeClock__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ResetEither__2 
 Detailed RTL Component Info : 
 Module ClockInverter 
 Detailed RTL Component Info : 
@@ -8575,7 +8594,7 @@ Module MakeResetA__1
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
-Module SyncReset0__1 
+Module SyncReset0__2 
 Detailed RTL Component Info : 
 Module MakeReset0 
 Detailed RTL Component Info : 
@@ -8613,11 +8632,11 @@ Module SyncResetA__parameterized1
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module ResetEither__2 
-Detailed RTL Component Info : 
 Module ResetEither__3 
 Detailed RTL Component Info : 
-Module FIFO2__1 
+Module ResetEither__4 
+Detailed RTL Component Info : 
+Module FIFO2 
 Detailed RTL Component Info : 
 +---Registers : 
 	               81 Bit    Registers := 2     
@@ -8645,6 +8664,10 @@ Module MakeResetA__parameterized0
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
+Module SyncReset0__3 
+Detailed RTL Component Info : 
+Module ResetEither__5 
+Detailed RTL Component Info : 
 Module SyncHandshake__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -8709,7 +8732,7 @@ Detailed RTL Component Info :
 	                2 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module ResetEither__4 
+Module ResetEither 
 Detailed RTL Component Info : 
 Module SyncResetA 
 Detailed RTL Component Info : 
@@ -8951,7 +8974,9 @@ Module SyncPulse
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 4     
-Module MakeClock__2 
+Module SyncWire__1 
+Detailed RTL Component Info : 
+Module MakeClock 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 3     
@@ -8963,30 +8988,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 Module ResetInverter__4 
 Detailed RTL Component Info : 
-Module MakeClock 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module FIFO2 
-Detailed RTL Component Info : 
-+---Registers : 
-	               81 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module SyncReset0__2 
-Detailed RTL Component Info : 
-Module ResetEither__5 
-Detailed RTL Component Info : 
-Module SyncReset0__3 
-Detailed RTL Component Info : 
-Module ResetEither 
-Detailed RTL Component Info : 
 Module SyncWire__2 
-Detailed RTL Component Info : 
-Module SyncWire 
 Detailed RTL Component Info : 
 Module FIFOL1 
 Detailed RTL Component Info : 
@@ -9077,9 +9079,11 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
 	  27 Input     24 Bit        Muxes := 1     
+	  11 Input     24 Bit        Muxes := 2     
 	   6 Input     24 Bit        Muxes := 2     
-	   2 Input     24 Bit        Muxes := 105   
+	   2 Input     24 Bit        Muxes := 107   
 	   2 Input      3 Bit        Muxes := 5     
 Module FIFO2__parameterized8__1 
 Detailed RTL Component Info : 
@@ -9121,9 +9125,11 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
 	  27 Input     24 Bit        Muxes := 1     
+	  11 Input     24 Bit        Muxes := 2     
 	   6 Input     24 Bit        Muxes := 2     
-	   2 Input     24 Bit        Muxes := 105   
+	   2 Input     24 Bit        Muxes := 107   
 	   2 Input      3 Bit        Muxes := 5     
 Module mkDutWrapper 
 Detailed RTL Component Info : 
@@ -9251,14 +9257,14 @@ WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[26] ) is unused and w
 WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[25] ) is unused and will be removed from module FIFO2__parameterized3.
 WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[24] ) is unused and will be removed from module FIFO2__parameterized3.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-4471] merging register 'scemi_clk_port_scemi_clkgen/new_gate_reg' into 'scemi_uclkgen/new_gate_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:110]
+INFO: [Synth 8-4471] merging register 'scemi_uclkgen/new_gate_reg' into 'scemi_clk_port_scemi_clkgen/new_gate_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:110]
 WARNING: [Synth 8-3917] design mkBridge has port leds[7] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[6] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:25 . Memory (MB): peak = 1605.086 ; gain = 968.012
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:26 . Memory (MB): peak = 1606.141 ; gain = 969.059
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -9283,8 +9289,8 @@ Distributed RAM:
 |SyncFIFO       | fifoMem_reg                                               | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__14  | 
 |SyncFIFO       | fifoMem_reg                                               | Implied            | 2 X 97               | RAM32M x 17    | SyncFIFO/ram__15  | 
 |SyncFIFO       | fifoMem_reg                                               | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__16  | 
-|mkBridge__GCB3 | scemi_settabledut_dut_dutIfc_m_dut/fromSyncQ/fifoMem_reg  | Implied            | 2 X 1                | RAM16X1D x 1   | ram__17           | 
-|mkBridge__GCB3 | scemi_settabledut_dut_dutIfc_m_dut/toKeySyncQ/fifoMem_reg | Implied            | 2 X 97               | RAM32M x 17    | ram__18           | 
+|mkBridge__GCB6 | scemi_settabledut_dut_dutIfc_m_dut/fromSyncQ/fifoMem_reg  | Implied            | 2 X 1                | RAM16X1D x 1   | ram__17           | 
+|mkBridge__GCB6 | scemi_settabledut_dut_dutIfc_m_dut/toKeySyncQ/fifoMem_reg | Implied            | 2 X 97               | RAM32M x 17    | ram__18           | 
 +---------------+-----------------------------------------------------------+--------------------+----------------------+----------------+-------------------+
 
 Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Mutiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
@@ -9323,81 +9329,81 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bri
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_0/\pbb_dma_rd_buffer_queue_rCache_reg[94] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_2/\pbb_dma_msg_parse_header_pos_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_2/pbb_csr_clock_status/\data1_reg_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data1_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_max_payload_cr_reg[6] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_uclkgen/new_gate_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[4] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_rcb_mask_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_shutdown_ctrl_out_beats_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_fFromContinueBeat_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_fFromContinueBeat_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_fS2MsgOut_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_fS2MsgOut_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\scemi_fS1MsgOut_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_max_rd_req_cr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data1_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_rcb_cr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_clk_port_scemi_clkgen/new_gate_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromContinueBeat_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromContinueBeat_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS2MsgOut_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS2MsgOut_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS1MsgOut_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[20] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:05:34 ; elapsed = 00:05:29 . Memory (MB): peak = 2113.750 ; gain = 1476.676
+Finished Area Optimization : Time (s): cpu = 00:05:36 ; elapsed = 00:05:31 . Memory (MB): peak = 2100.703 ; gain = 1463.621
 ---------------------------------------------------------------------------------
 
 
@@ -9463,25 +9469,25 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:37 ; elapsed = 00:05:32 . Memory (MB): peak = 2118.750 ; gain = 1481.676
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:39 ; elapsed = 00:05:34 . Memory (MB): peak = 2100.703 ; gain = 1463.621
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:51 ; elapsed = 00:05:46 . Memory (MB): peak = 2169.758 ; gain = 1532.684
+Finished Timing Optimization : Time (s): cpu = 00:06:06 ; elapsed = 00:06:01 . Memory (MB): peak = 2130.711 ; gain = 1493.629
 ---------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_20026' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19607' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19210' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18752' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18355' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17958' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17561' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17097' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12574' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12158' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11742' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11270' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10854' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10438' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10022' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_9547' with timing assertions on output pin 'O'
 INFO: [Synth 8-139] cannot merge instances \scemi_uclkgen/CLK_VAL_OUT_reg  and \scemi_uclkgen/current_clk_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_user_i/rxresetdone_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_rate.pipe_rate_i/rxresetdone_reg1_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_user_i/txresetdone_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_rate.pipe_rate_i/txresetdone_reg1_reg  because of non-equivalent assertions
@@ -9583,30 +9589,22 @@ INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[5].pipe_rate.pipe_rate_i/mmcm_lock_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_sync_i/mmcm_lock_reg1_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[5].pipe_rate.pipe_rate_i/mmcm_lock_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_sync_i/mmcm_lock_reg1_reg  because of non-equivalent assertions
 INFO: [Common 17-14] Message 'Synth 8-139' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_20026' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19607' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19210' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18752' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18355' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17958' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17561' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17097' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_20026' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19607' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19210' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18752' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18355' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17958' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17561' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17097' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_20026' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19607' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19210' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18752' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18355' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17958' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17561' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17097' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12574' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12158' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11742' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11270' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10854' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10438' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10022' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_9547' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12574' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_12158' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11742' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_11270' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10854' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10438' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_10022' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_9547' with timing assertions on output pin 'O'
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -9614,7 +9612,7 @@ INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:45 ; elapsed = 00:06:41 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Finished Technology Mapping : Time (s): cpu = 00:07:01 ; elapsed = 00:06:57 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 ---------------------------------------------------------------------------------
 
 
@@ -9740,7 +9738,7 @@ WARNING: [Synth 8-3295] tying undriven pin \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4560] design has 13 instantiated BUFGs while the limit set by the -bufg synthesis option is 12
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:49 ; elapsed = 00:06:45 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Finished IO Insertion : Time (s): cpu = 00:07:05 ; elapsed = 00:07:01 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 ---------------------------------------------------------------------------------
 
 
@@ -9755,7 +9753,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:49 ; elapsed = 00:06:45 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:06 ; elapsed = 00:07:01 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 ---------------------------------------------------------------------------------
 
 
@@ -9763,7 +9761,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:06:49 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:53 ; elapsed = 00:06:49 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:09 ; elapsed = 00:07:05 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -9803,15 +9801,15 @@ Report Cell Usage:
 |5     |GTXE2_COMMON  |     2|
 |6     |IBUFDS_GTE2   |     1|
 |7     |INV           |     9|
-|8     |LUT1          |  1623|
-|9     |LUT2          |  1791|
-|10    |LUT3          |  2284|
-|11    |LUT4          |  2669|
-|12    |LUT5          |  4872|
-|13    |LUT6          |  9505|
+|8     |LUT1          |  1626|
+|9     |LUT2          |  1696|
+|10    |LUT3          |  2763|
+|11    |LUT4          |  2517|
+|12    |LUT5          |  4574|
+|13    |LUT6          |  9590|
 |14    |MMCME2_ADV    |     4|
-|15    |MUXF7         |   327|
-|16    |MUXF8         |    26|
+|15    |MUXF7         |   334|
+|16    |MUXF8         |    28|
 |17    |PCIE_2_1      |     1|
 |18    |RAM16X1D      |     3|
 |19    |RAM32M        |    16|
@@ -9820,7 +9818,7 @@ Report Cell Usage:
 |22    |SRL16E        |     7|
 |23    |FDCE          |   372|
 |24    |FDPE          |    96|
-|25    |FDRE          | 12517|
+|25    |FDRE          | 12514|
 |26    |FDSE          |   596|
 |27    |IBUF          |    19|
 |28    |IBUFDS        |     1|
@@ -9831,122 +9829,122 @@ Report Instance Areas:
 +------+---------------------------------------------------------------+---------------------------------------+------+
 |      |Instance                                                       |Module                                 |Cells |
 +------+---------------------------------------------------------------+---------------------------------------+------+
-|1     |top                                                            |                                       | 37247|
-|2     |  scemi_1_outFifo                                              |FIFO2                                  |   528|
-|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19102|
+|1     |top                                                            |                                       | 37275|
+|2     |  scemi_1_outFifo                                              |FIFO2                                  |   448|
+|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19277|
 |4     |    pbb_arbiter                                                |mkTLPArbiter                           |  1803|
 |5     |      tlp_out_cfg_fifo                                         |FIFO2__parameterized0_137              |   637|
 |6     |      tlp_out_dma_fifo                                         |FIFO2__parameterized0_138              |   704|
 |7     |      tlp_out_fifo                                             |FIFO2__parameterized0_139              |   458|
-|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_130              |    67|
+|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_130              |    89|
 |9     |    pbb_csr_clock_status                                       |FIFO2__parameterized1_131              |    94|
-|10    |    pbb_csr_intr_info                                          |FIFO2__parameterized2                  |   337|
+|10    |    pbb_csr_intr_info                                          |FIFO2__parameterized2                  |   322|
 |11    |    pbb_csr_rd_addr_queue                                      |FIFO2__parameterized3                  |   836|
-|12    |    pbb_dispatcher                                             |mkTLPDispatcher                        |  4335|
-|13    |      tlp_in_cfg_fifo                                          |FIFO2__parameterized0                  |  1924|
+|12    |    pbb_dispatcher                                             |mkTLPDispatcher                        |  4382|
+|13    |      tlp_in_cfg_fifo                                          |FIFO2__parameterized0                  |  1971|
 |14    |      tlp_in_dma_fifo                                          |FIFO2__parameterized0_135              |  1817|
 |15    |      tlp_in_fifo                                              |FIFO2__parameterized0_136              |   592|
 |16    |    pbb_dma_dont_wait_out                                      |FIFO2__parameterized4_132              |    11|
 |17    |    pbb_dma_intr_info                                          |FIFO2__parameterized2_133              |   291|
-|18    |    pbb_dma_last_tag_queue                                     |SizedFIFO                              |   134|
-|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1610|
-|20    |    pbb_dma_rd_buffer_queue_memory                             |BRAM2                                  |   176|
-|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_134                              |   221|
-|22    |  scemi_clk_port_scemi_clkgen                                  |MakeClock                              |     9|
+|18    |    pbb_dma_last_tag_queue                                     |SizedFIFO                              |   200|
+|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1681|
+|20    |    pbb_dma_rd_buffer_queue_memory                             |BRAM2                                  |   173|
+|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_134                              |   156|
+|22    |  scemi_clk_port_scemi_clkgen                                  |MakeClock                              |     3|
 |23    |  scemi_clk_port_scemi_rstgen_inv_rstgen                       |MakeResetA                             |     2|
 |24    |    rstSync                                                    |SyncResetA_129                         |     2|
-|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     6|
-|26    |  scemi_epReset125                                             |SyncResetA__parameterized1             |     9|
+|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     5|
+|26    |  scemi_epReset125                                             |SyncResetA__parameterized1             |    10|
 |27    |  scemi_epReset250                                             |SyncResetA__parameterized1_0           |     6|
 |28    |  scemi_fToBridgeBeat                                          |FIFOL1                                 |    43|
-|29    |  scemi_inFifo                                                 |FIFO2_1                                |   593|
-|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   159|
+|29    |  scemi_inFifo                                                 |FIFO2_1                                |   519|
+|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   153|
 |31    |  scemi_network_status                                         |MakeResetA__parameterized0             |     8|
 |32    |    rstSync                                                    |SyncResetA__parameterized2             |     7|
-|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10349|
+|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10315|
 |34    |    \ext_clk.pipe_clock_i                                      |pcie_7x_v1_10_pipe_clock               |    29|
-|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10320|
-|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9326|
-|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    52|
-|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_71 |    51|
-|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |    51|
-|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |    52|
-|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |    52|
-|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |    51|
-|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |    51|
-|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_77 |    53|
-|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8903|
-|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     6|
+|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10286|
+|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9311|
+|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    57|
+|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_71 |    54|
+|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |    56|
+|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |    54|
+|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |    53|
+|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |    54|
+|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |    54|
+|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_77 |    54|
+|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8864|
+|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     4|
 |47    |          \pipe_lane[0].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp                 |   152|
-|48    |          \pipe_lane[0].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq                  |   544|
-|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_128            |   190|
+|48    |          \pipe_lane[0].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq                  |   539|
+|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_128            |   197|
 |50    |          \pipe_lane[0].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp                 |   142|
 |51    |          \pipe_lane[0].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper             |     1|
-|52    |          \pipe_lane[0].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate                |   154|
-|53    |          \pipe_lane[0].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync                |    64|
-|54    |          \pipe_lane[0].pipe_user_i                            |pcie_7x_v1_10_pipe_user                |   119|
+|52    |          \pipe_lane[0].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate                |   151|
+|53    |          \pipe_lane[0].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync                |    63|
+|54    |          \pipe_lane[0].pipe_user_i                            |pcie_7x_v1_10_pipe_user                |   120|
 |55    |          \pipe_lane[1].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_78            |     4|
 |56    |          \pipe_lane[1].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_79              |   152|
-|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_80               |   544|
-|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_127            |   190|
-|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_81             |   154|
-|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_82             |    57|
-|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_83             |   121|
-|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_84            |     4|
+|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_80               |   539|
+|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_127            |   197|
+|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_81             |   151|
+|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_82             |    58|
+|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_83             |   120|
+|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_84            |     6|
 |63    |          \pipe_lane[2].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_85              |   152|
-|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_86               |   544|
-|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_126            |   190|
-|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_87             |   154|
-|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_88             |    57|
-|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_89             |   119|
+|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_86               |   539|
+|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_126            |   197|
+|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_87             |   151|
+|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_88             |    58|
+|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_89             |   120|
 |69    |          \pipe_lane[3].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_90            |     4|
 |70    |          \pipe_lane[3].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_91              |   152|
-|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_92               |   544|
-|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_125            |   190|
-|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_93             |   154|
-|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_94             |    57|
-|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_95             |   123|
-|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_96            |     4|
+|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_92               |   539|
+|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_125            |   197|
+|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_93             |   151|
+|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_94             |    58|
+|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_95             |   120|
+|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_96            |     6|
 |77    |          \pipe_lane[4].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_97              |   152|
-|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_98               |   544|
-|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_124            |   190|
+|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_98               |   539|
+|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_124            |   197|
 |80    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp_99              |   144|
 |81    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper_100         |     1|
-|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_101            |   154|
-|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_102            |    57|
-|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_103            |   120|
+|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_101            |   151|
+|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_102            |    58|
+|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_103            |   121|
 |85    |          \pipe_lane[5].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_104           |     6|
 |86    |          \pipe_lane[5].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_105             |   152|
-|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_106              |   543|
-|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_123            |   190|
-|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_107            |   154|
-|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_108            |    57|
-|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_109            |   122|
-|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_110           |     8|
+|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_106              |   539|
+|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_123            |   197|
+|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_107            |   151|
+|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_108            |    58|
+|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_109            |   121|
+|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_110           |    10|
 |93    |          \pipe_lane[6].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_111             |   152|
-|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_112              |   535|
-|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_122            |   192|
+|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_112              |   539|
+|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_122            |   197|
 |96    |          \pipe_lane[6].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_113            |   151|
-|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_114            |    57|
-|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_115            |   124|
-|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_116           |     4|
+|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_114            |    58|
+|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_115            |   125|
+|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_116           |     6|
 |100   |          \pipe_lane[7].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_117             |   153|
-|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_118              |   535|
-|102   |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan                |   192|
+|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_118              |   539|
+|102   |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan                |   197|
 |103   |          \pipe_lane[7].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_119            |   151|
 |104   |          \pipe_lane[7].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_120            |    61|
-|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_121            |   121|
-|106   |          \pipe_reset.pipe_reset_i                             |pcie_7x_v1_10_pipe_reset               |   262|
-|107   |          \qpll_reset.qpll_reset_i                             |pcie_7x_v1_10_qpll_reset               |    98|
-|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |   985|
-|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   518|
-|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   394|
-|111   |            rx_null_gen_inst                                   |pcie_7x_v1_10_axi_basic_rx_null_gen    |    62|
-|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   332|
-|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   124|
-|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    46|
-|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    78|
-|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    41|
+|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_121            |   120|
+|106   |          \pipe_reset.pipe_reset_i                             |pcie_7x_v1_10_pipe_reset               |   255|
+|107   |          \qpll_reset.qpll_reset_i                             |pcie_7x_v1_10_qpll_reset               |    97|
+|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |   966|
+|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   504|
+|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   387|
+|111   |            rx_null_gen_inst                                   |pcie_7x_v1_10_axi_basic_rx_null_gen    |    60|
+|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   327|
+|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   117|
+|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    42|
+|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    75|
+|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    36|
 |117   |          pcie_bram_top                                        |pcie_7x_v1_10_pcie_bram_top_7x         |     8|
 |118   |            pcie_brams_rx                                      |pcie_7x_v1_10_pcie_brams_7x            |     4|
 |119   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x_63          |     1|
@@ -9976,22 +9974,22 @@ Report Instance Areas:
 |143   |          \pipe_8_lane.pipe_lane_7_i                           |pcie_7x_v1_10_pcie_pipe_lane_54        |    48|
 |144   |          pipe_lane_0_i                                        |pcie_7x_v1_10_pcie_pipe_lane_55        |    48|
 |145   |          pipe_misc_i                                          |pcie_7x_v1_10_pcie_pipe_misc           |    21|
-|146   |  scemi_processor_req_inport_buffer_empty_sp                   |SyncHandshake                          |    13|
+|146   |  scemi_processor_req_inport_buffer_empty_sp                   |SyncHandshake                          |    10|
 |147   |  scemi_processor_req_inport_buffer_full_sp                    |SyncHandshake_2                        |    10|
 |148   |  scemi_processor_req_inport_ending_reset                      |SyncPulse                              |     6|
-|149   |  scemi_processor_req_inport_next_sp                           |SyncHandshake_3                        |    13|
+|149   |  scemi_processor_req_inport_next_sp                           |SyncHandshake_3                        |    12|
 |150   |  scemi_processor_req_inport_starting_reset                    |SyncPulse_4                            |     5|
-|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |     9|
+|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |    11|
 |152   |  scemi_processor_req_res_fifo                                 |SyncFIFO__parameterized0               |    31|
-|153   |  scemi_processor_resp_outport_finished                        |SyncHandshake_6                        |   659|
-|154   |  scemi_processor_resp_outport_next                            |SyncHandshake_7                        |     8|
-|155   |  scemi_processor_resp_res_fifo                                |SyncFIFO__parameterized0_8             |    36|
+|153   |  scemi_processor_resp_outport_finished                        |SyncHandshake_6                        |   731|
+|154   |  scemi_processor_resp_outport_next                            |SyncHandshake_7                        |     6|
+|155   |  scemi_processor_resp_res_fifo                                |SyncFIFO__parameterized0_8             |    38|
 |156   |  scemi_rstgen_inv_rstgen                                      |MakeResetA_9                           |     5|
 |157   |    rstSync                                                    |SyncResetA                             |     4|
-|158   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   276|
-|159   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    38|
-|160   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_10                       |    13|
-|161   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_11                       |    16|
+|158   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   273|
+|159   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    36|
+|160   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_10                       |    11|
+|161   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_11                       |    10|
 |162   |  scemi_setkey_inport_ending_reset                             |SyncPulse_12                           |     6|
 |163   |  scemi_setkey_inport_next_sp                                  |SyncHandshake_13                       |    13|
 |164   |  scemi_setkey_inport_starting_reset                           |SyncPulse_14                           |     5|
@@ -10011,43 +10009,43 @@ Report Instance Areas:
 |178   |      encrypt_plaintextFIFO                                    |FIFO2__parameterized8_46               |    23|
 |179   |  scemi_settabledut_dut_dutIfc_myrst                           |MakeResetA__parameterized1             |    11|
 |180   |    rstSync                                                    |SyncResetA__parameterized4             |     9|
-|181   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   156|
+|181   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   135|
 |182   |  scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |SyncHandshake_16                       |    10|
 |183   |  scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |SyncHandshake_17                       |    10|
 |184   |  scemi_settabledut_dut_prb_control_control_in_ending_reset    |SyncPulse_18                           |     6|
 |185   |  scemi_settabledut_dut_prb_control_control_in_next_sp         |SyncHandshake_19                       |    13|
 |186   |  scemi_settabledut_dut_prb_control_control_in_starting_reset  |SyncPulse_20                           |     5|
-|187   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_21                       |    11|
-|188   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_22                       |     9|
-|189   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_23                       |     8|
-|190   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |   116|
+|187   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_21                       |    10|
+|188   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_22                       |    13|
+|189   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_23                       |    15|
+|190   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |   110|
 |191   |  scemi_settabledut_softrst_req_inport_buffer_empty_sp         |SyncHandshake_24                       |    10|
 |192   |  scemi_settabledut_softrst_req_inport_buffer_full_sp          |SyncHandshake_25                       |    10|
 |193   |  scemi_settabledut_softrst_req_inport_ending_reset            |SyncPulse_26                           |     6|
 |194   |  scemi_settabledut_softrst_req_inport_next_sp                 |SyncHandshake_27                       |    12|
 |195   |  scemi_settabledut_softrst_req_inport_starting_reset          |SyncPulse_28                           |     5|
-|196   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_29                       |     9|
+|196   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_29                       |    11|
 |197   |  scemi_settabledut_softrst_req_res_fifo                       |SyncFIFO__parameterized0_30            |    32|
-|198   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_31                       |     9|
-|199   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_32                       |     9|
-|200   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized0_33            |    39|
-|201   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_34                       |    10|
-|202   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_35                       |    12|
+|198   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_31                       |     8|
+|199   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_32                       |     8|
+|200   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized0_33            |    35|
+|201   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_34                       |    19|
+|202   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_35                       |    10|
 |203   |  scemi_shutdown_ctrl_in_ending_reset                          |SyncPulse_36                           |     6|
-|204   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_37                       |    14|
+|204   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_37                       |    13|
 |205   |  scemi_shutdown_ctrl_in_starting_reset                        |SyncPulse_38                           |     5|
-|206   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_39                       |     9|
-|207   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_40                       |    10|
-|208   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_41                       |    75|
+|206   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_39                       |    10|
+|207   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_40                       |     8|
+|208   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_41                       |    74|
 |209   |  scemi_uclkgen                                                |MakeClock_42                           |     4|
 |210   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
 +------+---------------------------------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:55 ; elapsed = 00:06:51 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:11 ; elapsed = 00:07:07 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 ---------------------------------------------------------------------------------
 
 Synthesis finished with 0 errors, 0 critical warnings and 4019 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:06:55 ; elapsed = 00:06:52 . Memory (MB): peak = 2256.695 ; gain = 1619.621
+Synthesis Optimization Complete : Time (s): cpu = 00:07:11 ; elapsed = 00:07:07 . Memory (MB): peak = 2281.375 ; gain = 1644.293
 INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -10060,20 +10058,20 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-715 Infos, 299 Warnings, 0 Critical Warnings and 0 Errors encountered.
+707 Infos, 299 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:03 ; elapsed = 00:06:59 . Memory (MB): peak = 2257.695 ; gain = 1512.672
+synth_design: Time (s): cpu = 00:07:20 ; elapsed = 00:07:15 . Memory (MB): peak = 2282.375 ; gain = 1537.344
 # write_checkpoint mkBridge.dcp
 # report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2257.695 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 15:52:44 2016...
-[Wed Apr 20 15:52:49 2016] synth_1 finished
-wait_on_run: Time (s): cpu = 00:00:00.58 ; elapsed = 00:07:14 . Memory (MB): peak = 1619.977 ; gain = 7.000
+report_utilization: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2282.375 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 18:54:47 2016...
+[Wed Apr 20 18:54:51 2016] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00.55 ; elapsed = 00:07:29 . Memory (MB): peak = 1621.023 ; gain = 7.000
 # launch_runs impl_1 -to_step write_bitstream
-[Wed Apr 20 15:52:50 2016] Launched impl_1...
+[Wed Apr 20 18:54:52 2016] Launched impl_1...
 Run output will be captured here: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/runme.log
 # wait_on_run impl_1
-[Wed Apr 20 15:52:50 2016] Waiting for impl_1 to finish...
+[Wed Apr 20 18:54:52 2016] Waiting for impl_1 to finish...
 
 *** Running vivado
     with args -log mkBridge.vdi -applog -m64 -messageDb vivado.pb -mode batch -source mkBridge.tcl -notrace
@@ -10127,7 +10125,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints. [/mnt/nfs/var/nfs/ldem
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
 INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
-get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1804.914 ; gain = 563.750
+get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1804.898 ; gain = 561.727
 Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -10135,7 +10133,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
 
-link_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1804.914 ; gain = 1050.891
+link_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1804.898 ; gain = 1050.867
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10146,7 +10144,7 @@ INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.65 . Memory (MB): peak = 1809.934 ; gain = 4.020
+Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.63 . Memory (MB): peak = 1809.918 ; gain = 4.020
 
 Starting Logic Optimization Task
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
@@ -10156,28 +10154,28 @@ Phase 1 Retarget
 
 INFO: [Opt 31-138] Pushed 13 inverter(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 283199ed9
+Phase 1 Retarget | Checksum: 20e22c6f5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1809.934 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1809.918 ; gain = 0.000
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 16 inverter(s).
-INFO: [Opt 31-10] Eliminated 2412 cells.
-Phase 2 Constant Propagation | Checksum: 1d3e4c64a
+INFO: [Opt 31-10] Eliminated 2408 cells.
+Phase 2 Constant Propagation | Checksum: 1e527bc45
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1809.934 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1809.918 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 4881 unconnected nets.
-INFO: [Opt 31-11] Eliminated 1702 unconnected cells.
-Phase 3 Sweep | Checksum: 19a75b02c
+INFO: [Opt 31-12] Eliminated 4862 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1683 unconnected cells.
+Phase 3 Sweep | Checksum: 2707453b0
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1809.934 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 19a75b02c
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1809.918 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 2707453b0
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1809.934 ; gain = 0.000
-Implement Debug Cores | Checksum: 28f0fe933
-Logic Optimization | Checksum: 28f0fe933
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1809.918 ; gain = 0.000
+Implement Debug Cores | Checksum: 21fcb4883
+Logic Optimization | Checksum: 21fcb4883
 
 Starting Power Optimization Task
 
@@ -10185,9 +10183,9 @@ Starting PowerOpt TimerUpdates Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
-Ending PowerOpt TimerUpdates Task | Checksum: 19a75b02c
+Ending PowerOpt TimerUpdates Task | Checksum: 2707453b0
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1809.934 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1809.918 ; gain = 0.000
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
@@ -10195,17 +10193,17 @@ INFO: [Pwropt 34-162] WRITE_MODE attribute of 6 BRAM(s) out of a total of 14 has
     Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 28
-Ending Power Optimization Task | Checksum: 19a75b02c
+Ending Power Optimization Task | Checksum: 2707453b0
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1938.957 ; gain = 129.023
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1939.941 ; gain = 130.023
 INFO: [Common 17-83] Releasing license: Implementation
 25 Infos, 17 Warnings, 11 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1938.957 ; gain = 133.043
+opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1939.941 ; gain = 134.043
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.59 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.59 . Memory (MB): peak = 1940.941 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10220,189 +10218,189 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Core
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1940.941 ; gain = 0.000
 
 Phase 1.1.1 Mandatory Logic Optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1940.941 ; gain = 0.000
 Phase 1.1.1 Mandatory Logic Optimization | Checksum: f32a2cce
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1940.941 ; gain = 0.000
 
 Phase 1.1.2 Build Super Logic Region (SLR) Database
 Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: f32a2cce
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1940.941 ; gain = 0.000
 
 Phase 1.1.3 Add Constraints
-Phase 1.1.3 Add Constraints | Checksum: 1793f34fa
+Phase 1.1.3 Add Constraints | Checksum: 1a1c44cc4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1939.957 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1940.941 ; gain = 0.000
 
 Phase 1.1.4 Build Shapes/ HD Config
 
 Phase 1.1.4.1 Build Macros
-Phase 1.1.4.1 Build Macros | Checksum: 21abc2e38
+Phase 1.1.4.1 Build Macros | Checksum: 1ccc4fd30
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1.4 Build Shapes/ HD Config | Checksum: 21abc2e38
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1.4 Build Shapes/ HD Config | Checksum: 1ccc4fd30
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1995.969 ; gain = 55.027
 
 Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 1.1.5.1 Pre-Place Cells
-Phase 1.1.5.1 Pre-Place Cells | Checksum: 1793f34fa
+Phase 1.1.5.1 Pre-Place Cells | Checksum: 1a1c44cc4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1995.969 ; gain = 55.027
 
 Phase 1.1.5.2 Implementation Feasibility check
-Phase 1.1.5.2 Implementation Feasibility check | Checksum: 1793f34fa
+Phase 1.1.5.2 Implementation Feasibility check | Checksum: 1a1c44cc4
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1995.969 ; gain = 55.027
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 
 Phase 1.1.5.3 Implementation Feasibility check On IDelay
-Phase 1.1.5.3 Implementation Feasibility check On IDelay | Checksum: 1793f34fa
+Phase 1.1.5.3 Implementation Feasibility check On IDelay | Checksum: 1a1c44cc4
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1700460ff
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1220d2ff7
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1995.969 ; gain = 55.027
 
 Phase 1.1.6 Build Placer Netlist Model
 
 Phase 1.1.6.1 Place Init Design
 
 Phase 1.1.6.1.1 Build Clock Data
-Phase 1.1.6.1.1 Build Clock Data | Checksum: 187fc3a61
+Phase 1.1.6.1.1 Build Clock Data | Checksum: 18d03471d
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1.6.1 Place Init Design | Checksum: 17d0725b0
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1.6.1 Place Init Design | Checksum: 1b18b228b
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1.6 Build Placer Netlist Model | Checksum: 17d0725b0
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1.6 Build Placer Netlist Model | Checksum: 1b18b228b
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 1995.969 ; gain = 55.027
 
 Phase 1.1.7 Constrain Clocks/Macros
 
 Phase 1.1.7.1 Constrain Global/Regional Clocks
-Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: 17d0725b0
+Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: 1b18b228b
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1.7 Constrain Clocks/Macros | Checksum: 19a90a3ad
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1.7 Constrain Clocks/Macros | Checksum: 135fa80a9
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1.1 Placer Initialization Core | Checksum: 19a90a3ad
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:23 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1.1 Placer Initialization Core | Checksum: 135fa80a9
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.984 ; gain = 55.027
-Phase 1 Placer Initialization | Checksum: 19a90a3ad
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.969 ; gain = 55.027
+Phase 1 Placer Initialization | Checksum: 135fa80a9
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:24 . Memory (MB): peak = 1994.984 ; gain = 55.027
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.969 ; gain = 55.027
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1a91006bf
+Phase 2 Global Placement | Checksum: 1c2909e0f
 
-Time (s): cpu = 00:02:00 ; elapsed = 00:00:56 . Memory (MB): peak = 2014.422 ; gain = 74.465
+Time (s): cpu = 00:02:00 ; elapsed = 00:00:56 . Memory (MB): peak = 2018.812 ; gain = 77.871
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1a91006bf
+Phase 3.1 Commit Multi Column Macros | Checksum: 1c2909e0f
 
-Time (s): cpu = 00:02:00 ; elapsed = 00:00:56 . Memory (MB): peak = 2014.422 ; gain = 74.465
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:57 . Memory (MB): peak = 2018.812 ; gain = 77.871
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 21d0df1de
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 18790c6e0
 
-Time (s): cpu = 00:02:17 ; elapsed = 00:01:02 . Memory (MB): peak = 2014.422 ; gain = 74.465
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:02 . Memory (MB): peak = 2018.812 ; gain = 77.871
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 2a5ca1913
+Phase 3.3 Area Swap Optimization | Checksum: 131ea6981
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:01:03 . Memory (MB): peak = 2014.422 ; gain = 74.465
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:03 . Memory (MB): peak = 2018.812 ; gain = 77.871
 
 Phase 3.4 Timing Path Optimizer
-Phase 3.4 Timing Path Optimizer | Checksum: 24d10e144
+Phase 3.4 Timing Path Optimizer | Checksum: 1d3f0ca8d
 
-Time (s): cpu = 00:02:25 ; elapsed = 00:01:06 . Memory (MB): peak = 2014.422 ; gain = 74.465
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:06 . Memory (MB): peak = 2018.812 ; gain = 77.871
 
 Phase 3.5 Commit Small Macros & Core Logic
-Phase 3.5 Commit Small Macros & Core Logic | Checksum: 261d7821c
+Phase 3.5 Commit Small Macros & Core Logic | Checksum: 19c68a290
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:19 . Memory (MB): peak = 2084.363 ; gain = 144.406
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:19 . Memory (MB): peak = 2086.730 ; gain = 145.789
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 261d7821c
+Phase 3.6 Re-assign LUT pins | Checksum: 19c68a290
 
-Time (s): cpu = 00:02:44 ; elapsed = 00:01:21 . Memory (MB): peak = 2085.363 ; gain = 145.406
-Phase 3 Detail Placement | Checksum: 261d7821c
+Time (s): cpu = 00:02:45 ; elapsed = 00:01:21 . Memory (MB): peak = 2087.730 ; gain = 146.789
+Phase 3 Detail Placement | Checksum: 19c68a290
 
-Time (s): cpu = 00:02:44 ; elapsed = 00:01:21 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:02:45 ; elapsed = 00:01:21 . Memory (MB): peak = 2087.730 ; gain = 146.789
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 PCOPT Shape updates
-Phase 4.1 PCOPT Shape updates | Checksum: 23f8ca835
+Phase 4.1 PCOPT Shape updates | Checksum: 1e3c4fc5e
 
-Time (s): cpu = 00:02:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:22 . Memory (MB): peak = 2087.730 ; gain = 146.789
 
 Phase 4.2 Post Placement Optimization
 
 Phase 4.2.1 Post Placement Timing Optimization
 
 Phase 4.2.1.1 Restore Best Placement
-Phase 4.2.1.1 Restore Best Placement | Checksum: 1440e6bb3
+Phase 4.2.1.1 Restore Best Placement | Checksum: 18b971522
 
-Time (s): cpu = 00:03:05 ; elapsed = 00:01:32 . Memory (MB): peak = 2085.363 ; gain = 145.406
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.424. For the most accurate timing information please run report_timing.
-Phase 4.2.1 Post Placement Timing Optimization | Checksum: 1440e6bb3
+Time (s): cpu = 00:03:01 ; elapsed = 00:01:28 . Memory (MB): peak = 2087.730 ; gain = 146.789
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.509. For the most accurate timing information please run report_timing.
+Phase 4.2.1 Post Placement Timing Optimization | Checksum: 18b971522
 
-Time (s): cpu = 00:03:05 ; elapsed = 00:01:32 . Memory (MB): peak = 2085.363 ; gain = 145.406
-Phase 4.2 Post Placement Optimization | Checksum: 1440e6bb3
+Time (s): cpu = 00:03:01 ; elapsed = 00:01:28 . Memory (MB): peak = 2087.730 ; gain = 146.789
+Phase 4.2 Post Placement Optimization | Checksum: 18b971522
 
-Time (s): cpu = 00:03:05 ; elapsed = 00:01:33 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:29 . Memory (MB): peak = 2087.730 ; gain = 146.789
 
 Phase 4.3 Post Placement Cleanup
-Phase 4.3 Post Placement Cleanup | Checksum: 1440e6bb3
+Phase 4.3 Post Placement Cleanup | Checksum: 18b971522
 
-Time (s): cpu = 00:03:06 ; elapsed = 00:01:33 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:29 . Memory (MB): peak = 2087.730 ; gain = 146.789
 
 Phase 4.4 Placer Reporting
 
 Phase 4.4.1 Restore STA
-Phase 4.4.1 Restore STA | Checksum: 1440e6bb3
+Phase 4.4.1 Restore STA | Checksum: 18b971522
 
-Time (s): cpu = 00:03:07 ; elapsed = 00:01:34 . Memory (MB): peak = 2085.363 ; gain = 145.406
-Phase 4.4 Placer Reporting | Checksum: 1440e6bb3
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:29 . Memory (MB): peak = 2087.730 ; gain = 146.789
+Phase 4.4 Placer Reporting | Checksum: 18b971522
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:01:35 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:30 . Memory (MB): peak = 2087.730 ; gain = 146.789
 
 Phase 4.5 Final Placement Cleanup
-Phase 4.5 Final Placement Cleanup | Checksum: 1da7c1859
+Phase 4.5 Final Placement Cleanup | Checksum: 176334ed0
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:01:35 . Memory (MB): peak = 2085.363 ; gain = 145.406
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1da7c1859
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:31 . Memory (MB): peak = 2087.730 ; gain = 146.789
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 176334ed0
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:01:36 . Memory (MB): peak = 2085.363 ; gain = 145.406
-Ending Placer Task | Checksum: 1a9b6e9ba
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:31 . Memory (MB): peak = 2087.730 ; gain = 146.789
+Ending Placer Task | Checksum: 91dc1eae
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:01:36 . Memory (MB): peak = 2085.363 ; gain = 145.406
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:31 . Memory (MB): peak = 2087.730 ; gain = 146.789
 INFO: [Common 17-83] Releasing license: Implementation
 36 Infos, 19 Warnings, 11 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:03:15 ; elapsed = 00:01:38 . Memory (MB): peak = 2085.363 ; gain = 145.406
+place_design: Time (s): cpu = 00:03:11 ; elapsed = 00:01:34 . Memory (MB): peak = 2087.730 ; gain = 146.789
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.363 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.363 ; gain = 1.000
-report_utilization: Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2086.363 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2088.730 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2088.730 ; gain = 1.000
+report_utilization: Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.70 . Memory (MB): peak = 2088.730 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10418,89 +10416,111 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Starting Route Task
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 25d050fb
+Phase 1 Build RT Design | Checksum: 18394652f
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:40 . Memory (MB): peak = 2378.941 ; gain = 247.352
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:42 . Memory (MB): peak = 2377.277 ; gain = 246.320
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 25d050fb
+Phase 2.1 Create Timer | Checksum: 18394652f
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:41 . Memory (MB): peak = 2378.941 ; gain = 247.352
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:43 . Memory (MB): peak = 2377.277 ; gain = 246.320
 
 Phase 2.2 Update Timing
-Phase 2.2 Update Timing | Checksum: b0ff1c06
+Phase 2.2 Update Timing | Checksum: 137380090
 
-Time (s): cpu = 00:02:38 ; elapsed = 00:01:54 . Memory (MB): peak = 2448.977 ; gain = 317.387
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.516  | TNS=0      | WHS=-0.441 | THS=-754   |
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:56 . Memory (MB): peak = 2448.461 ; gain = 317.504
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.58   | TNS=0      | WHS=-0.43  | THS=-682   |
 
-Phase 2 Router Initialization | Checksum: 165104d39
+Phase 2 Router Initialization | Checksum: 13b5ce8bf
 
-Time (s): cpu = 00:02:51 ; elapsed = 00:02:01 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:03 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: c50a14e0
+Phase 3 Initial Routing | Checksum: 13161d82c
 
-Time (s): cpu = 00:03:13 ; elapsed = 00:02:04 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:03:14 ; elapsed = 00:02:06 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 4880
- Number of Nodes with overlaps = 312
- Number of Nodes with overlaps = 33
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 4850
+ Number of Nodes with overlaps = 288
+ Number of Nodes with overlaps = 39
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+INFO: [Route 35-325] The following overlapped nodes exist in the design and there is low overall congestion. 
+Resolution: Check for routing resource conflicts on the identified nets or significant localized congestion using the Route Congestion Metrics in the Device View. 
+1. INT_R_X125Y157/ER1BEG1
+Overlapping nets: 2
+	scemi_uclkgen/p_0_in
+	scemi_clk_port_scemi_clkgen/sCLK
+2. INT_R_X125Y156/ER1BEG1
+Overlapping nets: 2
+	scemi_uclkgen/p_0_in
+	scemi_clk_port_scemi_clkgen/sCLK
+3. INT_R_X127Y151/ER1BEG1
+Overlapping nets: 2
+	scemi_uclkgen/p_0_in
+	scemi_clk_port_scemi_clkgen/sCLK
+4. INT_R_X121Y157/EE4BEG0
+Overlapping nets: 2
+	scemi_uclkgen/p_0_in
+	scemi_clk_port_scemi_clkgen/sCLK
+
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: b214b309
+Phase 4.1.1 Update Timing | Checksum: 1a923379e
 
-Time (s): cpu = 00:03:53 ; elapsed = 00:02:18 . Memory (MB): peak = 2448.977 ; gain = 317.387
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.544  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:03:56 ; elapsed = 00:02:21 . Memory (MB): peak = 2448.461 ; gain = 317.504
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.257  | TNS=0      | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 16bbf22f2
+Phase 4.1 Global Iteration 0 | Checksum: 14708cc03
 
-Time (s): cpu = 00:03:54 ; elapsed = 00:02:18 . Memory (MB): peak = 2448.977 ; gain = 317.387
-Phase 4 Rip-up And Reroute | Checksum: 16bbf22f2
+Time (s): cpu = 00:03:57 ; elapsed = 00:02:21 . Memory (MB): peak = 2448.461 ; gain = 317.504
+Phase 4 Rip-up And Reroute | Checksum: 14708cc03
 
-Time (s): cpu = 00:03:54 ; elapsed = 00:02:18 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:03:57 ; elapsed = 00:02:21 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 5 Delay CleanUp
 
 Phase 5.1 Update Timing
-Phase 5.1 Update Timing | Checksum: 16bbf22f2
+Phase 5.1 Update Timing | Checksum: 14708cc03
 
-Time (s): cpu = 00:03:59 ; elapsed = 00:02:19 . Memory (MB): peak = 2448.977 ; gain = 317.387
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.631  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:22 . Memory (MB): peak = 2448.461 ; gain = 317.504
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.344  | TNS=0      | WHS=N/A    | THS=N/A    |
 
-Phase 5 Delay CleanUp | Checksum: 16bbf22f2
+Phase 5 Delay CleanUp | Checksum: 14708cc03
 
-Time (s): cpu = 00:03:59 ; elapsed = 00:02:19 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:23 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 6 Clock Skew Optimization
-Phase 6 Clock Skew Optimization | Checksum: 16bbf22f2
+Phase 6 Clock Skew Optimization | Checksum: 14708cc03
 
-Time (s): cpu = 00:03:59 ; elapsed = 00:02:20 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:23 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: 16bbf22f2
+Phase 7.1 Update Timing | Checksum: 14708cc03
 
-Time (s): cpu = 00:04:07 ; elapsed = 00:02:22 . Memory (MB): peak = 2448.977 ; gain = 317.387
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.631  | TNS=0      | WHS=-0.094 | THS=-0.221 |
+Time (s): cpu = 00:04:11 ; elapsed = 00:02:25 . Memory (MB): peak = 2448.461 ; gain = 317.504
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.344  | TNS=0      | WHS=-0.142 | THS=-0.249 |
 
-Phase 7 Post Hold Fix | Checksum: 4e1e6312
+Phase 7 Post Hold Fix | Checksum: 121d99655
 
-Time (s): cpu = 00:04:08 ; elapsed = 00:02:22 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:25 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.64398 %
-  Global Horizontal Routing Utilization  = 1.7975 %
+  Global Vertical Routing Utilization    = 1.66203 %
+  Global Horizontal Routing Utilization  = 1.74352 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -10509,64 +10529,64 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 4e1e6312
+Phase 8 Route finalize | Checksum: 121d99655
 
-Time (s): cpu = 00:04:09 ; elapsed = 00:02:22 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:25 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 4e1e6312
+Phase 9 Verifying routed nets | Checksum: 121d99655
 
-Time (s): cpu = 00:04:09 ; elapsed = 00:02:22 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:25 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 5282d615
+Phase 10 Depositing Routes | Checksum: 166a458fa
 
-Time (s): cpu = 00:04:11 ; elapsed = 00:02:25 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:15 ; elapsed = 00:02:28 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Phase 11 Post Router Timing
 
 Phase 11.1 Update Timing
-Phase 11.1 Update Timing | Checksum: 5282d615
+Phase 11.1 Update Timing | Checksum: 166a458fa
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:02:26 . Memory (MB): peak = 2448.977 ; gain = 317.387
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.631  | TNS=0      | WHS=0.026  | THS=0      |
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:29 . Memory (MB): peak = 2448.461 ; gain = 317.504
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.344  | TNS=0      | WHS=0.026  | THS=0      |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 11 Post Router Timing | Checksum: 5282d615
+Phase 11 Post Router Timing | Checksum: 166a458fa
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:02:26 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:29 . Memory (MB): peak = 2448.461 ; gain = 317.504
 INFO: [Route 35-16] Router Completed Successfully
-Ending Route Task | Checksum: 5282d615
+Ending Route Task | Checksum: 166a458fa
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:02:26 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:29 . Memory (MB): peak = 2448.461 ; gain = 317.504
 
 Routing Is Done.
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:02:26 . Memory (MB): peak = 2448.977 ; gain = 317.387
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:29 . Memory (MB): peak = 2448.461 ; gain = 317.504
 INFO: [Common 17-83] Releasing license: Implementation
-49 Infos, 19 Warnings, 11 Critical Warnings and 0 Errors encountered.
+50 Infos, 19 Warnings, 11 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:25 ; elapsed = 00:02:31 . Memory (MB): peak = 2448.977 ; gain = 362.613
+route_design: Time (s): cpu = 00:04:28 ; elapsed = 00:02:33 . Memory (MB): peak = 2448.461 ; gain = 359.730
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2448.977 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2448.977 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2448.461 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2448.461 ; gain = 0.000
 INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 2448.977 ; gain = 0.000
+report_timing_summary: Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 2448.461 ; gain = 0.000
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1, power analysis is using 0 by default.
-Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets scemi_pcie_ep/pcie_7x_v1_10_i/O2]'  to set the static_probability to '1'  if desired.
+Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets scemi_pcie_ep/pcie_7x_v1_10_i/O1]'  to set the static_probability to '1'  if desired.
 WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1, power analysis is using 0 by default.
 Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets scemi_scemi_clkgen_rReset]'  to set the static_probability to '1'  if desired.
-report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2448.977 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2448.461 ; gain = 0.000
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
 Running DRC as a precondition to command write_bitstream
@@ -10586,10 +10606,10 @@ sh: 1: Syntax error: Bad fd number
 sh: 1: Syntax error: Bad fd number
 INFO: [Common 17-185] WebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:01:51 ; elapsed = 00:01:49 . Memory (MB): peak = 2851.891 ; gain = 402.914
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 16:00:43 2016...
-[Wed Apr 20 16:00:46 2016] impl_1 finished
-wait_on_run: Time (s): cpu = 00:00:00.49 ; elapsed = 00:07:56 . Memory (MB): peak = 1620.977 ; gain = 0.000
+write_bitstream: Time (s): cpu = 00:01:52 ; elapsed = 00:01:49 . Memory (MB): peak = 2851.094 ; gain = 402.633
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 19:02:42 2016...
+[Wed Apr 20 19:02:43 2016] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:00.49 ; elapsed = 00:07:51 . Memory (MB): peak = 1622.023 ; gain = 0.000
 # file copy -force mkBridge/mkBridge.runs/impl_1/mkBridge.bit ./mkBridge.bit
 # file copy -force mkBridge/mkBridge.runs/impl_1/mkBridge.bit ./fpga.bit
 # file copy -force mkBridge/mkBridge.runs/synth_1/runme.log         ./mkBridge.slog
@@ -10607,33 +10627,33 @@ wait_on_run: Time (s): cpu = 00:00:00.49 ; elapsed = 00:07:56 . Memory (MB): pea
 INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.1
-Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-20391-bdbm11/dcp/mkBridge_early.xdc]
-Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-20391-bdbm11/dcp/mkBridge_early.xdc]
-Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-20391-bdbm11/dcp/mkBridge.xdc]
+Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-21721-bdbm11/dcp/mkBridge_early.xdc]
+Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-21721-bdbm11/dcp/mkBridge_early.xdc]
+Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-21721-bdbm11/dcp/mkBridge.xdc]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
 INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc:203]
-get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.656 ; gain = 553.742
-Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-20391-bdbm11/dcp/mkBridge.xdc]
+get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2195.273 ; gain = 551.312
+Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/.Xil/Vivado-21721-bdbm11/dcp/mkBridge.xdc]
 Reading XDEF placement.
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2196.656 ; gain = 2.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2197.273 ; gain = 2.000
 Restoring placement.
-Restored 5892 out of 5892 XDEF sites from archive | CPU: 4.630000 secs | Memory: 50.298981 MB |
+Restored 5764 out of 5764 XDEF sites from archive | CPU: 4.570000 secs | Memory: 49.962471 MB |
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 19 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
 
-open_run: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2213.328 ; gain = 592.352
+open_run: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2213.945 ; gain = 591.922
 # report_utilization -hierarchical -file $UTIL_RPT
-report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2236.305 ; gain = 22.977
+report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2235.922 ; gain = 21.977
 # report_timing_summary -warn_on_violation -delay_type min_max -check_timing_verbose -max_paths 10 -input_pins -file $TIMING_RPT
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 2364.012 ; gain = 127.707
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 16:01:32 2016...
+report_timing_summary: Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 2362.957 ; gain = 127.035
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 19:03:29 2016...
