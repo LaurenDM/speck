@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2u
-aTime (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.69 . Memory (MB): peak = 1836.508 ; gain = 4.0202default:default
+aTime (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.69 . Memory (MB): peak = 1836.508 ; gain = 4.0202default:default
 X
 
 Starting %s Task
@@ -194,7 +194,7 @@ A
 
 %s
 *constraints2q
-]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1970.531 ; gain = 134.0232default:default
+]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1969.531 ; gain = 133.0232default:default
 Q
 Releasing license: %s
 83*common2"
@@ -216,9 +216,9 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
 00:00:222default:default2
-00:00:202default:default2
-1970.5312default:default2
-138.0432default:defaultZ17-268
+00:00:192default:default2
+1969.5312default:default2
+137.0432default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -234,7 +234,7 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 Write XDEF Complete: 2default:default2
 00:00:00.542default:default2
 00:00:00.622default:default2
-1971.5312default:default2
+1970.5312default:default2
 0.0002default:defaultZ17-268
 
 
