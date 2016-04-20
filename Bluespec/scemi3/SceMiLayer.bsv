@@ -12,10 +12,13 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
-typedef Server#(Block_Flag, Block_Flag) DutInterface;
+/* because OFB only uses encrypt module, we are exclusively using BlockType and KeyType
+ instead of Block_Flag and Key_Flag */
+
+typedef Server#(BlockType, BlockType) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(Key_Flag) setkey;
+   interface Put#(KeyType) setkey;
 endinterface
 
 (* synthesize *)
@@ -25,48 +28,28 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    //cross clock domains. Thus we must wrap our DUT using synchronization primitives (SyncFIFOs).
    Clock clk_scemi <- exposeCurrentClock; //clk_scemi is the implicit SceMi clock (50Mhz)
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
-   SyncFIFOIfc#(Block_Flag) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(Key_Flag) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
-
-   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
-   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);
+   SyncFIFOIfc#(BlockType) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
+   SyncFIFOIfc#(BlockType) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
+   SyncFIFOIfc#(KeyType) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+   
+   OperationMode#(N,M,T) ofb <- mkOFB(clocked_by clk_usr, reset_by rst_usr);
 
    rule enqRequest;
-      Block_Flag x = toSyncQ.first;
+      BlockType request = toSyncQ.first;
       toSyncQ.deq;
-
-      if (x.flag == Encrypt) begin
-	       encrypt.inputMessage(x.block);
-      end
-      else if (x.flag == Decrypt) begin
-      	 decrypt.inputMessage(x.block);
-      end
+      ofb.inputMessage(request);
    endrule
 
-   rule getResponseEncrypt;
-      Block_Flag response;
-      response.flag = Encrypt;
-      response.block <- encrypt.getResult();
-      fromSyncQ.enq(response);
-   endrule
-
-   rule getResponseDecrypt;
-      Block_Flag response;
-      response.flag = Decrypt;
-      response.block <- decrypt.getResult();
+   rule getResponse;
+      BlockType response;
+      response <- ofb.getResult();
       fromSyncQ.enq(response);
    endrule
 
    rule putKey;
-      let x = toKeySyncQ.first;
+      let key = toKeySyncQ.first;
       toKeySyncQ.deq;
-      if (x.flag == Encrypt) begin
-          encrypt.setKey(x.key);
-      end
-      else if (x.flag == Decrypt) begin
-          decrypt.setKey(x.key);
-      end
+      ofb.setKeyIV(key);
    endrule
 
    interface DutInterface dut;
@@ -74,9 +57,10 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
       interface Get response = toGet(fromSyncQ);
    endinterface
 
-   interface Put setkey;
-      method Action put(Key_Flag x);
-	         toKeySyncQ.enq(x);
+   interface Put setkeyandIV;
+      method Action put(KeyType key, BlockType iv);
+	 let key_iv = {key, block};
+	 toKeySyncQ.enq(key_iv);
       endmethod
    endinterface
 endmodule
