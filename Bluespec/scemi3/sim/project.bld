@@ -8,7 +8,7 @@ bsv-define: USER_CLK_PERIOD=15
 hide-target
 top-module:            mkBridge
 top-file:              ../Bridge.bsv
-bsv-source-directories:  ../../scemi ../../common
+bsv-source-directories:  ../../scemi3 ../../common
 verilog-directory:     vlog_dut
 binary-directory:      bdir_dut
 simulation-directory:  simdir_dut
