@@ -65,8 +65,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 write_bitstream: 2default:default2
 00:01:522default:default2
 00:01:492default:default2
-2912.5742default:default2
-425.3282default:defaultZ17-268
+2911.7152default:default2
+423.3282default:defaultZ17-268
 
 
 End Record

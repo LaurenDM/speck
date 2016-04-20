@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Apr 19 20:03:52 2016'>
+<webTalkData  fileName='/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Wed Apr 20 14:25:33 2016'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="881834" description="" />
-  <keyValuePair key="date_generated" value="Tue Apr 19 20:03:51 2016" description="" />
+  <keyValuePair key="date_generated" value="Wed Apr 20 14:25:33 2016" description="" />
   <keyValuePair key="os_platform" value="LIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2014.1 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="e06af1c15c674a39b97c39055c1b5441" description="" />
+  <keyValuePair key="project_id" value="b18c65fffef3458b9628950df1a44704" description="" />
   <keyValuePair key="project_iteration" value="1" description="" />
   <keyValuePair key="random_id" value="b008c1720b6b54eab688536779c070e8" description="" />
   <keyValuePair key="registration_id" value="" description="" />
@@ -20,7 +20,7 @@
  </section>
  <section name="user_environment" level="1" order="2" description="">
   <keyValuePair key="cpu_name" value="Intel(R) Xeon(R) CPU           X5670  @ 2.93GHz" description="" />
-  <keyValuePair key="cpu_speed" value="1733.000 MHz" description="" />
+  <keyValuePair key="cpu_speed" value="1600.000 MHz" description="" />
   <keyValuePair key="os_name" value="Ubuntu" description="" />
   <keyValuePair key="os_release" value="Ubuntu 14.04.3 LTS" description="" />
   <keyValuePair key="system_ram" value="50.000 GB" description="" />
@@ -81,7 +81,7 @@
    <keyValuePair key="movable_instances" value="38539" description="" />
    <keyValuePair key="nets" value="41465" description="" />
    <keyValuePair key="pins" value="229569" description="" />
-   <keyValuePair key="placer_runtime" value="102.180000" description="" />
+   <keyValuePair key="placer_runtime" value="102.050000" description="" />
    <keyValuePair key="placer_timing_driven" value="1" description="" />
    <keyValuePair key="pll" value="0" description="" />
    <keyValuePair key="threads" value="8" description="" />
@@ -187,7 +187,7 @@
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="ffg1761" description="" />
    <keyValuePair key="pcie" value="0.045000" description="" />
-   <keyValuePair key="pct_clock_constrained" value="13.110000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="13.050000" description="" />
    <keyValuePair key="pct_inputs_defined" value="5" description="" />
    <keyValuePair key="platform" value="lin64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -574,7 +574,7 @@
    <keyValuePair key="nets" value="41457" description="" />
    <keyValuePair key="pins" value="229561" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="router_runtime" value="152.190000" description="" />
+   <keyValuePair key="router_runtime" value="151.070000" description="" />
    <keyValuePair key="router_timing_driven" value="1" description="" />
    <keyValuePair key="threads" value="8" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
@@ -604,9 +604,9 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:07:05s" description="" />
-   <keyValuePair key="memory_gain" value="1631.500MB" description="" />
-   <keyValuePair key="memory_peak" value="2376.535MB" description="" />
+   <keyValuePair key="elapsed" value="00:07:09s" description="" />
+   <keyValuePair key="memory_gain" value="1630.836MB" description="" />
+   <keyValuePair key="memory_peak" value="2375.859MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">
