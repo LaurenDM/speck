@@ -34,11 +34,11 @@ Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParamete
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v (mkSceMiUInt64Parameter/virtex7)
 
-Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedDecrypt.v (mkSynthesizedDecrypt/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v (mkThroughputDecrypt/virtex7)
 
 Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v (mkBridge/virtex7)
 
-Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedEncrypt.v (mkSynthesizedEncrypt/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v (mkThroughputEncrypt/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v (ProbeHook/virtex7)
 
@@ -99,6 +99,8 @@ Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v (ConfigRegN/
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v (MakeResetA/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BRAM2.v (BRAM2/virtex7)
+
+Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v (RevertReg/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v (xilinx_v7_pcie_wrapper/virtex7)
 

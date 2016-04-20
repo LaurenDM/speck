@@ -13,9 +13,9 @@ add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt3
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedDecrypt.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v}
 add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkSynthesizedEncrypt.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v}
@@ -46,6 +46,7 @@ add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/BypassWire.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ConfigRegN.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/BRAM2.v}
+add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/RevertReg.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_axi_basic_rx.v}
