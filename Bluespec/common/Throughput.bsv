@@ -47,13 +47,13 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
 
     rule feed if(started);
         let x = ?;
-        if(inputFIFO.notEmpty()) begin
+        if(inputFIFO.notEmpty()) begin // if ciphertext availble in fifo, use as input
             x = inputFIFO.first();
             //$display("x = %h %h", tpl_1(x), tpl_2(x));
             inputFIFO.deq;
         end
-        else begin
-            x = testvector[0];
+        else begin // if no output available, use input
+            x = testvector[countin % fromInteger(valueof(INITAMOUNT))];
         end
         engine.inputMessage(x);
         countin <= countin +1;
