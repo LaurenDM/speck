@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date             : Fri Apr 22 10:38:10 2016
+| Date             : Fri Apr 22 11:09:35 2016
 | Host             : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command          : report_power -file mkBridge_power_routed.rpt -pb mkBridge_power_summary_routed.pb
 | Design           : mkBridge
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 3.112 |
-| Dynamic (W)              | 2.830 |
+| Total On-Chip Power (W)  | 3.110 |
+| Dynamic (W)              | 2.828 |
 | Device Static (W)        | 0.282 |
 | Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 1.1   |
@@ -50,24 +50,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.102 |       46 |       --- |             --- |
-| Slice Logic              |     0.015 |    34016 |       --- |             --- |
-|   LUT as Logic           |     0.014 |    18263 |    303600 |            6.01 |
-|   Register               |    <0.001 |    12138 |    607200 |            1.99 |
-|   CARRY4                 |    <0.001 |      442 |     75900 |            0.58 |
+| Clocks                   |     0.100 |       46 |       --- |             --- |
+| Slice Logic              |     0.016 |    34096 |       --- |             --- |
+|   LUT as Logic           |     0.014 |    18307 |    303600 |            6.02 |
+|   Register               |    <0.001 |    12186 |    607200 |            2.00 |
+|   CARRY4                 |    <0.001 |      454 |     75900 |            0.59 |
 |   F7/F8 Muxes            |    <0.001 |      300 |    303600 |            0.09 |
 |   LUT as Distributed RAM |    <0.001 |       70 |    130800 |            0.05 |
 |   Others                 |     0.000 |      310 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |     0.000 |        5 |    130800 |           <0.01 |
-| Signals                  |     0.031 |    27699 |       --- |             --- |
+| Signals                  |     0.030 |    27772 |       --- |             --- |
 | Block RAM                |     0.040 |       14 |      1030 |            1.35 |
 | MMCM                     |     0.435 |        4 |        14 |           28.57 |
 | PCIE                     |     0.045 |        1 |         4 |           25.00 |
 | I/O                      |     0.004 |       45 |       700 |            6.42 |
 | GTX                      |     2.157 |        8 |        28 |           28.57 |
 | Static Power             |     0.282 |          |           |                 |
-| Total                    |     3.112 |          |           |                 |
+| Total                    |     3.110 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.543 |       0.389 |      0.154 |
+| Vccint    |       1.000 |     0.541 |       0.387 |      0.154 |
 | Vccaux    |       1.800 |     0.277 |       0.239 |      0.038 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -195,13 +195,13 @@ Table of Contents
 +----------------------------------------------------------------+-----------+
 | Name                                                           | Power (W) |
 +----------------------------------------------------------------+-----------+
-| mkBridge                                                       |     2.830 |
+| mkBridge                                                       |     2.828 |
 |   scemi_1_outFifo                                              |     0.005 |
-|   scemi_bridge                                                 |     0.058 |
+|   scemi_bridge                                                 |     0.057 |
 |     pbb_arbiter                                                |     0.010 |
 |       tlp_out_cfg_fifo                                         |     0.003 |
 |       tlp_out_dma_fifo                                         |     0.003 |
-|       tlp_out_fifo                                             |     0.004 |
+|       tlp_out_fifo                                             |     0.003 |
 |     pbb_csr_clock_control                                      |    <0.001 |
 |     pbb_csr_clock_status                                       |    <0.001 |
 |     pbb_csr_intr_info                                          |     0.002 |
@@ -367,7 +367,7 @@ Table of Contents
 |     fifoMem_reg_0_1_0_0                                        |    <0.001 |
 |   scemi_rstgen_inv_rstgen                                      |    <0.001 |
 |     rstSync                                                    |    <0.001 |
-|   scemi_scemi_clkgen_fRequest                                  |     0.002 |
+|   scemi_scemi_clkgen_fRequest                                  |     0.001 |
 |   scemi_scemi_clkgen_fResponse                                 |    <0.001 |
 |   scemi_setkey_inport_buffer_empty_sp                          |    <0.001 |
 |   scemi_setkey_inport_buffer_full_sp                           |    <0.001 |
@@ -378,17 +378,17 @@ Table of Contents
 |   scemi_setkey_res_fifo                                        |    <0.001 |
 |     fifoMem_reg_0_1_0_5                                        |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_didreset                        |    <0.001 |
-|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.003 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.002 |
 |     fromSyncQ                                                  |    <0.001 |
 |       fifoMem_reg_0_1_0_0                                      |    <0.001 |
 |     rst_usr                                                    |    <0.001 |
 |     toKeySyncQ                                                 |    <0.001 |
 |       fifoMem_reg_0_1_0_5                                      |    <0.001 |
 |     toSyncQ                                                    |    <0.001 |
-|     tpDec                                                      |     0.001 |
+|     tpDec                                                      |    <0.001 |
 |       decrypt_ciphertextFIFO                                   |    <0.001 |
 |       decrypt_plaintextFIFO                                    |    <0.001 |
-|     tpEnc                                                      |     0.001 |
+|     tpEnc                                                      |    <0.001 |
 |       encrypt_ciphertextFIFO                                   |    <0.001 |
 |       encrypt_plaintextFIFO                                    |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_myrst                           |    <0.001 |
