@@ -4,7 +4,7 @@ import SpeckTypes::*;
 import Speck::*;
 import Unfolding::*;
 
-typedef 10000 TESTAMOUNT;
+typedef 1000000 TESTAMOUNT;
 typedef 10 INITAMOUNT;
 
 interface SetKey#(numeric type n, numeric type m, numeric type t);

@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date             : Fri Apr 22 09:50:30 2016
+| Date             : Fri Apr 22 10:38:10 2016
 | Host             : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command          : report_power -file mkBridge_power_routed.rpt -pb mkBridge_power_summary_routed.pb
 | Design           : mkBridge
@@ -30,9 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 3.110 |
-| Dynamic (W)              | 2.828 |
+| Total On-Chip Power (W)  | 3.112 |
+| Dynamic (W)              | 2.830 |
 | Device Static (W)        | 0.282 |
+| Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 1.1   |
 | Max Ambient (C)          | 81.4  |
 | Junction Temperature (C) | 28.6  |
@@ -49,9 +50,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.100 |       46 |       --- |             --- |
+| Clocks                   |     0.102 |       46 |       --- |             --- |
 | Slice Logic              |     0.015 |    34016 |       --- |             --- |
-|   LUT as Logic           |     0.014 |    18279 |    303600 |            6.02 |
+|   LUT as Logic           |     0.014 |    18263 |    303600 |            6.01 |
 |   Register               |    <0.001 |    12138 |    607200 |            1.99 |
 |   CARRY4                 |    <0.001 |      442 |     75900 |            0.58 |
 |   F7/F8 Muxes            |    <0.001 |      300 |    303600 |            0.09 |
@@ -59,14 +60,14 @@ Table of Contents
 |   Others                 |     0.000 |      310 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |     0.000 |        5 |    130800 |           <0.01 |
-| Signals                  |     0.030 |    27698 |       --- |             --- |
+| Signals                  |     0.031 |    27699 |       --- |             --- |
 | Block RAM                |     0.040 |       14 |      1030 |            1.35 |
 | MMCM                     |     0.435 |        4 |        14 |           28.57 |
 | PCIE                     |     0.045 |        1 |         4 |           25.00 |
 | I/O                      |     0.004 |       45 |       700 |            6.42 |
 | GTX                      |     2.157 |        8 |        28 |           28.57 |
 | Static Power             |     0.282 |          |           |                 |
-| Total                    |     3.110 |          |           |                 |
+| Total                    |     3.112 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.540 |       0.386 |      0.154 |
+| Vccint    |       1.000 |     0.543 |       0.389 |      0.154 |
 | Vccaux    |       1.800 |     0.277 |       0.239 |      0.038 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -194,13 +195,13 @@ Table of Contents
 +----------------------------------------------------------------+-----------+
 | Name                                                           | Power (W) |
 +----------------------------------------------------------------+-----------+
-| mkBridge                                                       |     2.828 |
+| mkBridge                                                       |     2.830 |
 |   scemi_1_outFifo                                              |     0.005 |
-|   scemi_bridge                                                 |     0.057 |
+|   scemi_bridge                                                 |     0.058 |
 |     pbb_arbiter                                                |     0.010 |
 |       tlp_out_cfg_fifo                                         |     0.003 |
 |       tlp_out_dma_fifo                                         |     0.003 |
-|       tlp_out_fifo                                             |     0.003 |
+|       tlp_out_fifo                                             |     0.004 |
 |     pbb_csr_clock_control                                      |    <0.001 |
 |     pbb_csr_clock_status                                       |    <0.001 |
 |     pbb_csr_intr_info                                          |     0.002 |
@@ -243,7 +244,7 @@ Table of Contents
 |   scemi_pcie_ep                                                |     2.385 |
 |     ext_clk.pipe_clock_i                                       |     0.111 |
 |     pcie_7x_v1_10_i                                            |     2.274 |
-|       gt_top_i                                                 |     2.173 |
+|       gt_top_i                                                 |     2.172 |
 |         gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
@@ -252,7 +253,7 @@ Table of Contents
 |         gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         pipe_wrapper_i                                         |     2.173 |
+|         pipe_wrapper_i                                         |     2.172 |
 |           pipe_lane[0].gt_wrapper_i                            |     0.270 |
 |           pipe_lane[0].pipe_drp.pipe_drp_i                     |     0.001 |
 |           pipe_lane[0].pipe_eq.pipe_eq_i                       |     0.000 |
@@ -287,7 +288,7 @@ Table of Contents
 |           pipe_lane[4].pipe_drp.pipe_drp_i                     |     0.001 |
 |           pipe_lane[4].pipe_eq.pipe_eq_i                       |     0.000 |
 |             rxeq_scan_i                                        |     0.000 |
-|           pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i        |     0.001 |
+|           pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i        |    <0.001 |
 |           pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i    |    <0.001 |
 |           pipe_lane[4].pipe_rate.pipe_rate_i                   |     0.000 |
 |           pipe_lane[4].pipe_sync_i                             |     0.000 |
