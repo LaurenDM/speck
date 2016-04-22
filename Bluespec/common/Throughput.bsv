@@ -14,14 +14,14 @@ endinterface
 
 (* synthesize *)
 module mkThroughputEncrypt(SetKey#(N,M,T));
-    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt_unfold();
+    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
     SetKey#(N,M,T) tp <- mkThroughputTest(encrypt);
     return tp;
 endmodule
 
 (* synthesize *)
 module mkThroughputDecrypt(SetKey#(N,M,T));
-    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt_unfold();
+    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
     SetKey#(N,M,T) tp <- mkThroughputTest(decrypt);
     return tp;
 endmodule

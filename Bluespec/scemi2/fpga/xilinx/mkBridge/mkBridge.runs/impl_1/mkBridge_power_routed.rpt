@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date             : Fri Apr 22 12:28:30 2016
+| Date             : Fri Apr 22 13:00:20 2016
 | Host             : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command          : report_power -file mkBridge_power_routed.rpt -pb mkBridge_power_summary_routed.pb
 | Design           : mkBridge
@@ -31,7 +31,7 @@ Table of Contents
 
 +--------------------------+-------+
 | Total On-Chip Power (W)  | 3.107 |
-| Dynamic (W)              | 2.826 |
+| Dynamic (W)              | 2.825 |
 | Device Static (W)        | 0.282 |
 | Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 1.1   |
@@ -51,16 +51,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.097 |       46 |       --- |             --- |
-| Slice Logic              |     0.016 |    34009 |       --- |             --- |
-|   LUT as Logic           |     0.015 |    18308 |    303600 |            6.03 |
-|   Register               |    <0.001 |    12091 |    607200 |            1.99 |
-|   CARRY4                 |    <0.001 |      430 |     75900 |            0.56 |
-|   F7/F8 Muxes            |    <0.001 |      324 |    303600 |            0.10 |
+| Slice Logic              |     0.016 |    34021 |       --- |             --- |
+|   LUT as Logic           |     0.015 |    18200 |    303600 |            5.99 |
+|   Register               |    <0.001 |    12044 |    607200 |            1.98 |
+|   CARRY4                 |    <0.001 |      418 |     75900 |            0.55 |
+|   F7/F8 Muxes            |    <0.001 |      306 |    303600 |            0.10 |
 |   LUT as Distributed RAM |    <0.001 |       70 |    130800 |            0.05 |
 |   Others                 |     0.000 |      310 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |     0.000 |        5 |    130800 |           <0.01 |
-| Signals                  |     0.030 |    27670 |       --- |             --- |
+| Signals                  |     0.030 |    27673 |       --- |             --- |
 | Block RAM                |     0.040 |       14 |      1030 |            1.35 |
 | MMCM                     |     0.435 |        4 |        14 |           28.57 |
 | PCIE                     |     0.045 |        1 |         4 |           25.00 |
@@ -176,7 +176,7 @@ Table of Contents
 | clk_250mhz                       | scemi_pcie_ep/ext_clk.pipe_clock_i/clk_250mhz                                                     |             4.0 |
 | clk_125mhz                       | scemi_pcie_ep/ext_clk.pipe_clock_i/clk_125mhz                                                     |             8.0 |
 | mmcm_fb                          | scemi_pcie_ep/ext_clk.pipe_clock_i/mmcm_fb                                                        |            10.0 |
-| cclock                           | scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT                                   |            20.0 |
+| cclock                           | scemi_clk_port_scemi_clkgen/sCLK                                                                  |            20.0 |
 | uclock                           | scemi_uclkgen/p_0_in                                                                              |            20.0 |
 | core_clock                       | scemi_scemi_clkgen_mmcm$CLKOUT0                                                                   |            10.0 |
 | noc_clk                          | scemi_clkgen_pll$CLKOUT0                                                                          |             8.0 |
@@ -195,7 +195,7 @@ Table of Contents
 +----------------------------------------------------------------+-----------+
 | Name                                                           | Power (W) |
 +----------------------------------------------------------------+-----------+
-| mkBridge                                                       |     2.826 |
+| mkBridge                                                       |     2.825 |
 |   scemi_1_outFifo                                              |     0.005 |
 |   scemi_bridge                                                 |     0.056 |
 |     pbb_arbiter                                                |     0.010 |
@@ -224,7 +224,7 @@ Table of Contents
 |   scemi_epReset125                                             |    <0.001 |
 |   scemi_epReset250                                             |    <0.001 |
 |   scemi_fToBridgeBeat                                          |    <0.001 |
-|   scemi_inFifo                                                 |     0.004 |
+|   scemi_inFifo                                                 |     0.005 |
 |   scemi_init_state_msgFIFO                                     |     0.002 |
 |     fifoMem_reg_0_7_0_5                                        |    <0.001 |
 |     fifoMem_reg_0_7_12_17                                      |    <0.001 |
@@ -378,17 +378,17 @@ Table of Contents
 |   scemi_setkey_res_fifo                                        |    <0.001 |
 |     fifoMem_reg_0_1_0_5                                        |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_didreset                        |    <0.001 |
-|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.003 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.002 |
 |     fromSyncQ                                                  |    <0.001 |
 |       fifoMem_reg_0_1_0_0                                      |    <0.001 |
 |     rst_usr                                                    |    <0.001 |
 |     toKeySyncQ                                                 |    <0.001 |
 |       fifoMem_reg_0_1_0_5                                      |    <0.001 |
 |     toSyncQ                                                    |    <0.001 |
-|     tpDec                                                      |     0.001 |
+|     tpDec                                                      |    <0.001 |
 |       decrypt_ciphertextFIFO                                   |    <0.001 |
 |       decrypt_plaintextFIFO                                    |    <0.001 |
-|     tpEnc                                                      |     0.001 |
+|     tpEnc                                                      |    <0.001 |
 |       encrypt_ciphertextFIFO                                   |    <0.001 |
 |       encrypt_plaintextFIFO                                    |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_myrst                           |    <0.001 |
