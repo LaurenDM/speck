@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date         : Thu Apr 21 23:06:27 2016
+| Date         : Fri Apr 22 09:47:21 2016
 | Host         : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_clock_utilization -file mkBridge_clock_utilization_placed.rpt
 | Design       : mkBridge
@@ -53,14 +53,14 @@ Table of Contents
 |     2 | scemi_pcie_ep/ext_clk.pipe_clock_i/txoutclk_i.txoutclk_i    | scemi_pcie_ep/ext_clk.pipe_clock_i/refclk         |    1 |     1 |     no |         1.538 |     0.077 |
 |     3 | scemi_scemi_clkgen_clkfbbuf                                 | scemi_scemi_clkgen_mmcm$CLKFBIN                   |    1 |     1 |     no |         1.883 |     0.094 |
 |     4 | usrClk_mmcm_pll_clkfbbuf                                    | usrClk_mmcm_pll_clkfbbuf$O                        |    1 |     1 |     no |         1.514 |     0.076 |
-|     5 | scemi_clk_port_scemi_cReset                                 | scemi_clk_port_scemi_cReset$O                     |    4 |     2 |     no |         1.566 |     0.259 |
+|     5 | scemi_clk_port_scemi_cReset                                 | scemi_clk_port_scemi_cReset$O                     |    4 |     2 |     no |         1.700 |     0.328 |
 |     6 | scemi_pcie_ep/ext_clk.pipe_clock_i/userclk1_i1.usrclk1_i1   | scemi_pcie_ep/ext_clk.pipe_clock_i/user_clk       |    9 |    17 |     no |         1.865 |     0.287 |
-|     7 | scemi_scemi_clkgen_clkout0buf                               | scemi_scemi_clkgen_clkout0buf$O                   |  174 |    43 |     no |         1.700 |     0.355 |
-|     8 | usrClk_mmcm_clkout0buffer                                   | usrClk_mmcm_clkout0buffer$O                       |  293 |    83 |     no |         1.532 |     0.189 |
-|     9 | scemi_pcie_ep/ext_clk.pipe_clock_i/dclk_i_bufg.dclk_i       | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |  759 |   233 |     no |         2.010 |     0.425 |
-|    10 | scemi_pcie_ep/ext_clk.pipe_clock_i/userclk2_i1.usrclk2_i1   | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             | 1035 |   309 |     no |         1.894 |     0.459 |
-|    11 | scemi_pcie_ep/ext_clk.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN | 2600 |   913 |     no |         2.010 |     0.520 |
-|    12 | scemi_clkgen_clkout0buffer                                  | scemi_clkgen_clkout0buffer$O                      | 6789 |  2597 |     no |         1.923 |     0.576 |
+|     7 | scemi_scemi_clkgen_clkout0buf                               | scemi_scemi_clkgen_clkout0buf$O                   |  174 |    51 |     no |         1.639 |     0.292 |
+|     8 | usrClk_mmcm_clkout0buffer                                   | usrClk_mmcm_clkout0buffer$O                       |  341 |    97 |     no |         1.702 |     0.412 |
+|     9 | scemi_pcie_ep/ext_clk.pipe_clock_i/dclk_i_bufg.dclk_i       | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |  759 |   240 |     no |         2.010 |     0.426 |
+|    10 | scemi_pcie_ep/ext_clk.pipe_clock_i/userclk2_i1.usrclk2_i1   | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             | 1035 |   313 |     no |         1.750 |     0.260 |
+|    11 | scemi_pcie_ep/ext_clk.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN | 2600 |   843 |     no |         2.010 |     0.518 |
+|    12 | scemi_clkgen_clkout0buffer                                  | scemi_clkgen_clkout0buffer$O                      | 6788 |  2718 |     no |         2.047 |     0.702 |
 +-------+-------------------------------------------------------------+---------------------------------------------------+------+-------+--------+---------------+-----------+
 
 
@@ -125,14 +125,14 @@ Table of Contents
 6. Details of Local Clocks
 --------------------------
 
-+-------+---------------------------------------------+-----------------------------------------------------------------+--------------+--------+---------------+-----------+
-|       |                                             |                                                                 |   Num Loads  |        |               |           |
-+-------+---------------------------------------------+-----------------------------------------------------------------+------+-------+--------+---------------+-----------+
-| Index | Local Clk Src                               | Net Name                                                        | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
-+-------+---------------------------------------------+-----------------------------------------------------------------+------+-------+--------+---------------+-----------+
-|     1 | scemi_clk_port_scemi_clkgen/current_clk_reg | scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT |  119 |    38 |     no |         1.355 |     0.951 |
-|     2 | scemi_uclkgen/current_clk_reg               | scemi_uclkgen/p_0_in                                            |  492 |   160 |     no |         1.570 |     1.220 |
-+-------+---------------------------------------------+-----------------------------------------------------------------+------+-------+--------+---------------+-----------+
++-------+---------------------------------------------+-----------------------------------------+--------------+--------+---------------+-----------+
+|       |                                             |                                         |   Num Loads  |        |               |           |
++-------+---------------------------------------------+-----------------------------------------+------+-------+--------+---------------+-----------+
+| Index | Local Clk Src                               | Net Name                                | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
++-------+---------------------------------------------+-----------------------------------------+------+-------+--------+---------------+-----------+
+|     1 | scemi_clk_port_scemi_clkgen/current_clk_reg | scemi_clk_port_scemi_clkgen/current_clk |  119 |    36 |     no |         1.953 |     1.439 |
+|     2 | scemi_uclkgen/current_clk_reg               | scemi_uclkgen/current_clk               |  492 |   143 |     no |         1.786 |     1.355 |
++-------+---------------------------------------------+-----------------------------------------+------+-------+--------+---------------+-----------+
 
 
 7. Clock Regions : Key Resource Utilization
@@ -144,13 +144,13 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 44000 |    0 |  8800 |    0 |   140 |    0 |    70 |    0 |   180 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 44800 |    0 | 10000 |    0 |   160 |    0 |    80 |    0 |   220 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |  417 | 44800 |    0 | 10000 |    0 |   160 |    0 |    80 |    0 |   220 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 39200 |    0 |  8800 |    0 |   140 |    0 |    70 |    0 |   180 |
-| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    0 |     0 |    0 |    50 |    0 |    50 | 3505 | 44800 |    0 | 10000 |    0 |   160 |    3 |    80 |    0 |   220 |
+| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    0 |     0 |    0 |    50 |    0 |    50 | 3198 | 44800 |    0 | 10000 |    0 |   160 |    5 |    80 |    0 |   220 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     1 |    0 |    50 |    0 |    50 |    0 | 38000 |    0 |  8600 |    0 |   130 |    0 |    65 |    0 |   180 |
-| X1Y2              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    1 |     1 |    0 |    50 |    0 |    50 | 8029 | 43600 |  134 |  9800 |    0 |   150 |   11 |    75 |    0 |   220 |
+| X1Y2              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    1 |     1 |    0 |    50 |    0 |    50 | 7706 | 43600 |  134 |  9800 |    0 |   150 |    9 |    75 |    0 |   220 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 44000 |    0 |  8800 |    0 |   140 |    0 |    70 |    0 |   180 |
-| X1Y3              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |  557 | 44800 |    7 | 10000 |    0 |   160 |    0 |    80 |    0 |   220 |
+| X1Y3              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |  817 | 44800 |    7 | 10000 |    0 |   160 |    0 |    80 |    0 |   220 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 44000 |    0 |  8800 |    0 |   140 |    0 |    70 |    0 |   180 |
 | X1Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 44800 |    0 | 10000 |    0 |   160 |    0 |    80 |    0 |   220 |
 | X0Y5              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     1 |    0 |    50 |    0 |    50 |    0 | 42800 |    0 |  8600 |    0 |   130 |    0 |    65 |    0 |   180 |
@@ -167,8 +167,8 @@ Table of Contents
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
 | Source Type | BUFHCE Site | Locked | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |          Clock Net Name         |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
-| BUFG        |     ---     |   no   |         2 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | scemi_clkgen_clkout0buffer$O    |
 | BUFG        |     ---     |   no   |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | scemi_scemi_clkgen_mmcm$CLKFBIN |
+| BUFG        |     ---     |   no   |         2 |        0 |       0 |         0 |       0 |       0 | 417 |     0 |        0 | scemi_clkgen_clkout0buffer$O    |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
 
 
@@ -178,12 +178,12 @@ Table of Contents
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+---------------------------------------------------+
 | Source Type | BUFHCE Site | Locked | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                   Clock Net Name                  |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+---------------------------------------------------+
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         4 |       0 |       0 |    0 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/user_clk       |
 | BUFG        |     ---     |   no   |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | scemi_clkgen_pll_clkfbbuf$O                       |
-| BUFG        |     ---     |   no   |         1 |        0 |       0 |         0 |       0 |       0 |    1 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             |
-| BUFG        |     ---     |   no   |         0 |        0 |       5 |         0 |       0 |       0 |  346 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |
-| BUFGCTRL    |     ---     |   no   |         0 |        0 |      16 |         0 |       0 |       0 | 1324 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         2 |       0 |       0 | 1834 |     0 |        0 | scemi_clkgen_clkout0buffer$O                      |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         4 |       0 |       0 |    0 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/user_clk       |
+| BUFG        |     ---     |   no   |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             |
+| BUFG        |     ---     |   no   |         0 |        0 |       5 |         0 |       0 |       0 |  345 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |
+| BUFGCTRL    |     ---     |   no   |         0 |        0 |      16 |         0 |       0 |       0 | 1259 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         6 |       0 |       0 | 1594 |     0 |        0 | scemi_clkgen_clkout0buffer$O                      |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+---------------------------------------------------+
 
 
@@ -195,11 +195,12 @@ Table of Contents
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+---------------------------------------------------+
 | BUFG        |     ---     |   no   |         0 |        0 |       0 |        12 |       0 |       0 |    0 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/user_clk       |
 | BUFG        |     ---     |   no   |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/refclk         |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |  108 |     0 |        0 | scemi_scemi_clkgen_clkout0buf$O                   |
-| BUFG        |     ---     |   no   |         0 |        0 |       5 |         0 |       0 |       0 |  403 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 | 1032 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             |
-| BUFGCTRL    |     ---     |   no   |         0 |        0 |      16 |         0 |       0 |       0 | 1267 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |        10 |       0 |       0 | 4910 |    14 |        0 | scemi_clkgen_clkout0buffer$O                      |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | usrClk_mmcm_clkout0buffer$O                       |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |  119 |     0 |        0 | scemi_scemi_clkgen_clkout0buf$O                   |
+| BUFG        |     ---     |   no   |         0 |        0 |       5 |         0 |       0 |       0 |  404 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/CLK            |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 | 1033 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/O1             |
+| BUFGCTRL    |     ---     |   no   |         0 |        0 |      16 |         0 |       0 |       0 | 1332 |     0 |        0 | scemi_pcie_ep/ext_clk.pipe_clock_i/PIPE_OOBCLK_IN |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         6 |       0 |       0 | 4456 |    14 |        0 | scemi_clkgen_clkout0buffer$O                      |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+---------------------------------------------------+
 
 
@@ -209,9 +210,9 @@ Table of Contents
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
 | Source Type | BUFHCE Site | Locked | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |          Clock Net Name         |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |  24 |     0 |        0 | scemi_clkgen_clkout0buffer$O    |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |  66 |     0 |        0 | scemi_scemi_clkgen_clkout0buf$O |
-| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 | 290 |     3 |        0 | usrClk_mmcm_clkout0buffer$O     |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 |  55 |     0 |        0 | scemi_scemi_clkgen_clkout0buf$O |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 | 300 |     0 |        0 | scemi_clkgen_clkout0buffer$O    |
+| BUFG        |     ---     |   no   |         0 |        0 |       0 |         0 |       0 |       0 | 310 |     3 |        0 | usrClk_mmcm_clkout0buffer$O     |
 +-------------+-------------+--------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------+
 
 
@@ -318,16 +319,16 @@ add_cells_to_pblock [get_pblocks  CLKAG_usrClk_mmcm_clkout0buffer$O] [get_cells 
 resize_pblock [get_pblocks CLKAG_usrClk_mmcm_clkout0buffer$O] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X0Y5:CLOCKREGION_X0Y5 CLOCKREGION_X0Y6:CLOCKREGION_X0Y6 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup
 
-# Clock net "scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT" driven by instance "scemi_clk_port_scemi_clkgen/current_clk_reg" located at site "SLICE_X185Y143"
+# Clock net "scemi_clk_port_scemi_clkgen/current_clk" driven by instance "scemi_clk_port_scemi_clkgen/current_clk_reg" located at site "SLICE_X143Y145"
 #startgroup
-create_pblock CLKAG_scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT
-add_cells_to_pblock [get_pblocks  CLKAG_scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT"}]]]
-resize_pblock [get_pblocks CLKAG_scemi_clk_port_scemi_clkgen/scemi_clk_port_scemi_clkgen$CLK_OUT] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X0Y5:CLOCKREGION_X0Y5 CLOCKREGION_X0Y6:CLOCKREGION_X0Y6 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
+create_pblock CLKAG_scemi_clk_port_scemi_clkgen/current_clk
+add_cells_to_pblock [get_pblocks  CLKAG_scemi_clk_port_scemi_clkgen/current_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="scemi_clk_port_scemi_clkgen/current_clk"}]]]
+resize_pblock [get_pblocks CLKAG_scemi_clk_port_scemi_clkgen/current_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X0Y5:CLOCKREGION_X0Y5 CLOCKREGION_X0Y6:CLOCKREGION_X0Y6 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup
 
-# Clock net "scemi_uclkgen/p_0_in" driven by instance "scemi_uclkgen/current_clk_reg" located at site "SLICE_X179Y153"
+# Clock net "scemi_uclkgen/current_clk" driven by instance "scemi_uclkgen/current_clk_reg" located at site "SLICE_X170Y153"
 #startgroup
-create_pblock CLKAG_scemi_uclkgen/p_0_in
-add_cells_to_pblock [get_pblocks  CLKAG_scemi_uclkgen/p_0_in] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="scemi_uclkgen/p_0_in"}]]]
-resize_pblock [get_pblocks CLKAG_scemi_uclkgen/p_0_in] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X0Y5:CLOCKREGION_X0Y5 CLOCKREGION_X0Y6:CLOCKREGION_X0Y6 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
+create_pblock CLKAG_scemi_uclkgen/current_clk
+add_cells_to_pblock [get_pblocks  CLKAG_scemi_uclkgen/current_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="scemi_uclkgen/current_clk"}]]]
+resize_pblock [get_pblocks CLKAG_scemi_uclkgen/current_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X0Y5:CLOCKREGION_X0Y5 CLOCKREGION_X0Y6:CLOCKREGION_X0Y6 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup
