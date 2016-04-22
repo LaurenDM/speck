@@ -2,6 +2,7 @@ import Fifo::*;
 import Vector::*;
 import SpeckTypes::*;
 import Speck::*;
+import Unfolding::*;
 
 typedef 10000 TESTAMOUNT;
 typedef 10 INITAMOUNT;
@@ -13,14 +14,14 @@ endinterface
 
 (* synthesize *)
 module mkThroughputEncrypt(SetKey#(N,M,T));
-    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt();
+    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt_unfold();
     SetKey#(N,M,T) tp <- mkThroughputTest(encrypt);
     return tp;
 endmodule
 
 (* synthesize *)
 module mkThroughputDecrypt(SetKey#(N,M,T));
-    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt();
+    EncryptDecrypt#(N,M,T) decrypt <- mkDecrypt_unfold();
     SetKey#(N,M,T) tp <- mkThroughputTest(decrypt);
     return tp;
 endmodule
