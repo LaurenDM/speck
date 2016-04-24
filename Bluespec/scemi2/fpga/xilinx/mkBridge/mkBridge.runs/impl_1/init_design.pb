@@ -215,10 +215,10 @@ G/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/xilinx/default.xdc2defa
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 get_clocks: 2default:default2
-00:00:182default:default2
+00:00:192default:default2
 00:00:172default:default2
-1804.9142default:default2
-563.7502default:defaultZ17-268
+1803.9022default:default2
+562.7342default:defaultZ17-268
 š
 Finished Parsing XDC File [%s]
 178*designutils2[
@@ -240,8 +240,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 link_design: 2default:default2
 00:00:412default:default2
 00:00:412default:default2
-1804.9142default:default2
-1050.8912default:defaultZ17-268
+1804.9022default:default2
+1050.8752default:defaultZ17-268
 
 
 End Record

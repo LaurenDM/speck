@@ -19,7 +19,6 @@ FlagType flag;
 void out_cb(void* x, const Bool& ready)
 {
     if(ready && !outdone){
-        printf("ready \n");
         outdone = true;
     }
 }

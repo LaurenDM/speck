@@ -8,6 +8,7 @@ Elaborated module file created: bdir_dut/mkSynthesizedEncrypt.ba
 code generation for mkSynthesizedDecrypt starts
 Verilog file created: vlog_dut/mkSynthesizedDecrypt.v
 Elaborated module file created: bdir_dut/mkSynthesizedDecrypt.ba
+compiling ../../common/Unfolding.bsv
 compiling ../../common/includes/Ehr.bsv
 compiling ../../common/includes/Fifo.bsv
 compiling ../../common/Throughput.bsv
