@@ -7,7 +7,7 @@ import Clocks::*;
 import ResetXactor::*;
 import Xilinx::*;
 
-import Speck::*;
+import OFB::*;
 import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
@@ -18,7 +18,7 @@ import Vector::*;
 typedef Server#(BlockType, BlockType) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(KeyType) setkey;
+   interface Put#(Key_Iv) setkeyandIV;
 endinterface
 
 (* synthesize *)
@@ -30,8 +30,8 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(BlockType) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
    SyncFIFOIfc#(BlockType) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
-   SyncFIFOIfc#(KeyType) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
-   
+   SyncFIFOIfc#(Key_Iv) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
+
    OperationMode#(N,M,T) ofb <- mkOFB(clocked_by clk_usr, reset_by rst_usr);
 
    rule enqRequest;
@@ -47,9 +47,9 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    endrule
 
    rule putKey;
-      let key = toKeySyncQ.first;
+      let key_iv = toKeySyncQ.first;
       toKeySyncQ.deq;
-      ofb.setKeyIV(key);
+      ofb.setKeyIV(key_iv.key, key_iv.iv);
    endrule
 
    interface DutInterface dut;
@@ -58,9 +58,8 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    endinterface
 
    interface Put setkeyandIV;
-      method Action put(KeyType key, BlockType iv);
-	 let key_iv = {key, block};
-	 toKeySyncQ.enq(key_iv);
+      method Action put(Key_Iv key_iv);
+	       toKeySyncQ.enq(key_iv);
       endmethod
    endinterface
 endmodule
@@ -76,7 +75,7 @@ module [SceMiModule] mkSceMiLayer#(Clock clk_usr)();
    SettableDutInterface settabledut <- buildDutWithSoftReset(mkDutWrapper(clk_usr), clk_port_scemi);
 
    Empty processor <- mkServerXactor(settabledut.dut, clk_port_scemi);
-   Empty setkey <- mkPutXactor(settabledut.setkey, clk_port_scemi);
+   Empty setkey <- mkPutXactor(settabledut.setkeyandIV, clk_port_scemi);
 
    Empty shutdown <- mkShutdownXactor();
 endmodule

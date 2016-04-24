@@ -14,20 +14,20 @@ typedef u24 word;
 typedef BitT<24> scemiword;
 
 FILE* outfile = NULL;
-FlagType flag;
 
 bool indone = false;
 long int putcount = 0;
 long int gotcount = 0;
 
 
-void out_cb(void* x, const Block_Flag& block)
+void out_cb(void* x, const BlockType& block)
 {
     //printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
     if (gotcount < putcount) {
-        //printf("printing out \n");
-        fprintf(outfile,"%x %x \n",block.m_block.m_tpl_1.get(),block.m_block.m_tpl_2.get());
-        gotcount++;
+        if(block.m_tpl_1.get()!=0 && block.m_tpl_2.get()!=0) {
+          fprintf(outfile,"%x %x \n",block.m_tpl_1.get(),block.m_tpl_2.get());
+          gotcount++;
+        }
     } else if (indone && outfile) {
         //printf("closing outfile \n");
         word end = 0x0;
@@ -38,7 +38,7 @@ void out_cb(void* x, const Block_Flag& block)
 
 }
 
-void runtest(InportProxyT<Block_Flag >& inport, FILE* infile)
+void runtest(InportProxyT<BlockType >& inport, FILE* infile)
 {
     word in1, in2;
     while (outfile) {
@@ -52,18 +52,17 @@ void runtest(InportProxyT<Block_Flag >& inport, FILE* infile)
                 fclose(infile);
                 infile = NULL;
             } else {
-                //printf("sending input \n");
-                Block_Flag bf;
-                bf.m_block.m_tpl_1 = BitT<24>(in1);
-                bf.m_block.m_tpl_2 = BitT<24>(in2);
-                bf.m_flag = flag;
+                //printf("sending input %lx %lx \n",in1,in2);
+                BlockType block;
+                block.m_tpl_1 = BitT<24>(in1);
+                block.m_tpl_2 = BitT<24>(in2);
                 putcount++;
-                inport.sendMessage(bf);
+                inport.sendMessage(block);
             }
         }
         else{
-            Block_Flag bf;
-            inport.sendMessage(bf);
+            BlockType block;
+            inport.sendMessage(block);
         }
         sleep(0);
     }
@@ -76,11 +75,11 @@ int main(int argc, char* argv[])
     SceMi *sceMi = SceMi::Init(sceMiVersion, &params);
 
     // Initialize the SceMi inport
-    InportProxyT<Block_Flag > inport ("", "scemi_processor_req_inport", sceMi);
-    InportProxyT<Key_Flag> setkey ("", "scemi_setkey_inport", sceMi);
+    InportProxyT<BlockType > inport ("", "scemi_processor_req_inport", sceMi);
+    InportProxyT<Key_Iv> setkey ("", "scemi_setkey_inport", sceMi);
 
     // Initialize the SceMi outport
-    OutportProxyT<Block_Flag > outport ("", "scemi_processor_resp_outport", sceMi);
+    OutportProxyT<BlockType > outport ("", "scemi_processor_resp_outport", sceMi);
     outport.setCallBack(out_cb, NULL);
 
     // Initialize the reset port.
@@ -95,14 +94,14 @@ int main(int argc, char* argv[])
     reset.reset();
 
     /********************************* DECRYPT *****************************************/
-    flag.m_val = FlagType::e_Encrypt;
-    Key_Flag kf;
+    Key_Iv ki;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
     for (int i=0; i<4; i++){
-        kf.m_key[i]=enkey[i];
+        ki.m_key[i]=enkey[i];
     }
-    kf.m_flag = flag;
-    setkey.sendMessage(kf);
+    ki.m_iv.m_tpl_1 = 0x735e10;
+    ki.m_iv.m_tpl_2 = 0xb6445d;
+    setkey.sendMessage(ki);
     //printf("enc key = set \n");
     FILE* infile = fopen("pt_in.txt", "rb");
     if (infile == NULL) {
@@ -125,16 +124,11 @@ int main(int argc, char* argv[])
     // reset
     // Reset the dut.
     reset.reset();
+    sleep(10);
     indone = false;
     putcount = 0;
     gotcount = 0;
-    flag.m_val = FlagType::e_Decrypt;
-    word dekey[4] = {0xcb6915, 0xc6cbb1, 0x4a5369, 0x7f5a9d};
-    for (int i=0; i<4; i++){
-        kf.m_key[i]=dekey[i];
-    }
-    kf.m_flag = flag;
-    setkey.sendMessage(kf);
+    setkey.sendMessage(ki); // key and iv stay the same
     infile = fopen("ct_out.txt", "rb");
     if (infile == NULL) {
         std::cerr << "couldn't open ct_out.txt" << std::endl;

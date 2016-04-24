@@ -35,3 +35,8 @@ typedef struct{
    BlockType block;
    FlagType flag;
 } Block_Flag deriving(Bits, Eq);
+
+typedef struct{
+    KeyType key;
+    BlockType iv;
+} Key_Iv deriving(Bits, Eq);
