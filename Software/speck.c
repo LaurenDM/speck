@@ -81,7 +81,9 @@ void ofb(FILE* in, FILE* out, word k[], word iv[]){
     for(int i=0; i<10; i++){
         encrypt(iv,xorkey,k);
         fscanf(in,"%llx %llx",&in1, &in2);
-        fprintf(out,"ciphertext[%d] = tuple2('h%llx, 'h%llx); \n",i,in1^xorkey[0],in2^xorkey[1]);
+        //printf("in %d: %llx %llx \n",i,in1,in2);
+        //fprintf(out,"ciphertext[%d] = tuple2('h%llx, 'h%llx); \n",i,in1^xorkey[0],in2^xorkey[1]);
+        fprintf(out, "%llx %llx \n",in1^xorkey[0],in2^xorkey[1]);
         iv = xorkey;
     }
 }
@@ -134,4 +136,11 @@ int main(int argc, char* argv[]){
   FILE* in = fopen("pt_in.txt","r");
   FILE* out = fopen("ct_out.txt","w");
   ofb(in,out,k,iv);
+  fclose(in);
+  fclose(out);
+  in = fopen("ct_out.txt", "r");
+  out = fopen("pt_out.txt", "w");
+  ofb(in,out,k,iv);
+  fclose(out);
+  fclose(in);
 }

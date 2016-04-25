@@ -3,16 +3,17 @@ import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
+import Unfold::*;
 
 (* synthesize *)
 module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
     return enc;
 endmodule
 
 (* synthesize *)
 module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
     return dec;
 endmodule
 
