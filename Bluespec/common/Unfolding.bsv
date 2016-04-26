@@ -15,6 +15,7 @@ endmodule
 module mkSynthesizedUnfoldDecrypt(EncryptDecrypt#(N,M,T));
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
     return dec;
+endmodule
 
 
 module mkEncrypt_unfold(EncryptDecrypt#(n,m,t));
