@@ -7,13 +7,18 @@ import Unfolding::*;
 
 (* synthesize *)
 module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
+   //EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
+   /* it would be very difficult to remember to change this or quickly check what is being synthesized;
+   changes should be at highest level;
+   meaning synthesis mod for unfolding go in unfolding file*/
+   EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
     return enc;
 endmodule
 
 (* synthesize *)
 module mkSynthesizedDecrypt(EncryptDecrypt#(N,M,T));
-    EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
+    //EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
+   EncryptDecrypt#(N,M,T) dec <- mkDecrypt();
     return dec;
 endmodule
 
