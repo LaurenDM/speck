@@ -9,6 +9,8 @@ import Xilinx::*;
 
 import Speck::*;
 import SpeckTypes::*;
+import Unfolding::*;
+
 import FixedPoint::*;
 import Vector::*;
 
