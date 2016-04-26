@@ -29,8 +29,9 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    SyncFIFOIfc#(Block_Flag) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
    SyncFIFOIfc#(Key_Flag) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
 
-   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedEncrypt(clocked_by clk_usr, reset_by rst_usr);
-   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedDecrypt(clocked_by clk_usr, reset_by rst_usr);
+   // either Encrypt/Decrypt or UnfoldEncrypt/UnfoldDecrypt
+   EncryptDecrypt#(N,M,T) encrypt <- mkSynthesizedUnfoldEncrypt(clocked_by clk_usr, reset_by rst_usr);
+   EncryptDecrypt#(N,M,T) decrypt <- mkSynthesizedUnfoldDecrypt(clocked_by clk_usr, reset_by rst_usr);
 
    rule enqRequest;
       Block_Flag x = toSyncQ.first;
