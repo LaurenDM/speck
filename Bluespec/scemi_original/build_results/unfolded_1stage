@@ -1,0 +1,261 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
+| Date         : Tue Apr 26 11:04:48 2016
+| Host         : bdbm10 running 64-bit Ubuntu 14.04.3 LTS
+| Command      : report_utilization -hierarchical -file /mnt/nfs/var/nfs/ccross/speck/Bluespec/scemi_original/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge_utilization_placed_hierarchical.rpt
+| Design       : mkBridge
+| Device       : xc7vx485t
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+|                            Instance                            |                 Module                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP48 Blocks |
++----------------------------------------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+| mkBridge                                                       |                                  (top) |      21353 |      21014 |     338 |    1 | 14677 |     14 |      0 |            0 |
+|   (mkBridge)                                                   |                                  (top) |        395 |        395 |       0 |    0 |  3439 |      0 |      0 |            0 |
+|   scemi_1_outFifo                                              |                                  FIFO2 |        298 |        298 |       0 |    0 |   148 |      0 |      0 |            0 |
+|   scemi_bridge                                                 |                    mkPCIEtoBNoCSceMi_4 |      12648 |      12644 |       4 |    0 |  4159 |      6 |      0 |            0 |
+|     (scemi_bridge)                                             |                    mkPCIEtoBNoCSceMi_4 |       5722 |       5722 |       0 |    0 |  2054 |      0 |      0 |            0 |
+|     pbb_arbiter                                                |                           mkTLPArbiter |        870 |        870 |       0 |    0 |   851 |      0 |      0 |            0 |
+|       (pbb_arbiter)                                            |                           mkTLPArbiter |          0 |          0 |       0 |    0 |     4 |      0 |      0 |            0 |
+|       tlp_out_cfg_fifo                                         |              FIFO2__parameterized0_138 |        340 |        340 |       0 |    0 |   281 |      0 |      0 |            0 |
+|       tlp_out_dma_fifo                                         |              FIFO2__parameterized0_139 |        368 |        368 |       0 |    0 |   277 |      0 |      0 |            0 |
+|       tlp_out_fifo                                             |              FIFO2__parameterized0_140 |        162 |        162 |       0 |    0 |   289 |      0 |      0 |            0 |
+|     pbb_csr_clock_control                                      |              FIFO2__parameterized1_131 |         16 |         16 |       0 |    0 |    46 |      0 |      0 |            0 |
+|     pbb_csr_clock_status                                       |              FIFO2__parameterized1_132 |         51 |         51 |       0 |    0 |    34 |      0 |      0 |            0 |
+|     pbb_csr_intr_info                                          |                  FIFO2__parameterized2 |        141 |        141 |       0 |    0 |   190 |      0 |      0 |            0 |
+|     pbb_csr_rd_addr_queue                                      |                  FIFO2__parameterized3 |        710 |        710 |       0 |    0 |    28 |      0 |      0 |            0 |
+|     pbb_dispatcher                                             |                        mkTLPDispatcher |       3216 |       3216 |       0 |    0 |   818 |      0 |      0 |            0 |
+|       (pbb_dispatcher)                                         |                        mkTLPDispatcher |          0 |          0 |       0 |    0 |     2 |      0 |      0 |            0 |
+|       tlp_in_cfg_fifo                                          |                  FIFO2__parameterized0 |       1507 |       1507 |       0 |    0 |   276 |      0 |      0 |            0 |
+|       tlp_in_dma_fifo                                          |              FIFO2__parameterized0_136 |       1401 |       1401 |       0 |    0 |   264 |      0 |      0 |            0 |
+|       tlp_in_fifo                                              |              FIFO2__parameterized0_137 |        308 |        308 |       0 |    0 |   276 |      0 |      0 |            0 |
+|     pbb_dma_dont_wait_out                                      |              FIFO2__parameterized4_133 |          6 |          6 |       0 |    0 |     4 |      0 |      0 |            0 |
+|     pbb_dma_intr_info                                          |              FIFO2__parameterized2_134 |        182 |        182 |       0 |    0 |    96 |      0 |      0 |            0 |
+|     pbb_dma_last_tag_queue                                     |                              SizedFIFO |        100 |         96 |       4 |    0 |    18 |      0 |      0 |            0 |
+|     pbb_dma_msg_len_out                                        |                  FIFO2__parameterized5 |       1345 |       1345 |       0 |    0 |    20 |      0 |      0 |            0 |
+|     pbb_dma_rd_buffer_queue_memory                             |                                  BRAM2 |        136 |        136 |       0 |    0 |     0 |      3 |      0 |            0 |
+|     pbb_dma_wr_buffer_queue_memory                             |                              BRAM2_135 |        157 |        157 |       0 |    0 |     0 |      3 |      0 |            0 |
+|   scemi_clk_port_scemi_clkgen                                  |                              MakeClock |          1 |          1 |       0 |    0 |     1 |      0 |      0 |            0 |
+|   scemi_clk_port_scemi_rstgen_inv_rstgen                       |                             MakeResetA |          1 |          1 |       0 |    0 |     2 |      0 |      0 |            0 |
+|     rstSync                                                    |                         SyncResetA_130 |          1 |          1 |       0 |    0 |     2 |      0 |      0 |            0 |
+|   scemi_clk_port_scemi_rstgen_rstgen                           |                             MakeReset0 |          3 |          3 |       0 |    0 |     1 |      0 |      0 |            0 |
+|   scemi_epReset125                                             |             SyncResetA__parameterized1 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_epReset250                                             |           SyncResetA__parameterized1_0 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_fToBridgeBeat                                          |                                 FIFOL1 |          8 |          8 |       0 |    0 |    33 |      0 |      0 |            0 |
+|   scemi_inFifo                                                 |                                FIFO2_1 |        368 |        368 |       0 |    0 |   148 |      0 |      0 |            0 |
+|   scemi_init_state_msgFIFO                                     |                               SyncFIFO |         75 |         23 |      52 |    0 |   112 |      0 |      0 |            0 |
+|   scemi_network_status                                         |             MakeResetA__parameterized0 |          2 |          2 |       0 |    0 |     6 |      0 |      0 |            0 |
+|     (scemi_network_status)                                     |             MakeResetA__parameterized0 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     rstSync                                                    |             SyncResetA__parameterized2 |          2 |          2 |       0 |    0 |     5 |      0 |      0 |            0 |
+|   scemi_pcie_ep                                                |                 xilinx_v7_pcie_wrapper |       3029 |       3029 |       0 |    0 |  3628 |      8 |      0 |            0 |
+|     ext_clk.pipe_clock_i                                       |               pcie_7x_v1_10_pipe_clock |          3 |          3 |       0 |    0 |    17 |      0 |      0 |            0 |
+|     pcie_7x_v1_10_i                                            |                          pcie_7x_v1_10 |       3026 |       3026 |       0 |    0 |  3611 |      8 |      0 |            0 |
+|       (pcie_7x_v1_10_i)                                        |                          pcie_7x_v1_10 |          1 |          1 |       0 |    0 |     8 |      0 |      0 |            0 |
+|       gt_top_i                                                 |                   pcie_7x_v1_10_gt_top |       2775 |       2775 |       0 |    0 |  2918 |      0 |      0 |            0 |
+|         (gt_top_i)                                             |                   pcie_7x_v1_10_gt_top |          2 |          2 |       0 |    0 |     8 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst       |    pcie_7x_v1_10_gt_rx_valid_filter_7x |         18 |         18 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |         17 |         17 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |         17 |         17 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |         19 |         19 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |         17 |         17 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |         18 |         18 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_77 |         18 |         18 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst       | pcie_7x_v1_10_gt_rx_valid_filter_7x_78 |         20 |         20 |       0 |    0 |    30 |      0 |      0 |            0 |
+|         pipe_wrapper_i                                         |             pcie_7x_v1_10_pipe_wrapper |       2629 |       2629 |       0 |    0 |  2670 |      0 |      0 |            0 |
+|           (pipe_wrapper_i)                                     |             pcie_7x_v1_10_pipe_wrapper |          1 |          1 |       0 |    0 |     2 |      0 |      0 |            0 |
+|           pipe_lane[0].gt_wrapper_i                            |               pcie_7x_v1_10_gt_wrapper |          2 |          2 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_drp.pipe_drp_i                     |                 pcie_7x_v1_10_pipe_drp |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_eq.pipe_eq_i                       |                  pcie_7x_v1_10_pipe_eq |        125 |        125 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[0].pipe_eq.pipe_eq_i)                   |                  pcie_7x_v1_10_pipe_eq |         75 |         75 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_129 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_quad.pipe_common.qpll_drp_i        |                 pcie_7x_v1_10_qpll_drp |         50 |         50 |       0 |    0 |    76 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_quad.pipe_common.qpll_wrapper_i    |             pcie_7x_v1_10_qpll_wrapper |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_rate.pipe_rate_i                   |                pcie_7x_v1_10_pipe_rate |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_sync_i                             |                pcie_7x_v1_10_pipe_sync |         21 |         21 |       0 |    0 |    17 |      0 |      0 |            0 |
+|           pipe_lane[0].pipe_user_i                             |                pcie_7x_v1_10_pipe_user |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[1].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_79 |          2 |          2 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_80 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_81 |        122 |        122 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[1].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_81 |         72 |         72 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_128 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_rate.pipe_rate_i                   |             pcie_7x_v1_10_pipe_rate_82 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_sync_i                             |             pcie_7x_v1_10_pipe_sync_83 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[1].pipe_user_i                             |             pcie_7x_v1_10_pipe_user_84 |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[2].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_85 |          4 |          4 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_86 |         59 |         59 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_87 |        121 |        121 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[2].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_87 |         71 |         71 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_127 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_rate.pipe_rate_i                   |             pcie_7x_v1_10_pipe_rate_88 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_sync_i                             |             pcie_7x_v1_10_pipe_sync_89 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[2].pipe_user_i                             |             pcie_7x_v1_10_pipe_user_90 |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[3].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_91 |          2 |          2 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[3].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_92 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[3].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_93 |        126 |        126 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[3].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_93 |         76 |         76 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_126 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[3].pipe_rate.pipe_rate_i                   |             pcie_7x_v1_10_pipe_rate_94 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[3].pipe_sync_i                             |             pcie_7x_v1_10_pipe_sync_95 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[3].pipe_user_i                             |             pcie_7x_v1_10_pipe_user_96 |         27 |         27 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[4].gt_wrapper_i                            |            pcie_7x_v1_10_gt_wrapper_97 |          4 |          4 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_drp.pipe_drp_i                     |              pcie_7x_v1_10_pipe_drp_98 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_eq.pipe_eq_i                       |               pcie_7x_v1_10_pipe_eq_99 |        119 |        119 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[4].pipe_eq.pipe_eq_i)                   |               pcie_7x_v1_10_pipe_eq_99 |         69 |         69 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_125 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i        |             pcie_7x_v1_10_qpll_drp_100 |         50 |         50 |       0 |    0 |    78 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i    |         pcie_7x_v1_10_qpll_wrapper_101 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_rate.pipe_rate_i                   |            pcie_7x_v1_10_pipe_rate_102 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_sync_i                             |            pcie_7x_v1_10_pipe_sync_103 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[4].pipe_user_i                             |            pcie_7x_v1_10_pipe_user_104 |         27 |         27 |       0 |    0 |    62 |      0 |      0 |            0 |
+|           pipe_lane[5].gt_wrapper_i                            |           pcie_7x_v1_10_gt_wrapper_105 |          4 |          4 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[5].pipe_drp.pipe_drp_i                     |             pcie_7x_v1_10_pipe_drp_106 |         59 |         59 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[5].pipe_eq.pipe_eq_i                       |              pcie_7x_v1_10_pipe_eq_107 |        124 |        124 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[5].pipe_eq.pipe_eq_i)                   |              pcie_7x_v1_10_pipe_eq_107 |         74 |         74 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_124 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[5].pipe_rate.pipe_rate_i                   |            pcie_7x_v1_10_pipe_rate_108 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[5].pipe_sync_i                             |            pcie_7x_v1_10_pipe_sync_109 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[5].pipe_user_i                             |            pcie_7x_v1_10_pipe_user_110 |         29 |         29 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[6].gt_wrapper_i                            |           pcie_7x_v1_10_gt_wrapper_111 |          8 |          8 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[6].pipe_drp.pipe_drp_i                     |             pcie_7x_v1_10_pipe_drp_112 |         60 |         60 |       0 |    0 |    74 |      0 |      0 |            0 |
+|           pipe_lane[6].pipe_eq.pipe_eq_i                       |              pcie_7x_v1_10_pipe_eq_113 |        123 |        123 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[6].pipe_eq.pipe_eq_i)                   |              pcie_7x_v1_10_pipe_eq_113 |         73 |         73 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |            pcie_7x_v1_10_rxeq_scan_123 |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[6].pipe_rate.pipe_rate_i                   |            pcie_7x_v1_10_pipe_rate_114 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[6].pipe_sync_i                             |            pcie_7x_v1_10_pipe_sync_115 |         16 |         16 |       0 |    0 |    16 |      0 |      0 |            0 |
+|           pipe_lane[6].pipe_user_i                             |            pcie_7x_v1_10_pipe_user_116 |         30 |         30 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_lane[7].gt_wrapper_i                            |           pcie_7x_v1_10_gt_wrapper_117 |          3 |          3 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pipe_lane[7].pipe_drp.pipe_drp_i                     |             pcie_7x_v1_10_pipe_drp_118 |         60 |         60 |       0 |    0 |    75 |      0 |      0 |            0 |
+|           pipe_lane[7].pipe_eq.pipe_eq_i                       |              pcie_7x_v1_10_pipe_eq_119 |        121 |        121 |       0 |    0 |    84 |      0 |      0 |            0 |
+|             (pipe_lane[7].pipe_eq.pipe_eq_i)                   |              pcie_7x_v1_10_pipe_eq_119 |         71 |         71 |       0 |    0 |    50 |      0 |      0 |            0 |
+|             rxeq_scan_i                                        |                pcie_7x_v1_10_rxeq_scan |         50 |         50 |       0 |    0 |    34 |      0 |      0 |            0 |
+|           pipe_lane[7].pipe_rate.pipe_rate_i                   |            pcie_7x_v1_10_pipe_rate_120 |         75 |         75 |       0 |    0 |    55 |      0 |      0 |            0 |
+|           pipe_lane[7].pipe_sync_i                             |            pcie_7x_v1_10_pipe_sync_121 |         16 |         16 |       0 |    0 |    20 |      0 |      0 |            0 |
+|           pipe_lane[7].pipe_user_i                             |            pcie_7x_v1_10_pipe_user_122 |         28 |         28 |       0 |    0 |    61 |      0 |      0 |            0 |
+|           pipe_reset.pipe_reset_i                              |               pcie_7x_v1_10_pipe_reset |         71 |         71 |       0 |    0 |   123 |      0 |      0 |            0 |
+|           qpll_reset.qpll_reset_i                              |               pcie_7x_v1_10_qpll_reset |         25 |         25 |       0 |    0 |    64 |      0 |      0 |            0 |
+|       pcie_top_i                                               |                 pcie_7x_v1_10_pcie_top |        250 |        250 |       0 |    0 |   685 |      8 |      0 |            0 |
+|         (pcie_top_i)                                           |                 pcie_7x_v1_10_pcie_top |          3 |          3 |       0 |    0 |    16 |      0 |      0 |            0 |
+|         axi_basic_top                                          |            pcie_7x_v1_10_axi_basic_top |        225 |        225 |       0 |    0 |   264 |      0 |      0 |            0 |
+|           rx_inst                                              |             pcie_7x_v1_10_axi_basic_rx |        203 |        203 |       0 |    0 |   169 |      0 |      0 |            0 |
+|             rx_null_gen_inst                                   |    pcie_7x_v1_10_axi_basic_rx_null_gen |         37 |         37 |       0 |    0 |    13 |      0 |      0 |            0 |
+|             rx_pipeline_inst                                   |    pcie_7x_v1_10_axi_basic_rx_pipeline |        168 |        168 |       0 |    0 |   156 |      0 |      0 |            0 |
+|           tx_inst                                              |             pcie_7x_v1_10_axi_basic_tx |         22 |         22 |       0 |    0 |    95 |      0 |      0 |            0 |
+|             thrtl_ctl_enabled.tx_thrl_ctl_inst                 |   pcie_7x_v1_10_axi_basic_tx_thrtl_ctl |         18 |         18 |       0 |    0 |    24 |      0 |      0 |            0 |
+|             tx_pipeline_inst                                   |    pcie_7x_v1_10_axi_basic_tx_pipeline |          4 |          4 |       0 |    0 |    71 |      0 |      0 |            0 |
+|         pcie_7x_i                                              |                  pcie_7x_v1_10_pcie_7x |         22 |         22 |       0 |    0 |     0 |      8 |      0 |            0 |
+|           (pcie_7x_i)                                          |                  pcie_7x_v1_10_pcie_7x |         22 |         22 |       0 |    0 |     0 |      0 |      0 |            0 |
+|           pcie_bram_top                                        |         pcie_7x_v1_10_pcie_bram_top_7x |          0 |          0 |       0 |    0 |     0 |      8 |      0 |            0 |
+|             pcie_brams_rx                                      |            pcie_7x_v1_10_pcie_brams_7x |          0 |          0 |       0 |    0 |     0 |      4 |      0 |            0 |
+|               brams[0].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_64 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_71 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[1].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_65 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_70 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[2].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_66 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_69 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[3].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_67 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_68 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|             pcie_brams_tx                                      |         pcie_7x_v1_10_pcie_brams_7x_57 |          0 |          0 |       0 |    0 |     0 |      4 |      0 |            0 |
+|               brams[0].ram                                     |             pcie_7x_v1_10_pcie_bram_7x |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_63 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[1].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_58 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_62 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[2].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_59 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                      BRAM_TDP_MACRO_61 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|               brams[3].ram                                     |          pcie_7x_v1_10_pcie_bram_7x_60 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|                 use_tdp.ramb36                                 |                         BRAM_TDP_MACRO |          0 |          0 |       0 |    0 |     0 |      1 |      0 |            0 |
+|         pcie_pipe_pipeline_i                                   |       pcie_7x_v1_10_pcie_pipe_pipeline |          0 |          0 |       0 |    0 |   405 |      0 |      0 |            0 |
+|           pipe_2_lane.pipe_lane_1_i                            |           pcie_7x_v1_10_pcie_pipe_lane |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_4_lane.pipe_lane_2_i                            |        pcie_7x_v1_10_pcie_pipe_lane_50 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_4_lane.pipe_lane_3_i                            |        pcie_7x_v1_10_pcie_pipe_lane_51 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_8_lane.pipe_lane_4_i                            |        pcie_7x_v1_10_pcie_pipe_lane_52 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_8_lane.pipe_lane_5_i                            |        pcie_7x_v1_10_pcie_pipe_lane_53 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_8_lane.pipe_lane_6_i                            |        pcie_7x_v1_10_pcie_pipe_lane_54 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_8_lane.pipe_lane_7_i                            |        pcie_7x_v1_10_pcie_pipe_lane_55 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_lane_0_i                                        |        pcie_7x_v1_10_pcie_pipe_lane_56 |          0 |          0 |       0 |    0 |    48 |      0 |      0 |            0 |
+|           pipe_misc_i                                          |           pcie_7x_v1_10_pcie_pipe_misc |          0 |          0 |       0 |    0 |    21 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_buffer_empty_sp                   |                          SyncHandshake |          6 |          6 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_buffer_full_sp                    |                        SyncHandshake_2 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_ending_reset                      |                              SyncPulse |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_next_sp                           |                        SyncHandshake_3 |          7 |          7 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_starting_reset                    |                            SyncPulse_4 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_processor_req_inport_wait_sp                           |                        SyncHandshake_5 |          2 |          2 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_req_res_fifo                                 |               SyncFIFO__parameterized0 |         96 |         60 |      36 |    0 |    71 |      0 |      0 |            0 |
+|   scemi_processor_resp_outport_ending_reset                    |                            SyncPulse_6 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_processor_resp_outport_finished                        |                        SyncHandshake_7 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_resp_outport_next                            |                        SyncHandshake_8 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_processor_resp_outport_starting_reset                  |                            SyncPulse_9 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_processor_resp_res_fifo                                |            SyncFIFO__parameterized0_10 |         46 |         10 |      36 |    0 |    71 |      0 |      0 |            0 |
+|   scemi_rstgen_inv_rstgen                                      |                          MakeResetA_11 |          2 |          2 |       0 |    0 |     3 |      0 |      0 |            0 |
+|     (scemi_rstgen_inv_rstgen)                                  |                          MakeResetA_11 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     rstSync                                                    |                             SyncResetA |          2 |          2 |       0 |    0 |     2 |      0 |      0 |            0 |
+|   scemi_scemi_clkgen_fRequest                                  |                  FIFO2__parameterized6 |        185 |        185 |       0 |    0 |    46 |      0 |      0 |            0 |
+|   scemi_scemi_clkgen_fResponse                                 |                  FIFO2__parameterized7 |          3 |          3 |       0 |    0 |    34 |      0 |      0 |            0 |
+|   scemi_setkey_inport_buffer_empty_sp                          |                       SyncHandshake_12 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_setkey_inport_buffer_full_sp                           |                       SyncHandshake_13 |          8 |          8 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_setkey_inport_ending_reset                             |                           SyncPulse_14 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_setkey_inport_next_sp                                  |                       SyncHandshake_15 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_setkey_inport_starting_reset                           |                           SyncPulse_16 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_setkey_inport_wait_sp                                  |                       SyncHandshake_17 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_setkey_res_fifo                                        |               SyncFIFO__parameterized1 |        176 |        108 |      68 |    0 |   119 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_dutIfc_didreset                        |                  FIFO2__parameterized4 |          4 |          4 |       0 |    0 |     3 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |                           mkDutWrapper |       3041 |       2900 |     140 |    1 |  2340 |      0 |      0 |            0 |
+|     decrypt                                                    |             mkSynthesizedUnfoldDecrypt |       1318 |       1318 |       0 |    0 |  1036 |      0 |      0 |            0 |
+|       (decrypt)                                                |             mkSynthesizedUnfoldDecrypt |        654 |        654 |       0 |    0 |   840 |      0 |      0 |            0 |
+|       dec_ciphertextFIFO                                       |               FIFO2__parameterized8_48 |        571 |        571 |       0 |    0 |    98 |      0 |      0 |            0 |
+|       dec_plaintextFIFO                                        |               FIFO2__parameterized8_49 |         93 |         93 |       0 |    0 |    98 |      0 |      0 |            0 |
+|     encrypt                                                    |             mkSynthesizedUnfoldEncrypt |       1548 |       1548 |       0 |    0 |  1036 |      0 |      0 |            0 |
+|       (encrypt)                                                |             mkSynthesizedUnfoldEncrypt |        575 |        575 |       0 |    0 |   840 |      0 |      0 |            0 |
+|       enc_ciphertextFIFO                                       |                  FIFO2__parameterized8 |        144 |        144 |       0 |    0 |    98 |      0 |      0 |            0 |
+|       enc_plaintextFIFO                                        |               FIFO2__parameterized8_47 |        829 |        829 |       0 |    0 |    98 |      0 |      0 |            0 |
+|     fromSyncQ                                                  |            SyncFIFO__parameterized0_44 |         46 |         10 |      36 |    0 |    71 |      0 |      0 |            0 |
+|     rst_usr                                                    |             SyncResetA__parameterized3 |          3 |          2 |       0 |    1 |     7 |      0 |      0 |            0 |
+|     toKeySyncQ                                                 |            SyncFIFO__parameterized1_45 |         80 |         12 |      68 |    0 |   119 |      0 |      0 |            0 |
+|     toSyncQ                                                    |            SyncFIFO__parameterized0_46 |         46 |         10 |      36 |    0 |    71 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_dutIfc_myrst                           |             MakeResetA__parameterized1 |          3 |          3 |       0 |    0 |     8 |      0 |      0 |            0 |
+|     (scemi_settabledut_dut_dutIfc_myrst)                       |             MakeResetA__parameterized1 |          1 |          1 |       0 |    0 |     1 |      0 |      0 |            0 |
+|     rstSync                                                    |             SyncResetA__parameterized4 |          2 |          2 |       0 |    0 |     7 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_ackFifo                    |                  FIFO2__parameterized1 |        132 |        132 |       0 |    0 |    34 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |                       SyncHandshake_18 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |                       SyncHandshake_19 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_ending_reset    |                           SyncPulse_20 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_next_sp         |                       SyncHandshake_21 |          5 |          5 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_starting_reset  |                           SyncPulse_22 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_control_in_wait_sp         |                       SyncHandshake_23 |          5 |          5 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_data_out_finished          |                       SyncHandshake_24 |        297 |        297 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_data_out_next              |                       SyncHandshake_25 |          8 |          8 |       0 |    0 |     5 |      0 |      0 |            0 |
+|   scemi_settabledut_dut_prb_control_enff                       |                  FIFO2__parameterized9 |         82 |         82 |       0 |    0 |     2 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_buffer_empty_sp         |                       SyncHandshake_26 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_buffer_full_sp          |                       SyncHandshake_27 |          2 |          2 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_ending_reset            |                           SyncPulse_28 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_next_sp                 |                       SyncHandshake_29 |          3 |          3 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_starting_reset          |                           SyncPulse_30 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_inport_wait_sp                 |                       SyncHandshake_31 |          7 |          7 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_req_res_fifo                       |               SyncFIFO__parameterized2 |         10 |         10 |       0 |    0 |    20 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_resp_outport_finished              |                       SyncHandshake_32 |        277 |        277 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_resp_outport_next                  |                       SyncHandshake_33 |          3 |          3 |       0 |    0 |     5 |      0 |      0 |            0 |
+|   scemi_settabledut_softrst_resp_res_fifo                      |            SyncFIFO__parameterized2_34 |         12 |         10 |       2 |    0 |    23 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_buffer_empty_sp                       |                       SyncHandshake_35 |          4 |          4 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_buffer_full_sp                        |                       SyncHandshake_36 |          7 |          7 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_ending_reset                          |                           SyncPulse_37 |          2 |          2 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_next_sp                               |                       SyncHandshake_38 |          5 |          5 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_starting_reset                        |                           SyncPulse_39 |          1 |          1 |       0 |    0 |     4 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_in_wait_sp                               |                       SyncHandshake_40 |          5 |          5 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_out_finished                             |                       SyncHandshake_41 |         36 |         36 |       0 |    0 |     6 |      0 |      0 |            0 |
+|   scemi_shutdown_ctrl_out_next                                 |                       SyncHandshake_42 |          3 |          3 |       0 |    0 |     5 |      0 |      0 |            0 |
+|   scemi_uclkgen                                                |                           MakeClock_43 |          1 |          1 |       0 |    0 |     2 |      0 |      0 |            0 |
+|   scemi_user_reset_half                                        |             SyncResetA__parameterized5 |          1 |          1 |       0 |    0 |     1 |      0 |      0 |            0 |
++----------------------------------------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
