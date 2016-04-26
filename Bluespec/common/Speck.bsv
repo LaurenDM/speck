@@ -3,7 +3,7 @@ import FIFOF::*; // for inputfifo, to check if empty
 import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
-import Unfold::*;
+import Unfolding::*;
 
 (* synthesize *)
 module mkSynthesizedEncrypt(EncryptDecrypt#(N,M,T));
