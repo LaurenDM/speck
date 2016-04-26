@@ -53,163 +53,163 @@ P/opt/xilinx/vivado2014.1/Vivado/2014.1/data/parts/xilinx/virtex7/ConfigModes.xm
 ^
 1Inserted %s OBUFs to IO ports without IO buffers.101*opt2
 02default:defaultZ31-141
-ê
+ô
 Parsing XDC File [%s]
-179*designutils2Z
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:defaultZ20-179
-ı
+179*designutils2c
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:defaultZ20-179
+˛
 No cells matched '%s'.
 180*	planAhead2D
-0get_cells -hier -filter { NAME =~ *clk_gen_pll }2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+0get_cells -hier -filter { NAME =~ *clk_gen_pll }2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 952default:default8@Z12-180
-◊
+‡
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 952default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[7].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[7].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1302default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1302default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[6].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[6].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1312default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1312default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[5].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[5].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1322default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1322default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[4].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_rx/brams[4].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1332default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1332default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[4].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[4].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1422default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1422default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[5].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[5].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1432default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1432default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[6].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[6].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1442default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1442default:default8@Z17-55
- 
+”
 No cells matched '%s'.
 180*	planAhead2ó
-Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[7].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+Ç*/pcie_7x_v1_10_i/pcie_top_i/pcie_7x_i/pcie_bram_top/pcie_brams_tx/brams[7].ram/use_tdp.ramb36/genblk*.bram36_tdp_bl.bram36_tdp_bl2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1452default:default8@Z12-180
-ÿ
+·
 "'%s' expects at least one object.
 55*common2 
-set_property2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+set_property2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1452default:default8@Z17-55
-—
+⁄
 No cells matched '%s'.
 180*	planAhead2
-*fS2MsgOut*2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+*fS2MsgOut*2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1612default:default8@Z12-180
-í
+õ
 wExpecting a non-empty list of cells to be added to the pblock.  Please verify the correctness of the <cells> argument.
-1433*	planAhead2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+1433*	planAhead2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1612default:default8@Z12-1433
-˛
+á
 No nets matched '%s'.
 507*	planAhead2M
-9*/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/user_resetdone*2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+9*/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/user_resetdone*2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1862default:default8@Z12-507
-ﬂ
+Ë
 =No valid object(s) found for %s constraint with option '%s'.
 1387*	planAhead2"
 set_false_path2default:default2a
-M-through [get_nets */pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/user_resetdone*]2default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+M-through [get_nets */pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/user_resetdone*]2default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 1862default:default8@Z12-1387
-π
+¬
 %Done setting XDC timing constraints.
-35*timing2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+35*timing2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-35
-÷
+ﬂ
 zUser defined clock exists on pin %s and will prevent any subsequent automatic derivation of generated clocks on that pin.
 3*timing2H
-scemi_clkgen_pll/CLKOUT0scemi_clkgen_pll/CLKOUT02default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+scemi_clkgen_pll/CLKOUT0scemi_clkgen_pll/CLKOUT02default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-3
-‰
+Ì
 zUser defined clock exists on pin %s and will prevent any subsequent automatic derivation of generated clocks on that pin.
 3*timing2V
-scemi_scemi_clkgen_mmcm/CLKOUT0scemi_scemi_clkgen_mmcm/CLKOUT02default:default2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+scemi_scemi_clkgen_mmcm/CLKOUT0scemi_scemi_clkgen_mmcm/CLKOUT02default:default2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-3
-¨
+µ
 Deriving generated clocks
-2*timing2\
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:default2
+2*timing2e
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-2
 ˚
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
@@ -217,12 +217,12 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 get_clocks: 2default:default2
 00:00:192default:default2
 00:00:172default:default2
-1830.4882default:default2
-567.1562default:defaultZ17-268
-ô
+1842.0512default:default2
+570.9222default:defaultZ17-268
+¢
 Finished Parsing XDC File [%s]
-178*designutils2Z
-F/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc2default:defaultZ20-178
+178*designutils2c
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc2default:defaultZ20-178
 C
 Pushed %s inverter(s).
 98*opt2
@@ -240,8 +240,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 link_design: 2default:default2
 00:00:422default:default2
 00:00:422default:default2
-1831.4882default:default2
-1077.4612default:defaultZ17-268
+1842.0512default:default2
+1088.0232default:defaultZ17-268
 
 
 End Record

@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
 
-<Project Version="7" Minor="0" Path="/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/mkBridge/mkBridge.xpr">
+<Project Version="7" Minor="0" Path="/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/mkBridge/mkBridge.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="8a422b97be7645bfbca7ccdf3973ef09"/>
+    <Option Name="Id" Val="e6982fc4955e4b4584b4d0d5eb09e441"/>
     <Option Name="Part" Val="xc7vx485tffg1761-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>

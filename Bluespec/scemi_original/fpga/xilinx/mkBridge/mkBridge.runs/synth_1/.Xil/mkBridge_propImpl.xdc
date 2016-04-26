@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/default.xdc rfile:../../../../default.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc rfile:../../../../default.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:91 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC IBUFDS_GTE2_X1Y5  [get_cells { *_sys_clk_buf }]
 set_property src_info {type:XDC file:1 line:93 export:INPUT save:INPUT read:READ} [current_design]

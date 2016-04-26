@@ -2,9 +2,9 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Mon Apr 11 20:17:38 2016
-# Process ID: 30698
-# Log file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge.vdi
-# Journal file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/vivado.jou
+# Start of session at: Tue Apr 26 11:55:45 2016
+# Process ID: 22482
+# Log file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge.vdi
+# Journal file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source mkBridge.tcl -notrace
