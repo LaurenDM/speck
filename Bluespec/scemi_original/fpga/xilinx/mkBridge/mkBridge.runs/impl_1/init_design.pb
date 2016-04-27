@@ -7,10 +7,10 @@ a
 &Design is defaulting to constrset: %s
 434*	planAhead2
 	constrs_12default:defaultZ12-434
-^
+]
 -Analyzing %s Unisim elements for replacement
-17*netlist2
-1232default:defaultZ29-17
+17*netlist2
+572default:defaultZ29-17
 a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
@@ -215,10 +215,10 @@ O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/xilinx/default.xdc
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 get_clocks: 2default:default2
-00:00:202default:default2
 00:00:182default:default2
-1866.5702default:default2
-577.8522default:defaultZ17-268
+00:00:172default:default2
+1804.7502default:default2
+563.5782default:defaultZ17-268
 ¢
 Finished Parsing XDC File [%s]
 178*designutils2c
@@ -230,18 +230,18 @@ C
 •
 !Unisim Transformation Summary:
 %s111*project2Ø
-Ã  A total of 85 instances were transformed.
+Ã  A total of 19 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 84 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 18 instances
 2default:defaultZ1-111
 ý
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2!
 link_design: 2default:default2
-00:00:452default:default2
-00:00:442default:default2
-1866.5702default:default2
-1112.5472default:defaultZ17-268
+00:00:402default:default2
+00:00:402default:default2
+1804.7502default:default2
+1050.7192default:defaultZ17-268
 
 
 End Record

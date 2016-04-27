@@ -99,7 +99,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pci
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_lane with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_lane.v:103]
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_gt_top with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_gt_top.v:244]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 809.891 ; gain = 172.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.887 ; gain = 170.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_original/fpga/vlog_dut/mkBridge.v:37]
 INFO: [Synth 8-638] synthesizing module 'SyncWire' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
@@ -3198,7 +3198,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1140.172 ; gain = 503.090
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1013.027 ; gain = 375.949
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -3247,7 +3247,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 1891.523 ; gain = 1254.441
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1583.473 ; gain = 946.395
 ---------------------------------------------------------------------------------
 
 
@@ -3289,11 +3289,11 @@ can't read "CLKOUT4": no such variable at line NOLINE of file NONE (auto generat
 can't read "CLKOUT5": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto generated)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1891.523 ; gain = 1254.441
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1583.473 ; gain = 946.395
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1891.523 ; gain = 1254.441
+Finished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1583.473 ; gain = 946.395
 ---------------------------------------------------------------------------------
 
 INFO: [Synth 8-4471] merging register 'pbb_dma_dma_read_req_tlp_valids_1_reg' into 'pbb_dma_dma_read_req_tlp_valids_0_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v:10205]
@@ -3384,25 +3384,17 @@ INFO: [Synth 8-223] decloning instance 'scemi_setkey_inport_param_channelId' (mk
 INFO: [Synth 8-223] decloning instance 'scemi_settabledut_softrst_req_inport_param_channelId' (mkSceMiUInt32Parameter__parameterized5) to 'scemi_settabledut_softrst_resp_outport_param_channelId'
 
 Report RTL Partitions: 
-+------+------------------------------------+------------+----------+
-|      |RTL Partition                       |Replication |Instances |
-+------+------------------------------------+------------+----------+
-|1     |mkPCIEtoBNoCSceMi_4__GB0            |           1|     39317|
-|2     |mkPCIEtoBNoCSceMi_4__GB1            |           1|     14789|
-|3     |mkPCIEtoBNoCSceMi_4__GB2            |           1|     11550|
-|4     |mkSynthesizedDecrypt__GB0           |           1|     29588|
-|5     |mkSynthesizedDecrypt__GB1           |           1|      9453|
-|6     |mkSynthesizedDecrypt__GB2           |           1|     13990|
-|7     |mkSynthesizedDecrypt__GB3           |           1|     13567|
-|8     |mkSynthesizedDecrypt__GB4           |           1|     18876|
-|9     |mkSynthesizedDecrypt__GB5           |           1|     26635|
-|10    |mkSynthesizedDecrypt__dec_alpha_reg |           1|         5|
-|11    |mkDutWrapper__GC0                   |           1|     41420|
-|12    |mkBridge__GCB0                      |           1|     39595|
-|13    |mkBridge__GCB1                      |           1|     19125|
-|14    |mkBridge__GCB2                      |           1|     22468|
-|15    |mkBridge__GCB13                     |           1|        14|
-+------+------------------------------------+------------+----------+
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |mkPCIEtoBNoCSceMi_4__GB0 |           1|     39317|
+|2     |mkPCIEtoBNoCSceMi_4__GB1 |           1|     14789|
+|3     |mkPCIEtoBNoCSceMi_4__GB2 |           1|     11550|
+|4     |mkBridge__GCB0           |           1|     39489|
+|5     |case__967__GD            |           1|        32|
+|6     |mkBridge__GCB4           |           1|     20925|
+|7     |mkBridge__GCB5           |           1|     22988|
++------+-------------------------+------------+----------+
 
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -3410,42 +3402,37 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
-	   3 Input     32 Bit       Adders := 3     
 	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
-	   3 Input     24 Bit       Adders := 10    
-	   2 Input     24 Bit       Adders := 35    
 	   2 Input     22 Bit       Adders := 8     
 	   2 Input     19 Bit       Adders := 2     
 	   2 Input     14 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
 	   2 Input     12 Bit       Adders := 3     
-	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 6     
 	   3 Input     10 Bit       Adders := 1     
-	   3 Input      9 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 6     
 	   2 Input      9 Bit       Adders := 6     
+	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 10    
 	   2 Input      7 Bit       Adders := 3     
-	   2 Input      6 Bit       Adders := 14    
 	   4 Input      6 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 14    
 	   3 Input      6 Bit       Adders := 6     
 	   4 Input      5 Bit       Adders := 2     
-	  16 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 16    
 	   3 Input      5 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 18    
+	  16 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 24    
-	   5 Input      3 Bit       Adders := 8     
 	   2 Input      3 Bit       Adders := 13    
-	   4 Input      3 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 29    
 	   3 Input      2 Bit       Adders := 4     
 	   2 Input      1 Bit       Adders := 12    
 +---XORs : 
-	   2 Input     24 Bit         XORs := 40    
 	   2 Input      4 Bit         XORs := 4     
 	   2 Input      2 Bit         XORs := 32    
 +---Registers : 
@@ -3463,10 +3450,9 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 5     
 	               50 Bit    Registers := 1     
 	               49 Bit    Registers := 4     
-	               48 Bit    Registers := 18    
+	               48 Bit    Registers := 8     
 	               32 Bit    Registers := 38    
 	               30 Bit    Registers := 2     
-	               24 Bit    Registers := 74    
 	               22 Bit    Registers := 11    
 	               19 Bit    Registers := 10    
 	               18 Bit    Registers := 65    
@@ -3480,7 +3466,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 119   
 	                7 Bit    Registers := 14    
 	                6 Bit    Registers := 123   
-	                5 Bit    Registers := 38    
+	                5 Bit    Registers := 36    
 	                4 Bit    Registers := 100   
 	                3 Bit    Registers := 109   
 	                2 Bit    Registers := 189   
@@ -3503,21 +3489,19 @@ Detailed RTL Component Info :
 	   2 Input     50 Bit        Muxes := 1     
 	   2 Input     49 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 126   
+	  37 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 5     
-	  37 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 2     
-	   2 Input     24 Bit        Muxes := 4214  
-	  27 Input     24 Bit        Muxes := 10    
 	   5 Input     22 Bit        Muxes := 8     
 	   2 Input     22 Bit        Muxes := 11    
 	   2 Input     20 Bit        Muxes := 3     
+	   7 Input     19 Bit        Muxes := 8     
 	   2 Input     19 Bit        Muxes := 9     
 	   4 Input     19 Bit        Muxes := 1     
-	   7 Input     19 Bit        Muxes := 8     
-	   5 Input     18 Bit        Muxes := 8     
-	   2 Input     18 Bit        Muxes := 33    
 	   7 Input     18 Bit        Muxes := 16    
+	   2 Input     18 Bit        Muxes := 33    
+	   5 Input     18 Bit        Muxes := 8     
 	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 46    
 	   8 Input     16 Bit        Muxes := 2     
@@ -3527,51 +3511,51 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 20    
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 10    
-	   2 Input      9 Bit        Muxes := 27    
 	  10 Input      9 Bit        Muxes := 2     
 	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 27    
 	   4 Input      8 Bit        Muxes := 18    
-	   2 Input      8 Bit        Muxes := 2267  
 	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2267  
 	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 16    
-	   2 Input      6 Bit        Muxes := 147   
-	   8 Input      6 Bit        Muxes := 2     
-	   7 Input      6 Bit        Muxes := 40    
-	  37 Input      6 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 2     
-	   3 Input      5 Bit        Muxes := 1     
-	   5 Input      5 Bit        Muxes := 1     
-	   8 Input      5 Bit        Muxes := 8     
+	  37 Input      6 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 40    
+	   8 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 147   
 	   6 Input      5 Bit        Muxes := 8     
+	   8 Input      5 Bit        Muxes := 8     
+	   3 Input      5 Bit        Muxes := 1     
 	   7 Input      5 Bit        Muxes := 2     
-	   4 Input      5 Bit        Muxes := 9     
 	   2 Input      5 Bit        Muxes := 167   
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 9     
 	   2 Input      4 Bit        Muxes := 175   
-	   5 Input      4 Bit        Muxes := 8     
 	   7 Input      4 Bit        Muxes := 8     
-	  32 Input      3 Bit        Muxes := 8     
-	   9 Input      3 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 8     
+	   4 Input      3 Bit        Muxes := 8     
 	  10 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 8     
-	   4 Input      3 Bit        Muxes := 8     
 	   2 Input      3 Bit        Muxes := 104   
 	   7 Input      3 Bit        Muxes := 16    
+	   9 Input      3 Bit        Muxes := 1     
+	  32 Input      3 Bit        Muxes := 8     
 	  32 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 60    
-	   7 Input      2 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 14    
-	  32 Input      1 Bit        Muxes := 152   
+	   7 Input      2 Bit        Muxes := 8     
 	  13 Input      1 Bit        Muxes := 6     
-	   3 Input      1 Bit        Muxes := 3     
 	   7 Input      1 Bit        Muxes := 151   
-	   5 Input      1 Bit        Muxes := 67    
+	  10 Input      1 Bit        Muxes := 6     
 	  18 Input      1 Bit        Muxes := 7     
 	   4 Input      1 Bit        Muxes := 34    
-	   2 Input      1 Bit        Muxes := 1188  
-	   8 Input      1 Bit        Muxes := 26    
+	  32 Input      1 Bit        Muxes := 152   
+	   5 Input      1 Bit        Muxes := 67    
 	   6 Input      1 Bit        Muxes := 24    
-	  10 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1178  
+	   3 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 26    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -3595,12 +3579,12 @@ Detailed RTL Component Info :
 	   3 Input      6 Bit       Adders := 5     
 	   2 Input      6 Bit       Adders := 3     
 	   4 Input      6 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 1     
 	   3 Input      5 Bit       Adders := 1     
-	   4 Input      5 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 2     
 	   3 Input      2 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
 	   2 Input      1 Bit       Adders := 3     
 +---Registers : 
 	              256 Bit    Registers := 8     
@@ -3628,35 +3612,37 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input    128 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
-	   2 Input     64 Bit        Muxes := 1     
 	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
 	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
 	   3 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     20 Bit        Muxes := 3     
-	   2 Input     19 Bit        Muxes := 1     
 	   4 Input     19 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   8 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   3 Input      8 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 2     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 8     
+	   4 Input      5 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 14    
-	   3 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 17    
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 28    
+Module SyncWire 
+Detailed RTL Component Info : 
 Module FIFO2__parameterized0__4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -3782,25 +3768,25 @@ Detailed RTL Component Info :
 Module mkPCIEtoBNoCSceMi_4 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     32 Bit       Adders := 3     
 	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
 	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 4     
-	   3 Input      9 Bit       Adders := 3     
 	   2 Input      9 Bit       Adders := 3     
+	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 8     
 	   3 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 5     
 	  16 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 5     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 3     
 +---Registers : 
@@ -3835,8 +3821,8 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 8     
-	   2 Input      9 Bit        Muxes := 11    
 	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 11    
 	   2 Input      8 Bit        Muxes := 2221  
 	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      7 Bit        Muxes := 3     
@@ -3845,8 +3831,8 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 33    
 	   2 Input      3 Bit        Muxes := 6     
-	   4 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 790   
 Module mkSceMiUInt32Parameter 
@@ -3865,117 +3851,6 @@ Module mkSceMiUInt32Parameter__parameterized3
 Detailed RTL Component Info : 
 Module mkSceMiUInt32Parameter__parameterized4 
 Detailed RTL Component Info : 
-Module FIFO2__parameterized8__1 
-Detailed RTL Component Info : 
-+---Registers : 
-	               48 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module FIFO2__parameterized8__2 
-Detailed RTL Component Info : 
-+---Registers : 
-	               48 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module mkSynthesizedDecrypt 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     24 Bit       Adders := 10    
-	   2 Input     24 Bit       Adders := 15    
-	   2 Input      5 Bit       Adders := 1     
-	   4 Input      3 Bit       Adders := 1     
-	   5 Input      3 Bit       Adders := 4     
-+---XORs : 
-	   2 Input     24 Bit         XORs := 20    
-+---Registers : 
-	               48 Bit    Registers := 5     
-	               24 Bit    Registers := 37    
-	                5 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     24 Bit        Muxes := 3607  
-	  27 Input     24 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 6     
-Module FIFO2__parameterized8__3 
-Detailed RTL Component Info : 
-+---Registers : 
-	               48 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module FIFO2__parameterized8 
-Detailed RTL Component Info : 
-+---Registers : 
-	               48 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module mkSynthesizedEncrypt 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     24 Bit       Adders := 20    
-	   2 Input      5 Bit       Adders := 1     
-	   5 Input      3 Bit       Adders := 4     
-	   4 Input      3 Bit       Adders := 1     
-+---XORs : 
-	   2 Input     24 Bit         XORs := 20    
-+---Registers : 
-	               48 Bit    Registers := 5     
-	               24 Bit    Registers := 37    
-	                5 Bit    Registers := 1     
-+---Muxes : 
-	  27 Input     24 Bit        Muxes := 5     
-	   2 Input     24 Bit        Muxes := 607   
-	   2 Input      1 Bit        Muxes := 6     
-Module SyncFIFO__parameterized0__1 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      2 Bit         XORs := 4     
-+---Registers : 
-	               49 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 2     
-+---RAMs : 
-	               98 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module SyncResetA__parameterized3 
-Detailed RTL Component Info : 
-+---Registers : 
-	                6 Bit    Registers := 1     
-Module SyncFIFO__parameterized1__1 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      2 Bit         XORs := 4     
-+---Registers : 
-	               97 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 2     
-+---RAMs : 
-	              194 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module SyncFIFO__parameterized0__2 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      2 Bit         XORs := 4     
-+---Registers : 
-	               49 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 2     
-+---RAMs : 
-	               98 Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module mkDutWrapper 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     49 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
 Module mkSceMiUInt32Parameter__parameterized5 
 Detailed RTL Component Info : 
 Module mkSceMiUInt32Parameter__parameterized6 
@@ -3983,10 +3858,6 @@ Detailed RTL Component Info :
 Module ResetInverter 
 Detailed RTL Component Info : 
 Module SyncReset0 
-Detailed RTL Component Info : 
-Module SyncWire__1 
-Detailed RTL Component Info : 
-Module ResetInverter__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_clock 
 Detailed RTL Component Info : 
@@ -4262,8 +4133,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4279,15 +4150,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4311,14 +4182,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_qpll_drp__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4334,8 +4205,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -4343,8 +4214,8 @@ Detailed RTL Component Info :
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__2 
@@ -4420,8 +4291,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4437,15 +4308,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4469,14 +4340,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__3 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__3 
@@ -4550,8 +4421,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4567,15 +4438,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4599,14 +4470,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__4 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__4 
@@ -4680,8 +4551,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4697,15 +4568,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4729,14 +4600,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__5 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__5 
@@ -4810,8 +4681,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4827,15 +4698,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4859,14 +4730,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_qpll_drp 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4882,8 +4753,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -4891,8 +4762,8 @@ Detailed RTL Component Info :
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__6 
@@ -4968,8 +4839,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4985,15 +4856,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5017,14 +4888,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__7 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__7 
@@ -5098,8 +4969,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5115,15 +4986,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5147,14 +5018,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__8 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user 
@@ -5228,8 +5099,8 @@ Detailed RTL Component Info :
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5245,15 +5116,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5277,14 +5148,14 @@ Detailed RTL Component Info :
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_wrapper 
@@ -5417,6 +5288,27 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 8     
 Module xilinx_v7_pcie_wrapper 
 Detailed RTL Component Info : 
+Module ResetInverter__1 
+Detailed RTL Component Info : 
+Module ResetEither__1 
+Detailed RTL Component Info : 
+Module SyncReset0__1 
+Detailed RTL Component Info : 
+Module FIFO2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module MakeClock__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ResetEither__2 
+Detailed RTL Component Info : 
 Module ClockInverter 
 Detailed RTL Component Info : 
 Module SyncResetA__1 
@@ -5427,7 +5319,7 @@ Module MakeResetA__1
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
-Module SyncReset0__1 
+Module SyncReset0__2 
 Detailed RTL Component Info : 
 Module MakeReset0 
 Detailed RTL Component Info : 
@@ -5465,11 +5357,11 @@ Module SyncResetA__parameterized1
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module ResetEither__1 
+Module ResetEither__3 
 Detailed RTL Component Info : 
-Module ResetEither__2 
+Module ResetEither__4 
 Detailed RTL Component Info : 
-Module FIFO2__1 
+Module FIFO2 
 Detailed RTL Component Info : 
 +---Registers : 
 	               81 Bit    Registers := 2     
@@ -5497,7 +5389,9 @@ Module MakeResetA__parameterized0
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
-Module ResetEither__3 
+Module SyncReset0__3 
+Detailed RTL Component Info : 
+Module ResetEither__5 
 Detailed RTL Component Info : 
 Module SyncHandshake__1 
 Detailed RTL Component Info : 
@@ -5565,7 +5459,7 @@ Detailed RTL Component Info :
 	               98 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module ResetEither__4 
+Module ResetEither 
 Detailed RTL Component Info : 
 Module SyncResetA 
 Detailed RTL Component Info : 
@@ -5632,6 +5526,90 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized8__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkSynthesizedDecrypt 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__parameterized8__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized8__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkSynthesizedEncrypt 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SyncFIFO__parameterized0__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      2 Bit         XORs := 4     
++---Registers : 
+	               49 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               98 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module SyncResetA__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
+Module SyncFIFO__parameterized1__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      2 Bit         XORs := 4     
++---Registers : 
+	               97 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              194 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module SyncFIFO__parameterized0__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      2 Bit         XORs := 4     
++---Registers : 
+	               49 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               98 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module mkDutWrapper 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module SyncResetA__parameterized4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -5807,7 +5785,9 @@ Module SyncPulse
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 4     
-Module MakeClock__2 
+Module SyncWire__1 
+Detailed RTL Component Info : 
+Module MakeClock 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 3     
@@ -5819,30 +5799,9 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 Module ResetInverter__4 
 Detailed RTL Component Info : 
-Module MakeClock 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module FIFO2 
-Detailed RTL Component Info : 
-+---Registers : 
-	               81 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
-Module SyncReset0__2 
-Detailed RTL Component Info : 
-Module ResetEither__5 
-Detailed RTL Component Info : 
-Module SyncReset0__3 
-Detailed RTL Component Info : 
-Module ResetEither 
+Module ResetInverter__5 
 Detailed RTL Component Info : 
 Module SyncWire__2 
-Detailed RTL Component Info : 
-Module SyncWire 
 Detailed RTL Component Info : 
 Module FIFOL1 
 Detailed RTL Component Info : 
@@ -5851,8 +5810,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 3     
-Module ResetInverter__5 
-Detailed RTL Component Info : 
 
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -5973,14 +5930,14 @@ WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[18] ) is unused and w
 WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[17] ) is unused and will be removed from module FIFO2__parameterized3.
 WARNING: [Synth 8-3332] Sequential element (\data0_reg_reg[16] ) is unused and will be removed from module FIFO2__parameterized3.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-4471] merging register 'scemi_clk_port_scemi_clkgen/new_gate_reg' into 'scemi_uclkgen/new_gate_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:110]
+INFO: [Synth 8-4471] merging register 'scemi_uclkgen/new_gate_reg' into 'scemi_clk_port_scemi_clkgen/new_gate_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:110]
 WARNING: [Synth 8-3917] design mkBridge has port leds[7] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[6] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:02:44 . Memory (MB): peak = 1891.523 ; gain = 1254.441
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:23 . Memory (MB): peak = 1583.473 ; gain = 946.395
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -5996,19 +5953,19 @@ Block RAM:
 
 Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Mutiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
 Distributed RAM: 
-+------------------+------------------------+--------------------+----------------------+----------------+-------------------+
-|Module Name       | RTL Object             | Inference Criteria | Size (depth X width) | Primitives     | Hierarchical Name | 
-+------------------+------------------------+--------------------+----------------------+----------------+-------------------+
-|SizedFIFO         | arr_reg                | User Attribute     | 32 X 5               | RAM32M x 1     | SizedFIFO/ram__11 | 
-|mkDutWrapper__GC0 | fromSyncQ/fifoMem_reg  | Implied            | 2 X 49               | RAM32M x 9     | ram__12           | 
-|mkDutWrapper__GC0 | toKeySyncQ/fifoMem_reg | Implied            | 2 X 97               | RAM32M x 17    | ram__13           | 
-|mkDutWrapper__GC0 | toSyncQ/fifoMem_reg    | Implied            | 2 X 49               | RAM32M x 9     | ram__14           | 
-|SyncFIFO          | fifoMem_reg            | Implied            | 8 X 74               | RAM32M x 13    | SyncFIFO/ram__15  | 
-|SyncFIFO          | fifoMem_reg            | Implied            | 2 X 49               | RAM32M x 9     | SyncFIFO/ram__16  | 
-|SyncFIFO          | fifoMem_reg            | Implied            | 2 X 49               | RAM32M x 9     | SyncFIFO/ram__17  | 
-|SyncFIFO          | fifoMem_reg            | Implied            | 2 X 97               | RAM32M x 17    | SyncFIFO/ram__18  | 
-|SyncFIFO          | fifoMem_reg            | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__19  | 
-+------------------+------------------------+--------------------+----------------------+----------------+-------------------+
++-------------+------------------------+--------------------+----------------------+----------------+----------------------+
+|Module Name  | RTL Object             | Inference Criteria | Size (depth X width) | Primitives     | Hierarchical Name    | 
++-------------+------------------------+--------------------+----------------------+----------------+----------------------+
+|SizedFIFO    | arr_reg                | User Attribute     | 32 X 5               | RAM32M x 1     | SizedFIFO/ram__11    | 
+|SyncFIFO     | fifoMem_reg            | Implied            | 8 X 74               | RAM32M x 13    | SyncFIFO/ram__12     | 
+|SyncFIFO     | fifoMem_reg            | Implied            | 2 X 49               | RAM32M x 9     | SyncFIFO/ram__13     | 
+|SyncFIFO     | fifoMem_reg            | Implied            | 2 X 49               | RAM32M x 9     | SyncFIFO/ram__14     | 
+|SyncFIFO     | fifoMem_reg            | Implied            | 2 X 97               | RAM32M x 17    | SyncFIFO/ram__15     | 
+|mkDutWrapper | fromSyncQ/fifoMem_reg  | Implied            | 2 X 49               | RAM32M x 9     | mkDutWrapper/ram__16 | 
+|mkDutWrapper | toKeySyncQ/fifoMem_reg | Implied            | 2 X 97               | RAM32M x 17    | mkDutWrapper/ram__17 | 
+|mkDutWrapper | toSyncQ/fifoMem_reg    | Implied            | 2 X 49               | RAM32M x 9     | mkDutWrapper/ram__18 | 
+|SyncFIFO     | fifoMem_reg            | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__19     | 
++-------------+------------------------+--------------------+----------------------+----------------+----------------------+
 
 Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Mutiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
 ---------------------------------------------------------------------------------
@@ -6046,81 +6003,81 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bri
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_0/\pbb_dma_rd_buffer_queue_rCache_reg[94] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_2/\pbb_dma_msg_parse_header_pos_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (scemi_bridgei_2/pbb_csr_clock_status/\data1_reg_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_13/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_13/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_12/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data1_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_max_rd_req_cr_reg[6] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_12/\scemi_uclkgen/new_gate_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_shutdown_ctrl_out_beats_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_fS2MsgOut_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_fS2MsgOut_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_fFromContinueBeat_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_fFromContinueBeat_ifc_rDataCount_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\scemi_fS1MsgOut_ifc_rDataCount_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_max_payload_cr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\scemi_fFromBridgeBeat_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data1_reg_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/scemi_settabledut_dut_prb_control_ackFifo/\data1_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_clk_port_scemi_clkgen/new_gate_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_prb_control_prb_str/\data1_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_rcb_cr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_rcb_mask_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_shutdown_ctrl_out_beats_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromContinueBeat_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fFromContinueBeat_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS2MsgOut_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS2MsgOut_ifc_rDataCount_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\scemi_fS1MsgOut_ifc_rDataCount_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\fromSyncQ/sGEnqPtr1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\fromSyncQ/sGEnqPtr1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\fromSyncQ/sGEnqPtr1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\fromSyncQ/sGEnqPtr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\encrypt/enc_ciphertextFIFO/data0_reg_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/scemi_settabledut_dut_dutIfc_m_dut/\decrypt/dec_plaintextFIFO/data0_reg_reg[37] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:07:42 ; elapsed = 00:07:39 . Memory (MB): peak = 2475.219 ; gain = 1838.137
+Finished Area Optimization : Time (s): cpu = 00:05:28 ; elapsed = 00:05:22 . Memory (MB): peak = 2103.301 ; gain = 1466.223
 ---------------------------------------------------------------------------------
 
 
@@ -6186,25 +6143,25 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:45 ; elapsed = 00:07:43 . Memory (MB): peak = 2475.219 ; gain = 1838.137
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:30 ; elapsed = 00:05:25 . Memory (MB): peak = 2108.301 ; gain = 1471.223
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:08:02 ; elapsed = 00:08:00 . Memory (MB): peak = 2534.227 ; gain = 1897.145
+Finished Timing Optimization : Time (s): cpu = 00:05:45 ; elapsed = 00:05:40 . Memory (MB): peak = 2158.309 ; gain = 1521.230
 ---------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29688' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29288' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28888' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28427' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28027' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27627' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27227' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_26760' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19987' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19581' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19175' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18713' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18307' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17901' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17495' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17030' with timing assertions on output pin 'O'
 INFO: [Synth 8-139] cannot merge instances \scemi_uclkgen/CLK_VAL_OUT_reg  and \scemi_uclkgen/current_clk_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_user_i/rxresetdone_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_rate.pipe_rate_i/rxresetdone_reg1_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_user_i/txresetdone_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_rate.pipe_rate_i/txresetdone_reg1_reg  because of non-equivalent assertions
@@ -6306,22 +6263,30 @@ INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[5].pipe_rate.pipe_rate_i/mmcm_lock_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[1].pipe_sync_i/mmcm_lock_reg1_reg  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[5].pipe_rate.pipe_rate_i/mmcm_lock_reg1_reg  and \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_sync_i/mmcm_lock_reg1_reg  because of non-equivalent assertions
 INFO: [Common 17-14] Message 'Synth 8-139' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29688' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29288' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28888' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28427' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28027' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27627' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27227' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_26760' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29688' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_29288' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28888' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28427' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_28027' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27627' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_27227' with timing assertions on output pin 'O'
-INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_26760' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19987' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19581' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19175' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18713' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18307' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17901' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17495' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17030' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19987' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19581' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19175' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18713' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18307' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17901' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17495' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17030' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19987' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19581' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_19175' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18713' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_18307' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17901' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17495' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_17030' with timing assertions on output pin 'O'
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_rd_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -6329,7 +6294,7 @@ INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:09:09 ; elapsed = 00:09:09 . Memory (MB): peak = 2604.656 ; gain = 1967.574
+Finished Technology Mapping : Time (s): cpu = 00:06:40 ; elapsed = 00:06:35 . Memory (MB): peak = 2238.699 ; gain = 1601.621
 ---------------------------------------------------------------------------------
 
 
@@ -6455,7 +6420,7 @@ WARNING: [Synth 8-3295] tying undriven pin \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4560] design has 13 instantiated BUFGs while the limit set by the -bufg synthesis option is 12
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:09:15 ; elapsed = 00:09:15 . Memory (MB): peak = 2604.656 ; gain = 1967.574
+Finished IO Insertion : Time (s): cpu = 00:06:44 ; elapsed = 00:06:39 . Memory (MB): peak = 2238.699 ; gain = 1601.621
 ---------------------------------------------------------------------------------
 
 
@@ -6470,7 +6435,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:09:15 ; elapsed = 00:09:15 . Memory (MB): peak = 2604.656 ; gain = 1967.574
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:44 ; elapsed = 00:06:40 . Memory (MB): peak = 2238.699 ; gain = 1601.621
 ---------------------------------------------------------------------------------
 
 
@@ -6478,7 +6443,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:09:15 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:20 ; elapsed = 00:09:20 . Memory (MB): peak = 2604.656 ; gain = 1967.574
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:48 ; elapsed = 00:06:44 . Memory (MB): peak = 2238.699 ; gain = 1601.621
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6490,6 +6455,7 @@ Static Shift Register:
 |Module Name | RTL Name                                                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +------------+--------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |mkBridge    | scemi_settabledut_dut_dutIfc_m_dut/rst_usr/reset_hold_reg[5] | 6      | 1     | YES          | NO                 | NO                | 1      | 0       | 
+|mkBridge    | scemi_setkey_inport_scemiInportBeats_reg[5]                  | 4      | 6     | YES          | NO                 | NO                | 6      | 0       | 
 +------------+--------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -6512,30 +6478,30 @@ Report Cell Usage:
 +------+--------------+------+
 |1     |BUFG          |    41|
 |2     |BUFGCTRL      |     1|
-|3     |CARRY4        |   684|
+|3     |CARRY4        |   386|
 |4     |GTXE2_CHANNEL |     8|
 |5     |GTXE2_COMMON  |     2|
 |6     |IBUFDS_GTE2   |     1|
 |7     |INV           |     9|
-|8     |LUT1          |  2042|
-|9     |LUT2          |  2321|
-|10    |LUT3          |  2782|
-|11    |LUT4          |  3310|
-|12    |LUT5          |  5987|
-|13    |LUT6          | 14802|
+|8     |LUT1          |  1477|
+|9     |LUT2          |  1885|
+|10    |LUT3          |  2506|
+|11    |LUT4          |  2620|
+|12    |LUT5          |  4534|
+|13    |LUT6          |  9717|
 |14    |MMCME2_ADV    |     4|
-|15    |MUXF7         |   886|
-|16    |MUXF8         |   167|
+|15    |MUXF7         |   323|
+|16    |MUXF8         |    19|
 |17    |PCIE_2_1      |     1|
 |18    |RAM16X1D      |     1|
-|19    |RAM32M        |    84|
+|19    |RAM32M        |    18|
 |20    |RAMB36E1      |     6|
 |21    |RAMB36E1_1    |     8|
-|22    |SRL16E        |     1|
-|23    |FDCE          |   385|
-|24    |FDPE          |    96|
-|25    |FDRE          | 15649|
-|26    |FDSE          |   665|
+|22    |SRL16E        |     7|
+|23    |FDCE          |   336|
+|24    |FDPE          |    86|
+|25    |FDRE          | 12392|
+|26    |FDSE          |   596|
 |27    |IBUF          |    19|
 |28    |IBUFDS        |     1|
 |29    |OBUF          |    24|
@@ -6545,241 +6511,234 @@ Report Instance Areas:
 +------+---------------------------------------------------------------+---------------------------------------+------+
 |      |Instance                                                       |Module                                 |Cells |
 +------+---------------------------------------------------------------+---------------------------------------+------+
-|1     |top                                                            |                                       | 49987|
+|1     |top                                                            |                                       | 37028|
 |2     |  scemi_1_outFifo                                              |FIFO2                                  |   528|
-|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19279|
+|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19957|
 |4     |    pbb_arbiter                                                |mkTLPArbiter                           |  1803|
-|5     |      tlp_out_cfg_fifo                                         |FIFO2__parameterized0_138              |   637|
-|6     |      tlp_out_dma_fifo                                         |FIFO2__parameterized0_139              |   704|
-|7     |      tlp_out_fifo                                             |FIFO2__parameterized0_140              |   458|
-|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_131              |    67|
-|9     |    pbb_csr_clock_status                                       |FIFO2__parameterized1_132              |    94|
+|5     |      tlp_out_cfg_fifo                                         |FIFO2__parameterized0_131              |   637|
+|6     |      tlp_out_dma_fifo                                         |FIFO2__parameterized0_132              |   704|
+|7     |      tlp_out_fifo                                             |FIFO2__parameterized0_133              |   458|
+|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_124              |    67|
+|9     |    pbb_csr_clock_status                                       |FIFO2__parameterized1_125              |    94|
 |10    |    pbb_csr_intr_info                                          |FIFO2__parameterized2                  |   337|
 |11    |    pbb_csr_rd_addr_queue                                      |FIFO2__parameterized3                  |   836|
 |12    |    pbb_dispatcher                                             |mkTLPDispatcher                        |  4335|
 |13    |      tlp_in_cfg_fifo                                          |FIFO2__parameterized0                  |  1924|
-|14    |      tlp_in_dma_fifo                                          |FIFO2__parameterized0_136              |  1817|
-|15    |      tlp_in_fifo                                              |FIFO2__parameterized0_137              |   592|
-|16    |    pbb_dma_dont_wait_out                                      |FIFO2__parameterized4_133              |    11|
-|17    |    pbb_dma_intr_info                                          |FIFO2__parameterized2_134              |   291|
+|14    |      tlp_in_dma_fifo                                          |FIFO2__parameterized0_129              |  1817|
+|15    |      tlp_in_fifo                                              |FIFO2__parameterized0_130              |   592|
+|16    |    pbb_dma_dont_wait_out                                      |FIFO2__parameterized4_126              |    11|
+|17    |    pbb_dma_intr_info                                          |FIFO2__parameterized2_127              |   291|
 |18    |    pbb_dma_last_tag_queue                                     |SizedFIFO                              |   134|
-|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1636|
+|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1628|
 |20    |    pbb_dma_rd_buffer_queue_memory                             |BRAM2                                  |   176|
-|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_135                              |   221|
+|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_128                              |   221|
 |22    |  scemi_clk_port_scemi_clkgen                                  |MakeClock                              |     2|
 |23    |  scemi_clk_port_scemi_rstgen_inv_rstgen                       |MakeResetA                             |     2|
-|24    |    rstSync                                                    |SyncResetA_130                         |     2|
-|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     8|
+|24    |    rstSync                                                    |SyncResetA_123                         |     2|
+|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     4|
 |26    |  scemi_epReset125                                             |SyncResetA__parameterized1             |    10|
 |27    |  scemi_epReset250                                             |SyncResetA__parameterized1_0           |     6|
 |28    |  scemi_fToBridgeBeat                                          |FIFOL1                                 |    43|
-|29    |  scemi_inFifo                                                 |FIFO2_1                                |   593|
-|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   154|
+|29    |  scemi_inFifo                                                 |FIFO2_1                                |   592|
+|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   157|
 |31    |  scemi_network_status                                         |MakeResetA__parameterized0             |     8|
 |32    |    rstSync                                                    |SyncResetA__parameterized2             |     7|
-|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10386|
+|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10419|
 |34    |    \ext_clk.pipe_clock_i                                      |pcie_7x_v1_10_pipe_clock               |    29|
-|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10357|
-|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9359|
-|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    53|
-|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |    52|
-|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |    52|
-|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |    53|
-|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |    52|
-|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |    52|
-|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_77 |    52|
-|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_78 |    53|
-|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8930|
-|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     6|
+|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10390|
+|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9409|
+|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    57|
+|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_65 |    54|
+|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_66 |    56|
+|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_67 |    54|
+|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_68 |    53|
+|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_69 |    54|
+|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_70 |    54|
+|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_71 |    54|
+|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8962|
+|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     4|
 |47    |          \pipe_lane[0].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp                 |   152|
-|48    |          \pipe_lane[0].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq                  |   544|
-|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_129            |   190|
+|48    |          \pipe_lane[0].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq                  |   548|
+|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_122            |   203|
 |50    |          \pipe_lane[0].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp                 |   142|
 |51    |          \pipe_lane[0].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper             |     1|
-|52    |          \pipe_lane[0].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate                |   154|
-|53    |          \pipe_lane[0].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync                |    64|
+|52    |          \pipe_lane[0].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate                |   153|
+|53    |          \pipe_lane[0].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync                |    63|
 |54    |          \pipe_lane[0].pipe_user_i                            |pcie_7x_v1_10_pipe_user                |   120|
-|55    |          \pipe_lane[1].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_79            |     4|
-|56    |          \pipe_lane[1].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_80              |   152|
-|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_81               |   544|
-|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_128            |   190|
-|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_82             |   154|
-|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_83             |    57|
-|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_84             |   121|
-|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_85            |     4|
-|63    |          \pipe_lane[2].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_86              |   152|
-|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_87               |   544|
-|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_127            |   190|
-|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_88             |   154|
-|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_89             |    57|
-|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_90             |   119|
-|69    |          \pipe_lane[3].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_91            |     4|
-|70    |          \pipe_lane[3].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_92              |   152|
-|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_93               |   544|
-|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_126            |   190|
-|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_94             |   154|
-|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_95             |    57|
-|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_96             |   124|
-|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_97            |     4|
-|77    |          \pipe_lane[4].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_98              |   152|
-|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_99               |   544|
-|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_125            |   190|
-|80    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp_100             |   144|
-|81    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper_101         |     1|
-|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_102            |   154|
-|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_103            |    57|
-|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_104            |   121|
-|85    |          \pipe_lane[5].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_105           |     6|
-|86    |          \pipe_lane[5].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_106             |   152|
-|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_107              |   544|
-|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_124            |   190|
-|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_108            |   154|
-|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_109            |    57|
-|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_110            |   123|
-|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_111           |     8|
-|93    |          \pipe_lane[6].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_112             |   152|
-|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_113              |   544|
-|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_123            |   190|
-|96    |          \pipe_lane[6].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_114            |   154|
-|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_115            |    57|
-|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_116            |   125|
-|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_117           |     4|
-|100   |          \pipe_lane[7].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_118             |   153|
-|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_119              |   544|
-|102   |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan                |   190|
-|103   |          \pipe_lane[7].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_120            |   154|
-|104   |          \pipe_lane[7].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_121            |    61|
-|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_122            |   122|
+|55    |          \pipe_lane[1].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_72            |     4|
+|56    |          \pipe_lane[1].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_73              |   152|
+|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_74               |   548|
+|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_121            |   203|
+|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_75             |   153|
+|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_76             |    58|
+|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_77             |   122|
+|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_78            |     4|
+|63    |          \pipe_lane[2].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_79              |   152|
+|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_80               |   548|
+|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_120            |   203|
+|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_81             |   153|
+|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_82             |    58|
+|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_83             |   122|
+|69    |          \pipe_lane[3].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_84            |     4|
+|70    |          \pipe_lane[3].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_85              |   152|
+|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_86               |   548|
+|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_119            |   203|
+|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_87             |   153|
+|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_88             |    58|
+|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_89             |   126|
+|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_90            |     4|
+|77    |          \pipe_lane[4].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_91              |   152|
+|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_92               |   548|
+|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_118            |   203|
+|80    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp_93              |   144|
+|81    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper_94          |     1|
+|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_95             |   153|
+|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_96             |    58|
+|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_97             |   121|
+|85    |          \pipe_lane[5].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_98            |     8|
+|86    |          \pipe_lane[5].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_99              |   152|
+|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_100              |   548|
+|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_117            |   203|
+|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_101            |   153|
+|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_102            |    58|
+|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_103            |   121|
+|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_104           |     8|
+|93    |          \pipe_lane[6].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_105             |   152|
+|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_106              |   548|
+|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_116            |   203|
+|96    |          \pipe_lane[6].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_107            |   153|
+|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_108            |    58|
+|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_109            |   125|
+|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_110           |     4|
+|100   |          \pipe_lane[7].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_111             |   153|
+|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_112              |   548|
+|102   |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan                |   203|
+|103   |          \pipe_lane[7].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_113            |   153|
+|104   |          \pipe_lane[7].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_114            |    61|
+|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_115            |   122|
 |106   |          \pipe_reset.pipe_reset_i                             |pcie_7x_v1_10_pipe_reset               |   259|
 |107   |          \qpll_reset.qpll_reset_i                             |pcie_7x_v1_10_qpll_reset               |    97|
-|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |   989|
-|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   522|
-|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   398|
-|111   |            rx_null_gen_inst                                   |pcie_7x_v1_10_axi_basic_rx_null_gen    |    64|
-|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   334|
-|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   124|
-|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    46|
-|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    78|
-|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    41|
+|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |   972|
+|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   509|
+|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   392|
+|111   |            rx_null_gen_inst                                   |pcie_7x_v1_10_axi_basic_rx_null_gen    |    60|
+|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   332|
+|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   117|
+|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    41|
+|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    76|
+|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    37|
 |117   |          pcie_bram_top                                        |pcie_7x_v1_10_pcie_bram_top_7x         |     8|
 |118   |            pcie_brams_rx                                      |pcie_7x_v1_10_pcie_brams_7x            |     4|
-|119   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x_64          |     1|
-|120   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_71                      |     1|
-|121   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_65          |     1|
-|122   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_70                      |     1|
-|123   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_66          |     1|
-|124   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_69                      |     1|
-|125   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_67          |     1|
-|126   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_68                      |     1|
-|127   |            pcie_brams_tx                                      |pcie_7x_v1_10_pcie_brams_7x_57         |     4|
+|119   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x_57          |     1|
+|120   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_64                      |     1|
+|121   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_58          |     1|
+|122   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_63                      |     1|
+|123   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_59          |     1|
+|124   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_62                      |     1|
+|125   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_60          |     1|
+|126   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_61                      |     1|
+|127   |            pcie_brams_tx                                      |pcie_7x_v1_10_pcie_brams_7x_50         |     4|
 |128   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x             |     1|
-|129   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_63                      |     1|
-|130   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_58          |     1|
-|131   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_62                      |     1|
-|132   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_59          |     1|
-|133   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_61                      |     1|
-|134   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_60          |     1|
+|129   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_56                      |     1|
+|130   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_51          |     1|
+|131   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_55                      |     1|
+|132   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_52          |     1|
+|133   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_54                      |     1|
+|134   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_53          |     1|
 |135   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO                         |     1|
 |136   |        pcie_pipe_pipeline_i                                   |pcie_7x_v1_10_pcie_pipe_pipeline       |   405|
 |137   |          \pipe_2_lane.pipe_lane_1_i                           |pcie_7x_v1_10_pcie_pipe_lane           |    48|
-|138   |          \pipe_4_lane.pipe_lane_2_i                           |pcie_7x_v1_10_pcie_pipe_lane_50        |    48|
-|139   |          \pipe_4_lane.pipe_lane_3_i                           |pcie_7x_v1_10_pcie_pipe_lane_51        |    48|
-|140   |          \pipe_8_lane.pipe_lane_4_i                           |pcie_7x_v1_10_pcie_pipe_lane_52        |    48|
-|141   |          \pipe_8_lane.pipe_lane_5_i                           |pcie_7x_v1_10_pcie_pipe_lane_53        |    48|
-|142   |          \pipe_8_lane.pipe_lane_6_i                           |pcie_7x_v1_10_pcie_pipe_lane_54        |    48|
-|143   |          \pipe_8_lane.pipe_lane_7_i                           |pcie_7x_v1_10_pcie_pipe_lane_55        |    48|
-|144   |          pipe_lane_0_i                                        |pcie_7x_v1_10_pcie_pipe_lane_56        |    48|
+|138   |          \pipe_4_lane.pipe_lane_2_i                           |pcie_7x_v1_10_pcie_pipe_lane_43        |    48|
+|139   |          \pipe_4_lane.pipe_lane_3_i                           |pcie_7x_v1_10_pcie_pipe_lane_44        |    48|
+|140   |          \pipe_8_lane.pipe_lane_4_i                           |pcie_7x_v1_10_pcie_pipe_lane_45        |    48|
+|141   |          \pipe_8_lane.pipe_lane_5_i                           |pcie_7x_v1_10_pcie_pipe_lane_46        |    48|
+|142   |          \pipe_8_lane.pipe_lane_6_i                           |pcie_7x_v1_10_pcie_pipe_lane_47        |    48|
+|143   |          \pipe_8_lane.pipe_lane_7_i                           |pcie_7x_v1_10_pcie_pipe_lane_48        |    48|
+|144   |          pipe_lane_0_i                                        |pcie_7x_v1_10_pcie_pipe_lane_49        |    48|
 |145   |          pipe_misc_i                                          |pcie_7x_v1_10_pcie_pipe_misc           |    21|
 |146   |  scemi_processor_req_inport_buffer_empty_sp                   |SyncHandshake                          |    10|
-|147   |  scemi_processor_req_inport_buffer_full_sp                    |SyncHandshake_2                        |    11|
+|147   |  scemi_processor_req_inport_buffer_full_sp                    |SyncHandshake_2                        |    12|
 |148   |  scemi_processor_req_inport_ending_reset                      |SyncPulse                              |     6|
 |149   |  scemi_processor_req_inport_next_sp                           |SyncHandshake_3                        |    13|
 |150   |  scemi_processor_req_inport_starting_reset                    |SyncPulse_4                            |     5|
-|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |    12|
-|152   |  scemi_processor_req_res_fifo                                 |SyncFIFO__parameterized0               |   142|
-|153   |  scemi_processor_resp_outport_ending_reset                    |SyncPulse_6                            |     6|
-|154   |  scemi_processor_resp_outport_finished                        |SyncHandshake_7                        |     8|
-|155   |  scemi_processor_resp_outport_next                            |SyncHandshake_8                        |     9|
-|156   |  scemi_processor_resp_outport_starting_reset                  |SyncPulse_9                            |     5|
-|157   |  scemi_processor_resp_res_fifo                                |SyncFIFO__parameterized0_10            |    92|
-|158   |  scemi_rstgen_inv_rstgen                                      |MakeResetA_11                          |     5|
-|159   |    rstSync                                                    |SyncResetA                             |     4|
-|160   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   295|
-|161   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    40|
-|162   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_12                       |    10|
-|163   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_13                       |    15|
-|164   |  scemi_setkey_inport_ending_reset                             |SyncPulse_14                           |     6|
-|165   |  scemi_setkey_inport_next_sp                                  |SyncHandshake_15                       |    12|
-|166   |  scemi_setkey_inport_starting_reset                           |SyncPulse_16                           |     5|
-|167   |  scemi_setkey_inport_wait_sp                                  |SyncHandshake_17                       |    12|
-|168   |  scemi_setkey_res_fifo                                        |SyncFIFO__parameterized1               |   246|
-|169   |  scemi_settabledut_dut_dutIfc_didreset                        |FIFO2__parameterized4                  |     7|
-|170   |  scemi_settabledut_dut_dutIfc_m_dut                           |mkDutWrapper                           | 12520|
-|171   |    decrypt                                                    |mkSynthesizedDecrypt                   |  6245|
-|172   |      dec_ciphertextFIFO                                       |FIFO2__parameterized8_48               |  1394|
-|173   |      dec_plaintextFIFO                                        |FIFO2__parameterized8_49               |   159|
-|174   |    encrypt                                                    |mkSynthesizedEncrypt                   |  5929|
-|175   |      enc_ciphertextFIFO                                       |FIFO2__parameterized8                  |   254|
-|176   |      enc_plaintextFIFO                                        |FIFO2__parameterized8_47               |  1488|
-|177   |    fromSyncQ                                                  |SyncFIFO__parameterized0_44            |    92|
-|178   |    rst_usr                                                    |SyncResetA__parameterized3             |    10|
-|179   |    toKeySyncQ                                                 |SyncFIFO__parameterized1_45            |   149|
-|180   |    toSyncQ                                                    |SyncFIFO__parameterized0_46            |    95|
-|181   |  scemi_settabledut_dut_dutIfc_myrst                           |MakeResetA__parameterized1             |    11|
-|182   |    rstSync                                                    |SyncResetA__parameterized4             |     9|
-|183   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   155|
-|184   |  scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |SyncHandshake_18                       |    16|
-|185   |  scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |SyncHandshake_19                       |    10|
-|186   |  scemi_settabledut_dut_prb_control_control_in_ending_reset    |SyncPulse_20                           |     6|
-|187   |  scemi_settabledut_dut_prb_control_control_in_next_sp         |SyncHandshake_21                       |    13|
-|188   |  scemi_settabledut_dut_prb_control_control_in_starting_reset  |SyncPulse_22                           |     5|
-|189   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_23                       |     9|
-|190   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_24                       |   622|
-|191   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_25                       |    20|
-|192   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |    85|
-|193   |  scemi_settabledut_softrst_req_inport_buffer_empty_sp         |SyncHandshake_26                       |    10|
-|194   |  scemi_settabledut_softrst_req_inport_buffer_full_sp          |SyncHandshake_27                       |    10|
-|195   |  scemi_settabledut_softrst_req_inport_ending_reset            |SyncPulse_28                           |     6|
-|196   |  scemi_settabledut_softrst_req_inport_next_sp                 |SyncHandshake_29                       |    13|
-|197   |  scemi_settabledut_softrst_req_inport_starting_reset          |SyncPulse_30                           |     5|
-|198   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_31                       |     8|
-|199   |  scemi_settabledut_softrst_req_res_fifo                       |SyncFIFO__parameterized2               |    32|
-|200   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_32                       |     8|
-|201   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_33                       |    79|
-|202   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized2_34            |    37|
-|203   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_35                       |    11|
-|204   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_36                       |    14|
-|205   |  scemi_shutdown_ctrl_in_ending_reset                          |SyncPulse_37                           |     6|
-|206   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_38                       |    14|
-|207   |  scemi_shutdown_ctrl_in_starting_reset                        |SyncPulse_39                           |     5|
-|208   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_40                       |     8|
-|209   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_41                       |     7|
-|210   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_42                       |     6|
-|211   |  scemi_uclkgen                                                |MakeClock_43                           |     4|
-|212   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
+|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |    14|
+|152   |  scemi_processor_req_res_fifo                                 |SyncFIFO__parameterized0               |    47|
+|153   |  scemi_processor_resp_outport_finished                        |SyncHandshake_6                        |     6|
+|154   |  scemi_rstgen_inv_rstgen                                      |MakeResetA_7                           |     5|
+|155   |    rstSync                                                    |SyncResetA                             |     4|
+|156   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   272|
+|157   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    40|
+|158   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_8                        |    13|
+|159   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_9                        |     9|
+|160   |  scemi_setkey_inport_ending_reset                             |SyncPulse_10                           |     6|
+|161   |  scemi_setkey_inport_next_sp                                  |SyncHandshake_11                       |    14|
+|162   |  scemi_setkey_inport_starting_reset                           |SyncPulse_12                           |     5|
+|163   |  scemi_setkey_inport_wait_sp                                  |SyncHandshake_13                       |    15|
+|164   |  scemi_setkey_res_fifo                                        |SyncFIFO__parameterized1               |    47|
+|165   |  scemi_settabledut_dut_dutIfc_didreset                        |FIFO2__parameterized4                  |     7|
+|166   |  scemi_settabledut_dut_dutIfc_m_dut                           |mkDutWrapper                           |   214|
+|167   |    decrypt                                                    |mkSynthesizedDecrypt                   |    67|
+|168   |      dec_ciphertextFIFO                                       |FIFO2__parameterized8_42               |    12|
+|169   |    encrypt                                                    |mkSynthesizedEncrypt                   |    66|
+|170   |      enc_plaintextFIFO                                        |FIFO2__parameterized8                  |    12|
+|171   |    rst_usr                                                    |SyncResetA__parameterized3             |    10|
+|172   |    toKeySyncQ                                                 |SyncFIFO__parameterized1_40            |    35|
+|173   |    toSyncQ                                                    |SyncFIFO__parameterized0_41            |    36|
+|174   |  scemi_settabledut_dut_dutIfc_myrst                           |MakeResetA__parameterized1             |    11|
+|175   |    rstSync                                                    |SyncResetA__parameterized4             |     9|
+|176   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   159|
+|177   |  scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |SyncHandshake_14                       |    12|
+|178   |  scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |SyncHandshake_15                       |    10|
+|179   |  scemi_settabledut_dut_prb_control_control_in_ending_reset    |SyncPulse_16                           |     6|
+|180   |  scemi_settabledut_dut_prb_control_control_in_next_sp         |SyncHandshake_17                       |    14|
+|181   |  scemi_settabledut_dut_prb_control_control_in_starting_reset  |SyncPulse_18                           |     5|
+|182   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_19                       |     9|
+|183   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_20                       |    10|
+|184   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_21                       |    84|
+|185   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |    87|
+|186   |  scemi_settabledut_softrst_req_inport_buffer_empty_sp         |SyncHandshake_22                       |    10|
+|187   |  scemi_settabledut_softrst_req_inport_buffer_full_sp          |SyncHandshake_23                       |    10|
+|188   |  scemi_settabledut_softrst_req_inport_ending_reset            |SyncPulse_24                           |     6|
+|189   |  scemi_settabledut_softrst_req_inport_next_sp                 |SyncHandshake_25                       |    12|
+|190   |  scemi_settabledut_softrst_req_inport_starting_reset          |SyncPulse_26                           |     5|
+|191   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_27                       |    12|
+|192   |  scemi_settabledut_softrst_req_res_fifo                       |SyncFIFO__parameterized2               |    32|
+|193   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_28                       |    27|
+|194   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_29                       |     6|
+|195   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized2_30            |    39|
+|196   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_31                       |    13|
+|197   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_32                       |    10|
+|198   |  scemi_shutdown_ctrl_in_ending_reset                          |SyncPulse_33                           |     6|
+|199   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_34                       |    13|
+|200   |  scemi_shutdown_ctrl_in_starting_reset                        |SyncPulse_35                           |     5|
+|201   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_36                       |    12|
+|202   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_37                       |     8|
+|203   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_38                       |     6|
+|204   |  scemi_uclkgen                                                |MakeClock_39                           |     4|
+|205   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
 +------+---------------------------------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:09:23 ; elapsed = 00:09:22 . Memory (MB): peak = 2604.656 ; gain = 1967.574
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:50 ; elapsed = 00:06:46 . Memory (MB): peak = 2238.699 ; gain = 1601.621
 ---------------------------------------------------------------------------------
 
-Synthesis finished with 0 errors, 0 critical warnings and 2079 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:09:23 ; elapsed = 00:09:22 . Memory (MB): peak = 2604.656 ; gain = 1967.574
-INFO: [Netlist 29-17] Analyzing 123 Unisim elements for replacement
+Synthesis finished with 0 errors, 0 critical warnings and 2645 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:06:50 ; elapsed = 00:06:46 . Memory (MB): peak = 2238.699 ; gain = 1601.621
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 2 inverter(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 93 instances were transformed.
+  A total of 27 instances were transformed.
   INV => LUT1: 8 instances
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 84 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 18 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-697 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
+705 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:09:34 ; elapsed = 00:09:33 . Memory (MB): peak = 2605.656 ; gain = 1860.625
+synth_design: Time (s): cpu = 00:06:58 ; elapsed = 00:06:54 . Memory (MB): peak = 2239.699 ; gain = 1494.672
 # write_checkpoint mkBridge.dcp
 # report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:01 . Memory (MB): peak = 2605.656 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 18:55:13 2016...
+report_utilization: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2239.699 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 20:18:02 2016...
