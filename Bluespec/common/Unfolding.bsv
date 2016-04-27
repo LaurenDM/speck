@@ -3,7 +3,7 @@ import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
 
-typedef 4 STAGES;
+typedef 5 STAGES;
 
 module mkEncrypt_unfold(EncryptDecrypt#(n,m,t));
     // Permanent Regs

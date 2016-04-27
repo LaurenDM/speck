@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date             : Tue Apr 26 18:35:45 2016
+| Date             : Tue Apr 26 19:02:37 2016
 | Host             : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command          : report_power -file mkBridge_power_routed.rpt -pb mkBridge_power_summary_routed.pb
 | Design           : mkBridge
@@ -30,9 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 3.133 |
-| Dynamic (W)              | 2.851 |
+| Total On-Chip Power (W)  | 3.137 |
+| Dynamic (W)              | 2.855 |
 | Device Static (W)        | 0.282 |
+| Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 1.1   |
 | Max Ambient (C)          | 81.4  |
 | Junction Temperature (C) | 28.6  |
@@ -49,24 +50,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.112 |       46 |       --- |             --- |
-| Slice Logic              |     0.021 |    44574 |       --- |             --- |
-|   LUT as Logic           |     0.019 |    24094 |    303600 |            7.93 |
-|   Register               |    <0.001 |    15061 |    607200 |            2.48 |
-|   CARRY4                 |    <0.001 |      614 |     75900 |            0.80 |
+| Clocks                   |     0.113 |       46 |       --- |             --- |
+| Slice Logic              |     0.023 |    46939 |       --- |             --- |
+|   LUT as Logic           |     0.021 |    25878 |    303600 |            8.52 |
+|   Register               |    <0.001 |    15260 |    607200 |            2.51 |
+|   CARRY4                 |    <0.001 |      684 |     75900 |            0.90 |
 |   LUT as Distributed RAM |    <0.001 |      338 |    130800 |            0.25 |
-|   F7/F8 Muxes            |    <0.001 |      943 |    303600 |            0.31 |
+|   F7/F8 Muxes            |    <0.001 |     1013 |    303600 |            0.33 |
 |   Others                 |     0.000 |      313 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |     0.000 |        1 |    130800 |           <0.01 |
-| Signals                  |     0.035 |    35043 |       --- |             --- |
+| Signals                  |     0.037 |    36788 |       --- |             --- |
 | Block RAM                |     0.040 |       14 |      1030 |            1.35 |
 | MMCM                     |     0.435 |        4 |        14 |           28.57 |
 | PCIE                     |     0.045 |        1 |         4 |           25.00 |
 | I/O                      |     0.004 |       45 |       700 |            6.42 |
 | GTX                      |     2.157 |        8 |        28 |           28.57 |
 | Static Power             |     0.282 |          |           |                 |
-| Total                    |     3.133 |          |           |                 |
+| Total                    |     3.137 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.563 |       0.409 |      0.154 |
+| Vccint    |       1.000 |     0.567 |       0.413 |      0.154 |
 | Vccaux    |       1.800 |     0.277 |       0.239 |      0.038 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -175,8 +176,8 @@ Table of Contents
 | clk_250mhz                       | scemi_pcie_ep/ext_clk.pipe_clock_i/clk_250mhz                                                     |             4.0 |
 | clk_125mhz                       | scemi_pcie_ep/ext_clk.pipe_clock_i/clk_125mhz                                                     |             8.0 |
 | mmcm_fb                          | scemi_pcie_ep/ext_clk.pipe_clock_i/mmcm_fb                                                        |            10.0 |
-| cclock                           | scemi_clk_port_scemi_clkgen/current_clk                                                           |            20.0 |
-| uclock                           | scemi_uclkgen/current_clk                                                                         |            20.0 |
+| cclock                           | scemi_clk_port_scemi_clkgen/sCLK                                                                  |            20.0 |
+| uclock                           | scemi_uclkgen/p_0_in                                                                              |            20.0 |
 | core_clock                       | scemi_scemi_clkgen_mmcm$CLKOUT0                                                                   |            10.0 |
 | noc_clk                          | scemi_clkgen_pll$CLKOUT0                                                                          |             8.0 |
 | txoutclk                         | scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/PIPE_TXOUTCLK_OUT |            10.0 |
@@ -194,8 +195,8 @@ Table of Contents
 +----------------------------------------------------------------+-----------+
 | Name                                                           | Power (W) |
 +----------------------------------------------------------------+-----------+
-| mkBridge                                                       |     2.851 |
-|   scemi_1_outFifo                                              |     0.004 |
+| mkBridge                                                       |     2.855 |
+|   scemi_1_outFifo                                              |     0.006 |
 |   scemi_bridge                                                 |     0.056 |
 |     pbb_arbiter                                                |     0.010 |
 |       tlp_out_cfg_fifo                                         |     0.003 |
@@ -223,7 +224,7 @@ Table of Contents
 |   scemi_epReset125                                             |    <0.001 |
 |   scemi_epReset250                                             |    <0.001 |
 |   scemi_fToBridgeBeat                                          |    <0.001 |
-|   scemi_inFifo                                                 |     0.005 |
+|   scemi_inFifo                                                 |     0.006 |
 |   scemi_init_state_msgFIFO                                     |     0.002 |
 |     fifoMem_reg_0_7_0_5                                        |    <0.001 |
 |     fifoMem_reg_0_7_12_17                                      |    <0.001 |
@@ -240,18 +241,18 @@ Table of Contents
 |     fifoMem_reg_0_7_72_73                                      |    <0.001 |
 |   scemi_network_status                                         |    <0.001 |
 |     rstSync                                                    |    <0.001 |
-|   scemi_pcie_ep                                                |     2.384 |
+|   scemi_pcie_ep                                                |     2.385 |
 |     ext_clk.pipe_clock_i                                       |     0.111 |
-|     pcie_7x_v1_10_i                                            |     2.273 |
+|     pcie_7x_v1_10_i                                            |     2.274 |
 |       gt_top_i                                                 |     2.172 |
-|         gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
+|         gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
 |         gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
+|         gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
+|         gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
+|         gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
+|         gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
+|         gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst       |     0.000 |
 |         pipe_wrapper_i                                         |     2.172 |
 |           pipe_lane[0].gt_wrapper_i                            |     0.270 |
 |           pipe_lane[0].pipe_drp.pipe_drp_i                     |     0.001 |
@@ -315,7 +316,7 @@ Table of Contents
 |           pipe_lane[7].pipe_user_i                             |    <0.001 |
 |           pipe_reset.pipe_reset_i                              |    <0.001 |
 |           qpll_reset.qpll_reset_i                              |     0.000 |
-|       pcie_top_i                                               |     0.101 |
+|       pcie_top_i                                               |     0.102 |
 |         axi_basic_top                                          |     0.006 |
 |           rx_inst                                              |     0.004 |
 |             rx_null_gen_inst                                   |    <0.001 |
@@ -385,7 +386,7 @@ Table of Contents
 |     fifoMem_reg_0_1_6_11                                       |    <0.001 |
 |   scemi_rstgen_inv_rstgen                                      |    <0.001 |
 |     rstSync                                                    |    <0.001 |
-|   scemi_scemi_clkgen_fRequest                                  |     0.001 |
+|   scemi_scemi_clkgen_fRequest                                  |     0.002 |
 |   scemi_scemi_clkgen_fResponse                                 |    <0.001 |
 |   scemi_setkey_inport_buffer_empty_sp                          |    <0.001 |
 |   scemi_setkey_inport_buffer_full_sp                           |    <0.001 |
@@ -393,7 +394,7 @@ Table of Contents
 |   scemi_setkey_inport_next_sp                                  |    <0.001 |
 |   scemi_setkey_inport_starting_reset                           |    <0.001 |
 |   scemi_setkey_inport_wait_sp                                  |    <0.001 |
-|   scemi_setkey_res_fifo                                        |     0.001 |
+|   scemi_setkey_res_fifo                                        |    <0.001 |
 |     fifoMem_reg_0_1_0_5                                        |    <0.001 |
 |     fifoMem_reg_0_1_12_17                                      |    <0.001 |
 |     fifoMem_reg_0_1_18_23                                      |    <0.001 |
@@ -412,11 +413,11 @@ Table of Contents
 |     fifoMem_reg_0_1_90_95                                      |    <0.001 |
 |     fifoMem_reg_0_1_96_96                                      |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_didreset                        |    <0.001 |
-|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.025 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.026 |
 |     decrypt                                                    |     0.010 |
-|       dec_ciphertextFIFO                                       |     0.005 |
+|       dec_ciphertextFIFO                                       |     0.004 |
 |       dec_plaintextFIFO                                        |    <0.001 |
-|     encrypt                                                    |     0.013 |
+|     encrypt                                                    |     0.014 |
 |       enc_ciphertextFIFO                                       |     0.002 |
 |       enc_plaintextFIFO                                        |     0.006 |
 |     fromSyncQ                                                  |    <0.001 |
@@ -430,7 +431,7 @@ Table of Contents
 |       fifoMem_reg_0_1_48_48                                    |    <0.001 |
 |       fifoMem_reg_0_1_6_11                                     |    <0.001 |
 |     rst_usr                                                    |    <0.001 |
-|     toKeySyncQ                                                 |     0.001 |
+|     toKeySyncQ                                                 |    <0.001 |
 |       fifoMem_reg_0_1_0_5                                      |    <0.001 |
 |       fifoMem_reg_0_1_12_17                                    |    <0.001 |
 |       fifoMem_reg_0_1_18_23                                    |    <0.001 |
