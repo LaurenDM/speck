@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1461715857">
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1461717563">
   <File Type="VDS-TIMING-PB" Name="mkBridge_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="mkBridge_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="mkBridge.dcp"/>

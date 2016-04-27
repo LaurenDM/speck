@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date         : Tue Apr 26 20:18:02 2016
+| Date         : Tue Apr 26 20:46:50 2016
 | Host         : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
 | Design       : mkBridge
@@ -29,16 +29,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 20165 |     0 |    303600 |  6.64 |
-|   LUT as Logic             | 20084 |     0 |    303600 |  6.61 |
-|   LUT as Memory            |    81 |     0 |    130800 |  0.06 |
-|     LUT as Distributed RAM |    74 |     0 |           |       |
-|     LUT as Shift Register  |     7 |     0 |           |       |
-| Slice Registers            | 13410 |     0 |    607200 |  2.20 |
-|   Register as Flip Flop    | 13410 |     0 |    607200 |  2.20 |
+| Slice LUTs*                | 21676 |     0 |    303600 |  7.13 |
+|   LUT as Logic             | 21337 |     0 |    303600 |  7.02 |
+|   LUT as Memory            |   339 |     0 |    130800 |  0.25 |
+|     LUT as Distributed RAM |   338 |     0 |           |       |
+|     LUT as Shift Register  |     1 |     0 |           |       |
+| Slice Registers            | 16019 |     0 |    607200 |  2.63 |
+|   Register as Flip Flop    | 16019 |     0 |    607200 |  2.63 |
 |   Register as Latch        |     0 |     0 |    607200 |  0.00 |
-| F7 Muxes                   |   323 |     0 |    151800 |  0.21 |
-| F8 Muxes                   |    19 |     0 |     75900 |  0.02 |
+| F7 Muxes                   |   431 |     0 |    151800 |  0.28 |
+| F8 Muxes                   |    51 |     0 |     75900 |  0.06 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -133,29 +133,29 @@ Table of Contents
 +---------------+-------+----------------------+
 |    Ref Name   |  Used |  Functional Category |
 +---------------+-------+----------------------+
-| FDRE          | 12392 |         Flop & Latch |
-| LUT6          |  9717 |                  LUT |
-| LUT5          |  4534 |                  LUT |
-| LUT4          |  2620 |                  LUT |
-| LUT3          |  2506 |                  LUT |
-| LUT2          |  1885 |                  LUT |
-| LUT1          |  1485 |                  LUT |
-| FDSE          |   596 |         Flop & Latch |
-| CARRY4        |   386 |           CarryLogic |
-| FDCE          |   336 |         Flop & Latch |
-| MUXF7         |   323 |                MuxFx |
-| RAMD32        |   110 |   Distributed Memory |
-| FDPE          |    86 |         Flop & Latch |
+| FDRE          | 14874 |         Flop & Latch |
+| LUT6          | 10134 |                  LUT |
+| LUT5          |  4872 |                  LUT |
+| LUT4          |  2863 |                  LUT |
+| LUT3          |  2552 |                  LUT |
+| LUT2          |  1991 |                  LUT |
+| LUT1          |  1566 |                  LUT |
+| FDSE          |   665 |         Flop & Latch |
+| RAMD32        |   506 |   Distributed Memory |
+| MUXF7         |   431 |                MuxFx |
+| CARRY4        |   428 |           CarryLogic |
+| FDCE          |   384 |         Flop & Latch |
+| RAMS32        |   168 |   Distributed Memory |
+| FDPE          |    96 |         Flop & Latch |
+| MUXF8         |    51 |                MuxFx |
 | BUFG          |    41 |                Clock |
-| RAMS32        |    36 |   Distributed Memory |
 | OBUF          |    24 |                   IO |
-| MUXF8         |    19 |                MuxFx |
 | IBUF          |    19 |                   IO |
 | RAMB36E1      |    14 |         Block Memory |
 | GTXE2_CHANNEL |     8 |                   IO |
-| SRL16E        |     7 |   Distributed Memory |
 | MMCME2_ADV    |     4 |                Clock |
 | GTXE2_COMMON  |     2 |                   IO |
+| SRL16E        |     1 |   Distributed Memory |
 | PCIE_2_1      |     1 | Specialized Resource |
 | IBUFDS_GTE2   |     1 |                   IO |
 | IBUFDS        |     1 |                   IO |
