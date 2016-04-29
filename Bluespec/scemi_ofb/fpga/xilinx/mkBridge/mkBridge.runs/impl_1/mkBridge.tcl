@@ -51,10 +51,10 @@ start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
-  set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge [current_project]
-  add_files -quiet /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/mkBridge.dcp
-  read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/default.xdc
+  set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
+  set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge [current_project]
+  add_files -quiet /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/mkBridge.dcp
+  read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc
   link_design -top mkBridge -part xc7vx485tffg1761-2
   close_msg_db -file init_design.pb
 } RESULT]
@@ -69,7 +69,7 @@ start_step opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   catch {write_debug_probes -quiet -force debug_nets}
-  catch {update_ip_catalog -quiet -current_ip_cache /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge/mkBridge.cache}
+  catch {update_ip_catalog -quiet -current_ip_cache /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.cache}
   opt_design 
   write_checkpoint -force mkBridge_opt.dcp
   close_msg_db -file opt_design.pb

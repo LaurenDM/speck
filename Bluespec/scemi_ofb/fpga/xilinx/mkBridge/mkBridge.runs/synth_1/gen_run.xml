@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1461518435">
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1461941041">
   <File Type="VDS-TIMING-PB" Name="mkBridge_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="mkBridge_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="mkBridge.dcp"/>
@@ -287,6 +287,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../../../../../../../../opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vlog_dut/mkSynthesizedOFB.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

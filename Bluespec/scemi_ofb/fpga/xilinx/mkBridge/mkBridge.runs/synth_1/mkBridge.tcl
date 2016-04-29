@@ -51,6 +51,7 @@ read_verilog -library xil_defaultlib {
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v
+  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v
@@ -69,16 +70,16 @@ read_verilog -library xil_defaultlib {
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v
   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v
   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v
-  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/vlog_dut/mkDutWrapper.v
-  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/vlog_dut/mkBridge.v
+  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v
+  /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v
 }
-read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/default.xdc
-set_property used_in_implementation false [get_files /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/default.xdc]
+read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc
+set_property used_in_implementation false [get_files /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]
 
 set_param synth.vivado.isSynthRun true
 set_property verilog_define BSV_TOP=mkBridge [current_fileset]
-set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
-set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge [current_project]
+set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
+set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge [current_project]
 synth_design -top mkBridge -part xc7vx485tffg1761-2 -fsm_extraction off
 write_checkpoint mkBridge.dcp
 report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb

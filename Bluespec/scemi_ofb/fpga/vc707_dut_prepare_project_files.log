@@ -1,28 +1,30 @@
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 Warning: Command line: (S0073)
   Duplicate directories were found in the path specified with the -p flag.
   Only the first occurrence will be used. The duplicates are:
-    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/bdir_dut
+    /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/bdir_dut
   Note that when the -bdir flag is used, that directory is automatically added
   to the head of the path.
 *****
 Subcommand: /opt/bluespec/Bluespec-2014.07.A/lib/tcllib/bluespec/listVlogFiles.tcl -bdir bdir_dut -vdir vlog_dut -p bdir_dut:vlog_dut:/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado:%/Libraries/Xactors:%/Libraries/TLM3:%/Libraries/Axi:%/Libraries/Axi4:%/Libraries/Ahb:%/Libraries/Apb:+ mkBridge mkBridge
 *****
 Writing xilinx/mkBridge.files.
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v (mkSynthesizedOFB/virtex7)
+
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v (mkPCIEtoBNoCSceMi_4/virtex7)
 
-Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/vlog_dut/mkDutWrapper.v (mkDutWrapper/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v (mkDutWrapper/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v (mkTLPDispatcher/virtex7)
 
@@ -34,7 +36,7 @@ Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParamete
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v (mkSceMiUInt64Parameter/virtex7)
 
-Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/vlog_dut/mkBridge.v (mkBridge/virtex7)
+Examining /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v (mkBridge/virtex7)
 
 Examining /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v (ProbeHook/virtex7)
 

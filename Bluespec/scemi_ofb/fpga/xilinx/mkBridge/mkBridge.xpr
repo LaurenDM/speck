@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
 
-<Project Version="7" Minor="0" Path="/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi3/fpga/xilinx/mkBridge/mkBridge.xpr">
+<Project Version="7" Minor="0" Path="/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="5a7243dd655c40458ee160598cc6caba"/>
+    <Option Name="Id" Val="d3b28d689d764f978ba048e1dccc0483"/>
     <Option Name="Part" Val="xc7vx485tffg1761-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
@@ -290,6 +290,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../../../../../../../../opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../vlog_dut/mkSynthesizedOFB.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -68,7 +68,7 @@ B
 49*opt2
 02default:defaultZ31-49
 3
-'Phase 1 Retarget | Checksum: 24a78ea5c
+'Phase 1 Retarget | Checksum: 190e92f41
 *common
 †
 
@@ -90,7 +90,7 @@ C
 10*opt2
 22912default:defaultZ31-10
 ?
-3Phase 2 Constant Propagation | Checksum: 1f60bc4da
+3Phase 2 Constant Propagation | Checksum: 2c77ed14d
 *common
 †
 
@@ -112,7 +112,7 @@ O
 11*opt2
 16912default:defaultZ31-11
 0
-$Phase 3 Sweep | Checksum: 268430802
+$Phase 3 Sweep | Checksum: 25fe4a619
 *common
 †
 
@@ -120,7 +120,7 @@ $Phase 3 Sweep | Checksum: 268430802
 *constraints2o
 [Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.594 ; gain = 0.0002default:default
 A
-5Ending Logic Optimization Task | Checksum: 268430802
+5Ending Logic Optimization Task | Checksum: 25fe4a619
 *common
 †
 
@@ -128,10 +128,10 @@ A
 *constraints2o
 [Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.594 ; gain = 0.0002default:default
 8
-,Implement Debug Cores | Checksum: 221bda32f
+,Implement Debug Cores | Checksum: 2bf993436
 *common
 5
-)Logic Optimization | Checksum: 221bda32f
+)Logic Optimization | Checksum: 2bf993436
 *common
 X
 
@@ -155,13 +155,13 @@ zUser defined clock exists on pin %s and will prevent any subsequent automatic d
 3*timing2V
 scemi_scemi_clkgen_mmcm/CLKOUT0scemi_scemi_clkgen_mmcm/CLKOUT02default:default8Z38-3
 D
-8Ending PowerOpt TimerUpdates Task | Checksum: 268430802
+8Ending PowerOpt TimerUpdates Task | Checksum: 25fe4a619
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.594 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.594 ; gain = 0.0002default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -188,13 +188,13 @@ CNumber of BRAM Ports augmented: %s newly gated: %s Total Ports: %s
 02default:default2
 282default:defaultZ34-65
 A
-5Ending Power Optimization Task | Checksum: 268430802
+5Ending Power Optimization Task | Checksum: 25fe4a619
 *common
 ˆ
 
 %s
 *constraints2q
-]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1964.617 ; gain = 132.0232default:default
+]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1963.617 ; gain = 131.0232default:default
 Q
 Releasing license: %s
 83*common2"
@@ -217,8 +217,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 opt_design: 2default:default2
 00:00:222default:default2
 00:00:202default:default2
-1964.6172default:default2
-136.0432default:defaultZ17-268
+1963.6172default:default2
+135.0432default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -233,8 +233,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
 00:00:00.532default:default2
-00:00:00.602default:default2
-1965.6172default:default2
+00:00:00.612default:default2
+1964.6172default:default2
 0.0002default:defaultZ17-268
 
 
