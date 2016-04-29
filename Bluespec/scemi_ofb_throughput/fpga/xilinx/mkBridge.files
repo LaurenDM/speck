@@ -1,13 +1,12 @@
+/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkThroughputOFB.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkDutWrapper.v
+/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkDutWrapper.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputDecrypt.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkBridge.v
-/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi2/fpga/vlog_dut/mkThroughputEncrypt.v
+/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v
 /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v
