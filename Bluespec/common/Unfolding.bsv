@@ -5,6 +5,19 @@ import SpeckTypes::*;
 
 typedef 1 STAGES;
 
+(* synthesize *)
+module mkSynthesizedUnfoldEncrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
+    return enc;
+endmodule
+
+(* synthesize *)
+module mkSynthesizedUnfoldDecrypt(EncryptDecrypt#(N,M,T));
+    EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
+    return dec;
+endmodule
+
+
 module mkEncrypt_unfold(EncryptDecrypt#(n,m,t));
     // Permanent Regs
     Vector#(TSub#(TAdd#(t,m),1), Reg#(UInt#(n))) l <- replicateM(mkReg(0)); // for key expansion
