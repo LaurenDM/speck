@@ -2,6 +2,12 @@ checking package dependencies
 compiling ../../scemi_ofb/ResetXactor.bsv
 compiling ../../common/SpeckTypes.bsv
 compiling ../../common/Unfolding.bsv
+code generation for mkSynthesizedUnfoldEncrypt starts
+Verilog file created: vlog_dut/mkSynthesizedUnfoldEncrypt.v
+Elaborated module file created: bdir_dut/mkSynthesizedUnfoldEncrypt.ba
+code generation for mkSynthesizedUnfoldDecrypt starts
+Verilog file created: vlog_dut/mkSynthesizedUnfoldDecrypt.v
+Elaborated module file created: bdir_dut/mkSynthesizedUnfoldDecrypt.ba
 compiling ../../common/Speck.bsv
 code generation for mkSynthesizedEncrypt starts
 Verilog file created: vlog_dut/mkSynthesizedEncrypt.v

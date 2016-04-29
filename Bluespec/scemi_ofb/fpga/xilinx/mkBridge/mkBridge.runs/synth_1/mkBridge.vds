@@ -2,8 +2,8 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Fri Apr 29 10:44:03 2016
-# Process ID: 7560
+# Start of session at: Fri Apr 29 15:49:34 2016
+# Process ID: 12158
 # Log file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/mkBridge.vds
 # Journal file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
@@ -3243,7 +3243,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.758 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 
@@ -3398,36 +3398,36 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 3     
 	   3 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
 	   2 Input     24 Bit       Adders := 4     
 	   2 Input     22 Bit       Adders := 8     
 	   2 Input     19 Bit       Adders := 2     
 	   2 Input     14 Bit       Adders := 1     
-	   3 Input     13 Bit       Adders := 3     
 	   2 Input     13 Bit       Adders := 12    
-	   2 Input     12 Bit       Adders := 3     
+	   3 Input     13 Bit       Adders := 3     
 	   4 Input     12 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 3     
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 6     
 	   3 Input     10 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 6     
 	   3 Input      9 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 6     
 	   2 Input      8 Bit       Adders := 10    
 	   2 Input      7 Bit       Adders := 3     
+	   4 Input      6 Bit       Adders := 2     
 	   3 Input      6 Bit       Adders := 6     
 	   2 Input      6 Bit       Adders := 14    
-	   4 Input      6 Bit       Adders := 2     
-	   4 Input      5 Bit       Adders := 2     
 	  16 Input      5 Bit       Adders := 1     
-	   3 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 17    
+	   4 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 24    
 	   2 Input      3 Bit       Adders := 13    
-	   3 Input      2 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 29    
+	   3 Input      2 Bit       Adders := 4     
 	   2 Input      1 Bit       Adders := 12    
 +---XORs : 
 	   2 Input     24 Bit         XORs := 6     
@@ -3477,8 +3477,8 @@ Detailed RTL Component Info :
 	                2 Bit         RAMs := 2     
 +---Muxes : 
 	   2 Input    144 Bit        Muxes := 2     
-	   2 Input    128 Bit        Muxes := 2     
 	   4 Input    128 Bit        Muxes := 2     
+	   2 Input    128 Bit        Muxes := 2     
 	   2 Input    105 Bit        Muxes := 2     
 	   2 Input     98 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
@@ -3493,68 +3493,68 @@ Detailed RTL Component Info :
 	   2 Input     30 Bit        Muxes := 2     
 	  27 Input     24 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 105   
-	   5 Input     22 Bit        Muxes := 8     
 	   2 Input     22 Bit        Muxes := 11    
+	   5 Input     22 Bit        Muxes := 8     
 	   2 Input     20 Bit        Muxes := 3     
 	   4 Input     19 Bit        Muxes := 1     
-	   2 Input     19 Bit        Muxes := 9     
 	   7 Input     19 Bit        Muxes := 8     
-	   5 Input     18 Bit        Muxes := 8     
-	   2 Input     18 Bit        Muxes := 33    
+	   2 Input     19 Bit        Muxes := 9     
 	   7 Input     18 Bit        Muxes := 16    
-	   4 Input     16 Bit        Muxes := 1     
-	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 33    
+	   5 Input     18 Bit        Muxes := 8     
 	   2 Input     16 Bit        Muxes := 46    
+	   8 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     15 Bit        Muxes := 16    
 	   2 Input     14 Bit        Muxes := 16    
 	   2 Input     13 Bit        Muxes := 17    
 	   2 Input     12 Bit        Muxes := 20    
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 10    
-	  10 Input      9 Bit        Muxes := 2     
 	   4 Input      9 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 27    
-	   2 Input      8 Bit        Muxes := 2267  
+	  10 Input      9 Bit        Muxes := 2     
 	   6 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 18    
+	   2 Input      8 Bit        Muxes := 2267  
 	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 16    
 	   4 Input      6 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 147   
-	   7 Input      6 Bit        Muxes := 40    
 	  37 Input      6 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 2     
-	   2 Input      5 Bit        Muxes := 167   
-	   3 Input      5 Bit        Muxes := 1     
-	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 147   
+	   7 Input      6 Bit        Muxes := 40    
+	   6 Input      5 Bit        Muxes := 8     
 	   4 Input      5 Bit        Muxes := 9     
 	   7 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 167   
+	   5 Input      5 Bit        Muxes := 1     
 	   8 Input      5 Bit        Muxes := 8     
-	   6 Input      5 Bit        Muxes := 8     
-	   5 Input      4 Bit        Muxes := 8     
+	   3 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 8     
 	   2 Input      4 Bit        Muxes := 175   
-	   4 Input      3 Bit        Muxes := 8     
-	   2 Input      3 Bit        Muxes := 104   
-	  10 Input      3 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 8     
 	   7 Input      3 Bit        Muxes := 16    
+	  10 Input      3 Bit        Muxes := 2     
 	  32 Input      3 Bit        Muxes := 8     
 	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 8     
 	   8 Input      3 Bit        Muxes := 8     
-	  32 Input      2 Bit        Muxes := 8     
-	   7 Input      2 Bit        Muxes := 8     
-	   2 Input      2 Bit        Muxes := 60    
+	   2 Input      3 Bit        Muxes := 104   
 	   4 Input      2 Bit        Muxes := 14    
-	   7 Input      1 Bit        Muxes := 151   
-	  10 Input      1 Bit        Muxes := 6     
-	   3 Input      1 Bit        Muxes := 3     
-	  32 Input      1 Bit        Muxes := 152   
+	  32 Input      2 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 60    
+	   7 Input      2 Bit        Muxes := 8     
 	   6 Input      1 Bit        Muxes := 24    
-	   2 Input      1 Bit        Muxes := 1174  
-	   5 Input      1 Bit        Muxes := 67    
-	   8 Input      1 Bit        Muxes := 26    
-	  18 Input      1 Bit        Muxes := 7     
 	  13 Input      1 Bit        Muxes := 6     
+	  10 Input      1 Bit        Muxes := 6     
+	  32 Input      1 Bit        Muxes := 152   
+	   8 Input      1 Bit        Muxes := 26    
+	   7 Input      1 Bit        Muxes := 151   
+	   3 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 67    
+	  18 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 1174  
 	   4 Input      1 Bit        Muxes := 34    
 
 ---------------------------------------------------------------------------------
@@ -3576,15 +3576,15 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 6     
 	   2 Input      7 Bit       Adders := 1     
-	   4 Input      6 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 3     
+	   4 Input      6 Bit       Adders := 2     
 	   3 Input      6 Bit       Adders := 5     
 	   3 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 	   4 Input      5 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 2     
 	   3 Input      2 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
 	   2 Input      1 Bit       Adders := 3     
 +---Registers : 
 	              256 Bit    Registers := 8     
@@ -3611,34 +3611,34 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input    128 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
-	   2 Input     64 Bit        Muxes := 1     
 	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
 	   2 Input     49 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 3     
 	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 3     
-	   4 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
+	   4 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
-	   8 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
 	   3 Input      8 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 2     
-	   2 Input      5 Bit        Muxes := 2     
 	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 8     
 	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 17    
 	   5 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 17    
 	   2 Input      1 Bit        Muxes := 28    
 Module FIFO2__parameterized0__4 
 Detailed RTL Component Info : 
@@ -3770,20 +3770,20 @@ Detailed RTL Component Info :
 	   2 Input     30 Bit       Adders := 2     
 	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 4     
 	   3 Input     10 Bit       Adders := 1     
-	   3 Input      9 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 4     
 	   2 Input      9 Bit       Adders := 3     
+	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 8     
 	   3 Input      6 Bit       Adders := 1     
-	  16 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 5     
+	  16 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 3     
 +---Registers : 
@@ -3808,9 +3808,9 @@ Detailed RTL Component Info :
 	   2 Input    128 Bit        Muxes := 2     
 	   2 Input    105 Bit        Muxes := 2     
 	   2 Input     98 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 123   
 	  37 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 123   
 	   2 Input     30 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
@@ -3818,13 +3818,13 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 8     
-	   2 Input      9 Bit        Muxes := 11    
 	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 11    
 	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      8 Bit        Muxes := 2221  
 	   2 Input      7 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 2     
 	  37 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 33    
 	   2 Input      3 Bit        Muxes := 6     
@@ -4130,14 +4130,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4151,8 +4151,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4160,8 +4160,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4176,19 +4176,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4208,8 +4208,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -4217,8 +4217,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__2 
@@ -4288,14 +4288,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4309,8 +4309,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4318,8 +4318,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4334,19 +4334,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4418,14 +4418,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4439,8 +4439,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4448,8 +4448,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4464,19 +4464,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4548,14 +4548,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4569,8 +4569,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4578,8 +4578,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4594,19 +4594,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4678,14 +4678,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4699,8 +4699,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4708,8 +4708,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4724,19 +4724,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4756,8 +4756,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
+	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
@@ -4765,8 +4765,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__6 
@@ -4836,14 +4836,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4857,8 +4857,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4866,8 +4866,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4882,19 +4882,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -4966,14 +4966,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4987,8 +4987,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -4996,8 +4996,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5012,19 +5012,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -5096,14 +5096,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5117,8 +5117,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 1     
+	   5 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -5126,8 +5126,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_pipe_eq 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5142,19 +5142,19 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 14    
 +---Muxes : 
-	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
-	   7 Input     18 Bit        Muxes := 2     
+	   7 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 3     
+	   7 Input     18 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
@@ -5941,7 +5941,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.758 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6081,7 +6081,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:05:40 ; elapsed = 00:05:35 . Memory (MB): peak = 2188.000 ; gain = 1550.918
+Finished Area Optimization : Time (s): cpu = 00:05:48 ; elapsed = 00:05:42 . Memory (MB): peak = 2187.070 ; gain = 1549.988
 ---------------------------------------------------------------------------------
 
 
@@ -6147,11 +6147,11 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:43 ; elapsed = 00:05:38 . Memory (MB): peak = 2188.000 ; gain = 1550.918
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:51 ; elapsed = 00:05:45 . Memory (MB): peak = 2187.070 ; gain = 1549.988
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:23 ; elapsed = 00:06:18 . Memory (MB): peak = 2227.008 ; gain = 1589.926
+Finished Timing Optimization : Time (s): cpu = 00:06:31 ; elapsed = 00:06:26 . Memory (MB): peak = 2225.078 ; gain = 1587.996
 ---------------------------------------------------------------------------------
 
 
@@ -6290,7 +6290,7 @@ INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:07:16 ; elapsed = 00:07:12 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Finished Technology Mapping : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 ---------------------------------------------------------------------------------
 
 
@@ -6416,7 +6416,7 @@ WARNING: [Synth 8-3295] tying undriven pin \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4560] design has 13 instantiated BUFGs while the limit set by the -bufg synthesis option is 12
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:21 ; elapsed = 00:07:17 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Finished IO Insertion : Time (s): cpu = 00:07:31 ; elapsed = 00:07:26 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 ---------------------------------------------------------------------------------
 
 
@@ -6431,7 +6431,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:21 ; elapsed = 00:07:17 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:31 ; elapsed = 00:07:27 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 ---------------------------------------------------------------------------------
 
 
@@ -6439,7 +6439,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:07:21 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:25 ; elapsed = 00:07:21 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:35 ; elapsed = 00:07:30 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6719,11 +6719,11 @@ Report Instance Areas:
 |211   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
 +------+---------------------------------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:27 ; elapsed = 00:07:23 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 ---------------------------------------------------------------------------------
 
 Synthesis finished with 0 errors, 0 critical warnings and 2080 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:07:27 ; elapsed = 00:07:23 . Memory (MB): peak = 2257.398 ; gain = 1620.316
+Synthesis Optimization Complete : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
 INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -6738,8 +6738,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 695 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:36 ; elapsed = 00:07:32 . Memory (MB): peak = 2258.398 ; gain = 1513.367
+synth_design: Time (s): cpu = 00:07:46 ; elapsed = 00:07:41 . Memory (MB): peak = 2256.469 ; gain = 1511.438
 # write_checkpoint mkBridge.dcp
 # report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.86 . Memory (MB): peak = 2258.398 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 29 10:51:45 2016...
+report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2256.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 29 15:57:25 2016...

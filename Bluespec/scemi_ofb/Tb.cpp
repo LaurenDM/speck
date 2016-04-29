@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <fstream>
 #include <unistd.h>
 #include <cmath>
 #include <time.h>
@@ -9,6 +10,7 @@
 #include "ResetXactor.h"
 #include <stdio.h>
 #include <stdlib.h>
+using namespace std;
 
 #define u24 unsigned long
 
@@ -23,6 +25,15 @@ long int gotcount = 0;
 
 int num_chars_per_word = 3; // each character is transformed to two hexadecimal digits
 int N = 24;
+
+void print_ascii_from_hex(word block[]){
+  for(int b=0; b<2; b++){
+    for(int i=0; i<num_chars_per_word; i++){
+      int n = (block[b]>>(N-8*(i+1)))&0x0000FF; // take 2 hexadecimal digits at a time
+      fprintf(outfile,"%c",static_cast<char>(n));
+    }
+  }
+}
 
 void out_cb(void* x, const BlockType& block_in)
 {
@@ -40,15 +51,6 @@ void out_cb(void* x, const BlockType& block_in)
         outfile = NULL;
     }
 
-}
-
-void print_ascii_from_hex(word block[]){
-  for(int b=0; b<2; b++){
-    for(int i=0; i<num_chars_per_word; i++){
-      int n = (block[b]>>(N-8*(i+1)))&0x0000FF; // take 2 hexadecimal digits at a time
-      fprintf(outfile,"%c",static_cast<char>(n));
-    }
-  }
 }
 
 void runtest(InportProxyT<BlockType >& inport, FILE* infile)
@@ -81,39 +83,32 @@ void runtest(InportProxyT<BlockType >& inport, FILE* infile)
     }
 }
 
-void convert_ascii_to_hex(char filename[]){
+void convert_ascii_to_hex(char filename_in[], char filename_out[]){
   // open input/output files
   ifstream infile;
   ofstream outfile;
-  infile.open(filename);
-  outfile.open("pt_in.txt");
+  infile.open(filename_in);
+  outfile.open(filename_out);
 
   // write to output file
   int digit_counter = 0;
   int n;
+  char c;
   string line;
   if (infile.is_open()){
-    while (getline(infile,line)){
-      for (int char_index=0; char_index < line.length(); char_index++){
-	       digit_counter = digit_counter + 1;
-         n = (int) line[char_index];
-         outfile << hex << n; // regular character write
-	       if (digit_counter == num_chars_per_word){
-	          outfile << " "; // adding space after first word
-	       } else if (digit_counter == 2*num_chars_per_word){
-	          outfile << "\n"; // start writing on new line
-	          digit_counter = 0;
-	       }
-      }
-      // end of line character
-      digit_counter=digit_counter+1;
-      outfile << "0a";
-      if(digit_counter == num_chars_per_word){
-        outfile << " ";
-      } else if(digit_counter == 2*num_chars_per_word){
-        outfile << "\n";
-        digit_counter = 0;
-      }
+    while (infile.get(c)){
+       digit_counter = digit_counter + 1;
+       n = (unsigned char) c;
+       if(n<16){ // only one hexadecimal digit
+         outfile << "0"; // we need two digits for every character
+       }
+       outfile << hex << n; // regular character write
+       if (digit_counter == num_chars_per_word){
+          outfile << " "; // adding space after first word
+       } else if (digit_counter == 2*num_chars_per_word){
+          outfile << "\n"; // start writing on new line
+          digit_counter = 0;
+       }
     }
   } else{
     cerr << "Plaintext/ciphertext file could not be found! Exiting..\n";
@@ -123,6 +118,9 @@ void convert_ascii_to_hex(char filename[]){
     while(digit_counter < 2*num_chars_per_word){
       outfile << "00";
       digit_counter=digit_counter+1;
+      if(digit_counter==num_chars_per_word){
+        outfile << " ";
+      }
     }
     outfile << "\n";
   }
@@ -156,7 +154,7 @@ int main(int argc, char* argv[])
     // Reset the dut.
     reset.reset();
 
-    convert_ascii_to_hex("message.txt");
+    convert_ascii_to_hex("message.txt","pt_in.txt");
     /********************************* ENCRYPT *****************************************/
     Key_Iv ki;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
@@ -184,7 +182,7 @@ int main(int argc, char* argv[])
     endtime = clock();
     printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 
-    convert_ascii_to_hex("ciphermessage.txt");
+    convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
     /********************************* DECRYPT *****************************************/
     // reset
     // Reset the dut.
@@ -194,9 +192,9 @@ int main(int argc, char* argv[])
     putcount = 0;
     gotcount = 0;
     setkey.sendMessage(ki); // key and iv stay the same
-    infile = fopen("pt_in.txt", "rb");
+    infile = fopen("ct_in.txt", "rb");
     if (infile == NULL) {
-        std::cerr << "couldn't open ct_out.txt" << std::endl;
+        std::cerr << "couldn't open ct_in.txt" << std::endl;
         return 1;
     }
     outfile = fopen("message_out.txt", "wb");
