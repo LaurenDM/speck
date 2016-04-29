@@ -32,7 +32,7 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    SyncFIFOIfc#(BlockType) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr); //clk_usr -> clk_scemi
    SyncFIFOIfc#(Key_Iv) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
 
-   OperationMode#(N,M,T) ofb <- mkOFB(clocked_by clk_usr, reset_by rst_usr);
+   OperationMode#(N,M,T) ofb <- mkSynthesizedOFB(clocked_by clk_usr, reset_by rst_usr);
 
    rule enqRequest;
       BlockType request = toSyncQ.first;

@@ -3,6 +3,12 @@ import Vector::*;
 import SpeckTypes::*;
 import Speck::*;
 
+(* synthesize *)
+module mkSynthesizedOFB(OperationMode#(N,M,T));
+    OperationMode#(N,M,T) ofb <- mkOFB();
+    return ofb;
+endmodule
+
 module mkOFB(OperationMode#(n,m,t));
     EncryptDecrypt#(n,m,t) enc <- mkEncrypt();
     Reg#(Bool) started <- mkReg(False);
@@ -22,7 +28,7 @@ module mkOFB(OperationMode#(n,m,t));
         enc.inputMessage(xorkey);
     endrule
 
-    rule empty if (!started); // empty outputfifo of encryption module 
+    rule empty if (!started); // empty outputfifo of encryption module
         let dummy <- enc.getResult();
     endrule
 
