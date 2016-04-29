@@ -28,30 +28,23 @@ void convert_ascii_to_hex(){
 
   // write to output file
   int digit_counter = 0;
-  int n;
+  unsigned int n;
+  char c;
   string line;
   if (infile.is_open()){
-    while (getline(infile,line)){
-      for (int char_index=0; char_index < line.length(); char_index++){
-	       digit_counter = digit_counter + 1;
-         n = (int) line[char_index];
-         outfile << hex << n; // regular character write
-	       if (digit_counter == num_chars_per_word){
-	          outfile << " "; // adding space after first word
-	       } else if (digit_counter == 2*num_chars_per_word){
-	          outfile << "\n"; // start writing on new line
-	          digit_counter = 0;
-	       }
-      }
-      // end of line character
-      digit_counter=digit_counter+1;
-      outfile << "0a";
-      if(digit_counter == num_chars_per_word){
-        outfile << " ";
-      } else if(digit_counter == 2*num_chars_per_word){
-        outfile << "\n";
-        digit_counter = 0;
-      }
+    while (infile.get(c)){
+       digit_counter = digit_counter + 1;
+       n = (unsigned char) c;
+       if(n<16){ // only one hexadecimal digit
+         outfile << "0"; // we need two digits for every character
+       }
+       outfile << hex << n; // regular character write
+       if (digit_counter == num_chars_per_word){
+          outfile << " "; // adding space after first word
+       } else if (digit_counter == 2*num_chars_per_word){
+          outfile << "\n"; // start writing on new line
+          digit_counter = 0;
+       }
     }
   } else{
     cerr << "Plaintext/ciphertext file could not be found! Exiting..\n";
@@ -61,6 +54,9 @@ void convert_ascii_to_hex(){
     while(digit_counter < 2*num_chars_per_word){
       outfile << "00";
       digit_counter=digit_counter+1;
+      if(digit_counter==num_chars_per_word){
+        outfile << " ";
+      }
     }
     outfile << "\n";
   }
