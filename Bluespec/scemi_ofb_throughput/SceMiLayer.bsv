@@ -16,7 +16,7 @@ import Vector::*;
 typedef Server#(Bool, Bool) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
-   interface Put#(Key_Iv) setkeyandIV;
+   interface Put#(Key_Iv) setkey;
 endinterface
 
 (* synthesize *)

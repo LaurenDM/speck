@@ -35,7 +35,7 @@ endmodule
 (* synthesize *)
 module mkThroughputOFB(SetKeyIV#(N,M,T));
     OperationMode#(N,M,T) ofb <- mkOFB();
-    SetKeyIV#(N,M,T) tp <- mkThroughputTest(ofb);
+    SetKeyIV#(N,M,T) tp <- mkOpModeThroughputTest(ofb);
     return tp;
 endmodule
 
@@ -94,7 +94,7 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     endmethod
 endmodule
 
-module mkThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc);
+module mkOpModeThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc);
     Fifo#(5,Block#(N)) inputFIFO <- mkPipelineFifo();
     Reg#(Bool) started <- mkReg(False);
     Reg#(int) countin <- mkReg(0);
@@ -139,7 +139,7 @@ module mkThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc);
         countout <= countout + 1;
     endrule
 
-    method Action setKeyIV(Vector#(M,UInt#(N)) key, Block#(n) iv) if (!started);
+    method Action setKeyIV(Vector#(M,UInt#(N)) key, Block#(N) iv) if (!started);
         engine.setKeyIV(key,iv);
         started <= True;
     endmethod
