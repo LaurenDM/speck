@@ -8,9 +8,6 @@
 #include "SceMiHeaders.h"
 #include "ResetXactor.h"
 
-#include <fstream>
-using namespace std;
-
 #define u24 unsigned long
 
 typedef u24 word;

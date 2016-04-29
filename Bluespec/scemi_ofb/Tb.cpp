@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <fstream>
 #include <unistd.h>
 #include <cmath>
 #include <time.h>
@@ -9,6 +10,7 @@
 #include "ResetXactor.h"
 #include <stdio.h>
 #include <stdlib.h>
+using namespace std;
 
 #define u24 unsigned long
 
@@ -23,6 +25,15 @@ long int gotcount = 0;
 
 int num_chars_per_word = 3; // each character is transformed to two hexadecimal digits
 int N = 24;
+
+void print_ascii_from_hex(word block[]){
+  for(int b=0; b<2; b++){
+    for(int i=0; i<num_chars_per_word; i++){
+      int n = (block[b]>>(N-8*(i+1)))&0x0000FF; // take 2 hexadecimal digits at a time
+      fprintf(outfile,"%c",static_cast<char>(n));
+    }
+  }
+}
 
 void out_cb(void* x, const BlockType& block_in)
 {
@@ -40,15 +51,6 @@ void out_cb(void* x, const BlockType& block_in)
         outfile = NULL;
     }
 
-}
-
-void print_ascii_from_hex(word block[]){
-  for(int b=0; b<2; b++){
-    for(int i=0; i<num_chars_per_word; i++){
-      int n = (block[b]>>(N-8*(i+1)))&0x0000FF; // take 2 hexadecimal digits at a time
-      fprintf(outfile,"%c",static_cast<char>(n));
-    }
-  }
 }
 
 void runtest(InportProxyT<BlockType >& inport, FILE* infile)
