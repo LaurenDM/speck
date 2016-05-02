@@ -82,7 +82,6 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
             inputFIFO.enq(x); // put encrypt results in fifo as new random inputs
         // this is allowed because input and output formats are the same and all we need is random inputs
         countout <= countout + 1;
-        countint <= countin + 1; // keep counting to get nb of clock cycles
     endrule
 
     method Action setKey(Vector#(M,UInt#(N)) key) if (!started);
@@ -119,6 +118,7 @@ module mkOpModeThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc
 
     rule count if(counting);
         clkcount <= clkcount +1;
+        //$display("clk = %d, countin = %d, countout = %d",clkcount,countin, countout);
     endrule
 
     rule feed if(started);
@@ -144,11 +144,6 @@ module mkOpModeThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc
             inputFIFO.enq(x); // put encrypt results in fifo as new random inputs
         // this is allowed because input and output formats are the same and all we need is random inputs
         countout <= countout + 1;
-        if(countout == fromInteger(valueof(TESTAMOUNT))) begin
-            counting <= False;
-            $display("nb of cycles = %d",clkcount);
-            started <= False;
-        end
     endrule
 
     method Action setKeyIV(Vector#(M,UInt#(N)) key, Block#(N) iv) if (!started);
@@ -158,6 +153,11 @@ module mkOpModeThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc
     endmethod
 
     method ActionValue#(Bool) ready();
-        return (countout == fromInteger(valueof(TESTAMOUNT)));
+        if (countout == fromInteger(valueof(TESTAMOUNT))) begin
+            $display("clk = %d",clkcount);
+            return True;
+        end
+        else
+            return False;
     endmethod
 endmodule
