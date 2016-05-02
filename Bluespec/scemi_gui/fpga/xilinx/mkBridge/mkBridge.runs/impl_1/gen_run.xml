@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1461959848">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="mkBridge.vdi"/>
+  <File Type="BG-DRC" Name="mkBridge.drc"/>
+  <File Type="BG-BGN" Name="mkBridge.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="$PSDKDIR/SDK/SDK_Export/hw/mkBridge.sysdef"/>
+  <File Type="BITSTR-MMI" Name="mkBridge.mmi"/>
+  <File Type="BITSTR-BMM" Name="mkBridge_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="mkBridge.nky"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mkBridge_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="mkBridge_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="mkBridge_utilization_placed.pb"/>
+  <File Type="PLACE-CLK" Name="mkBridge_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="mkBridge_placed.dcp"/>
+  <File Type="PLACE-CTRL" Name="mkBridge_control_sets_placed.rpt"/>
+  <File Type="PWROPT-DRC" Name="mkBridge_drc_pwropted.rpt"/>
+  <File Type="BITSTR-MSK" Name="mkBridge.msk"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PLACE-IO" Name="mkBridge_io_placed.rpt"/>
+  <File Type="OPT-DCP" Name="mkBridge_opt.dcp"/>
+  <File Type="BG-BIT" Name="mkBridge.bit"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PLACE-UTIL" Name="mkBridge_utilization_placed.rpt"/>
+  <File Type="PWROPT-DCP" Name="mkBridge_pwropt.dcp"/>
+  <File Type="PA-TCL" Name="mkBridge.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mkBridge_timing_summary_postroute_physopted.rpt"/>
+  <File Type="OPT-DRC" Name="mkBridge_drc_opted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mkBridge_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="mkBridge.bin"/>
+  <File Type="PHYSOPT-DCP" Name="mkBridge_physopt.dcp"/>
+  <File Type="BITSTR-RBT" Name="mkBridge.rbt"/>
+  <File Type="PHYSOPT-DRC" Name="mkBridge_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="mkBridge_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="mkBridge_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="mkBridge_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="mkBridge_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="mkBridge_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="mkBridge_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="mkBridge_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mkBridge_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="mkBridge_timing_summary_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="mkBridge_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="mkBridge_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mkBridge_timing_summary_postroute_physopted.pb"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../default.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Mon May  2 19:38:14 2016
+# Process ID: 2815
+# Log file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vivado.log
+# Journal file: /afs/athena.mit.edu/user/l/d/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vivado.jou
+#-----------------------------------------------------------
+source /mit/6.375//install/scripts/program.tcl
