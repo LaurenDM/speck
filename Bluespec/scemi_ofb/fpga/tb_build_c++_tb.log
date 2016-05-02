@@ -1,9 +1,9 @@
 ../Tb.cpp: In function 'int main(int, char**)':
-../Tb.cpp:157:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-     convert_ascii_to_hex("message.txt","pt_in.txt");
-                                                   ^
-../Tb.cpp:157:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-../Tb.cpp:185:57: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-     convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
-                                                         ^
-../Tb.cpp:185:57: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../Tb.cpp:158:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     convert_ascii_to_hex("Tux.jpg","pt_in.txt");
+                                               ^
+../Tb.cpp:158:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../Tb.cpp:188:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
+                                                     ^
+../Tb.cpp:188:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
