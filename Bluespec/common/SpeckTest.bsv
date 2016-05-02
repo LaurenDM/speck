@@ -10,7 +10,7 @@ typedef 10 NB;
 
 typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
 
-module mkSpeckTest(Empty);
+module mkSpeckTest3(Empty); // this test tests the OFB implementation
     OperationMode#(N,M,T) ofb <- mkOFB();
 
     Vector#(NB,Block#(N)) plaintext = newVector();
@@ -114,16 +114,16 @@ module mkSpeckTest(Empty);
 endmodule
 
 
-module mkSpeckTest2(Empty);
-    EncryptDecrypt#(N,M,T) enc <- mkEncrypt();
-    SetKey#(N,M,T) tp <- mkThroughputTest(enc);
+module mkSpeckTest(Empty); // this test tests the throughput implementation
+    SetKeyIV#(N,M,T) tp <- mkThroughputOB();
 
     Vector#(M, UInt#(N)) key = newVector();
     key[0] = 'h020100;
     key[1] = 'h0a0908;
     key[2] = 'h121110;
     key[3] = 'h1a1918;
-
+    Block#(N) iv = tuple2('h735e10, 'hb6445d);
+    
     Reg#(Status) status <- mkReg(Keyset);
 
     rule setEncKey(status==Keyset);
@@ -146,7 +146,7 @@ module mkSpeckTest2(Empty);
 endmodule
 
 
-module mkSpeckTest1(Empty);
+module mkSpeckTest1(Empty); // this test checks the original implementation
     EncryptDecrypt#(N,M,T) enc <- mkEncrypt_unfold();
     EncryptDecrypt#(N,M,T) dec <- mkDecrypt_unfold();
 
