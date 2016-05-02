@@ -173,7 +173,7 @@ int main(int argc, char* argv[])
     setkey.sendMessage(ki);
     //printf("enc key = set \n");
     /********************************* ENCRYPT *****************************************/
-    FILE* infile = fopen("pt_in.txt", "rb");
+    infile = fopen("pt_in.txt", "rb");
     if (infile == NULL) {
         std::cerr << "couldn't open pt_in.txt" << std::endl;
         return 1;
@@ -185,7 +185,7 @@ int main(int argc, char* argv[])
     }
     // Send in all the data.
     runtest(inport,infile);
-    
+
     /********************************* FINISH *****************************************/
     std::cout << "shutting down..." << std::endl;
     shutdown.blocking_send_finish();
