@@ -93,6 +93,6 @@ set_max_delay -from [get_clocks userclk2] -to [get_clocks noc_clk] 8.000 -datapa
 set_property src_info {type:XDC file:1 line:214 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay -from [get_clocks noc_clk] -to [get_clocks userclk2] 8.000 -datapath_only
 set_property src_info {type:XDC file:1 line:227 export:INPUT save:INPUT read:READ} [current_design]
-set_max_delay 10.0 -datapath_only -from [get_clocks cclock] -to [get_clocks my_clk_usr]
+set_max_delay 8.0 -datapath_only -from [get_clocks cclock] -to [get_clocks my_clk_usr]
 set_property src_info {type:XDC file:1 line:228 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay 20.0 -datapath_only -from [get_clocks my_clk_usr] -to [get_clocks cclock]
