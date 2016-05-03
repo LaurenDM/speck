@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date             : Mon May  2 20:06:53 2016
+| Date             : Mon May  2 20:31:46 2016
 | Host             : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command          : report_power -file mkBridge_power_routed.rpt -pb mkBridge_power_summary_routed.pb
 | Design           : mkBridge
@@ -30,13 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 3.125 |
-| Dynamic (W)              | 2.843 |
-| Device Static (W)        | 0.282 |
-| Total Off-Chip Power (W) | 0.000 |
+| Total On-Chip Power (W)  | 3.020 |
+| Dynamic (W)              | 2.739 |
+| Device Static (W)        | 0.281 |
 | Effective TJA (C/W)      | 1.1   |
-| Max Ambient (C)          | 81.4  |
-| Junction Temperature (C) | 28.6  |
+| Max Ambient (C)          | 81.5  |
+| Junction Temperature (C) | 28.5  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,9 +49,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.108 |       46 |       --- |             --- |
-| Slice Logic              |     0.018 |    37241 |       --- |             --- |
-|   LUT as Logic           |     0.016 |    18972 |    303600 |            6.24 |
+| Clocks                   |     0.110 |       46 |       --- |             --- |
+| Slice Logic              |     0.019 |    37241 |       --- |             --- |
+|   LUT as Logic           |     0.017 |    18988 |    303600 |            6.25 |
 |   Register               |    <0.001 |    13908 |    607200 |            2.29 |
 |   LUT as Distributed RAM |    <0.001 |      378 |    130800 |            0.28 |
 |   CARRY4                 |    <0.001 |      398 |     75900 |            0.52 |
@@ -60,14 +59,14 @@ Table of Contents
 |   Others                 |     0.000 |      311 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |     0.000 |        1 |    130800 |           <0.01 |
-| Signals                  |     0.034 |    30377 |       --- |             --- |
+| Signals                  |     0.036 |    30377 |       --- |             --- |
 | Block RAM                |     0.040 |       14 |      1030 |            1.35 |
-| MMCM                     |     0.436 |        4 |        14 |           28.57 |
+| MMCM                     |     0.328 |        4 |        14 |           28.57 |
 | PCIE                     |     0.045 |        1 |         4 |           25.00 |
 | I/O                      |     0.004 |       45 |       700 |            6.42 |
 | GTX                      |     2.157 |        8 |        28 |           28.57 |
-| Static Power             |     0.282 |          |           |                 |
-| Total                    |     3.125 |          |           |                 |
+| Static Power             |     0.281 |          |           |                 |
+| Total                    |     3.020 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.555 |       0.401 |      0.154 |
-| Vccaux    |       1.800 |     0.278 |       0.239 |      0.038 |
+| Vccint    |       1.000 |     0.557 |       0.403 |      0.153 |
+| Vccaux    |       1.800 |     0.218 |       0.180 |      0.038 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
@@ -137,6 +136,17 @@ Table of Contents
 +----------------------------------+---------------------------------------------------------------------------------------------------+-----------------+
 | Clock                            | Domain                                                                                            | Constraint (ns) |
 +----------------------------------+---------------------------------------------------------------------------------------------------+-----------------+
+| scemi_clkgen_pll$CLKOUT6         | scemi_clkgen_pll$CLKOUT6                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT5         | scemi_clkgen_pll$CLKOUT5                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT4         | scemi_clkgen_pll$CLKOUT4                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT3B        | scemi_clkgen_pll$CLKOUT3B                                                                         |            10.0 |
+| scemi_clkgen_pll$CLKOUT3         | scemi_clkgen_pll$CLKOUT3                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT2B        | scemi_clkgen_pll$CLKOUT2B                                                                         |            10.0 |
+| scemi_clkgen_pll$CLKOUT2         | scemi_clkgen_pll$CLKOUT2                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT1B        | scemi_clkgen_pll$CLKOUT1B                                                                         |            10.0 |
+| scemi_clkgen_pll$CLKOUT1         | scemi_clkgen_pll$CLKOUT1                                                                          |            10.0 |
+| scemi_clkgen_pll$CLKOUT0B        | scemi_clkgen_pll$CLKOUT0B                                                                         |             8.0 |
+| scemi_clkgen_pll$CLKFBOUT        | scemi_clkgen_pll$CLKFBOUT                                                                         |             4.0 |
 | scemi_scemi_clkgen_mmcm$CLKOUT6  | scemi_scemi_clkgen_mmcm$CLKOUT6                                                                   |            10.0 |
 | scemi_scemi_clkgen_mmcm$CLKOUT5  | scemi_scemi_clkgen_mmcm$CLKOUT5                                                                   |            10.0 |
 | scemi_scemi_clkgen_mmcm$CLKOUT4  | scemi_scemi_clkgen_mmcm$CLKOUT4                                                                   |            10.0 |
@@ -157,8 +167,8 @@ Table of Contents
 | usrClk_mmcm_pll$CLKOUT2          | usrClk_mmcm_pll$CLKOUT2                                                                           |            10.0 |
 | usrClk_mmcm_pll$CLKOUT1B         | usrClk_mmcm_pll$CLKOUT1B                                                                          |            10.0 |
 | usrClk_mmcm_pll$CLKOUT1          | usrClk_mmcm_pll$CLKOUT1                                                                           |            10.0 |
-| usrClk_mmcm_pll$CLKOUT0B         | usrClk_mmcm_pll$CLKOUT0B                                                                          |             5.0 |
-| my_clk_usr                       | usrClk_mmcm_pll$CLKOUT0                                                                           |             5.0 |
+| usrClk_mmcm_pll$CLKOUT0B         | usrClk_mmcm_pll$CLKOUT0B                                                                          |             4.0 |
+| my_clk_usr                       | usrClk_mmcm_pll$CLKOUT0                                                                           |             4.0 |
 | usrClk_mmcm_pll$CLKFBOUT         | usrClk_mmcm_pll$CLKFBOUT                                                                          |             5.0 |
 | userclk2                         | scemi_pcie_ep/ext_clk.pipe_clock_i/userclk2                                                       |             4.0 |
 | userclk1                         | scemi_pcie_ep/ext_clk.pipe_clock_i/userclk1                                                       |             4.0 |
@@ -172,17 +182,6 @@ Table of Contents
 | txoutclk                         | scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/PIPE_TXOUTCLK_OUT |            10.0 |
 | sys_clk                          | sys_clk$O                                                                                         |             5.0 |
 | pci_refclk                       | scemi_sys_clk_buf$O                                                                               |            10.0 |
-| scemi_clkgen_pll$CLKOUT6         | scemi_clkgen_pll$CLKOUT6                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT5         | scemi_clkgen_pll$CLKOUT5                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT4         | scemi_clkgen_pll$CLKOUT4                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT3B        | scemi_clkgen_pll$CLKOUT3B                                                                         |            10.0 |
-| scemi_clkgen_pll$CLKOUT3         | scemi_clkgen_pll$CLKOUT3                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT2B        | scemi_clkgen_pll$CLKOUT2B                                                                         |            10.0 |
-| scemi_clkgen_pll$CLKOUT2         | scemi_clkgen_pll$CLKOUT2                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT1B        | scemi_clkgen_pll$CLKOUT1B                                                                         |            10.0 |
-| scemi_clkgen_pll$CLKOUT1         | scemi_clkgen_pll$CLKOUT1                                                                          |            10.0 |
-| scemi_clkgen_pll$CLKOUT0B        | scemi_clkgen_pll$CLKOUT0B                                                                         |             8.0 |
-| scemi_clkgen_pll$CLKFBOUT        | scemi_clkgen_pll$CLKFBOUT                                                                         |             4.0 |
 +----------------------------------+---------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -195,11 +194,11 @@ Table of Contents
 +----------------------------------------------------------------+-----------+
 | Name                                                           | Power (W) |
 +----------------------------------------------------------------+-----------+
-| mkBridge                                                       |     2.843 |
+| mkBridge                                                       |     2.739 |
 |   scemi_1_outFifo                                              |     0.004 |
-|   scemi_bridge                                                 |     0.056 |
+|   scemi_bridge                                                 |     0.055 |
 |     pbb_arbiter                                                |     0.010 |
-|       tlp_out_cfg_fifo                                         |     0.004 |
+|       tlp_out_cfg_fifo                                         |     0.003 |
 |       tlp_out_dma_fifo                                         |     0.003 |
 |       tlp_out_fifo                                             |     0.003 |
 |     pbb_csr_clock_control                                      |    <0.001 |
@@ -241,10 +240,10 @@ Table of Contents
 |     fifoMem_reg_0_7_72_73                                      |    <0.001 |
 |   scemi_network_status                                         |    <0.001 |
 |     rstSync                                                    |    <0.001 |
-|   scemi_pcie_ep                                                |     2.383 |
+|   scemi_pcie_ep                                                |     2.384 |
 |     ext_clk.pipe_clock_i                                       |     0.111 |
-|     pcie_7x_v1_10_i                                            |     2.272 |
-|       gt_top_i                                                 |     2.171 |
+|     pcie_7x_v1_10_i                                            |     2.273 |
+|       gt_top_i                                                 |     2.172 |
 |         gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
@@ -253,7 +252,7 @@ Table of Contents
 |         gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
 |         gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst       |    <0.001 |
-|         pipe_wrapper_i                                         |     2.171 |
+|         pipe_wrapper_i                                         |     2.172 |
 |           pipe_lane[0].gt_wrapper_i                            |     0.270 |
 |           pipe_lane[0].pipe_drp.pipe_drp_i                     |     0.001 |
 |           pipe_lane[0].pipe_eq.pipe_eq_i                       |     0.000 |
@@ -317,7 +316,7 @@ Table of Contents
 |           pipe_reset.pipe_reset_i                              |    <0.001 |
 |           qpll_reset.qpll_reset_i                              |     0.000 |
 |       pcie_top_i                                               |     0.101 |
-|         axi_basic_top                                          |     0.006 |
+|         axi_basic_top                                          |     0.005 |
 |           rx_inst                                              |     0.004 |
 |             rx_null_gen_inst                                   |    <0.001 |
 |             rx_pipeline_inst                                   |     0.003 |
@@ -373,7 +372,7 @@ Table of Contents
 |   scemi_processor_resp_outport_finished                        |    <0.001 |
 |   scemi_processor_resp_outport_next                            |    <0.001 |
 |   scemi_processor_resp_outport_starting_reset                  |    <0.001 |
-|   scemi_processor_resp_res_fifo                                |    <0.001 |
+|   scemi_processor_resp_res_fifo                                |     0.001 |
 |     fifoMem_reg_0_1_0_5                                        |    <0.001 |
 |     fifoMem_reg_0_1_12_17                                      |    <0.001 |
 |     fifoMem_reg_0_1_18_23                                      |    <0.001 |
@@ -392,7 +391,7 @@ Table of Contents
 |   scemi_setkey_inport_next_sp                                  |    <0.001 |
 |   scemi_setkey_inport_starting_reset                           |    <0.001 |
 |   scemi_setkey_inport_wait_sp                                  |    <0.001 |
-|   scemi_setkey_res_fifo                                        |     0.001 |
+|   scemi_setkey_res_fifo                                        |     0.002 |
 |     fifoMem_reg_0_1_0_5                                        |    <0.001 |
 |     fifoMem_reg_0_1_102_107                                    |    <0.001 |
 |     fifoMem_reg_0_1_108_113                                    |    <0.001 |
@@ -418,8 +417,8 @@ Table of Contents
 |     fifoMem_reg_0_1_90_95                                      |    <0.001 |
 |     fifoMem_reg_0_1_96_101                                     |    <0.001 |
 |   scemi_settabledut_dut_dutIfc_didreset                        |    <0.001 |
-|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.019 |
-|     fromSyncQ                                                  |     0.001 |
+|   scemi_settabledut_dut_dutIfc_m_dut                           |     0.021 |
+|     fromSyncQ                                                  |     0.002 |
 |       fifoMem_reg_0_1_0_5                                      |    <0.001 |
 |       fifoMem_reg_0_1_12_17                                    |    <0.001 |
 |       fifoMem_reg_0_1_18_23                                    |    <0.001 |
@@ -428,10 +427,10 @@ Table of Contents
 |       fifoMem_reg_0_1_36_41                                    |    <0.001 |
 |       fifoMem_reg_0_1_42_47                                    |    <0.001 |
 |       fifoMem_reg_0_1_6_11                                     |    <0.001 |
-|     ofb                                                        |     0.015 |
+|     ofb                                                        |     0.017 |
 |       ofb_enc_ciphertextFIFO                                   |     0.002 |
-|       ofb_enc_plaintextFIFO                                    |     0.005 |
-|       ofb_inputFIFO                                            |     0.001 |
+|       ofb_enc_plaintextFIFO                                    |     0.006 |
+|       ofb_inputFIFO                                            |     0.002 |
 |       ofb_outputFIFO                                           |     0.001 |
 |     rst_usr                                                    |    <0.001 |
 |     toKeySyncQ                                                 |     0.002 |

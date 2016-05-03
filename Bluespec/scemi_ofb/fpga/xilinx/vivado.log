@@ -2,8 +2,8 @@
 # Vivado v2014.1 (64-bit)
 # SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
 # IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
-# Start of session at: Mon May  2 19:51:47 2016
-# Process ID: 26834
+# Start of session at: Mon May  2 20:15:12 2016
+# Process ID: 27617
 # Log file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/vivado.log
 # Journal file: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/vivado.jou
 #-----------------------------------------------------------
@@ -110,7 +110,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pci
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_lane with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_lane.v:103]
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_misc with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_misc.v:90]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 817.773 ; gain = 174.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 817.770 ; gain = 174.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:37]
 INFO: [Synth 8-638] synthesizing module 'SyncWire' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
@@ -3143,7 +3143,7 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized2' [/opt/xilin
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 5.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 4.000000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
@@ -3207,7 +3207,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1022.914 ; gain = 379.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1022.910 ; gain = 379.949
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -3246,15 +3246,15 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1601.641 ; gain = 958.676
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1601.637 ; gain = 958.676
 370 Infos, 90 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1601.641 ; gain = 845.727
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1601.637 ; gain = 845.727
 # launch_runs synth_1
-[Mon May  2 19:52:42 2016] Launched synth_1...
+[Mon May  2 20:16:06 2016] Launched synth_1...
 Run output will be captured here: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/synth_1/runme.log
 # wait_on_run synth_1
-[Mon May  2 19:52:42 2016] Waiting for synth_1 to finish...
+[Mon May  2 20:16:06 2016] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log mkBridge.vds -m64 -mode batch -messageDb vivado.pb -source mkBridge.tcl
@@ -6388,7 +6388,7 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized2' [/opt/xilin
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 5.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 4.000000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
@@ -6501,7 +6501,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1594.754 ; gain = 957.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 
@@ -6543,11 +6543,11 @@ can't read "CLKOUT4": no such variable at line NOLINE of file NONE (auto generat
 can't read "CLKOUT5": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto generated)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1594.754 ; gain = 957.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1594.754 ; gain = 957.676
+Finished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 INFO: [Synth 8-4471] merging register 'pbb_dma_dma_read_req_tlp_valids_1_reg' into 'pbb_dma_dma_read_req_tlp_valids_0_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v:10205]
@@ -6663,29 +6663,29 @@ Detailed RTL Component Info :
 	   2 Input     22 Bit       Adders := 8     
 	   2 Input     19 Bit       Adders := 2     
 	   2 Input     14 Bit       Adders := 1     
-	   3 Input     13 Bit       Adders := 3     
 	   2 Input     13 Bit       Adders := 12    
+	   3 Input     13 Bit       Adders := 3     
+	   4 Input     12 Bit       Adders := 3     
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 3     
-	   4 Input     12 Bit       Adders := 3     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 6     
 	   3 Input     10 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 6     
 	   3 Input      9 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 6     
 	   2 Input      8 Bit       Adders := 10    
 	   2 Input      7 Bit       Adders := 3     
-	   4 Input      6 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 14    
+	   4 Input      6 Bit       Adders := 2     
 	   3 Input      6 Bit       Adders := 6     
-	   4 Input      5 Bit       Adders := 2     
-	  16 Input      5 Bit       Adders := 1     
-	   3 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 17    
+	  16 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 24    
 	   2 Input      3 Bit       Adders := 13    
-	   2 Input      2 Bit       Adders := 29    
 	   3 Input      2 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 29    
 	   2 Input      1 Bit       Adders := 12    
 +---XORs : 
 	   2 Input     24 Bit         XORs := 6     
@@ -6745,75 +6745,75 @@ Detailed RTL Component Info :
 	   2 Input     49 Bit        Muxes := 1     
 	   2 Input     48 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
-	  37 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 5     
 	   2 Input     32 Bit        Muxes := 126   
+	   4 Input     32 Bit        Muxes := 5     
+	  37 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 2     
 	   2 Input     24 Bit        Muxes := 105   
 	  27 Input     24 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 8     
 	   2 Input     22 Bit        Muxes := 11    
 	   2 Input     20 Bit        Muxes := 3     
-	   4 Input     19 Bit        Muxes := 1     
 	   7 Input     19 Bit        Muxes := 8     
 	   2 Input     19 Bit        Muxes := 9     
+	   4 Input     19 Bit        Muxes := 1     
+	   7 Input     18 Bit        Muxes := 16    
 	   5 Input     18 Bit        Muxes := 8     
 	   2 Input     18 Bit        Muxes := 33    
-	   7 Input     18 Bit        Muxes := 16    
-	   2 Input     16 Bit        Muxes := 46    
-	   4 Input     16 Bit        Muxes := 1     
 	   8 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 46    
 	   2 Input     15 Bit        Muxes := 16    
 	   2 Input     14 Bit        Muxes := 16    
 	   2 Input     13 Bit        Muxes := 17    
 	   2 Input     12 Bit        Muxes := 20    
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 10    
-	  10 Input      9 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 27    
 	   4 Input      9 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2267  
+	  10 Input      9 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 18    
+	   2 Input      8 Bit        Muxes := 2267  
 	   3 Input      8 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 16    
-	   8 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 147   
 	   4 Input      6 Bit        Muxes := 2     
 	   7 Input      6 Bit        Muxes := 40    
-	   2 Input      6 Bit        Muxes := 147   
+	   8 Input      6 Bit        Muxes := 2     
 	  37 Input      6 Bit        Muxes := 1     
-	   5 Input      5 Bit        Muxes := 1     
-	   7 Input      5 Bit        Muxes := 2     
-	   6 Input      5 Bit        Muxes := 8     
-	   4 Input      5 Bit        Muxes := 9     
 	   3 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 167   
 	   8 Input      5 Bit        Muxes := 8     
-	   7 Input      4 Bit        Muxes := 8     
-	   2 Input      4 Bit        Muxes := 175   
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 167   
+	   7 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 9     
+	   6 Input      5 Bit        Muxes := 8     
 	   5 Input      4 Bit        Muxes := 8     
-	   4 Input      3 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 175   
+	   7 Input      4 Bit        Muxes := 8     
 	  32 Input      3 Bit        Muxes := 8     
-	   9 Input      3 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 8     
-	   7 Input      3 Bit        Muxes := 16    
-	   2 Input      3 Bit        Muxes := 104   
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 8     
 	  10 Input      3 Bit        Muxes := 2     
-	   7 Input      2 Bit        Muxes := 8     
-	  32 Input      2 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 104   
+	   7 Input      3 Bit        Muxes := 16    
 	   2 Input      2 Bit        Muxes := 60    
+	   7 Input      2 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 14    
-	   5 Input      1 Bit        Muxes := 67    
-	  13 Input      1 Bit        Muxes := 6     
-	   8 Input      1 Bit        Muxes := 26    
-	  10 Input      1 Bit        Muxes := 6     
+	  32 Input      2 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 34    
-	  32 Input      1 Bit        Muxes := 152   
-	   3 Input      1 Bit        Muxes := 3     
+	  13 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1174  
 	   7 Input      1 Bit        Muxes := 151   
+	  32 Input      1 Bit        Muxes := 152   
+	   5 Input      1 Bit        Muxes := 67    
 	   6 Input      1 Bit        Muxes := 24    
 	  18 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 1174  
+	  10 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 26    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -6834,11 +6834,11 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 6     
 	   2 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 5     
 	   4 Input      6 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 3     
-	   3 Input      6 Bit       Adders := 5     
-	   4 Input      5 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 2     
 	   3 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 2     
@@ -6869,35 +6869,35 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input    128 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     49 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 3     
 	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 3     
 	   2 Input     19 Bit        Muxes := 1     
 	   4 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 4     
 	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
+	   6 Input      8 Bit        Muxes := 1     
 	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 2     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
-	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 8     
+	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 14    
 	   3 Input      1 Bit        Muxes := 3     
 	   5 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 17    
 	   2 Input      1 Bit        Muxes := 28    
+	   4 Input      1 Bit        Muxes := 17    
 Module FIFO2__parameterized0__4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -7028,9 +7028,9 @@ Detailed RTL Component Info :
 	   2 Input     30 Bit       Adders := 2     
 	   3 Input     13 Bit       Adders := 3     
 	   2 Input     13 Bit       Adders := 12    
+	   2 Input     12 Bit       Adders := 1     
 	   4 Input     12 Bit       Adders := 3     
 	   3 Input     12 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 4     
@@ -7040,8 +7040,8 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 8     
 	   3 Input      6 Bit       Adders := 1     
-	  16 Input      5 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 5     
+	  16 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 3     
 +---Registers : 
@@ -7067,22 +7067,22 @@ Detailed RTL Component Info :
 	   2 Input    105 Bit        Muxes := 2     
 	   2 Input     98 Bit        Muxes := 2     
 	  37 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 123   
+	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     30 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
 	   2 Input     13 Bit        Muxes := 9     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 8     
-	   2 Input      9 Bit        Muxes := 11    
 	   4 Input      9 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 16    
+	   2 Input      9 Bit        Muxes := 11    
 	   2 Input      8 Bit        Muxes := 2221  
+	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      7 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 2     
 	  37 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 33    
 	   2 Input      3 Bit        Muxes := 6     
@@ -7388,14 +7388,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7418,8 +7418,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7439,18 +7439,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_qpll_drp__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7475,8 +7475,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__2 
@@ -7546,14 +7546,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7576,8 +7576,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7597,18 +7597,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper__3 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__3 
@@ -7676,14 +7676,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7706,8 +7706,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7727,18 +7727,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper__4 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__4 
@@ -7806,14 +7806,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7836,8 +7836,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7857,18 +7857,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper__5 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__5 
@@ -7936,14 +7936,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7966,8 +7966,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -7987,18 +7987,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_qpll_drp 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8023,8 +8023,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_qpll_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__6 
@@ -8094,14 +8094,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8124,8 +8124,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8145,18 +8145,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper__7 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user__7 
@@ -8224,14 +8224,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8254,8 +8254,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8275,18 +8275,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper__8 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_user 
@@ -8354,14 +8354,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 4     
 	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_rxeq_scan 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8384,8 +8384,8 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
 Module pcie_7x_v1_10_pipe_eq 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -8405,18 +8405,18 @@ Detailed RTL Component Info :
 	   7 Input     18 Bit        Muxes := 2     
 	   2 Input     18 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      6 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 4     
 	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      4 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
 Module pcie_7x_v1_10_gt_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_pipe_wrapper 
@@ -9199,7 +9199,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:25 . Memory (MB): peak = 1594.754 ; gain = 957.676
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -9339,7 +9339,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:05:44 ; elapsed = 00:05:39 . Memory (MB): peak = 2188.160 ; gain = 1551.082
+Finished Area Optimization : Time (s): cpu = 00:05:49 ; elapsed = 00:05:44 . Memory (MB): peak = 2187.012 ; gain = 1549.934
 ---------------------------------------------------------------------------------
 
 
@@ -9405,11 +9405,11 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:47 ; elapsed = 00:05:42 . Memory (MB): peak = 2188.160 ; gain = 1551.082
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:52 ; elapsed = 00:05:47 . Memory (MB): peak = 2187.012 ; gain = 1549.934
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:27 ; elapsed = 00:06:23 . Memory (MB): peak = 2227.168 ; gain = 1590.090
+Finished Timing Optimization : Time (s): cpu = 00:06:33 ; elapsed = 00:06:28 . Memory (MB): peak = 2226.020 ; gain = 1588.941
 ---------------------------------------------------------------------------------
 
 
@@ -9548,7 +9548,7 @@ INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:07:22 ; elapsed = 00:07:18 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Finished Technology Mapping : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 ---------------------------------------------------------------------------------
 
 
@@ -9674,7 +9674,7 @@ WARNING: [Synth 8-3295] tying undriven pin \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4560] design has 13 instantiated BUFGs while the limit set by the -bufg synthesis option is 12
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Finished IO Insertion : Time (s): cpu = 00:07:30 ; elapsed = 00:07:26 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 ---------------------------------------------------------------------------------
 
 
@@ -9689,7 +9689,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:31 ; elapsed = 00:07:27 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 ---------------------------------------------------------------------------------
 
 
@@ -9697,7 +9697,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:07:26 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:30 ; elapsed = 00:07:26 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:35 ; elapsed = 00:07:31 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -9977,11 +9977,11 @@ Report Instance Areas:
 |211   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
 +------+---------------------------------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:32 ; elapsed = 00:07:28 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 ---------------------------------------------------------------------------------
 
 Synthesis finished with 0 errors, 0 critical warnings and 2080 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:07:32 ; elapsed = 00:07:28 . Memory (MB): peak = 2257.559 ; gain = 1620.480
+Synthesis Optimization Complete : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2256.410 ; gain = 1619.332
 INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -9996,18 +9996,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 695 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:41 ; elapsed = 00:07:37 . Memory (MB): peak = 2258.559 ; gain = 1513.531
+synth_design: Time (s): cpu = 00:07:46 ; elapsed = 00:07:41 . Memory (MB): peak = 2257.410 ; gain = 1512.383
 # write_checkpoint mkBridge.dcp
 # report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2258.559 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:00:30 2016...
-[Mon May  2 20:00:32 2016] synth_1 finished
-wait_on_run: Time (s): cpu = 00:00:00.57 ; elapsed = 00:07:49 . Memory (MB): peak = 1609.641 ; gain = 7.000
+report_utilization: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2257.410 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:23:59 2016...
+[Mon May  2 20:24:01 2016] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00.60 ; elapsed = 00:07:54 . Memory (MB): peak = 1609.637 ; gain = 7.000
 # launch_runs impl_1 -to_step write_bitstream
-[Mon May  2 20:00:33 2016] Launched impl_1...
+[Mon May  2 20:24:02 2016] Launched impl_1...
 Run output will be captured here: /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/runme.log
 # wait_on_run impl_1
-[Mon May  2 20:00:33 2016] Waiting for impl_1 to finish...
+[Mon May  2 20:24:02 2016] Waiting for impl_1 to finish...
 
 *** Running vivado
     with args -log mkBridge.vdi -applog -m64 -messageDb vivado.pb -mode batch -source mkBridge.tcl -notrace
@@ -10061,7 +10061,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints. [/mnt/nfs/var/nfs/ldem
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
 INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
-get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1826.574 ; gain = 562.406
+get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1827.570 ; gain = 563.406
 Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -10069,7 +10069,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 94 instances
 
-link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1827.574 ; gain = 1073.547
+link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 1827.570 ; gain = 1073.547
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10080,7 +10080,7 @@ INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.68 . Memory (MB): peak = 1832.594 ; gain = 4.020
+Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1832.590 ; gain = 4.020
 
 Starting Logic Optimization Task
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
@@ -10092,24 +10092,24 @@ INFO: [Opt 31-138] Pushed 13 inverter(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 190e92f41
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1832.594 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1832.590 ; gain = 0.000
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 16 inverter(s).
 INFO: [Opt 31-10] Eliminated 2291 cells.
 Phase 2 Constant Propagation | Checksum: 2c77ed14d
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1832.594 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1832.590 ; gain = 0.000
 
 Phase 3 Sweep
 INFO: [Opt 31-12] Eliminated 4648 unconnected nets.
 INFO: [Opt 31-11] Eliminated 1691 unconnected cells.
 Phase 3 Sweep | Checksum: 25fe4a619
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.594 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.590 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: 25fe4a619
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.594 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1832.590 ; gain = 0.000
 Implement Debug Cores | Checksum: 2bf993436
 Logic Optimization | Checksum: 2bf993436
 
@@ -10121,7 +10121,7 @@ WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 Ending PowerOpt TimerUpdates Task | Checksum: 25fe4a619
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.594 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.590 ; gain = 0.000
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
@@ -10131,15 +10131,15 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 28
 Ending Power Optimization Task | Checksum: 25fe4a619
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1963.617 ; gain = 131.023
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1963.613 ; gain = 131.023
 INFO: [Common 17-83] Releasing license: Implementation
 25 Infos, 17 Warnings, 11 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1963.617 ; gain = 135.043
+opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1963.613 ; gain = 135.043
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.59 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.62 . Memory (MB): peak = 1964.613 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10154,48 +10154,48 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Core
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1964.613 ; gain = 0.000
 
 Phase 1.1.1 Mandatory Logic Optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1964.613 ; gain = 0.000
 Phase 1.1.1 Mandatory Logic Optimization | Checksum: f32a2cce
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1964.613 ; gain = 0.000
 
 Phase 1.1.2 Build Super Logic Region (SLR) Database
 Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: f32a2cce
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1964.613 ; gain = 0.000
 
 Phase 1.1.3 Add Constraints
 Phase 1.1.3 Add Constraints | Checksum: 1766e73c1
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1964.617 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1964.613 ; gain = 0.000
 
 Phase 1.1.4 Build Shapes/ HD Config
 
 Phase 1.1.4.1 Build Macros
 Phase 1.1.4.1 Build Macros | Checksum: 211f202dc
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.641 ; gain = 55.027
 Phase 1.1.4 Build Shapes/ HD Config | Checksum: 211f202dc
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.641 ; gain = 55.027
 
 Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 1.1.5.1 Pre-Place Cells
 Phase 1.1.5.1 Pre-Place Cells | Checksum: 1766e73c1
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2019.641 ; gain = 55.027
 
 Phase 1.1.5.2 Implementation Feasibility check
 Phase 1.1.5.2 Implementation Feasibility check | Checksum: 1766e73c1
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2019.641 ; gain = 55.027
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
@@ -10203,140 +10203,145 @@ WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/
 Phase 1.1.5.3 Implementation Feasibility check On IDelay
 Phase 1.1.5.3 Implementation Feasibility check On IDelay | Checksum: 1766e73c1
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2019.641 ; gain = 55.027
 Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1673a35a3
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2019.641 ; gain = 55.027
 
 Phase 1.1.6 Build Placer Netlist Model
 
 Phase 1.1.6.1 Place Init Design
 
 Phase 1.1.6.1.1 Build Clock Data
-Phase 1.1.6.1.1 Build Clock Data | Checksum: 24956b7ba
+Phase 1.1.6.1.1 Build Clock Data | Checksum: 1a8e9ce20
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:21 . Memory (MB): peak = 2019.645 ; gain = 55.027
-Phase 1.1.6.1 Place Init Design | Checksum: 17892ef6a
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2019.641 ; gain = 55.027
+Phase 1.1.6.1 Place Init Design | Checksum: 211ef8118
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:23 . Memory (MB): peak = 2019.645 ; gain = 55.027
-Phase 1.1.6 Build Placer Netlist Model | Checksum: 17892ef6a
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2019.641 ; gain = 55.027
+Phase 1.1.6 Build Placer Netlist Model | Checksum: 211ef8118
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2019.641 ; gain = 55.027
 
 Phase 1.1.7 Constrain Clocks/Macros
 
 Phase 1.1.7.1 Constrain Global/Regional Clocks
-Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: 17892ef6a
+Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: 211ef8118
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:24 . Memory (MB): peak = 2019.645 ; gain = 55.027
-Phase 1.1.7 Constrain Clocks/Macros | Checksum: 183c84cf0
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2019.641 ; gain = 55.027
+Phase 1.1.7 Constrain Clocks/Macros | Checksum: 21d24de9e
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2019.645 ; gain = 55.027
-Phase 1.1 Placer Initialization Core | Checksum: 183c84cf0
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2019.641 ; gain = 55.027
+Phase 1.1 Placer Initialization Core | Checksum: 21d24de9e
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 2019.645 ; gain = 55.027
-Phase 1 Placer Initialization | Checksum: 183c84cf0
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:26 . Memory (MB): peak = 2019.641 ; gain = 55.027
+Phase 1 Placer Initialization | Checksum: 21d24de9e
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:26 . Memory (MB): peak = 2019.645 ; gain = 55.027
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:26 . Memory (MB): peak = 2019.641 ; gain = 55.027
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1c86ac574
+Phase 2 Global Placement | Checksum: 2ac8741d6
 
-Time (s): cpu = 00:02:12 ; elapsed = 00:01:01 . Memory (MB): peak = 2039.082 ; gain = 74.465
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:01 . Memory (MB): peak = 2038.141 ; gain = 73.527
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1c86ac574
+Phase 3.1 Commit Multi Column Macros | Checksum: 2ac8741d6
 
-Time (s): cpu = 00:02:12 ; elapsed = 00:01:02 . Memory (MB): peak = 2039.082 ; gain = 74.465
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:01 . Memory (MB): peak = 2038.141 ; gain = 73.527
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20c335761
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 21b74e790
 
-Time (s): cpu = 00:02:30 ; elapsed = 00:01:08 . Memory (MB): peak = 2039.082 ; gain = 74.465
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:08 . Memory (MB): peak = 2038.141 ; gain = 73.527
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 163183c51
+Phase 3.3 Area Swap Optimization | Checksum: 264bd9f75
 
-Time (s): cpu = 00:02:31 ; elapsed = 00:01:09 . Memory (MB): peak = 2039.082 ; gain = 74.465
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:09 . Memory (MB): peak = 2038.141 ; gain = 73.527
 
 Phase 3.4 Timing Path Optimizer
-Phase 3.4 Timing Path Optimizer | Checksum: 147c5f464
+Phase 3.4 Timing Path Optimizer | Checksum: 2192d95de
 
-Time (s): cpu = 00:02:40 ; elapsed = 00:01:12 . Memory (MB): peak = 2039.082 ; gain = 74.465
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:12 . Memory (MB): peak = 2038.141 ; gain = 73.527
 
 Phase 3.5 Commit Small Macros & Core Logic
-Phase 3.5 Commit Small Macros & Core Logic | Checksum: 2aa1beaa7
+Phase 3.5 Commit Small Macros & Core Logic | Checksum: 1680c41b5
 
-Time (s): cpu = 00:02:59 ; elapsed = 00:01:26 . Memory (MB): peak = 2115.617 ; gain = 151.000
+Time (s): cpu = 00:02:58 ; elapsed = 00:01:26 . Memory (MB): peak = 2114.902 ; gain = 150.289
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 2aa1beaa7
+Phase 3.6 Re-assign LUT pins | Checksum: 1680c41b5
 
-Time (s): cpu = 00:03:02 ; elapsed = 00:01:28 . Memory (MB): peak = 2116.617 ; gain = 152.000
-Phase 3 Detail Placement | Checksum: 2aa1beaa7
+Time (s): cpu = 00:03:01 ; elapsed = 00:01:28 . Memory (MB): peak = 2115.902 ; gain = 151.289
+Phase 3 Detail Placement | Checksum: 1680c41b5
 
-Time (s): cpu = 00:03:02 ; elapsed = 00:01:29 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:03:01 ; elapsed = 00:01:29 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 PCOPT Shape updates
-Phase 4.1 PCOPT Shape updates | Checksum: 226c878cf
+Phase 4.1 PCOPT Shape updates | Checksum: 10cc11cf9
 
-Time (s): cpu = 00:03:03 ; elapsed = 00:01:29 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
 Phase 4.2 Post Placement Optimization
 
 Phase 4.2.1 Post Placement Timing Optimization
 
 Phase 4.2.1.1 Restore Best Placement
-Phase 4.2.1.1 Restore Best Placement | Checksum: 1ef206864
+Phase 4.2.1.1 Restore Best Placement | Checksum: 25ba4710d
 
-Time (s): cpu = 00:03:24 ; elapsed = 00:01:40 . Memory (MB): peak = 2116.617 ; gain = 152.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.561. For the most accurate timing information please run report_timing.
-Phase 4.2.1 Post Placement Timing Optimization | Checksum: 1ef206864
+Time (s): cpu = 00:04:35 ; elapsed = 00:02:53 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
-Time (s): cpu = 00:03:24 ; elapsed = 00:01:40 . Memory (MB): peak = 2116.617 ; gain = 152.000
-Phase 4.2 Post Placement Optimization | Checksum: 1ef206864
+Phase 4.2.1.2 updateTiming after Restore Best Placement
+Phase 4.2.1.2 updateTiming after Restore Best Placement | Checksum: 25ba4710d
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:01:41 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:04:35 ; elapsed = 00:02:53 . Memory (MB): peak = 2115.902 ; gain = 151.289
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.000. For the most accurate timing information please run report_timing.
+Phase 4.2.1 Post Placement Timing Optimization | Checksum: 25ba4710d
+
+Time (s): cpu = 00:04:36 ; elapsed = 00:02:54 . Memory (MB): peak = 2115.902 ; gain = 151.289
+Phase 4.2 Post Placement Optimization | Checksum: 25ba4710d
+
+Time (s): cpu = 00:04:36 ; elapsed = 00:02:54 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
 Phase 4.3 Post Placement Cleanup
-Phase 4.3 Post Placement Cleanup | Checksum: 1ef206864
+Phase 4.3 Post Placement Cleanup | Checksum: 25ba4710d
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:01:41 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:04:37 ; elapsed = 00:02:55 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
 Phase 4.4 Placer Reporting
 
 Phase 4.4.1 Restore STA
-Phase 4.4.1 Restore STA | Checksum: 1ef206864
+Phase 4.4.1 Restore STA | Checksum: 25ba4710d
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:01:42 . Memory (MB): peak = 2116.617 ; gain = 152.000
-Phase 4.4 Placer Reporting | Checksum: 1ef206864
+Time (s): cpu = 00:04:37 ; elapsed = 00:02:55 . Memory (MB): peak = 2115.902 ; gain = 151.289
+Phase 4.4 Placer Reporting | Checksum: 25ba4710d
 
-Time (s): cpu = 00:03:30 ; elapsed = 00:01:43 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:04:42 ; elapsed = 00:02:56 . Memory (MB): peak = 2115.902 ; gain = 151.289
 
 Phase 4.5 Final Placement Cleanup
-Phase 4.5 Final Placement Cleanup | Checksum: 21c87c1c8
+Phase 4.5 Final Placement Cleanup | Checksum: 2890bca71
 
-Time (s): cpu = 00:03:30 ; elapsed = 00:01:43 . Memory (MB): peak = 2116.617 ; gain = 152.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 21c87c1c8
+Time (s): cpu = 00:04:42 ; elapsed = 00:02:57 . Memory (MB): peak = 2115.902 ; gain = 151.289
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2890bca71
 
-Time (s): cpu = 00:03:31 ; elapsed = 00:01:44 . Memory (MB): peak = 2116.617 ; gain = 152.000
-Ending Placer Task | Checksum: 1c153d986
+Time (s): cpu = 00:04:43 ; elapsed = 00:02:57 . Memory (MB): peak = 2115.902 ; gain = 151.289
+Ending Placer Task | Checksum: 1e60d97ac
 
-Time (s): cpu = 00:03:31 ; elapsed = 00:01:44 . Memory (MB): peak = 2116.617 ; gain = 152.000
+Time (s): cpu = 00:04:43 ; elapsed = 00:02:57 . Memory (MB): peak = 2115.902 ; gain = 151.289
 INFO: [Common 17-83] Releasing license: Implementation
 36 Infos, 19 Warnings, 11 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:03:34 ; elapsed = 00:01:47 . Memory (MB): peak = 2116.617 ; gain = 152.000
+place_design: Time (s): cpu = 00:04:46 ; elapsed = 00:03:00 . Memory (MB): peak = 2115.902 ; gain = 151.289
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2117.617 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2117.617 ; gain = 1.000
-report_utilization: Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.74 . Memory (MB): peak = 2117.617 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2116.902 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2116.902 ; gain = 1.000
+report_utilization: Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2116.902 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
@@ -10352,90 +10357,124 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Starting Route Task
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: a190b2f3
+Phase 1 Build RT Design | Checksum: 17cd4beff
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:41 . Memory (MB): peak = 2408.523 ; gain = 239.680
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:42 . Memory (MB): peak = 2409.809 ; gain = 245.680
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: a190b2f3
+Phase 2.1 Create Timer | Checksum: 17cd4beff
 
-Time (s): cpu = 00:02:10 ; elapsed = 00:01:42 . Memory (MB): peak = 2408.523 ; gain = 239.680
+Time (s): cpu = 00:02:11 ; elapsed = 00:01:42 . Memory (MB): peak = 2409.809 ; gain = 245.680
 
 Phase 2.2 Update Timing
-Phase 2.2 Update Timing | Checksum: 1ad99d67c
+Phase 2.2 Update Timing | Checksum: 15d603a99
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:57 . Memory (MB): peak = 2481.855 ; gain = 313.012
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.669  | TNS=0      | WHS=-0.437 | THS=-815   |
+Time (s): cpu = 00:02:41 ; elapsed = 00:01:57 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0026| TNS=-0.0026| WHS=-0.466 | THS=-777   |
 
-Phase 2 Router Initialization | Checksum: 2a78b53e
+Phase 2 Router Initialization | Checksum: 1bb03de9b
 
-Time (s): cpu = 00:02:55 ; elapsed = 00:02:03 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:02:55 ; elapsed = 00:02:03 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 10bab1ebf
+Phase 3 Initial Routing | Checksum: 1d34aafd1
 
-Time (s): cpu = 00:03:18 ; elapsed = 00:02:07 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:03:17 ; elapsed = 00:02:07 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 5178
- Number of Nodes with overlaps = 354
- Number of Nodes with overlaps = 52
- Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 4769
+ Number of Nodes with overlaps = 318
+ Number of Nodes with overlaps = 125
+ Number of Nodes with overlaps = 29
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 8
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 14b5576a2
+Phase 4.1.1 Update Timing | Checksum: 10cb20284
 
-Time (s): cpu = 00:04:01 ; elapsed = 00:02:21 . Memory (MB): peak = 2481.855 ; gain = 313.012
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.361  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:01 ; elapsed = 00:02:23 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.196 | TNS=-8.84  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: fb1955a9
 
-Time (s): cpu = 00:04:01 ; elapsed = 00:02:22 . Memory (MB): peak = 2481.855 ; gain = 313.012
-Phase 4 Rip-up And Reroute | Checksum: fb1955a9
+Phase 4.1.2 GlobIterForTiming
 
-Time (s): cpu = 00:04:01 ; elapsed = 00:02:22 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: 13547472c
+
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:24 . Memory (MB): peak = 2480.141 ; gain = 316.012
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: 13547472c
+
+Time (s): cpu = 00:04:03 ; elapsed = 00:02:25 . Memory (MB): peak = 2480.141 ; gain = 316.012
+Phase 4.1.2 GlobIterForTiming | Checksum: 1aa1fe85a
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:02:25 . Memory (MB): peak = 2480.141 ; gain = 316.012
+Phase 4.1 Global Iteration 0 | Checksum: 1aa1fe85a
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:02:26 . Memory (MB): peak = 2480.141 ; gain = 316.012
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 306
+ Number of Nodes with overlaps = 125
+ Number of Nodes with overlaps = 39
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.2.1 Update Timing
+Phase 4.2.1 Update Timing | Checksum: 0b020d22
+
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:31 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.246 | TNS=-12.9  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 17bef8632
+
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:31 . Memory (MB): peak = 2480.141 ; gain = 316.012
+Phase 4 Rip-up And Reroute | Checksum: 17bef8632
+
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:31 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 5 Delay CleanUp
 
 Phase 5.1 Update Timing
-Phase 5.1 Update Timing | Checksum: fb1955a9
+Phase 5.1 Update Timing | Checksum: 17bef8632
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:23 . Memory (MB): peak = 2481.855 ; gain = 313.012
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.374  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:18 ; elapsed = 00:02:32 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.111 | TNS=-1.21  | WHS=N/A    | THS=N/A    |
 
-Phase 5 Delay CleanUp | Checksum: fb1955a9
+ Number of Nodes with overlaps = 0
+Phase 5 Delay CleanUp | Checksum: 1856ced6a
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:23 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:19 ; elapsed = 00:02:32 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 6 Clock Skew Optimization
-Phase 6 Clock Skew Optimization | Checksum: fb1955a9
+Phase 6 Clock Skew Optimization | Checksum: 1856ced6a
 
-Time (s): cpu = 00:04:06 ; elapsed = 00:02:23 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:19 ; elapsed = 00:02:32 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: fb1955a9
+Phase 7.1 Update Timing | Checksum: 1856ced6a
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:02:25 . Memory (MB): peak = 2481.855 ; gain = 313.012
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.374  | TNS=0      | WHS=-0.308 | THS=-3.94  |
+Time (s): cpu = 00:04:27 ; elapsed = 00:02:35 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.111 | TNS=-1.21  | WHS=-0.032 | THS=-0.082 |
 
-Phase 7 Post Hold Fix | Checksum: 7648fce3
+Phase 7 Post Hold Fix | Checksum: 13f2feca1
 
-Time (s): cpu = 00:04:17 ; elapsed = 00:02:26 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:28 ; elapsed = 00:02:35 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.73743 %
-  Global Horizontal Routing Utilization  = 1.8858 %
+  Global Vertical Routing Utilization    = 1.70315 %
+  Global Horizontal Routing Utilization  = 1.85302 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -10444,64 +10483,70 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 7648fce3
+Congestion Report
+North Dir 1x1 Area, Max Cong = 72.0721%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 80.1802%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 77.9412%, No Congested Regions.
+Phase 8 Route finalize | Checksum: 13f2feca1
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:02:26 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:29 ; elapsed = 00:02:35 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 7648fce3
+Phase 9 Verifying routed nets | Checksum: 13f2feca1
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:02:26 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:29 ; elapsed = 00:02:35 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 3a4d9424
+Phase 10 Depositing Routes | Checksum: 16bb53bb2
 
-Time (s): cpu = 00:04:21 ; elapsed = 00:02:29 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:31 ; elapsed = 00:02:38 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Phase 11 Post Router Timing
 
 Phase 11.1 Update Timing
-Phase 11.1 Update Timing | Checksum: 3a4d9424
+Phase 11.1 Update Timing | Checksum: 16bb53bb2
 
-Time (s): cpu = 00:04:28 ; elapsed = 00:02:30 . Memory (MB): peak = 2481.855 ; gain = 313.012
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.374  | TNS=0      | WHS=0.026  | THS=0      |
+Time (s): cpu = 00:04:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2480.141 ; gain = 316.012
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.111 | TNS=-1.21  | WHS=0.026  | THS=0      |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 11 Post Router Timing | Checksum: 3a4d9424
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 11 Post Router Timing | Checksum: 16bb53bb2
 
-Time (s): cpu = 00:04:28 ; elapsed = 00:02:30 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2480.141 ; gain = 316.012
 INFO: [Route 35-16] Router Completed Successfully
-Ending Route Task | Checksum: 3a4d9424
+Ending Route Task | Checksum: 16bb53bb2
 
-Time (s): cpu = 00:04:28 ; elapsed = 00:02:30 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2480.141 ; gain = 316.012
 
 Routing Is Done.
 
-Time (s): cpu = 00:04:28 ; elapsed = 00:02:30 . Memory (MB): peak = 2481.855 ; gain = 313.012
+Time (s): cpu = 00:04:39 ; elapsed = 00:02:39 . Memory (MB): peak = 2480.141 ; gain = 316.012
 INFO: [Common 17-83] Releasing license: Implementation
-49 Infos, 19 Warnings, 11 Critical Warnings and 0 Errors encountered.
+49 Infos, 20 Warnings, 11 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:36 ; elapsed = 00:02:35 . Memory (MB): peak = 2481.855 ; gain = 364.238
+route_design: Time (s): cpu = 00:04:46 ; elapsed = 00:02:44 . Memory (MB): peak = 2480.141 ; gain = 363.238
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2481.855 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2481.855 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2480.141 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2480.141 ; gain = 0.000
 INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 2480.141 ; gain = 0.000
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:33 ; elapsed = 00:00:10 . Memory (MB): peak = 2481.855 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:00:33 ; elapsed = 00:00:10 . Memory (MB): peak = 2480.141 ; gain = 0.000
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1, power analysis is using 0 by default.
 Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets scemi_pcie_ep/pcie_7x_v1_10_i/SR[0]]'  to set the static_probability to '1'  if desired.
-WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1, power analysis is using 0 by default.
-Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets scemi_scemi_clkgen_rReset]'  to set the static_probability to '1'  if desired.
-report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2481.855 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.141 ; gain = 0.000
 Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
 Running DRC as a precondition to command write_bitstream
@@ -10521,10 +10566,10 @@ sh: 1: Syntax error: Bad fd number
 sh: 1: Syntax error: Bad fd number
 INFO: [Common 17-185] WebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:01:52 ; elapsed = 00:01:49 . Memory (MB): peak = 2905.152 ; gain = 423.297
-INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:08:43 2016...
-[Mon May  2 20:08:43 2016] impl_1 finished
-wait_on_run: Time (s): cpu = 00:00:00.48 ; elapsed = 00:08:10 . Memory (MB): peak = 1610.641 ; gain = 0.000
+write_bitstream: Time (s): cpu = 00:01:52 ; elapsed = 00:01:49 . Memory (MB): peak = 2901.438 ; gain = 421.297
+INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:33:35 2016...
+[Mon May  2 20:33:38 2016] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:00.49 ; elapsed = 00:09:36 . Memory (MB): peak = 1610.637 ; gain = 0.000
 # file copy -force mkBridge/mkBridge.runs/impl_1/mkBridge.bit ./mkBridge.bit
 # file copy -force mkBridge/mkBridge.runs/impl_1/mkBridge.bit ./fpga.bit
 # file copy -force mkBridge/mkBridge.runs/synth_1/runme.log         ./mkBridge.slog
@@ -10542,33 +10587,34 @@ wait_on_run: Time (s): cpu = 00:00:00.48 ; elapsed = 00:08:10 . Memory (MB): pea
 INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.1
-Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-26834-bdbm11/dcp/mkBridge_early.xdc]
-Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-26834-bdbm11/dcp/mkBridge_early.xdc]
-Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-26834-bdbm11/dcp/mkBridge.xdc]
+Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-27617-bdbm11/dcp/mkBridge_early.xdc]
+Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-27617-bdbm11/dcp/mkBridge_early.xdc]
+Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-27617-bdbm11/dcp/mkBridge.xdc]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
 INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
-get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2210.938 ; gain = 556.359
-Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-26834-bdbm11/dcp/mkBridge.xdc]
+get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2210.934 ; gain = 556.359
+Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/.Xil/Vivado-27617-bdbm11/dcp/mkBridge.xdc]
 Reading XDEF placement.
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2216.938 ; gain = 6.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2216.934 ; gain = 6.000
 Restoring placement.
-Restored 6133 out of 6133 XDEF sites from archive | CPU: 4.940000 secs | Memory: 55.894608 MB |
+Restored 6127 out of 6127 XDEF sites from archive | CPU: 4.960000 secs | Memory: 55.856598 MB |
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 95 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 94 instances
 
-open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2234.008 ; gain = 623.367
+open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2234.004 ; gain = 623.367
 # report_utilization -hierarchical -file $UTIL_RPT
-report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2255.984 ; gain = 21.977
+report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2255.980 ; gain = 21.977
 # report_timing_summary -warn_on_violation -delay_type min_max -check_timing_verbose -max_paths 10 -input_pins -file $TIMING_RPT
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:33 ; elapsed = 00:00:09 . Memory (MB): peak = 2402.926 ; gain = 146.941
-INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:09:32 2016...
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:00:34 ; elapsed = 00:00:10 . Memory (MB): peak = 2399.594 ; gain = 143.613
+INFO: [Common 17-206] Exiting Vivado at Mon May  2 20:34:28 2016...

@@ -1,1 +1,2 @@
-No timing errors exist.
+WARNING:  **********  TIMING ERRORS DETECTED  **********
+1 timing errors exist.  Please consult xilinx/mkBridge/mkBridge.runs/impl_1/mkBridge_timing_summary_routed.rpt for details.
