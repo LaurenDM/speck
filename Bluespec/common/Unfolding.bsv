@@ -3,7 +3,7 @@ import FIFO::*; // for outputfifo
 import Vector::*;
 import SpeckTypes::*;
 
-typedef 1 STAGES;
+typedef 2 STAGES;
 
 (* synthesize *)
 module mkSynthesizedUnfoldEncrypt(EncryptDecrypt#(N,M,T));

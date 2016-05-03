@@ -115,20 +115,23 @@ endmodule
 
 
 module mkSpeckTest(Empty); // this test tests the throughput implementation
-    OperationMode#(N,M,T) ofb <- mkOFB();
-    SetKeyIV#(N,M,T) tp <- mkOpModeThroughputTest(ofb);
+    //OperationMode#(N,M,T) ofb <- mkOFB();
+    //SetKeyIV#(N,M,T) tp <- mkOpModeThroughputTest(ofb);
+    EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt_unfold();
+    SetKey#(N,M,T) tp <- mkThroughputTest(encrypt);
 
     Vector#(M, UInt#(N)) key = newVector();
     key[0] = 'h020100;
     key[1] = 'h0a0908;
     key[2] = 'h121110;
     key[3] = 'h1a1918;
-    Block#(N) iv = tuple2('h735e10, 'hb6445d);
+    //Block#(N) iv = tuple2('h735e10, 'hb6445d);
 
     Reg#(Status) status <- mkReg(Keyset);
 
     rule setEncKey(status==Keyset);
-        tp.setKeyIV(key,iv);
+        //tp.setKeyIV(key,iv);
+        tp.setKey(key);
         status <= Check;
         $display("set enc key");
     endrule

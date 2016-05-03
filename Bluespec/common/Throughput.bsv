@@ -10,7 +10,7 @@ typedef 10 INITAMOUNT;
 
 interface SetKey#(numeric type n, numeric type m, numeric type t);
     method Action setKey(Vector#(m,UInt#(n)) key);
-    method ActionValue#(Bool) ready();
+    method ActionValue#(Tuple2#(Bool,Bit#(32))) ready();
 endinterface
 
 interface SetKeyIV#(numeric type n, numeric type m, numeric type t);
@@ -45,6 +45,9 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     Reg#(int) countin <- mkReg(0);
     Reg#(int) countout <-mkReg(0);
 
+    Reg#(int) clkcount <- mkReg(0);
+    Reg#(Bool) counting <- mkReg(False);
+
     // FIRST TEST INPUTS
     Vector#(INITAMOUNT,Block#(N)) testvector = newVector();
     // generated with cpp program:
@@ -58,6 +61,11 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     testvector[7] = tuple2('h656761, 'h737520);
     testvector[8] = tuple2('h656d69, 'h74206e);
     testvector[9] = tuple2('h69202c, 'h726576);
+
+    rule count if(counting);
+        clkcount <= clkcount +1;
+        //$display("clk = %d, countin = %d, countout = %d",clkcount,countin, countout);
+    endrule
 
     rule feed if(started);
         let x = ?;
@@ -87,10 +95,16 @@ module mkThroughputTest(EncryptDecrypt#(N,M,T) engine, SetKey#(N,M,T) ifc);
     method Action setKey(Vector#(M,UInt#(N)) key) if (!started);
         engine.setKey(key);
         started <= True;
+        counting <= True;
     endmethod
 
-    method ActionValue#(Bool) ready();
-        return (countout == fromInteger(valueof(TESTAMOUNT)));
+    method ActionValue#(Tuple2#(Bool,Bit#(32))) ready();
+        if (countout == fromInteger(valueof(TESTAMOUNT))) begin
+            //$display("clk = %d",clkcount);
+            return tuple2(True,pack(clkcount));
+        end
+        else
+            return tuple2(False,0);
     endmethod
 endmodule
 
