@@ -5,7 +5,7 @@ import Speck::*;
 import Unfolding::*;
 import OFB::*;
 
-typedef 20000000 TESTAMOUNT;
+typedef 1000000 TESTAMOUNT;
 typedef 10 INITAMOUNT;
 
 interface SetKey#(numeric type n, numeric type m, numeric type t);
@@ -15,7 +15,7 @@ endinterface
 
 interface SetKeyIV#(numeric type n, numeric type m, numeric type t);
     method Action setKeyIV(Vector#(m,UInt#(n)) key, Block#(n) iv);
-    method ActionValue#(Bool) ready();
+    method ActionValue#(Tuple2#(Bool,Bit#(32))) ready();
 endinterface
 
 (* synthesize *)
@@ -152,12 +152,12 @@ module mkOpModeThroughputTest(OperationMode#(N,M,T) engine, SetKeyIV#(N,M,T) ifc
         counting <= True;
     endmethod
 
-    method ActionValue#(Bool) ready();
+    method ActionValue#(Tuple2#(Bool,Bit#(32))) ready();
         if (countout == fromInteger(valueof(TESTAMOUNT))) begin
-            $display("clk = %d",clkcount);
-            return True;
+            //$display("clk = %d",clkcount);
+            return tuple2(True,pack(clkcount));
         end
         else
-            return False;
+            return tuple2(False,0);
     endmethod
 endmodule

@@ -135,7 +135,8 @@ module mkSpeckTest(Empty); // this test tests the throughput implementation
 
     rule check(status==Check);
         let x <- tp.ready();
-        if(x) begin
+        if(tpl_1(x)) begin
+            $display("clk = %d",tpl_2(x));
             status <= Finish;
         end
     endrule

@@ -15,27 +15,26 @@ typedef u24 word;
 bool outdone = false;
 
 
-void out_cb(void* x, const BitT<64>& duration)
+void out_cb(void* x, const BitT<32>& cycles)
 {
     if(!outdone){
       outdone = true;
-      printf("duration scemi = %d \n",duration);
+      printf("cycles = %d \n",cycles.get());
     }
 }
 
 void runtest(InportProxyT<Key_Iv>& keyport, Key_Iv ki)
 {
     clock_t starttime,endtime;
-    int count = 0;
     outdone=false;
+    printf("sending \n");
     keyport.sendMessage(ki);
     starttime =clock();
     while (!outdone) {
         sleep(0);
-        count = count + 1;
     }
     endtime=clock();
-    printf("done, duration = %f seconds, count = %d \n",((float) endtime-starttime)/CLOCKS_PER_SEC,count);
+    printf("done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 }
 
 int main(int argc, char* argv[])
@@ -49,7 +48,7 @@ int main(int argc, char* argv[])
     InportProxyT<Key_Iv> setkey ("", "scemi_setkey_inport", sceMi);
 
     // Initialize the SceMi outport
-    OutportProxyT<BitT<64> > outport ("", "scemi_processor_resp_outport", sceMi);
+    OutportProxyT<BitT<32> > outport ("", "scemi_processor_resp_outport", sceMi);
     outport.setCallBack(out_cb, NULL);
 
     // Initialize the reset port.

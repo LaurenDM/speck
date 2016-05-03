@@ -13,7 +13,7 @@ import SpeckTypes::*;
 import FixedPoint::*;
 import Vector::*;
 
-typedef Server#(Bool, Bit#(64)) DutInterface;
+typedef Server#(Bool, Bit#(32)) DutInterface;
 interface SettableDutInterface;
    interface DutInterface dut;
    interface Put#(Key_Iv) setkey;
@@ -28,25 +28,27 @@ module [Module] mkDutWrapper#(Clock clk_usr)(SettableDutInterface);
    Reset rst_usr <- mkAsyncResetFromCR(6, clk_usr);
    SyncFIFOIfc#(Key_Iv) toKeySyncQ <- mkSyncFIFOFromCC(2, clk_usr);
    SyncFIFOIfc#(Bool) toSyncQ <- mkSyncFIFOFromCC(2, clk_usr);          //clk_scemi -> clk_usr
-   SyncFIFOIfc#(Bit#(64)) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr);
+   SyncFIFOIfc#(Bit#(32)) fromSyncQ <- mkSyncFIFOToCC(2, clk_usr, rst_usr);
 
-   Reg#(Bit#(64)) timer <- mkReg(0);
+   //Reg#(Bit#(64)) starttime <- mkReg(0);
 
    SetKeyIV#(N,M,T) tpOfb <- mkThroughputOFB(clocked_by clk_usr, reset_by rst_usr);
 
    rule putKey;
       let key_iv = toKeySyncQ.first;
       toKeySyncQ.deq;
-      let x = $time;
-      timer <= x;
+      //let t <- $time;
+      //starttime <= t;
       tpOfb.setKeyIV(key_iv.key, key_iv.iv);
    endrule
 
    rule getResponse;
       let x <- tpOfb.ready();
-      if(x)
-          let duration = $time - timer;
-          fromSyncQ.enq(duration);
+      //let endtime = ?;
+      if(tpl_1(x))
+          //endtime <- $time;
+          //let duration = endtime - starttime;
+          fromSyncQ.enq(tpl_2(x));
    endrule
 
    interface DutInterface dut;

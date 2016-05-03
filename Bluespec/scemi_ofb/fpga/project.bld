@@ -2,7 +2,7 @@
 default-targets:     vc707_dut tb
 bsc-compile-options: -aggressive-conditions -keep-fires
 bsc-link-options:    -keep-fires
-bsv-define: USER_CLK_PERIOD=4
+bsv-define: USER_CLK_PERIOD=5
 
 [common]
 hide-target
