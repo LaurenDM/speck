@@ -15,10 +15,11 @@ typedef u24 word;
 bool outdone = false;
 
 
-void out_cb(void* x, const Bool& ready)
+void out_cb(void* x, const BitT<64>& duration)
 {
-    if(ready && !outdone){
-        outdone = true;
+    if(!outdone){
+      outdone = true;
+      printf("duration scemi = %d \n",duration);
     }
 }
 
@@ -48,7 +49,7 @@ int main(int argc, char* argv[])
     InportProxyT<Key_Iv> setkey ("", "scemi_setkey_inport", sceMi);
 
     // Initialize the SceMi outport
-    OutportProxyT<Bool > outport ("", "scemi_processor_resp_outport", sceMi);
+    OutportProxyT<BitT<64> > outport ("", "scemi_processor_resp_outport", sceMi);
     outport.setCallBack(out_cb, NULL);
 
     // Initialize the reset port.
