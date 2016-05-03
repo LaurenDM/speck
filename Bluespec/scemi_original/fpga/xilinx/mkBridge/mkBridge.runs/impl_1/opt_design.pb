@@ -161,7 +161,7 @@ D
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1836.508 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1836.508 ; gain = 0.0002default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -194,7 +194,7 @@ A
 
 %s
 *constraints2q
-]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1970.531 ; gain = 134.0232default:default
+]Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1969.531 ; gain = 133.0232default:default
 Q
 Releasing license: %s
 83*common2"
@@ -217,8 +217,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 opt_design: 2default:default2
 00:00:222default:default2
 00:00:192default:default2
-1970.5312default:default2
-138.0432default:defaultZ17-268
+1969.5312default:default2
+137.0432default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -232,9 +232,9 @@ A
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
-00:00:00.542default:default2
+00:00:00.552default:default2
 00:00:00.612default:default2
-1971.5312default:default2
+1970.5312default:default2
 0.0002default:defaultZ17-268
 
 
