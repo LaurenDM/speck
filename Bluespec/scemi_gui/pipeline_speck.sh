@@ -2,13 +2,11 @@
 
 set -euf -o pipefail
 
-#-- compile and run Speck GUI --#
-javac SpeckGUI.java
-java SpeckGUI
-
-#-- we can program FPGA from here; things to decide downstream --#
+#-- we'll do these only once --#
 # cd fgpa
 # programfpga xilinx/mkBridge.bit
+javac SpeckGUI.java #compile GUI
 
-#-- run tb --#
+#-- run GUI and tb --#
+java SpeckGUI
 #runtb ./tb
