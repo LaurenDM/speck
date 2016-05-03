@@ -10,7 +10,7 @@ a
 ]
 -Analyzing %s Unisim elements for replacement
 17*netlist2
-552default:defaultZ29-17
+652default:defaultZ29-17
 a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
@@ -217,8 +217,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 get_clocks: 2default:default2
 00:00:182default:default2
 00:00:172default:default2
-1803.6212default:default2
-562.4532default:defaultZ17-268
+1804.8482default:default2
+563.6802default:defaultZ17-268
 ¨
 Finished Parsing XDC File [%s]
 178*designutils2i
@@ -230,9 +230,9 @@ C
 •
 !Unisim Transformation Summary:
 %s111*project2Ø
-Ã  A total of 17 instances were transformed.
-  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 14 instances
+Ã  A total of 27 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 26 instances
 2default:defaultZ1-111
 ý
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
@@ -240,8 +240,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 link_design: 2default:default2
 00:00:402default:default2
 00:00:402default:default2
-1803.6212default:default2
-1049.5942default:defaultZ17-268
+1804.8482default:default2
+1050.8202default:defaultZ17-268
 
 
 End Record

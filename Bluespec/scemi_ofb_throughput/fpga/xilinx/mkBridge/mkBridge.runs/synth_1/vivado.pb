@@ -11995,6 +11995,30 @@ V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkB
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
 33782default:default8@Z8-4446
+ 
+synthesizing module '%s'638*oasys2,
+SyncFIFO__parameterized12default:default2M
+7/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v2default:default2
+532default:default8@Z8-638
+V
+%s*synth2G
+3	Parameter dataWidth bound to: 32 - type: integer 
+2default:default
+Q
+%s*synth2B
+.	Parameter depth bound to: 2 - type: integer 
+2default:default
+U
+%s*synth2F
+2	Parameter indxWidth bound to: 1 - type: integer 
+2default:default
+Ü
+%done synthesizing module '%s' (%s#%s)256*oasys2,
+SyncFIFO__parameterized12default:default2
+632default:default2
+12default:default2M
+7/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v2default:default2
+532default:default8@Z8-256
 Ì
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
@@ -12314,7 +12338,7 @@ V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkB
 36122default:default8@Z8-4446
  
 synthesizing module '%s'638*oasys2,
-SyncFIFO__parameterized12default:default2M
+SyncFIFO__parameterized22default:default2M
 7/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v2default:default2
 532default:default8@Z8-638
 W
@@ -12331,7 +12355,7 @@ U
 2default:default
 Ü
 %done synthesizing module '%s' (%s#%s)256*oasys2,
-SyncFIFO__parameterized12default:default2
+SyncFIFO__parameterized22default:default2
 632default:default2
 12default:default2M
 7/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v2default:default2
@@ -12405,7 +12429,7 @@ C
 Û
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2s
 ]/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkThroughputOFB.v2default:default2
-5642default:default8@Z8-4446
+5662default:default8@Z8-4446
 £
 %done synthesizing module '%s' (%s#%s)256*oasys2#
 mkThroughputOFB2default:default2
@@ -12829,9 +12853,9 @@ _
 %s*synth2O
 ;	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
 2default:default
-b
-%s*synth2S
-?	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: float 
+a
+%s*synth2R
+>	Parameter CLKOUT0_DIVIDE_F bound to: 5.000000 - type: float 
 2default:default
 c
 %s*synth2T
@@ -12921,167 +12945,167 @@ V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkB
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-64862default:default8@Z8-3536
+64902default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-65092default:default8@Z8-3536
+65132default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-65322default:default8@Z8-3536
+65362default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-70982default:default8@Z8-3536
+71022default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-71212default:default8@Z8-3536
+71252default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-71442default:default8@Z8-3536
+71482default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-71672default:default8@Z8-3536
+71712default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-71992default:default8@Z8-3536
+72032default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-72232default:default8@Z8-3536
+72272default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-72482default:default8@Z8-3536
+72522default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-72732default:default8@Z8-3536
+72772default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-72982default:default8@Z8-3536
+73022default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-73972default:default8@Z8-3536
+74012default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-74692default:default8@Z8-3536
+74732default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-75002default:default8@Z8-3536
+75042default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-75202default:default8@Z8-3536
+75242default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-75472default:default8@Z8-3536
+75512default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-76852default:default8@Z8-3536
+76892default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-77532default:default8@Z8-3536
+77572default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-77782default:default8@Z8-3536
+77822default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-78012default:default8@Z8-3536
+78052default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-78242default:default8@Z8-3536
+78282default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-78922default:default8@Z8-3536
+78962default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-81072default:default8@Z8-3536
+81112default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-82272default:default8@Z8-3536
+82312default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-83012default:default8@Z8-3536
+83052default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-83342default:default8@Z8-3536
+83382default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-84062default:default8@Z8-3536
+84102default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-86392default:default8@Z8-3536
+86432default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-87412default:default8@Z8-3536
+87452default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-89082default:default8@Z8-3536
+89122default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-89532default:default8@Z8-3536
+89572default:default8@Z8-3536
 â
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2l
 V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkBridge.v2default:default2
-93962default:default8@Z8-3536
+94002default:default8@Z8-3536
 ø
 merging register '%s' into '%s'3619*oasys27
 #scemi_setkey_inport_requestF_rv_reg2default:default2>
@@ -13140,7 +13164,7 @@ V/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkB
 02default:defaultZ8-3917
 ù
 %s*synth2ç
-yFinished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1016.027 ; gain = 378.949
+yFinished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1017.027 ; gain = 379.949
 2default:default
 ;
 %s*synth2,
@@ -13263,7 +13287,7 @@ u
 2default:defaultZ1-111
 ≤
 %s*synth2¢
-çFinished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1595.809 ; gain = 958.730
+çFinished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1595.895 ; gain = 958.816
 2default:default
 x
 %s*synth2i
@@ -13403,11 +13427,11 @@ Tcan't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto genera
 2default:default
 ∂
 %s*synth2¶
-ëFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1595.809 ; gain = 958.730
+ëFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1595.895 ; gain = 958.816
 2default:default
 û
 %s*synth2é
-zFinished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1595.809 ; gain = 958.730
+zFinished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1595.895 ; gain = 958.816
 2default:default
 ´
 merging register '%s' into '%s'3619*oasys29
@@ -13696,6 +13720,12 @@ t/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog
 user_reset_out_reg2default:default2ä
 t/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v2default:default2
 9172default:default8@Z8-4471
+ñ
+merging register '%s' into '%s'3619*oasys2#
+tp_counting_reg2default:default2#
+ofb_started_reg2default:default2s
+]/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb_throughput/fpga/vlog_dut/mkThroughputOFB.v2default:default2
+6072default:default8@Z8-4471
 ç
 øThe signal %s was recognized as a RAM template for dedicated block RAM(s) but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (%s address bits)* is shallow.
 3471*oasys2
@@ -13954,23 +13984,51 @@ Report RTL Partitions:
 2default:default
 ^
 %s*synth2O
-;|4     |mkBridge__GCB0           |           1|     40913|
+;|4     |mkBridge__GCB0           |           1|     33760|
 2default:default
 ^
 %s*synth2O
-;|5     |mkBridge__GCB1           |           1|     14150|
+;|5     |mkBridge__GCB1           |           1|     22602|
 2default:default
 ^
 %s*synth2O
-;|6     |mkBridge__GCB2           |           1|        80|
+;|6     |mkBridge__GCB2           |           1|       322|
 2default:default
 ^
 %s*synth2O
-;|7     |mkBridge__GCB3           |           1|     39972|
+;|7     |mkBridge__GCB3           |           1|     39488|
 2default:default
 ^
 %s*synth2O
-;|8     |mkBridge__GCB14          |           1|        14|
+;|8     |datapath__230__GD        |           1|        48|
+2default:default
+^
+%s*synth2O
+;|9     |reg__877                 |           1|        13|
+2default:default
+^
+%s*synth2O
+;|10    |case__1042__GD           |           1|         8|
+2default:default
+^
+%s*synth2O
+;|11    |reg__876                 |           1|        13|
+2default:default
+^
+%s*synth2O
+;|12    |mkBridge__GCB8           |           1|        25|
+2default:default
+^
+%s*synth2O
+;|13    |mkBridge__GCB9           |           1|         2|
+2default:default
+^
+%s*synth2O
+;|14    |mkBridge__GCB10          |           1|         2|
+2default:default
+^
+%s*synth2O
+;|15    |mkBridge__GCB26          |           1|        14|
 2default:default
 ^
 %s*synth2O
@@ -14010,7 +14068,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit       Adders := 3     
+.	   2 Input     19 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
@@ -14026,7 +14084,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     12 Bit       Adders := 3     
+.	   2 Input     12 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -14034,7 +14092,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     12 Bit       Adders := 3     
+.	   4 Input     12 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -14042,19 +14100,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit       Adders := 6     
-2default:default
-Q
-%s*synth2B
 .	   3 Input     10 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      9 Bit       Adders := 6     
+.	   2 Input     10 Bit       Adders := 6     
 2default:default
 Q
 %s*synth2B
 .	   3 Input      9 Bit       Adders := 3     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      9 Bit       Adders := 6     
 2default:default
 Q
 %s*synth2B
@@ -14078,11 +14136,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      5 Bit       Adders := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      5 Bit       Adders := 17    
+.	   4 Input      5 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
@@ -14090,7 +14144,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      5 Bit       Adders := 2     
+.	  16 Input      5 Bit       Adders := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      5 Bit       Adders := 17    
 2default:default
 Q
 %s*synth2B
@@ -14190,7 +14248,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	               32 Bit    Registers := 37    
+.	               32 Bit    Registers := 40    
 2default:default
 Q
 %s*synth2B
@@ -14206,7 +14264,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	               19 Bit    Registers := 11    
+.	               19 Bit    Registers := 10    
 2default:default
 Q
 %s*synth2B
@@ -14266,7 +14324,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	                1 Bit    Registers := 1896  
+.	                1 Bit    Registers := 1893  
 2default:default
 /
 %s*synth2 
@@ -14286,7 +14344,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	                2 Bit         RAMs := 6     
+.	               64 Bit         RAMs := 2     
+2default:default
+Q
+%s*synth2B
+.	                2 Bit         RAMs := 4     
 2default:default
 0
 %s*synth2!
@@ -14298,11 +14360,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input    128 Bit        Muxes := 2     
+.	   2 Input    128 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input    128 Bit        Muxes := 2     
+.	   4 Input    128 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14334,11 +14396,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  37 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 129   
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 128   
+.	  37 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14346,15 +14408,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  27 Input     24 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	  11 Input     24 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     24 Bit        Muxes := 107   
 2default:default
 Q
 %s*synth2B
@@ -14362,7 +14416,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 8     
+.	  27 Input     24 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     24 Bit        Muxes := 107   
 2default:default
 Q
 %s*synth2B
@@ -14370,19 +14428,23 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   5 Input     22 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
 .	   2 Input     20 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 12    
+.	   4 Input     19 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     19 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
 .	   7 Input     19 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   4 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14402,11 +14464,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input     16 Bit        Muxes := 2     
+.	   4 Input     16 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     16 Bit        Muxes := 1     
+.	   8 Input     16 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14438,11 +14500,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      9 Bit        Muxes := 2     
+.	   2 Input      9 Bit        Muxes := 27    
 2default:default
 Q
 %s*synth2B
-.	   2 Input      9 Bit        Muxes := 27    
+.	  10 Input      9 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14450,11 +14512,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      8 Bit        Muxes := 1     
+.	   4 Input      8 Bit        Muxes := 18    
 2default:default
 Q
 %s*synth2B
-.	   4 Input      8 Bit        Muxes := 18    
+.	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14466,7 +14528,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 148   
+.	   3 Input      6 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      6 Bit        Muxes := 147   
 2default:default
 Q
 %s*synth2B
@@ -14474,7 +14540,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  37 Input      6 Bit        Muxes := 1     
+.	   7 Input      6 Bit        Muxes := 40    
 2default:default
 Q
 %s*synth2B
@@ -14482,19 +14548,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 40    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      5 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   5 Input      5 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      5 Bit        Muxes := 2     
+.	  37 Input      6 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14506,7 +14560,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   5 Input      5 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   4 Input      5 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      5 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14514,7 +14576,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 175   
+.	   3 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14526,27 +14588,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  32 Input      3 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   8 Input      3 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      3 Bit        Muxes := 16    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      3 Bit        Muxes := 109   
-2default:default
-Q
-%s*synth2B
-.	   4 Input      3 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   9 Input      3 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 175   
 2default:default
 Q
 %s*synth2B
@@ -14554,7 +14596,35 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input      3 Bit        Muxes := 16    
+2default:default
+Q
+%s*synth2B
+.	  32 Input      3 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      3 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   8 Input      3 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   9 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 109   
+2default:default
+Q
+%s*synth2B
 .	   2 Input      2 Bit        Muxes := 55    
+2default:default
+Q
+%s*synth2B
+.	   7 Input      2 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -14566,23 +14636,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      2 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   5 Input      1 Bit        Muxes := 67    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 24    
-2default:default
-Q
-%s*synth2B
-.	  18 Input      1 Bit        Muxes := 7     
+.	  32 Input      1 Bit        Muxes := 152   
 2default:default
 Q
 %s*synth2B
@@ -14590,11 +14644,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input      1 Bit        Muxes := 151   
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 24    
+2default:default
+Q
+%s*synth2B
 .	  10 Input      1 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1172  
+.	   3 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -14602,15 +14664,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  32 Input      1 Bit        Muxes := 152   
-2default:default
-Q
-%s*synth2B
-.	   7 Input      1 Bit        Muxes := 151   
+.	  18 Input      1 Bit        Muxes := 7     
 2default:default
 Q
 %s*synth2B
 .	  13 Input      1 Bit        Muxes := 6     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 1172  
+2default:default
+Q
+%s*synth2B
+.	   5 Input      1 Bit        Muxes := 67    
 2default:default
 F
 %s*synth27
@@ -14638,7 +14704,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit       Adders := 3     
+.	   2 Input     19 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
@@ -14666,11 +14732,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit       Adders := 3     
+.	   4 Input      6 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input      6 Bit       Adders := 2     
+.	   2 Input      6 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -14734,11 +14800,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	               32 Bit    Registers := 13    
-2default:default
-Q
-%s*synth2B
-.	               19 Bit    Registers := 1     
+.	               32 Bit    Registers := 14    
 2default:default
 Q
 %s*synth2B
@@ -14782,7 +14844,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	                1 Bit    Registers := 102   
+.	                1 Bit    Registers := 101   
 2default:default
 0
 %s*synth2!
@@ -14798,11 +14860,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     64 Bit        Muxes := 1     
+.	   2 Input     64 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     64 Bit        Muxes := 1     
+.	   4 Input     64 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14818,7 +14880,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 4     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14842,19 +14904,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      8 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      8 Bit        Muxes := 4     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      8 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14866,7 +14928,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 1     
+.	   3 Input      6 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14894,7 +14956,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 17    
+.	   5 Input      1 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -14902,11 +14968,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 2     
+.	   4 Input      1 Bit        Muxes := 17    
 2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 3     
+4
+%s*synth2%
+Module SyncWire 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
 2default:default
 D
 %s*synth25
@@ -15422,19 +15492,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     13 Bit       Adders := 12    
-2default:default
-Q
-%s*synth2B
 .	   3 Input     13 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     12 Bit       Adders := 3     
+.	   2 Input     13 Bit       Adders := 12    
 2default:default
 Q
 %s*synth2B
 .	   2 Input     12 Bit       Adders := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input     12 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -15446,11 +15516,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit       Adders := 4     
+.	   3 Input     10 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     10 Bit       Adders := 1     
+.	   2 Input     10 Bit       Adders := 4     
 2default:default
 Q
 %s*synth2B
@@ -15478,11 +15548,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      5 Bit       Adders := 5     
+.	  16 Input      5 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	  16 Input      5 Bit       Adders := 1     
+.	   2 Input      5 Bit       Adders := 5     
 2default:default
 Q
 %s*synth2B
@@ -15662,11 +15732,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 8     
+.	   2 Input      2 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 8     
+.	   4 Input      2 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -15724,6 +15794,14 @@ B
 %s*synth23
 Detailed RTL Component Info : 
 2default:default
+9
+%s*synth2*
+Module ResetInverter 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
 R
 %s*synth2C
 /Module mkSceMiUInt32Parameter__parameterized3 
@@ -15756,33 +15834,9 @@ B
 %s*synth23
 Detailed RTL Component Info : 
 2default:default
-9
-%s*synth2*
-Module ResetInverter 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
 6
 %s*synth2'
 Module SyncReset0 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-7
-%s*synth2(
-Module SyncWire__1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-7
-%s*synth2(
-Module SyncWire__2 
 2default:default
 B
 %s*synth23
@@ -15799,6 +15853,22 @@ B
 9
 %s*synth2*
 Module SyncReset0__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+:
+%s*synth2+
+Module ResetEither__2 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+9
+%s*synth2*
+Module SyncReset0__2 
 2default:default
 B
 %s*synth23
@@ -15858,7 +15928,7 @@ Q
 2default:default
 :
 %s*synth2+
-Module ResetEither__2 
+Module ResetEither__3 
 2default:default
 B
 %s*synth23
@@ -15906,7 +15976,7 @@ Q
 2default:default
 9
 %s*synth2*
-Module SyncReset0__2 
+Module SyncReset0__3 
 2default:default
 B
 %s*synth23
@@ -15927,6 +15997,38 @@ B
 Q
 %s*synth2B
 .	                1 Bit    Registers := 1     
+2default:default
+<
+%s*synth2-
+Module ResetInverter__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+<
+%s*synth2-
+Module ResetInverter__2 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+F
+%s*synth27
+#Module SyncResetA__parameterized0 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	                3 Bit    Registers := 1     
 2default:default
 8
 %s*synth2)
@@ -15992,9 +16094,9 @@ Q
 %s*synth2B
 .	                1 Bit    Registers := 1     
 2default:default
-2
-%s*synth2#
-Module FIFOL1 
+I
+%s*synth2:
+&Module SyncResetA__parameterized1__1 
 2default:default
 B
 %s*synth23
@@ -16006,23 +16108,35 @@ B
 2default:default
 Q
 %s*synth2B
-.	               32 Bit    Registers := 1     
+.	                4 Bit    Registers := 1     
+2default:default
+F
+%s*synth27
+#Module SyncResetA__parameterized1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
 2default:default
 Q
 %s*synth2B
-.	                1 Bit    Registers := 1     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 3     
+.	                4 Bit    Registers := 1     
 2default:default
 :
 %s*synth2+
-Module ResetEither__3 
+Module ResetEither__4 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+:
+%s*synth2+
+Module ResetEither__5 
 2default:default
 B
 %s*synth23
@@ -16238,7 +16352,7 @@ Q
 2default:default
 G
 %s*synth28
-$Module SyncFIFO__parameterized0__1 
+$Module SyncFIFO__parameterized0__2 
 2default:default
 B
 %s*synth23
@@ -16348,9 +16462,9 @@ Q
 %s*synth2B
 .	                1 Bit    Registers := 4     
 2default:default
-G
-%s*synth28
-$Module SyncFIFO__parameterized0__2 
+D
+%s*synth25
+!Module SyncFIFO__parameterized1 
 2default:default
 B
 %s*synth23
@@ -16370,6 +16484,10 @@ Q
 2default:default
 Q
 %s*synth2B
+.	               32 Bit    Registers := 1     
+2default:default
+Q
+%s*synth2B
 .	                3 Bit    Registers := 2     
 2default:default
 Q
@@ -16378,7 +16496,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	                1 Bit    Registers := 3     
+.	                1 Bit    Registers := 2     
 2default:default
 /
 %s*synth2 
@@ -16386,7 +16504,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	                2 Bit         RAMs := 1     
+.	               64 Bit         RAMs := 1     
 2default:default
 0
 %s*synth2!
@@ -16396,9 +16514,9 @@ Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 2     
 2default:default
-:
-%s*synth2+
-Module ResetEither__4 
+7
+%s*synth2(
+Module ResetEither 
 2default:default
 B
 %s*synth23
@@ -16532,9 +16650,9 @@ Q
 %s*synth2B
 .	                1 Bit    Registers := 6     
 2default:default
-G
-%s*synth28
-$Module SyncFIFO__parameterized1__1 
+D
+%s*synth25
+!Module SyncFIFO__parameterized2 
 2default:default
 B
 %s*synth23
@@ -16607,6 +16725,422 @@ Q
 Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 3     
+2default:default
+G
+%s*synth28
+$Module SyncFIFO__parameterized1__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+/
+%s*synth2 
++---XORs : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      2 Bit         XORs := 4     
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               32 Bit    Registers := 1     
+2default:default
+Q
+%s*synth2B
+.	                3 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                2 Bit    Registers := 4     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+/
+%s*synth2 
++---RAMs : 
+2default:default
+Q
+%s*synth2B
+.	               64 Bit         RAMs := 1     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 2     
+2default:default
+F
+%s*synth27
+#Module SyncResetA__parameterized3 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	                6 Bit    Registers := 1     
+2default:default
+G
+%s*synth28
+$Module SyncFIFO__parameterized2__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+/
+%s*synth2 
++---XORs : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      2 Bit         XORs := 4     
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	              144 Bit    Registers := 1     
+2default:default
+Q
+%s*synth2B
+.	                3 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                2 Bit    Registers := 4     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+/
+%s*synth2 
++---RAMs : 
+2default:default
+Q
+%s*synth2B
+.	              288 Bit         RAMs := 1     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 2     
+2default:default
+G
+%s*synth28
+$Module SyncFIFO__parameterized0__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+/
+%s*synth2 
++---XORs : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      2 Bit         XORs := 4     
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	                3 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                2 Bit    Registers := 4     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 3     
+2default:default
+/
+%s*synth2 
++---RAMs : 
+2default:default
+Q
+%s*synth2B
+.	                2 Bit         RAMs := 1     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 2     
+2default:default
+D
+%s*synth25
+!Module FIFO2__parameterized8__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               48 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 3     
+2default:default
+D
+%s*synth25
+!Module FIFO2__parameterized8__2 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               48 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 3     
+2default:default
+D
+%s*synth25
+!Module FIFO2__parameterized8__3 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               48 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 3     
+2default:default
+A
+%s*synth22
+Module FIFO2__parameterized8 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               48 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 2     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 3     
+2default:default
+8
+%s*synth2)
+Module RevertReg__1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+8
+%s*synth2)
+Module RevertReg__2 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+8
+%s*synth2)
+Module RevertReg__3 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+8
+%s*synth2)
+Module RevertReg__4 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+5
+%s*synth2&
+Module RevertReg 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+;
+%s*synth2,
+Module mkThroughputOFB 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+1
+%s*synth2"
++---Adders : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input     24 Bit       Adders := 4     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      5 Bit       Adders := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit       Adders := 2     
+2default:default
+/
+%s*synth2 
++---XORs : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input     24 Bit         XORs := 6     
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               48 Bit    Registers := 6     
+2default:default
+Q
+%s*synth2B
+.	               24 Bit    Registers := 29    
+2default:default
+Q
+%s*synth2B
+.	                5 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                3 Bit    Registers := 2     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 4     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input     48 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	  27 Input     24 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  11 Input     24 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   6 Input     24 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     24 Bit        Muxes := 107   
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 5     
+2default:default
+8
+%s*synth2)
+Module mkDutWrapper 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
 2default:default
 F
 %s*synth27
@@ -17100,9 +17634,9 @@ Q
 %s*synth2B
 .	                1 Bit    Registers := 4     
 2default:default
-G
-%s*synth28
-$Module SyncFIFO__parameterized0__4 
+D
+%s*synth25
+!Module SyncFIFO__parameterized0 
 2default:default
 B
 %s*synth23
@@ -17332,426 +17866,6 @@ Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 1     
 2default:default
-G
-%s*synth28
-$Module SyncFIFO__parameterized0__5 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-/
-%s*synth2 
-+---XORs : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      2 Bit         XORs := 4     
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                3 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                2 Bit    Registers := 4     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 3     
-2default:default
-/
-%s*synth2 
-+---RAMs : 
-2default:default
-Q
-%s*synth2B
-.	                2 Bit         RAMs := 1     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 2     
-2default:default
-F
-%s*synth27
-#Module SyncResetA__parameterized3 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                6 Bit    Registers := 1     
-2default:default
-D
-%s*synth25
-!Module SyncFIFO__parameterized1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-/
-%s*synth2 
-+---XORs : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      2 Bit         XORs := 4     
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	              144 Bit    Registers := 1     
-2default:default
-Q
-%s*synth2B
-.	                3 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                2 Bit    Registers := 4     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 2     
-2default:default
-/
-%s*synth2 
-+---RAMs : 
-2default:default
-Q
-%s*synth2B
-.	              288 Bit         RAMs := 1     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 2     
-2default:default
-D
-%s*synth25
-!Module SyncFIFO__parameterized0 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-/
-%s*synth2 
-+---XORs : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      2 Bit         XORs := 4     
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                3 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                2 Bit    Registers := 4     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 3     
-2default:default
-/
-%s*synth2 
-+---RAMs : 
-2default:default
-Q
-%s*synth2B
-.	                2 Bit         RAMs := 1     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 2     
-2default:default
-D
-%s*synth25
-!Module FIFO2__parameterized8__1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	               48 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 2     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 3     
-2default:default
-D
-%s*synth25
-!Module FIFO2__parameterized8__2 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	               48 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 2     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 3     
-2default:default
-D
-%s*synth25
-!Module FIFO2__parameterized8__3 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	               48 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 2     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 3     
-2default:default
-A
-%s*synth22
-Module FIFO2__parameterized8 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	               48 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 2     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 3     
-2default:default
-8
-%s*synth2)
-Module RevertReg__1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-8
-%s*synth2)
-Module RevertReg__2 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-8
-%s*synth2)
-Module RevertReg__3 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-8
-%s*synth2)
-Module RevertReg__4 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-5
-%s*synth2&
-Module RevertReg 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-;
-%s*synth2,
-Module mkThroughputOFB 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-1
-%s*synth2"
-+---Adders : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input     24 Bit       Adders := 4     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      5 Bit       Adders := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      3 Bit       Adders := 2     
-2default:default
-/
-%s*synth2 
-+---XORs : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input     24 Bit         XORs := 6     
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	               48 Bit    Registers := 6     
-2default:default
-Q
-%s*synth2B
-.	               24 Bit    Registers := 29    
-2default:default
-Q
-%s*synth2B
-.	                5 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                3 Bit    Registers := 2     
-2default:default
-Q
-%s*synth2B
-.	                1 Bit    Registers := 4     
-2default:default
-0
-%s*synth2!
-+---Muxes : 
-2default:default
-Q
-%s*synth2B
-.	   2 Input     48 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  27 Input     24 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  11 Input     24 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   6 Input     24 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     24 Bit        Muxes := 107   
-2default:default
-Q
-%s*synth2B
-.	   2 Input      3 Bit        Muxes := 5     
-2default:default
-8
-%s*synth2)
-Module mkDutWrapper 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-<
-%s*synth2-
-Module ResetInverter__1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
 F
 %s*synth27
 #Module SyncResetA__parameterized5 
@@ -17767,6 +17881,42 @@ B
 Q
 %s*synth2B
 .	                1 Bit    Registers := 1     
+2default:default
+<
+%s*synth2-
+Module ResetInverter__3 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+2
+%s*synth2#
+Module FIFOL1 
+2default:default
+B
+%s*synth23
+Detailed RTL Component Info : 
+2default:default
+4
+%s*synth2%
++---Registers : 
+2default:default
+Q
+%s*synth2B
+.	               32 Bit    Registers := 1     
+2default:default
+Q
+%s*synth2B
+.	                1 Bit    Registers := 1     
+2default:default
+0
+%s*synth2!
++---Muxes : 
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 3     
 2default:default
 A
 %s*synth22
@@ -17824,9 +17974,9 @@ Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 3     
 2default:default
-<
-%s*synth2-
-Module ResetInverter__2 
+7
+%s*synth2(
+Module SyncWire__1 
 2default:default
 B
 %s*synth23
@@ -18918,11 +19068,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18930,11 +19080,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -18990,19 +19140,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19026,11 +19176,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -19090,15 +19240,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19106,15 +19252,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -19126,11 +19276,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19150,11 +19300,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 E
 %s*synth26
@@ -19218,11 +19368,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      9 Bit        Muxes := 1     
+.	   2 Input      9 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      9 Bit        Muxes := 4     
+.	  10 Input      9 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19550,11 +19700,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19562,11 +19712,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -19622,19 +19772,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19658,11 +19808,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -19722,15 +19872,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19738,15 +19884,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -19758,11 +19908,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19782,11 +19932,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 G
 %s*synth28
@@ -20070,11 +20220,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20082,11 +20232,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -20142,19 +20292,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20178,11 +20328,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -20242,15 +20392,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20258,15 +20404,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -20278,11 +20428,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20302,11 +20452,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 G
 %s*synth28
@@ -20590,11 +20740,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20602,11 +20752,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -20662,19 +20812,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20698,11 +20848,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -20762,15 +20912,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20778,15 +20924,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -20798,11 +20948,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20822,11 +20972,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 G
 %s*synth28
@@ -21110,11 +21260,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -21122,11 +21272,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -21182,19 +21332,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21218,11 +21368,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -21282,15 +21432,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21298,15 +21444,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -21318,11 +21468,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21342,11 +21492,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 B
 %s*synth23
@@ -21410,11 +21560,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      9 Bit        Muxes := 1     
+.	   2 Input      9 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      9 Bit        Muxes := 4     
+.	  10 Input      9 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21742,11 +21892,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -21754,11 +21904,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -21814,19 +21964,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21850,11 +22000,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -21914,15 +22064,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21930,15 +22076,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -21950,11 +22100,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21974,11 +22124,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 G
 %s*synth28
@@ -22262,11 +22412,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -22274,11 +22424,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -22334,19 +22484,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -22370,11 +22520,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 D
 %s*synth25
@@ -22434,15 +22584,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -22450,15 +22596,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -22470,11 +22620,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -22494,11 +22644,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 G
 %s*synth28
@@ -22782,11 +22932,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 2     
+.	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -22794,11 +22944,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 C
 %s*synth24
@@ -22854,19 +23004,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     18 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -22890,11 +23040,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   5 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 8     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 A
 %s*synth22
@@ -22954,15 +23104,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -22970,15 +23116,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     18 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -22990,11 +23140,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -23014,11 +23164,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 2     
+.	   2 Input      1 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 4     
+.	   4 Input      1 Bit        Muxes := 2     
 2default:default
 D
 %s*synth25
@@ -23548,105 +23698,9 @@ B
 %s*synth23
 Detailed RTL Component Info : 
 2default:default
-:
-%s*synth2+
-Module ResetEither__5 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-I
-%s*synth2:
-&Module SyncResetA__parameterized1__1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                4 Bit    Registers := 1     
-2default:default
-F
-%s*synth27
-#Module SyncResetA__parameterized1 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                4 Bit    Registers := 1     
-2default:default
-F
-%s*synth27
-#Module SyncResetA__parameterized0 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-+---Registers : 
-2default:default
-Q
-%s*synth2B
-.	                3 Bit    Registers := 1     
-2default:default
-<
-%s*synth2-
-Module ResetInverter__3 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
 <
 %s*synth2-
 Module ResetInverter__4 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-9
-%s*synth2*
-Module SyncReset0__3 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-7
-%s*synth2(
-Module ResetEither 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-4
-%s*synth2%
-Module SyncWire 
-2default:default
-B
-%s*synth23
-Detailed RTL Component Info : 
-2default:default
-<
-%s*synth2-
-Module ResetInverter__5 
 2default:default
 B
 %s*synth23
@@ -23658,6 +23712,18 @@ B
 DSPs: 2800 (col length:140)
 BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
 2default:default
+∑
+ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
+\reset_hold_reg[2] 2default:default2.
+SyncResetA__parameterized02default:defaultZ8-3332
+∑
+ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
+\reset_hold_reg[1] 2default:default2.
+SyncResetA__parameterized02default:defaultZ8-3332
+∑
+ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
+\reset_hold_reg[0] 2default:default2.
+SyncResetA__parameterized02default:defaultZ8-3332
 £
 ESequential element (%s) is unused and will be removed from module %s.3332*oasys2!
 dSyncReg1_reg2default:default2 
@@ -23818,18 +23884,6 @@ ESequential element (%s) is unused and will be removed from module %s.3332*
 ESequential element (%s) is unused and will be removed from module %s.3332*oasys2"
 dSyncPulse_reg2default:default2
 	SyncPulse2default:defaultZ8-3332
-∑
-ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
-\reset_hold_reg[2] 2default:default2.
-SyncResetA__parameterized02default:defaultZ8-3332
-∑
-ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
-\reset_hold_reg[1] 2default:default2.
-SyncResetA__parameterized02default:defaultZ8-3332
-∑
-ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
-\reset_hold_reg[0] 2default:default2.
-SyncResetA__parameterized02default:defaultZ8-3332
 ≤
 ESequential element (%s) is unused and will be removed from module %s.3332*oasys2'
 \data1_reg_reg[29] 2default:default2)
@@ -24096,7 +24150,7 @@ ESequential element (%s) is unused and will be removed from module %s.3332*
 02default:defaultZ8-3917
 ™
 %s*synth2ö
-ÖFinished Cross Boundary Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:24 . Memory (MB): peak = 1595.809 ; gain = 958.730
+ÖFinished Cross Boundary Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:25 . Memory (MB): peak = 1595.895 ; gain = 958.816
 2default:default
 ¢
 %s*synth2í
@@ -24138,49 +24192,49 @@ Block RAM:
 ¶Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Mutiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
 Distributed RAM: 
 2default:default
-√
-%s*synth2≥
-û+---------------+----------------------------------------------------------+--------------------+----------------------+----------------+-------------------+
+†
+%s*synth2ê
+|+-------------+-----------------------+--------------------+----------------------+----------------+----------------------+
 2default:default
-ƒ
-%s*synth2¥
-ü|Module Name    | RTL Object                                               | Inference Criteria | Size (depth X width) | Primitives     | Hierarchical Name | 
+°
+%s*synth2ë
+}|Module Name  | RTL Object            | Inference Criteria | Size (depth X width) | Primitives     | Hierarchical Name    | 
 2default:default
-√
-%s*synth2≥
-û+---------------+----------------------------------------------------------+--------------------+----------------------+----------------+-------------------+
+†
+%s*synth2ê
+|+-------------+-----------------------+--------------------+----------------------+----------------+----------------------+
 2default:default
-ƒ
-%s*synth2¥
-ü|SizedFIFO      | arr_reg                                                  | User Attribute     | 32 X 5               | RAM32M x 1     | SizedFIFO/ram__11 | 
+°
+%s*synth2ë
+}|SizedFIFO    | arr_reg               | User Attribute     | 32 X 5               | RAM32M x 1     | SizedFIFO/ram__11    | 
 2default:default
-ƒ
-%s*synth2¥
-ü|SyncFIFO       | fifoMem_reg                                              | Implied            | 8 X 74               | RAM32M x 13    | SyncFIFO/ram__12  | 
+°
+%s*synth2ë
+}|SyncFIFO     | fifoMem_reg           | Implied            | 8 X 74               | RAM32M x 13    | SyncFIFO/ram__12     | 
 2default:default
-ƒ
-%s*synth2¥
-ü|SyncFIFO       | fifoMem_reg                                              | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__13  | 
+°
+%s*synth2ë
+}|SyncFIFO     | fifoMem_reg           | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__13     | 
 2default:default
-ƒ
-%s*synth2¥
-ü|SyncFIFO       | fifoMem_reg                                              | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__14  | 
+°
+%s*synth2ë
+}|SyncFIFO     | fifoMem_reg           | Implied            | 2 X 32               | RAM32M x 6     | SyncFIFO/ram__14     | 
 2default:default
-ƒ
-%s*synth2¥
-ü|SyncFIFO       | fifoMem_reg                                              | Implied            | 2 X 144              | RAM32M x 24    | SyncFIFO/ram__15  | 
+°
+%s*synth2ë
+}|SyncFIFO     | fifoMem_reg           | Implied            | 2 X 144              | RAM32M x 24    | SyncFIFO/ram__15     | 
 2default:default
-ƒ
-%s*synth2¥
-ü|SyncFIFO       | fifoMem_reg                                              | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__16  | 
+°
+%s*synth2ë
+}|mkDutWrapper | fromSyncQ/fifoMem_reg | Implied            | 2 X 32               | RAM32M x 6     | mkDutWrapper/ram__16 | 
 2default:default
-ƒ
-%s*synth2¥
-ü|mkBridge__GCB1 | scemi_settabledut_dut_dutIfc_m_dut/fromSyncQ/fifoMem_reg | Implied            | 2 X 1                | RAM16X1D x 1   | ram__17           | 
+°
+%s*synth2ë
+}|SyncFIFO     | fifoMem_reg           | Implied            | 2 X 1                | RAM16X1D x 1   | SyncFIFO/ram__17     | 
 2default:default
-ƒ
-%s*synth2¥
-ü+---------------+----------------------------------------------------------+--------------------+----------------------+----------------+-------------------+
+°
+%s*synth2ë
+}+-------------+-----------------------+--------------------+----------------------+----------------+----------------------+
 
 2default:default
 π
@@ -24308,6 +24362,14 @@ Ascemi_bridgei_0/pbb_arbiter/\tlp_out_dma_fifo/data1_reg_reg[150] 2default:def
 6propagating constant %s across sequential element (%s)3333*oasys2
 02default:default2L
 8scemi_bridgei_2/pbb_csr_clock_status/\data1_reg_reg[31] 2default:defaultZ8-3333
+ï
+6propagating constant %s across sequential element (%s)3333*oasys2
+02default:default2-
+i_9/\scemi_rcb_cr_reg[5] 2default:defaultZ8-3333
+ó
+6propagating constant %s across sequential element (%s)3333*oasys2
+12default:default2/
+i_9/\scemi_rcb_mask_reg[5] 2default:defaultZ8-3333
 ‰
 6propagating constant %s across sequential element (%s)3333*oasys2
 02default:default2|
@@ -24452,6 +24514,10 @@ qi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[7].pipe_
 6propagating constant %s across sequential element (%s)3333*oasys2
 02default:default2ç
 yi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i /\addr_reg[6] 2default:defaultZ8-3333
+Ö
+6propagating constant %s across sequential element (%s)3333*oasys2
+02default:default2ú
+ái_6/\scemi_pcie_ep/pcie_7x_v1_10_i/pcie_top_i/axi_basic_top/tx_inst/thrtl_ctl_enabled.tx_thrl_ctl_inst/L23_thrtl_ep.reg_turnoff_ok_reg 2default:defaultZ8-3333
 Ô
 6propagating constant %s across sequential element (%s)3333*oasys2
 02default:default2Ü
@@ -24584,18 +24650,6 @@ oi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[5].pipe_
 6propagating constant %s across sequential element (%s)3333*oasys2
 12default:default2ç
 yi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[5].pipe_sync_i /\rxsync_fsm_disable.fsm_rx_reg[0] 2default:defaultZ8-3333
-Ù
-6propagating constant %s across sequential element (%s)3333*oasys2
-02default:default2ã
-wi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[5].pipe_sync_i /\rxsync_fsm_disable.rxdlyen_reg 2default:defaultZ8-3333
-Û
-6propagating constant %s across sequential element (%s)3333*oasys2
-02default:default2ä
-vi_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[5].pipe_user_i /\resetovrd_disble.reset_reg[4] 2default:defaultZ8-3333
-Ô
-6propagating constant %s across sequential element (%s)3333*oasys2
-02default:default2Ü
-ri_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[6].pipe_rate.pipe_rate_i /\rate_out_reg[2] 2default:defaultZ8-3333
 ‘
 ÅMessage '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
 14*common2 
@@ -24603,7 +24657,7 @@ ri_6/\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i /\pipe_lane[6].pipe_
 1002default:defaultZ17-14
 †
 %s*synth2ê
-|Finished Area Optimization : Time (s): cpu = 00:05:49 ; elapsed = 00:05:44 . Memory (MB): peak = 2074.504 ; gain = 1437.426
+|Finished Area Optimization : Time (s): cpu = 00:05:42 ; elapsed = 00:05:37 . Memory (MB): peak = 2126.613 ; gain = 1489.535
 2default:default
 ı
 $%s for constraint at line %s of %s.
@@ -24827,58 +24881,58 @@ F---------------------------------------------------------------------
 2default:default
 Ø
 %s*synth2ü
-äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:05:52 ; elapsed = 00:05:47 . Memory (MB): peak = 2076.504 ; gain = 1439.426
+äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:05:45 ; elapsed = 00:05:40 . Memory (MB): peak = 2144.613 ; gain = 1507.535
 2default:default
 ¢
 %s*synth2í
-~Finished Timing Optimization : Time (s): cpu = 00:06:18 ; elapsed = 00:06:13 . Memory (MB): peak = 2128.512 ; gain = 1491.434
+~Finished Timing Optimization : Time (s): cpu = 00:06:15 ; elapsed = 00:06:10 . Memory (MB): peak = 2177.621 ; gain = 1540.543
 2default:default
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_202012default:default2
+i_202082default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_197822default:default2
+i_197892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_193632default:default2
+i_193702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_188822default:default2
+i_188892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_184632default:default2
+i_184702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_180442default:default2
+i_180512default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_176252default:default2
+i_176322default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_171382default:default2
+i_171452default:default2
 output2default:default2
 O2default:defaultZ8-620
 ∆
@@ -25289,145 +25343,97 @@ c\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_sync_i
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_202012default:default2
+i_202082default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_197822default:default2
+i_197892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_193632default:default2
+i_193702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_188822default:default2
+i_188892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_184632default:default2
+i_184702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_180442default:default2
+i_180512default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_176252default:default2
+i_176322default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_171382default:default2
+i_171452default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_202012default:default2
+i_202082default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_197822default:default2
+i_197892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_193632default:default2
+i_193702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_188822default:default2
+i_188892default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_184632default:default2
+i_184702default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_180442default:default2
+i_180512default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_176252default:default2
+i_176322default:default2
 output2default:default2
 O2default:defaultZ8-620
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
 	inversion2default:default2
-i_171382default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_202012default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_197822default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_193632default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_188822default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_184632default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_180442default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_176252default:default2
-output2default:default2
-O2default:defaultZ8-620
-ÿ
-Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
-	inversion2default:default2
-i_171382default:default2
+i_171452default:default2
 output2default:default2
 O2default:defaultZ8-620
 æ
@@ -25456,7 +25462,7 @@ Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '
 7\scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2 2default:defaultZ8-4480
 °
 %s*synth2ë
-}Finished Technology Mapping : Time (s): cpu = 00:07:13 ; elapsed = 00:07:09 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+}Finished Technology Mapping : Time (s): cpu = 00:07:10 ; elapsed = 00:07:06 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 è
 @Design %s has %s max_fanout violations that cannot be satisfied.3743*oasys2
@@ -25970,7 +25976,7 @@ z\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[2].pipe_eq.pip
 122default:defaultZ8-4560
 õ
 %s*synth2ã
-wFinished IO Insertion : Time (s): cpu = 00:07:17 ; elapsed = 00:07:13 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+wFinished IO Insertion : Time (s): cpu = 00:07:14 ; elapsed = 00:07:10 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 ;
 %s*synth2,
@@ -25999,11 +26005,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ¨
 %s*synth2ú
-áFinished Renaming Generated Instances : Time (s): cpu = 00:07:18 ; elapsed = 00:07:13 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+áFinished Renaming Generated Instances : Time (s): cpu = 00:07:14 ; elapsed = 00:07:10 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 ©
 %s*synth2ô
-ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:07:22 ; elapsed = 00:07:17 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:07:18 ; elapsed = 00:07:14 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 ¢
 %s*synth2í
@@ -26097,7 +26103,7 @@ B
 2default:default
 B
 %s*synth23
-|3     |CARRY4        |   396|
+|3     |CARRY4        |   404|
 2default:default
 B
 %s*synth23
@@ -26117,27 +26123,27 @@ B
 2default:default
 B
 %s*synth23
-|8     |LUT1          |  1528|
+|8     |LUT1          |  1550|
 2default:default
 B
 %s*synth23
-|9     |LUT2          |  1669|
+|9     |LUT2          |  1717|
 2default:default
 B
 %s*synth23
-|10    |LUT3          |  2274|
+|10    |LUT3          |  2508|
 2default:default
 B
 %s*synth23
-|11    |LUT4          |  2476|
+|11    |LUT4          |  2651|
 2default:default
 B
 %s*synth23
-|12    |LUT5          |  5320|
+|12    |LUT5          |  4748|
 2default:default
 B
 %s*synth23
-|13    |LUT6          |  9272|
+|13    |LUT6          |  9355|
 2default:default
 B
 %s*synth23
@@ -26145,11 +26151,11 @@ B
 2default:default
 B
 %s*synth23
-|15    |MUXF7         |   300|
+|15    |MUXF7         |   316|
 2default:default
 B
 %s*synth23
-|16    |MUXF8         |    19|
+|16    |MUXF8         |    23|
 2default:default
 B
 %s*synth23
@@ -26157,11 +26163,11 @@ B
 2default:default
 B
 %s*synth23
-|18    |RAM16X1D      |     3|
+|18    |RAM16X1D      |     1|
 2default:default
 B
 %s*synth23
-|19    |RAM32M        |    14|
+|19    |RAM32M        |    26|
 2default:default
 B
 %s*synth23
@@ -26177,7 +26183,7 @@ B
 2default:default
 B
 %s*synth23
-|23    |FDCE          |   369|
+|23    |FDCE          |   368|
 2default:default
 B
 %s*synth23
@@ -26185,11 +26191,11 @@ B
 2default:default
 B
 %s*synth23
-|25    |FDRE          | 12305|
+|25    |FDRE          | 12519|
 2default:default
 B
 %s*synth23
-|26    |FDSE          |   592|
+|26    |FDSE          |   591|
 2default:default
 B
 %s*synth23
@@ -26226,87 +26232,87 @@ x+------+---------------------------------------------------------------+-------
 2default:default
 ú
 %s*synth2å
-x|1     |top                                                            |                                       | 36759|
+x|1     |top                                                            |                                       | 36999|
 2default:default
 ú
 %s*synth2å
-x|2     |  scemi_1_outFifo                                              |FIFO2                                  |   520|
+x|2     |  scemi_1_outFifo                                              |FIFO2                                  |   446|
 2default:default
 ú
 %s*synth2å
-x|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19124|
+x|3     |  scemi_bridge                                                 |mkPCIEtoBNoCSceMi_4                    | 19228|
 2default:default
 ú
 %s*synth2å
-x|4     |    pbb_arbiter                                                |mkTLPArbiter                           |  1793|
+x|4     |    pbb_arbiter                                                |mkTLPArbiter                           |  1799|
 2default:default
 ú
 %s*synth2å
-x|5     |      tlp_out_cfg_fifo                                         |FIFO2__parameterized0_137              |   632|
+x|5     |      tlp_out_cfg_fifo                                         |FIFO2__parameterized0_136              |   633|
 2default:default
 ú
 %s*synth2å
-x|6     |      tlp_out_dma_fifo                                         |FIFO2__parameterized0_138              |   701|
+x|6     |      tlp_out_dma_fifo                                         |FIFO2__parameterized0_137              |   704|
 2default:default
 ú
 %s*synth2å
-x|7     |      tlp_out_fifo                                             |FIFO2__parameterized0_139              |   456|
+x|7     |      tlp_out_fifo                                             |FIFO2__parameterized0_138              |   458|
 2default:default
 ú
 %s*synth2å
-x|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_130              |    86|
+x|8     |    pbb_csr_clock_control                                      |FIFO2__parameterized1_129              |    66|
 2default:default
 ú
 %s*synth2å
-x|9     |    pbb_csr_clock_status                                       |FIFO2__parameterized1_131              |    94|
+x|9     |    pbb_csr_clock_status                                       |FIFO2__parameterized1_130              |    67|
 2default:default
 ú
 %s*synth2å
-x|10    |    pbb_csr_intr_info                                          |FIFO2__parameterized2                  |   121|
+x|10    |    pbb_csr_intr_info                                          |FIFO2__parameterized2                  |   334|
 2default:default
 ú
 %s*synth2å
-x|11    |    pbb_csr_rd_addr_queue                                      |FIFO2__parameterized3                  |   786|
+x|11    |    pbb_csr_rd_addr_queue                                      |FIFO2__parameterized3                  |   836|
 2default:default
 ú
 %s*synth2å
-x|12    |    pbb_dispatcher                                             |mkTLPDispatcher                        |  4326|
+x|12    |    pbb_dispatcher                                             |mkTLPDispatcher                        |  4344|
 2default:default
 ú
 %s*synth2å
-x|13    |      tlp_in_cfg_fifo                                          |FIFO2__parameterized0                  |  1999|
+x|13    |      tlp_in_cfg_fifo                                          |FIFO2__parameterized0                  |  1934|
 2default:default
 ú
 %s*synth2å
-x|14    |      tlp_in_dma_fifo                                          |FIFO2__parameterized0_135              |  1741|
+x|14    |      tlp_in_dma_fifo                                          |FIFO2__parameterized0_134              |  1816|
 2default:default
 ú
 %s*synth2å
-x|15    |      tlp_in_fifo                                              |FIFO2__parameterized0_136              |   584|
+x|15    |      tlp_in_fifo                                              |FIFO2__parameterized0_135              |   592|
 2default:default
 ú
 %s*synth2å
-x|16    |    pbb_dma_dont_wait_out                                      |FIFO2__parameterized4_132              |    11|
+x|16    |    pbb_dma_dont_wait_out                                      |FIFO2__parameterized4_131              |    22|
 2default:default
 ú
 %s*synth2å
-x|17    |    pbb_dma_intr_info                                          |FIFO2__parameterized2_133              |   290|
+x|17    |    pbb_dma_intr_info                                          |FIFO2__parameterized2_132              |   291|
 2default:default
 ú
 %s*synth2å
-x|18    |    pbb_dma_last_tag_queue                                     |SizedFIFO                              |   467|
+x|18    |    pbb_dma_last_tag_queue                                     |SizedFIFO                              |   149|
 2default:default
 ú
 %s*synth2å
-x|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1684|
+x|19    |    pbb_dma_msg_len_out                                        |FIFO2__parameterized5                  |  1669|
 2default:default
 ú
 %s*synth2å
-x|20    |    pbb_dma_rd_buffer_queue_memory                             |BRAM2                                  |   217|
+x|20    |    pbb_dma_rd_buffer_queue_memory                             |BRAM2                                  |   174|
 2default:default
 ú
 %s*synth2å
-x|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_134                              |    79|
+x|21    |    pbb_dma_wr_buffer_queue_memory                             |BRAM2_133                              |   207|
 2default:default
 ú
 %s*synth2å
@@ -26314,35 +26320,35 @@ x|22    |  scemi_clk_port_scemi_clkgen                                  |MakeClo
 2default:default
 ú
 %s*synth2å
-x|23    |  scemi_clk_port_scemi_rstgen_inv_rstgen                       |MakeResetA                             |     3|
+x|23    |  scemi_clk_port_scemi_rstgen_inv_rstgen                       |MakeResetA                             |     2|
 2default:default
 ú
 %s*synth2å
-x|24    |    rstSync                                                    |SyncResetA_129                         |     3|
+x|24    |    rstSync                                                    |SyncResetA_128                         |     2|
 2default:default
 ú
 %s*synth2å
-x|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     5|
+x|25    |  scemi_clk_port_scemi_rstgen_rstgen                           |MakeReset0                             |     7|
 2default:default
 ú
 %s*synth2å
-x|26    |  scemi_epReset125                                             |SyncResetA__parameterized1             |    16|
+x|26    |  scemi_epReset125                                             |SyncResetA__parameterized1             |    11|
 2default:default
 ú
 %s*synth2å
-x|27    |  scemi_epReset250                                             |SyncResetA__parameterized1_0           |     6|
+x|27    |  scemi_epReset250                                             |SyncResetA__parameterized1_0           |     7|
 2default:default
 ú
 %s*synth2å
-x|28    |  scemi_fToBridgeBeat                                          |FIFOL1                                 |    42|
+x|28    |  scemi_fToBridgeBeat                                          |FIFOL1                                 |    43|
 2default:default
 ú
 %s*synth2å
-x|29    |  scemi_inFifo                                                 |FIFO2_1                                |   515|
+x|29    |  scemi_inFifo                                                 |FIFO2_1                                |   518|
 2default:default
 ú
 %s*synth2å
-x|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   150|
+x|30    |  scemi_init_state_msgFIFO                                     |SyncFIFO                               |   153|
 2default:default
 ú
 %s*synth2å
@@ -26354,7 +26360,7 @@ x|32    |    rstSync                                                    |SyncRes
 2default:default
 ú
 %s*synth2å
-x|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10323|
+x|33    |  scemi_pcie_ep                                                |xilinx_v7_pcie_wrapper                 | 10246|
 2default:default
 ú
 %s*synth2å
@@ -26362,51 +26368,51 @@ x|34    |    \ext_clk.pipe_clock_i                                      |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10294|
+x|35    |    pcie_7x_v1_10_i                                            |pcie_7x_v1_10                          | 10217|
 2default:default
 ú
 %s*synth2å
-x|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9237|
+x|36    |      gt_top_i                                                 |pcie_7x_v1_10_gt_top                   |  9243|
 2default:default
 ú
 %s*synth2å
-x|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    51|
+x|37    |        \gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x    |    52|
 2default:default
 ú
 %s*synth2å
-x|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_71 |    50|
+x|38    |        \gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_70 |    51|
 2default:default
 ú
 %s*synth2å
-x|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |    50|
+x|39    |        \gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_71 |    51|
 2default:default
 ú
 %s*synth2å
-x|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |    51|
+x|40    |        \gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_72 |    52|
 2default:default
 ú
 %s*synth2å
-x|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |    51|
+x|41    |        \gt_rx_valid_filter[4].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_73 |    52|
 2default:default
 ú
 %s*synth2å
-x|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |    50|
+x|42    |        \gt_rx_valid_filter[5].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_74 |    51|
 2default:default
 ú
 %s*synth2å
-x|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |    50|
+x|43    |        \gt_rx_valid_filter[6].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_75 |    51|
 2default:default
 ú
 %s*synth2å
-x|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_77 |    52|
+x|44    |        \gt_rx_valid_filter[7].GT_RX_VALID_FILTER_7x_inst      |pcie_7x_v1_10_gt_rx_valid_filter_7x_76 |    53|
 2default:default
 ú
 %s*synth2å
-x|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8822|
+x|45    |        pipe_wrapper_i                                         |pcie_7x_v1_10_pipe_wrapper             |  8819|
 2default:default
 ú
 %s*synth2å
-x|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     6|
+x|46    |          \pipe_lane[0].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper               |     4|
 2default:default
 ú
 %s*synth2å
@@ -26418,7 +26424,7 @@ x|48    |          \pipe_lane[0].pipe_eq.pipe_eq_i                      |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_128            |   192|
+x|49    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_127            |   192|
 2default:default
 ú
 %s*synth2å
@@ -26442,191 +26448,191 @@ x|54    |          \pipe_lane[0].pipe_user_i                            |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|55    |          \pipe_lane[1].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_78            |     4|
+x|55    |          \pipe_lane[1].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_77            |     4|
 2default:default
 ú
 %s*synth2å
-x|56    |          \pipe_lane[1].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_79              |   152|
+x|56    |          \pipe_lane[1].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_78              |   152|
 2default:default
 ú
 %s*synth2å
-x|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_80               |   535|
+x|57    |          \pipe_lane[1].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_79               |   535|
 2default:default
 ú
 %s*synth2å
-x|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_127            |   192|
+x|58    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_126            |   192|
 2default:default
 ú
 %s*synth2å
-x|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_81             |   151|
+x|59    |          \pipe_lane[1].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_80             |   151|
 2default:default
 ú
 %s*synth2å
-x|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_82             |    57|
+x|60    |          \pipe_lane[1].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_81             |    57|
 2default:default
 ú
 %s*synth2å
-x|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_83             |   121|
+x|61    |          \pipe_lane[1].pipe_user_i                            |pcie_7x_v1_10_pipe_user_82             |   119|
 2default:default
 ú
 %s*synth2å
-x|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_84            |     4|
+x|62    |          \pipe_lane[2].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_83            |     6|
 2default:default
 ú
 %s*synth2å
-x|63    |          \pipe_lane[2].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_85              |   152|
+x|63    |          \pipe_lane[2].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_84              |   152|
 2default:default
 ú
 %s*synth2å
-x|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_86               |   535|
+x|64    |          \pipe_lane[2].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_85               |   535|
 2default:default
 ú
 %s*synth2å
-x|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_126            |   192|
+x|65    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_125            |   192|
 2default:default
 ú
 %s*synth2å
-x|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_87             |   151|
+x|66    |          \pipe_lane[2].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_86             |   151|
 2default:default
 ú
 %s*synth2å
-x|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_88             |    57|
+x|67    |          \pipe_lane[2].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_87             |    57|
 2default:default
 ú
 %s*synth2å
-x|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_89             |   119|
+x|68    |          \pipe_lane[2].pipe_user_i                            |pcie_7x_v1_10_pipe_user_88             |   119|
 2default:default
 ú
 %s*synth2å
-x|69    |          \pipe_lane[3].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_90            |     4|
+x|69    |          \pipe_lane[3].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_89            |     4|
 2default:default
 ú
 %s*synth2å
-x|70    |          \pipe_lane[3].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_91              |   152|
+x|70    |          \pipe_lane[3].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_90              |   152|
 2default:default
 ú
 %s*synth2å
-x|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_92               |   535|
+x|71    |          \pipe_lane[3].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_91               |   535|
 2default:default
 ú
 %s*synth2å
-x|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_125            |   192|
+x|72    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_124            |   192|
 2default:default
 ú
 %s*synth2å
-x|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_93             |   151|
+x|73    |          \pipe_lane[3].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_92             |   151|
 2default:default
 ú
 %s*synth2å
-x|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_94             |    57|
+x|74    |          \pipe_lane[3].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_93             |    57|
 2default:default
 ú
 %s*synth2å
-x|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_95             |   121|
+x|75    |          \pipe_lane[3].pipe_user_i                            |pcie_7x_v1_10_pipe_user_94             |   119|
 2default:default
 ú
 %s*synth2å
-x|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_96            |     4|
+x|76    |          \pipe_lane[4].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_95            |     6|
 2default:default
 ú
 %s*synth2å
-x|77    |          \pipe_lane[4].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_97              |   152|
+x|77    |          \pipe_lane[4].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_96              |   152|
 2default:default
 ú
 %s*synth2å
-x|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_98               |   535|
+x|78    |          \pipe_lane[4].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_97               |   535|
 2default:default
 ú
 %s*synth2å
-x|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_124            |   192|
+x|79    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_123            |   192|
 2default:default
 ú
 %s*synth2å
-x|80    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp_99              |   144|
+x|80    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_drp_i       |pcie_7x_v1_10_qpll_drp_98              |   144|
 2default:default
 ú
 %s*synth2å
-x|81    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper_100         |     1|
+x|81    |          \pipe_lane[4].pipe_quad.pipe_common.qpll_wrapper_i   |pcie_7x_v1_10_qpll_wrapper_99          |     1|
 2default:default
 ú
 %s*synth2å
-x|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_101            |   151|
+x|82    |          \pipe_lane[4].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_100            |   151|
 2default:default
 ú
 %s*synth2å
-x|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_102            |    57|
+x|83    |          \pipe_lane[4].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_101            |    57|
 2default:default
 ú
 %s*synth2å
-x|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_103            |   120|
+x|84    |          \pipe_lane[4].pipe_user_i                            |pcie_7x_v1_10_pipe_user_102            |   120|
 2default:default
 ú
 %s*synth2å
-x|85    |          \pipe_lane[5].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_104           |     8|
+x|85    |          \pipe_lane[5].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_103           |     6|
 2default:default
 ú
 %s*synth2å
-x|86    |          \pipe_lane[5].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_105             |   152|
+x|86    |          \pipe_lane[5].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_104             |   152|
 2default:default
 ú
 %s*synth2å
-x|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_106              |   535|
+x|87    |          \pipe_lane[5].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_105              |   535|
 2default:default
 ú
 %s*synth2å
-x|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_123            |   192|
+x|88    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_122            |   192|
 2default:default
 ú
 %s*synth2å
-x|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_107            |   151|
+x|89    |          \pipe_lane[5].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_106            |   151|
 2default:default
 ú
 %s*synth2å
-x|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_108            |    57|
+x|90    |          \pipe_lane[5].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_107            |    57|
 2default:default
 ú
 %s*synth2å
-x|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_109            |   120|
+x|91    |          \pipe_lane[5].pipe_user_i                            |pcie_7x_v1_10_pipe_user_108            |   120|
 2default:default
 ú
 %s*synth2å
-x|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_110           |    10|
+x|92    |          \pipe_lane[6].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_109           |    10|
 2default:default
 ú
 %s*synth2å
-x|93    |          \pipe_lane[6].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_111             |   152|
+x|93    |          \pipe_lane[6].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_110             |   152|
 2default:default
 ú
 %s*synth2å
-x|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_112              |   535|
+x|94    |          \pipe_lane[6].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_111              |   535|
 2default:default
 ú
 %s*synth2å
-x|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_122            |   192|
+x|95    |            rxeq_scan_i                                        |pcie_7x_v1_10_rxeq_scan_121            |   192|
 2default:default
 ú
 %s*synth2å
-x|96    |          \pipe_lane[6].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_113            |   151|
+x|96    |          \pipe_lane[6].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_112            |   151|
 2default:default
 ú
 %s*synth2å
-x|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_114            |    57|
+x|97    |          \pipe_lane[6].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_113            |    57|
 2default:default
 ú
 %s*synth2å
-x|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_115            |   124|
+x|98    |          \pipe_lane[6].pipe_user_i                            |pcie_7x_v1_10_pipe_user_114            |   124|
 2default:default
 ú
 %s*synth2å
-x|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_116           |     4|
+x|99    |          \pipe_lane[7].gt_wrapper_i                           |pcie_7x_v1_10_gt_wrapper_115           |     6|
 2default:default
 ú
 %s*synth2å
-x|100   |          \pipe_lane[7].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_117             |   153|
+x|100   |          \pipe_lane[7].pipe_drp.pipe_drp_i                    |pcie_7x_v1_10_pipe_drp_116             |   153|
 2default:default
 ú
 %s*synth2å
-x|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_118              |   535|
+x|101   |          \pipe_lane[7].pipe_eq.pipe_eq_i                      |pcie_7x_v1_10_pipe_eq_117              |   535|
 2default:default
 ú
 %s*synth2å
@@ -26634,15 +26640,15 @@ x|102   |            rxeq_scan_i                                        |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|103   |          \pipe_lane[7].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_119            |   151|
+x|103   |          \pipe_lane[7].pipe_rate.pipe_rate_i                  |pcie_7x_v1_10_pipe_rate_118            |   151|
 2default:default
 ú
 %s*synth2å
-x|104   |          \pipe_lane[7].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_120            |    61|
+x|104   |          \pipe_lane[7].pipe_sync_i                            |pcie_7x_v1_10_pipe_sync_119            |    61|
 2default:default
 ú
 %s*synth2å
-x|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_121            |   119|
+x|105   |          \pipe_lane[7].pipe_user_i                            |pcie_7x_v1_10_pipe_user_120            |   119|
 2default:default
 ú
 %s*synth2å
@@ -26654,15 +26660,15 @@ x|107   |          \qpll_reset.qpll_reset_i                             |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |  1048|
+x|108   |      pcie_top_i                                               |pcie_7x_v1_10_pcie_top                 |   965|
 2default:default
 ú
 %s*synth2å
-x|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   585|
+x|109   |        axi_basic_top                                          |pcie_7x_v1_10_axi_basic_top            |   502|
 2default:default
 ú
 %s*synth2å
-x|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   464|
+x|110   |          rx_inst                                              |pcie_7x_v1_10_axi_basic_rx             |   384|
 2default:default
 ú
 %s*synth2å
@@ -26670,23 +26676,23 @@ x|111   |            rx_null_gen_inst                                   |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   407|
+x|112   |            rx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_rx_pipeline    |   327|
 2default:default
 ú
 %s*synth2å
-x|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   121|
+x|113   |          tx_inst                                              |pcie_7x_v1_10_axi_basic_tx             |   118|
 2default:default
 ú
 %s*synth2å
-x|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    45|
+x|114   |            \thrtl_ctl_enabled.tx_thrl_ctl_inst                |pcie_7x_v1_10_axi_basic_tx_thrtl_ctl   |    43|
 2default:default
 ú
 %s*synth2å
-x|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    76|
+x|115   |            tx_pipeline_inst                                   |pcie_7x_v1_10_axi_basic_tx_pipeline    |    75|
 2default:default
 ú
 %s*synth2å
-x|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    35|
+x|116   |        pcie_7x_i                                              |pcie_7x_v1_10_pcie_7x                  |    37|
 2default:default
 ú
 %s*synth2å
@@ -26698,39 +26704,39 @@ x|118   |            pcie_brams_rx                                      |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|119   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x_63          |     1|
+x|119   |              \brams[0].ram                                    |pcie_7x_v1_10_pcie_bram_7x_62          |     1|
 2default:default
 ú
 %s*synth2å
-x|120   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_70                      |     1|
+x|120   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_69                      |     1|
 2default:default
 ú
 %s*synth2å
-x|121   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_64          |     1|
+x|121   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_63          |     1|
 2default:default
 ú
 %s*synth2å
-x|122   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_69                      |     1|
+x|122   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_68                      |     1|
 2default:default
 ú
 %s*synth2å
-x|123   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_65          |     1|
+x|123   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_64          |     1|
 2default:default
 ú
 %s*synth2å
-x|124   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_68                      |     1|
+x|124   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_67                      |     1|
 2default:default
 ú
 %s*synth2å
-x|125   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_66          |     1|
+x|125   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_65          |     1|
 2default:default
 ú
 %s*synth2å
-x|126   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_67                      |     1|
+x|126   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_66                      |     1|
 2default:default
 ú
 %s*synth2å
-x|127   |            pcie_brams_tx                                      |pcie_7x_v1_10_pcie_brams_7x_56         |     4|
+x|127   |            pcie_brams_tx                                      |pcie_7x_v1_10_pcie_brams_7x_55         |     4|
 2default:default
 ú
 %s*synth2å
@@ -26738,27 +26744,27 @@ x|128   |              \brams[0].ram                                    |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|129   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_62                      |     1|
+x|129   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_61                      |     1|
 2default:default
 ú
 %s*synth2å
-x|130   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_57          |     1|
+x|130   |              \brams[1].ram                                    |pcie_7x_v1_10_pcie_bram_7x_56          |     1|
 2default:default
 ú
 %s*synth2å
-x|131   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_61                      |     1|
+x|131   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_60                      |     1|
 2default:default
 ú
 %s*synth2å
-x|132   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_58          |     1|
+x|132   |              \brams[2].ram                                    |pcie_7x_v1_10_pcie_bram_7x_57          |     1|
 2default:default
 ú
 %s*synth2å
-x|133   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_60                      |     1|
+x|133   |                \use_tdp.ramb36                                |BRAM_TDP_MACRO_59                      |     1|
 2default:default
 ú
 %s*synth2å
-x|134   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_59          |     1|
+x|134   |              \brams[3].ram                                    |pcie_7x_v1_10_pcie_bram_7x_58          |     1|
 2default:default
 ú
 %s*synth2å
@@ -26774,31 +26780,31 @@ x|137   |          \pipe_2_lane.pipe_lane_1_i                           |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|138   |          \pipe_4_lane.pipe_lane_2_i                           |pcie_7x_v1_10_pcie_pipe_lane_49        |    48|
+x|138   |          \pipe_4_lane.pipe_lane_2_i                           |pcie_7x_v1_10_pcie_pipe_lane_48        |    48|
 2default:default
 ú
 %s*synth2å
-x|139   |          \pipe_4_lane.pipe_lane_3_i                           |pcie_7x_v1_10_pcie_pipe_lane_50        |    48|
+x|139   |          \pipe_4_lane.pipe_lane_3_i                           |pcie_7x_v1_10_pcie_pipe_lane_49        |    48|
 2default:default
 ú
 %s*synth2å
-x|140   |          \pipe_8_lane.pipe_lane_4_i                           |pcie_7x_v1_10_pcie_pipe_lane_51        |    48|
+x|140   |          \pipe_8_lane.pipe_lane_4_i                           |pcie_7x_v1_10_pcie_pipe_lane_50        |    48|
 2default:default
 ú
 %s*synth2å
-x|141   |          \pipe_8_lane.pipe_lane_5_i                           |pcie_7x_v1_10_pcie_pipe_lane_52        |    48|
+x|141   |          \pipe_8_lane.pipe_lane_5_i                           |pcie_7x_v1_10_pcie_pipe_lane_51        |    48|
 2default:default
 ú
 %s*synth2å
-x|142   |          \pipe_8_lane.pipe_lane_6_i                           |pcie_7x_v1_10_pcie_pipe_lane_53        |    48|
+x|142   |          \pipe_8_lane.pipe_lane_6_i                           |pcie_7x_v1_10_pcie_pipe_lane_52        |    48|
 2default:default
 ú
 %s*synth2å
-x|143   |          \pipe_8_lane.pipe_lane_7_i                           |pcie_7x_v1_10_pcie_pipe_lane_54        |    48|
+x|143   |          \pipe_8_lane.pipe_lane_7_i                           |pcie_7x_v1_10_pcie_pipe_lane_53        |    48|
 2default:default
 ú
 %s*synth2å
-x|144   |          pipe_lane_0_i                                        |pcie_7x_v1_10_pcie_pipe_lane_55        |    48|
+x|144   |          pipe_lane_0_i                                        |pcie_7x_v1_10_pcie_pipe_lane_54        |    48|
 2default:default
 ú
 %s*synth2å
@@ -26806,7 +26812,7 @@ x|145   |          pipe_misc_i                                          |pcie_7x
 2default:default
 ú
 %s*synth2å
-x|146   |  scemi_processor_req_inport_buffer_empty_sp                   |SyncHandshake                          |    11|
+x|146   |  scemi_processor_req_inport_buffer_empty_sp                   |SyncHandshake                          |    10|
 2default:default
 ú
 %s*synth2å
@@ -26818,7 +26824,7 @@ x|148   |  scemi_processor_req_inport_ending_reset                      |SyncPul
 2default:default
 ú
 %s*synth2å
-x|149   |  scemi_processor_req_inport_next_sp                           |SyncHandshake_3                        |    13|
+x|149   |  scemi_processor_req_inport_next_sp                           |SyncHandshake_3                        |    12|
 2default:default
 ú
 %s*synth2å
@@ -26826,7 +26832,7 @@ x|150   |  scemi_processor_req_inport_starting_reset                    |SyncPul
 2default:default
 ú
 %s*synth2å
-x|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |     8|
+x|151   |  scemi_processor_req_inport_wait_sp                           |SyncHandshake_5                        |    12|
 2default:default
 ú
 %s*synth2å
@@ -26834,19 +26840,19 @@ x|152   |  scemi_processor_req_res_fifo                                 |SyncFIF
 2default:default
 ú
 %s*synth2å
-x|153   |  scemi_processor_resp_outport_finished                        |SyncHandshake_6                        |    87|
+x|153   |  scemi_processor_resp_outport_finished                        |SyncHandshake_6                        |   692|
 2default:default
 ú
 %s*synth2å
-x|154   |  scemi_processor_resp_outport_next                            |SyncHandshake_7                        |     6|
+x|154   |  scemi_processor_resp_outport_next                            |SyncHandshake_7                        |    75|
 2default:default
 ú
 %s*synth2å
-x|155   |  scemi_processor_resp_res_fifo                                |SyncFIFO__parameterized0_8             |   110|
+x|155   |  scemi_processor_resp_res_fifo                                |SyncFIFO__parameterized1               |    72|
 2default:default
 ú
 %s*synth2å
-x|156   |  scemi_rstgen_inv_rstgen                                      |MakeResetA_9                           |     5|
+x|156   |  scemi_rstgen_inv_rstgen                                      |MakeResetA_8                           |     5|
 2default:default
 ú
 %s*synth2å
@@ -26854,39 +26860,39 @@ x|157   |    rstSync                                                    |SyncRes
 2default:default
 ú
 %s*synth2å
-x|158   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   263|
+x|158   |  scemi_scemi_clkgen_fRequest                                  |FIFO2__parameterized6                  |   296|
 2default:default
 ú
 %s*synth2å
-x|159   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    71|
+x|159   |  scemi_scemi_clkgen_fResponse                                 |FIFO2__parameterized7                  |    52|
 2default:default
 ú
 %s*synth2å
-x|160   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_10                       |    12|
+x|160   |  scemi_setkey_inport_buffer_empty_sp                          |SyncHandshake_9                        |    11|
 2default:default
 ú
 %s*synth2å
-x|161   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_11                       |    12|
+x|161   |  scemi_setkey_inport_buffer_full_sp                           |SyncHandshake_10                       |    12|
 2default:default
 ú
 %s*synth2å
-x|162   |  scemi_setkey_inport_ending_reset                             |SyncPulse_12                           |     6|
+x|162   |  scemi_setkey_inport_ending_reset                             |SyncPulse_11                           |     6|
 2default:default
 ú
 %s*synth2å
-x|163   |  scemi_setkey_inport_next_sp                                  |SyncHandshake_13                       |    12|
+x|163   |  scemi_setkey_inport_next_sp                                  |SyncHandshake_12                       |    14|
 2default:default
 ú
 %s*synth2å
-x|164   |  scemi_setkey_inport_starting_reset                           |SyncPulse_14                           |     5|
+x|164   |  scemi_setkey_inport_starting_reset                           |SyncPulse_13                           |     5|
 2default:default
 ú
 %s*synth2å
-x|165   |  scemi_setkey_inport_wait_sp                                  |SyncHandshake_15                       |     8|
+x|165   |  scemi_setkey_inport_wait_sp                                  |SyncHandshake_14                       |     9|
 2default:default
 ú
 %s*synth2å
-x|166   |  scemi_setkey_res_fifo                                        |SyncFIFO__parameterized1               |    31|
+x|166   |  scemi_setkey_res_fifo                                        |SyncFIFO__parameterized2               |    31|
 2default:default
 ú
 %s*synth2å
@@ -26894,11 +26900,11 @@ x|167   |  scemi_settabledut_dut_dutIfc_didreset                        |FIFO2__
 2default:default
 ú
 %s*synth2å
-x|168   |  scemi_settabledut_dut_dutIfc_m_dut                           |mkDutWrapper                           |   406|
+x|168   |  scemi_settabledut_dut_dutIfc_m_dut                           |mkDutWrapper                           |   538|
 2default:default
 ú
 %s*synth2å
-x|169   |    fromSyncQ                                                  |SyncFIFO__parameterized0_43            |    35|
+x|169   |    fromSyncQ                                                  |SyncFIFO__parameterized1_42            |    71|
 2default:default
 ú
 %s*synth2å
@@ -26906,31 +26912,31 @@ x|170   |    rst_usr                                                    |SyncRes
 2default:default
 ú
 %s*synth2å
-x|171   |    toKeySyncQ                                                 |SyncFIFO__parameterized1_44            |    31|
+x|171   |    toKeySyncQ                                                 |SyncFIFO__parameterized2_43            |    31|
 2default:default
 ú
 %s*synth2å
-x|172   |    toSyncQ                                                    |SyncFIFO__parameterized0_45            |    31|
+x|172   |    toSyncQ                                                    |SyncFIFO__parameterized0_44            |    31|
 2default:default
 ú
 %s*synth2å
-x|173   |    tpOfb                                                      |mkThroughputOFB                        |   299|
+x|173   |    tpOfb                                                      |mkThroughputOFB                        |   395|
 2default:default
 ú
 %s*synth2å
-x|174   |      ofb_enc_ciphertextFIFO                                   |FIFO2__parameterized8                  |     5|
+x|174   |      ofb_enc_ciphertextFIFO                                   |FIFO2__parameterized8                  |     4|
 2default:default
 ú
 %s*synth2å
-x|175   |      ofb_enc_plaintextFIFO                                    |FIFO2__parameterized8_46               |    23|
+x|175   |      ofb_enc_plaintextFIFO                                    |FIFO2__parameterized8_45               |    14|
 2default:default
 ú
 %s*synth2å
-x|176   |      ofb_inputFIFO                                            |FIFO2__parameterized8_47               |    16|
+x|176   |      ofb_inputFIFO                                            |FIFO2__parameterized8_46               |    17|
 2default:default
 ú
 %s*synth2å
-x|177   |      ofb_outputFIFO                                           |FIFO2__parameterized8_48               |     9|
+x|177   |      ofb_outputFIFO                                           |FIFO2__parameterized8_47               |     9|
 2default:default
 ú
 %s*synth2å
@@ -26942,119 +26948,119 @@ x|179   |    rstSync                                                    |SyncRes
 2default:default
 ú
 %s*synth2å
-x|180   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   112|
+x|180   |  scemi_settabledut_dut_prb_control_ackFifo                    |FIFO2__parameterized1                  |   113|
 2default:default
 ú
 %s*synth2å
-x|181   |  scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |SyncHandshake_16                       |     8|
+x|181   |  scemi_settabledut_dut_prb_control_control_in_buffer_empty_sp |SyncHandshake_15                       |    11|
 2default:default
 ú
 %s*synth2å
-x|182   |  scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |SyncHandshake_17                       |    11|
+x|182   |  scemi_settabledut_dut_prb_control_control_in_buffer_full_sp  |SyncHandshake_16                       |     9|
 2default:default
 ú
 %s*synth2å
-x|183   |  scemi_settabledut_dut_prb_control_control_in_ending_reset    |SyncPulse_18                           |     6|
+x|183   |  scemi_settabledut_dut_prb_control_control_in_ending_reset    |SyncPulse_17                           |     6|
 2default:default
 ú
 %s*synth2å
-x|184   |  scemi_settabledut_dut_prb_control_control_in_next_sp         |SyncHandshake_19                       |    14|
+x|184   |  scemi_settabledut_dut_prb_control_control_in_next_sp         |SyncHandshake_18                       |    11|
 2default:default
 ú
 %s*synth2å
-x|185   |  scemi_settabledut_dut_prb_control_control_in_starting_reset  |SyncPulse_20                           |     5|
+x|185   |  scemi_settabledut_dut_prb_control_control_in_starting_reset  |SyncPulse_19                           |     5|
 2default:default
 ú
 %s*synth2å
-x|186   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_21                       |    11|
+x|186   |  scemi_settabledut_dut_prb_control_control_in_wait_sp         |SyncHandshake_20                       |    15|
 2default:default
 ú
 %s*synth2å
-x|187   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_22                       |     9|
+x|187   |  scemi_settabledut_dut_prb_control_data_out_finished          |SyncHandshake_21                       |    11|
 2default:default
 ú
 %s*synth2å
-x|188   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_23                       |    14|
+x|188   |  scemi_settabledut_dut_prb_control_data_out_next              |SyncHandshake_22                       |     8|
 2default:default
 ú
 %s*synth2å
-x|189   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |    95|
+x|189   |  scemi_settabledut_dut_prb_control_enff                       |FIFO2__parameterized9                  |   109|
 2default:default
 ú
 %s*synth2å
-x|190   |  scemi_settabledut_softrst_req_inport_buffer_empty_sp         |SyncHandshake_24                       |     8|
+x|190   |  scemi_settabledut_softrst_req_inport_buffer_empty_sp         |SyncHandshake_23                       |    10|
 2default:default
 ú
 %s*synth2å
-x|191   |  scemi_settabledut_softrst_req_inport_buffer_full_sp          |SyncHandshake_25                       |    11|
+x|191   |  scemi_settabledut_softrst_req_inport_buffer_full_sp          |SyncHandshake_24                       |    10|
 2default:default
 ú
 %s*synth2å
-x|192   |  scemi_settabledut_softrst_req_inport_ending_reset            |SyncPulse_26                           |     6|
+x|192   |  scemi_settabledut_softrst_req_inport_ending_reset            |SyncPulse_25                           |     6|
 2default:default
 ú
 %s*synth2å
-x|193   |  scemi_settabledut_softrst_req_inport_next_sp                 |SyncHandshake_27                       |    15|
+x|193   |  scemi_settabledut_softrst_req_inport_next_sp                 |SyncHandshake_26                       |    12|
 2default:default
 ú
 %s*synth2å
-x|194   |  scemi_settabledut_softrst_req_inport_starting_reset          |SyncPulse_28                           |     5|
+x|194   |  scemi_settabledut_softrst_req_inport_starting_reset          |SyncPulse_27                           |     5|
 2default:default
 ú
 %s*synth2å
-x|195   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_29                       |    10|
+x|195   |  scemi_settabledut_softrst_req_inport_wait_sp                 |SyncHandshake_28                       |    12|
 2default:default
 ú
 %s*synth2å
-x|196   |  scemi_settabledut_softrst_req_res_fifo                       |SyncFIFO__parameterized0_30            |    32|
+x|196   |  scemi_settabledut_softrst_req_res_fifo                       |SyncFIFO__parameterized0_29            |    32|
 2default:default
 ú
 %s*synth2å
-x|197   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_31                       |   546|
+x|197   |  scemi_settabledut_softrst_resp_outport_finished              |SyncHandshake_30                       |     8|
 2default:default
 ú
 %s*synth2å
-x|198   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_32                       |     7|
+x|198   |  scemi_settabledut_softrst_resp_outport_next                  |SyncHandshake_31                       |     9|
 2default:default
 ú
 %s*synth2å
-x|199   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized0_33            |    36|
+x|199   |  scemi_settabledut_softrst_resp_res_fifo                      |SyncFIFO__parameterized0_32            |    35|
 2default:default
 ú
 %s*synth2å
-x|200   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_34                       |    10|
+x|200   |  scemi_shutdown_ctrl_in_buffer_empty_sp                       |SyncHandshake_33                       |     9|
 2default:default
 ú
 %s*synth2å
-x|201   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_35                       |    20|
+x|201   |  scemi_shutdown_ctrl_in_buffer_full_sp                        |SyncHandshake_34                       |    19|
 2default:default
 ú
 %s*synth2å
-x|202   |  scemi_shutdown_ctrl_in_ending_reset                          |SyncPulse_36                           |     6|
+x|202   |  scemi_shutdown_ctrl_in_ending_reset                          |SyncPulse_35                           |     6|
 2default:default
 ú
 %s*synth2å
-x|203   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_37                       |    14|
+x|203   |  scemi_shutdown_ctrl_in_next_sp                               |SyncHandshake_36                       |    13|
 2default:default
 ú
 %s*synth2å
-x|204   |  scemi_shutdown_ctrl_in_starting_reset                        |SyncPulse_38                           |     5|
+x|204   |  scemi_shutdown_ctrl_in_starting_reset                        |SyncPulse_37                           |     5|
 2default:default
 ú
 %s*synth2å
-x|205   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_39                       |     8|
+x|205   |  scemi_shutdown_ctrl_in_wait_sp                               |SyncHandshake_38                       |    12|
 2default:default
 ú
 %s*synth2å
-x|206   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_40                       |     9|
+x|206   |  scemi_shutdown_ctrl_out_finished                             |SyncHandshake_39                       |     8|
 2default:default
 ú
 %s*synth2å
-x|207   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_41                       |     6|
+x|207   |  scemi_shutdown_ctrl_out_next                                 |SyncHandshake_40                       |    10|
 2default:default
 ú
 %s*synth2å
-x|208   |  scemi_uclkgen                                                |MakeClock_42                           |     4|
+x|208   |  scemi_uclkgen                                                |MakeClock_41                           |     4|
 2default:default
 ú
 %s*synth2å
@@ -27066,20 +27072,20 @@ x+------+---------------------------------------------------------------+-------
 2default:default
 ®
 %s*synth2ò
-ÉFinished Writing Synthesis Report : Time (s): cpu = 00:07:23 ; elapsed = 00:07:19 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+ÉFinished Writing Synthesis Report : Time (s): cpu = 00:07:20 ; elapsed = 00:07:16 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 l
 %s*synth2]
-ISynthesis finished with 0 errors, 0 critical warnings and 3161 warnings.
+ISynthesis finished with 0 errors, 0 critical warnings and 3584 warnings.
 2default:default
 ¶
 %s*synth2ñ
-ÅSynthesis Optimization Complete : Time (s): cpu = 00:07:24 ; elapsed = 00:07:20 . Memory (MB): peak = 2145.957 ; gain = 1508.879
+ÅSynthesis Optimization Complete : Time (s): cpu = 00:07:20 ; elapsed = 00:07:17 . Memory (MB): peak = 2247.230 ; gain = 1610.152
 2default:default
 ]
 -Analyzing %s Unisim elements for replacement
 17*netlist2
-552default:defaultZ29-17
+652default:defaultZ29-17
 a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
@@ -27097,10 +27103,10 @@ C
 ∞
 !Unisim Transformation Summary:
 %s111*project2Û
-ﬁ  A total of 25 instances were transformed.
+ﬁ  A total of 35 instances were transformed.
   INV => LUT1: 8 instances
-  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 3 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 14 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 26 instances
 2default:defaultZ1-111
 L
 Releasing license: %s
@@ -27109,7 +27115,7 @@ L
 ¿
 G%s Infos, %s Warnings, %s Critical Warnings and %s Errors encountered.
 28*	vivadotcl2
-7082default:default2
+7032default:default2
 2982default:default2
 02default:default2
 02default:defaultZ4-41
@@ -27121,15 +27127,15 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:07:312default:default2
-00:07:272default:default2
-2146.9572default:default2
-1401.9302default:defaultZ17-268
+00:07:282default:default2
+00:07:242default:default2
+2248.2302default:default2
+1503.2032default:defaultZ17-268
 Ç
-vreport_utilization: Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2146.957 ; gain = 0.000
+vreport_utilization: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2248.230 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Mon May  2 17:18:20 20162default:defaultZ17-206
+Tue May  3 15:40:45 20162default:defaultZ17-206

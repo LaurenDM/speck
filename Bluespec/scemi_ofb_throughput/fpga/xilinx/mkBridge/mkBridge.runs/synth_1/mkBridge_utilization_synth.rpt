@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.1 (lin64) Build 881834 Fri Apr  4 14:00:25 MDT 2014
-| Date         : Mon May  2 17:18:19 2016
+| Date         : Tue May  3 15:40:44 2016
 | Host         : bdbm11 running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
 | Design       : mkBridge
@@ -29,16 +29,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 20246 |     0 |    303600 |  6.66 |
-|   LUT as Logic             | 20183 |     0 |    303600 |  6.64 |
-|   LUT as Memory            |    63 |     0 |    130800 |  0.04 |
-|     LUT as Distributed RAM |    62 |     0 |           |       |
+| Slice LUTs*                | 20093 |     0 |    303600 |  6.61 |
+|   LUT as Logic             | 19986 |     0 |    303600 |  6.58 |
+|   LUT as Memory            |   107 |     0 |    130800 |  0.08 |
+|     LUT as Distributed RAM |   106 |     0 |           |       |
 |     LUT as Shift Register  |     1 |     0 |           |       |
-| Slice Registers            | 13362 |     0 |    607200 |  2.20 |
-|   Register as Flip Flop    | 13362 |     0 |    607200 |  2.20 |
+| Slice Registers            | 13574 |     0 |    607200 |  2.23 |
+|   Register as Flip Flop    | 13574 |     0 |    607200 |  2.23 |
 |   Register as Latch        |     0 |     0 |    607200 |  0.00 |
-| F7 Muxes                   |   300 |     0 |    151800 |  0.19 |
-| F8 Muxes                   |    19 |     0 |     75900 |  0.02 |
+| F7 Muxes                   |   316 |     0 |    151800 |  0.20 |
+| F8 Muxes                   |    23 |     0 |     75900 |  0.03 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -133,23 +133,23 @@ Table of Contents
 +---------------+-------+----------------------+
 |    Ref Name   |  Used |  Functional Category |
 +---------------+-------+----------------------+
-| FDRE          | 12305 |         Flop & Latch |
-| LUT6          |  9272 |                  LUT |
-| LUT5          |  5320 |                  LUT |
-| LUT4          |  2476 |                  LUT |
-| LUT3          |  2274 |                  LUT |
-| LUT2          |  1669 |                  LUT |
-| LUT1          |  1536 |                  LUT |
-| FDSE          |   592 |         Flop & Latch |
-| CARRY4        |   396 |           CarryLogic |
-| FDCE          |   369 |         Flop & Latch |
-| MUXF7         |   300 |                MuxFx |
+| FDRE          | 12519 |         Flop & Latch |
+| LUT6          |  9355 |                  LUT |
+| LUT5          |  4748 |                  LUT |
+| LUT4          |  2651 |                  LUT |
+| LUT3          |  2508 |                  LUT |
+| LUT2          |  1717 |                  LUT |
+| LUT1          |  1558 |                  LUT |
+| FDSE          |   591 |         Flop & Latch |
+| CARRY4        |   404 |           CarryLogic |
+| FDCE          |   368 |         Flop & Latch |
+| MUXF7         |   316 |                MuxFx |
+| RAMD32        |   158 |   Distributed Memory |
 | FDPE          |    96 |         Flop & Latch |
-| RAMD32        |    90 |   Distributed Memory |
+| RAMS32        |    52 |   Distributed Memory |
 | BUFG          |    41 |                Clock |
-| RAMS32        |    28 |   Distributed Memory |
 | OBUF          |    24 |                   IO |
-| MUXF8         |    19 |                MuxFx |
+| MUXF8         |    23 |                MuxFx |
 | IBUF          |    19 |                   IO |
 | RAMB36E1      |    14 |         Block Memory |
 | GTXE2_CHANNEL |     8 |                   IO |
