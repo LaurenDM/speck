@@ -59,10 +59,10 @@ void convert_ascii_to_hex(char infilename[], char outfilename[]){
     }
     outfile << "\n";
   }
-  outfile << "0 0 \n"; // indicate end of file
   infile.close();
   outfile.close();
 }
+
 int main() {
     /*ifstream in;
     ofstream out;
@@ -74,30 +74,33 @@ int main() {
     }
     return 0;*/
 
-    convert_ascii_to_hex("Tux.bmp","test.txt");
+    convert_ascii_to_hex("iceland.jpg","test.txt");
 
-    FILE* infile = fopen("test.txt","rb");
-    if (infile == NULL) {
-        std::cerr << "couldn't open test.txt" << std::endl;
-        return 1;
+    ifstream infile;
+    infile.open("test.txt",std::ios::binary);
+    FILE* outfile = fopen("out.jpg","wb");
+    if(!infile.is_open()){
+      std::cerr << "couldn't open test.txt" << std::endl;
+      return 1;
     }
-    FILE* outfile = fopen("out.bmp","wb");
-    if (outfile == NULL) {
-        std::cerr << "couldn't open out.jpg" << std::endl;
-        return 1;
+    if(outfile == NULL){
+      std::cerr << "couldn't open out.jpg" << std::endl;
+      return 1;
     }
-    bool indone = false;
+
+    bool indone=false;
     word in1, in2;
     word block[2];
     while(!indone){
-      fscanf(infile,"%lx %lx",&in1, &in2);
-      if(in1==0 && in2==0){
-        indone=true;
-        fclose(infile);
+      if(infile >> std::hex>> in1){
+        block[0] = in1;
+        infile >> std::hex >> in2;
+        block[1] = in2;
+        print_ascii_from_hex(outfile,block);
       }
       else{
-        block[0] = in1; block[1] = in2;
-        print_ascii_from_hex(outfile,block);
+        indone=true;
+        infile.close();
       }
     }
     fclose(outfile);
