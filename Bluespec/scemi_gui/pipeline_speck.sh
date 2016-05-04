@@ -5,7 +5,7 @@ cd fpga
 
 # define files
 key_file="key.txt"
-iv_file="key.txt"
+iv_file="iv.txt"
 message_input_file="in.txt"
 message_output_file="out.txt"
 
@@ -29,5 +29,5 @@ javac SpeckGUI.java #compile GUI
 #-- run GUI and tb --#
 while true; do #CTR-c CTR-c to kill; we'll add in user prompt in SpeckGUI
     java SpeckGUI $key_file $iv_file $message_input_file $message_output_file
-    runtb ./tb
+    #runtb ./tb
 done
