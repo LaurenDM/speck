@@ -6,18 +6,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/* based on hard-coded n=24, m=4
-   where n = 24 bits = 6 hex digits
-         m = 4 words = 24 hex digits
-   therefore key size=24 hex digits; iv size = 12 hex digits
-*/
-
 public class SpeckGUI{
     private final static String key_filename="key.txt", iv_filename="iv.txt", message_filename="in.txt";
-    private final static int target_length_key=24, target_length_iv=12;
+    private final static int target_length_key=27, target_length_iv=13; // lengths based on hex characters
     private static JFrame window;
     private final static String window_title = "GUI for Speck";
-    private final static int window_width=500, window_height=300;
+    private final static int window_width=1000, window_height=500;
     private static JPanel content_container;
 
     /* components for content container frame*/
@@ -26,7 +20,7 @@ public class SpeckGUI{
     private static JPanel center_panel, key_iv_panel, iv_panel, message_panel;
     private static JTextArea key_input, iv_input, message_input;
     private static JButton submit_button;
-    
+
     public static void main(String args[]){
 	/* make sure GUI stays responsive and avoids queue by overriding Java Runnable queue */
 	java.awt.EventQueue.invokeLater(new Runnable() {
@@ -35,19 +29,19 @@ public class SpeckGUI{
 		}
 	    });
     }
-    
+
     public SpeckGUI(){
 	createWindow();
 	createContentContainer();
-	
+
 	window.setContentPane(content_container);
-	
+
 	content_container.add(header_panel.add(new JLabel(header_title, JLabel.CENTER)), BorderLayout.NORTH);
 
 	createComponents();
 	content_container.add(center_panel, BorderLayout.CENTER);
     }
-    
+
     private static void createWindow(){
 	window = new JFrame();
 	window.setTitle(window_title);
@@ -66,23 +60,23 @@ public class SpeckGUI{
     private static void createComponents(){
 	center_panel = new JPanel();
 	center_panel.setLayout(new GridBagLayout());
-        	
-	key_input = new JTextArea(1, 22);
-	iv_input = new JTextArea(1, 22);
-	message_input = new JTextArea(12, 22);
-	
-	center_panel.add(new JLabel("Enter key (hex):", JLabel.RIGHT), getConstraints("key_text"));
+
+	key_input = new JTextArea("020100 0a0908 121110 1a1918",1, 60);
+	iv_input = new JTextArea("735e10 b6445d",1, 60);
+	message_input = new JTextArea("Type your message here",20, 60);
+
+	center_panel.add(new JLabel("Enter key:", JLabel.RIGHT), getConstraints("key_text"));
 	center_panel.add(new JScrollPane(key_input), getConstraints("key_input"));
-	center_panel.add(new JLabel("Enter IV (hex):", JLabel.RIGHT), getConstraints("iv_text"));
+	center_panel.add(new JLabel("Enter IV:", JLabel.RIGHT), getConstraints("iv_text"));
 	center_panel.add(new JScrollPane(iv_input), getConstraints("iv_input"));
-	center_panel.add(new JLabel("Enter message (ASCII):", JLabel.RIGHT), getConstraints("message_text"));
+	center_panel.add(new JLabel("Enter message:", JLabel.RIGHT), getConstraints("message_text"));
 	center_panel.add(new JScrollPane(message_input), getConstraints("message_input"));
 
 	submit_button = new JButton("Submit");
 	center_panel.add(submit_button, getConstraints("submit_button"));
 	addButtonListener();
     }
-    
+
     private static GridBagConstraints getConstraints(String which_element){
 	/* defines placement for prompts, text boxes, and submit button */
 	GridBagConstraints c = new GridBagConstraints();
@@ -125,7 +119,7 @@ public class SpeckGUI{
 	    String key = key_input.getText();
 	    String iv = iv_input.getText();
 	    String message = message_input.getText();
-	    
+
 	    if (checkContents(key, iv, message)){
 		/* if inputs are correct, write to file for testbench */
 		writeToFile(key, key_filename);
@@ -147,7 +141,7 @@ public class SpeckGUI{
 	} else {
 	    return true;
 	}
-    }    
+    }
 
     private static void writeToFile(String contents, String filename){
     	// reference: http://www.mkyong.com/java/how-to-write-to-file-in-java-bufferedwriter-example/
@@ -160,7 +154,7 @@ public class SpeckGUI{
 
 	    // write contents to file
     	    FileWriter fw = new FileWriter(file_out.getAbsoluteFile());
-    	    BufferedWriter bw = new BufferedWriter(fw);	    
+    	    BufferedWriter bw = new BufferedWriter(fw);
     	    bw.write(String.format("%s\n", contents));
     	    bw.close();
     	} catch (IOException e){
@@ -169,4 +163,3 @@ public class SpeckGUI{
     	}
     }
 }
- 
