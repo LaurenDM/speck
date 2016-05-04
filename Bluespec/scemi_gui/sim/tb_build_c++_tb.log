@@ -1,0 +1,5 @@
+../Tb.cpp: In function 'int main(int, char**)':
+../Tb.cpp:157:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../Tb.cpp:157:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../Tb.cpp:185:57: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../Tb.cpp:185:57: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
