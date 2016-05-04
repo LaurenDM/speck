@@ -20,7 +20,8 @@ public class SpeckGUI{
     private final static String header_title = "Welcome to Speck!";
     private static JPanel center_panel, key_iv_panel, iv_panel, message_panel;
     private static JTextArea key_input, iv_input, message_input;
-    private static JButton submit_button;
+    private static JPanel button_panel;
+    private static JButton submit_button, exit_button;
 
     public static void main(String args[]){
 	/* populate filenames; rather do this in SpeckGUI but this is simpler for now */
@@ -78,9 +79,15 @@ public class SpeckGUI{
 	center_panel.add(new JLabel("Enter message:", JLabel.RIGHT), getConstraints("message_text"));
 	center_panel.add(new JScrollPane(message_input), getConstraints("message_input"));
 
-	submit_button = new JButton("Submit");
+	/* add buttons to boxlayout (to get them side by side), which then gets added to center_panel */
+	button_panel = new JPanel();
+	button_panel.setLayout(new BoxLayout(button_panel, BoxLayout.X_AXIS));
+	
+	submit_button = new JButton("Submit Message");
 	center_panel.add(submit_button, getConstraints("submit_button"));
 	addButtonListener();
+
+	exit_button = new JButton("Exit Speck");
     }
 
     private static GridBagConstraints getConstraints(String which_element){
