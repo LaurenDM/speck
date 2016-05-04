@@ -1,4 +1,4 @@
-
+#include <exception>
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
@@ -18,6 +18,7 @@ typedef u24 word;
 typedef BitT<24> scemiword;
 
 FILE* outfile = NULL;
+ifstream infile;
 
 bool indone = false;
 long int putcount = 0;
@@ -53,26 +54,24 @@ void out_cb(void* x, const BlockType& block_in)
 
 }
 
-void runtest(InportProxyT<BlockType >& inport, FILE* infile)
+void runtest(InportProxyT<BlockType >& inport)
 {
     word in1, in2;
     while (outfile) {
         if (!indone) {
             //printf("scanning, gotcount = %ld, putcount= %ld  \n",gotcount,putcount);
-            fscanf(infile,"%lx %lx",&in1, &in2);
-
-            if (in1 == 0 && in2 == 0) { // we will use 0's to indicate end of plaintexts/ciphertexts
-                //printf("end of file \n");
-                indone = true;
-                fclose(infile);
-                infile = NULL;
-            } else {
-                //printf("sending input %lx %lx \n",in1,in2);
-                BlockType block;
-                block.m_tpl_1 = BitT<24>(in1);
-                block.m_tpl_2 = BitT<24>(in2);
-                putcount++;
-                inport.sendMessage(block);
+            //fscanf(infile,"%lx %lx",&in1, &in2);
+            if(infile >> std::hex>> in1){
+              BlockType block;
+              block.m_tpl_1 = BitT<24>(in1);
+              infile >> std::hex >> in2;
+              block.m_tpl_2 = BitT<24>(in2);
+              putcount++;
+              inport.sendMessage(block);
+            }
+            else{
+              indone=true;
+              infile.close();
             }
         }
         else{
@@ -83,30 +82,29 @@ void runtest(InportProxyT<BlockType >& inport, FILE* infile)
     }
 }
 
-void convert_ascii_to_hex(char filename_in[], char filename_out[]){
+void convert_ascii_to_hex(char infilename[], char outfilename[]){
   // open input/output files
-  ifstream infile;
-  ofstream outfile;
-  infile.open(filename_in);
-  outfile.open(filename_out);
+  ifstream in;
+  ofstream out;
+  in.open(infilename,std::ios::binary);
+  out.open(outfilename);
 
   // write to output file
   int digit_counter = 0;
-  int n;
+  unsigned int n;
   char c;
-  string line;
-  if (infile.is_open()){
-    while (infile.get(c)){
-       digit_counter = digit_counter + 1;
+  if (in.is_open()){
+    while (in.get(c)){
        n = (unsigned char) c;
+       digit_counter = digit_counter + 1;
        if(n<16){ // only one hexadecimal digit
-         outfile << "0"; // we need two digits for every character
+          out << "0"; // we need two digits for every character
        }
-       outfile << hex << n; // regular character write
+       out << hex << n; // regular character write
        if (digit_counter == num_chars_per_word){
-          outfile << " "; // adding space after first word
+           out << " "; // adding space after first word
        } else if (digit_counter == 2*num_chars_per_word){
-          outfile << "\n"; // start writing on new line
+          out << "\n"; // start writing on new line
           digit_counter = 0;
        }
     }
@@ -116,17 +114,16 @@ void convert_ascii_to_hex(char filename_in[], char filename_out[]){
   // pad with zeros to get full blocks
   if(digit_counter !=0){
     while(digit_counter < 2*num_chars_per_word){
-      outfile << "00";
+      out << "00";
       digit_counter=digit_counter+1;
       if(digit_counter==num_chars_per_word){
-        outfile << " ";
+        out << " ";
       }
     }
-    outfile << "\n";
+    out << "\n";
   }
-  outfile << "0 0 \n"; // indicate end of file
-  infile.close();
-  outfile.close();
+  in.close();
+  out.close();
 }
 
 int main(int argc, char* argv[])
@@ -154,25 +151,28 @@ int main(int argc, char* argv[])
     // Reset the dut.
     reset.reset();
 
-    convert_ascii_to_hex("message.txt","pt_in.txt");
-    //convert_ascii_to_hex("Tux.jpg","pt_in.txt");
+    //convert_ascii_to_hex("message.txt","pt_in.txt");
+    convert_ascii_to_hex("Tux.jpg","pt_in.txt");
     /********************************* ENCRYPT *****************************************/
     Key_Iv ki;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
+    // 020100 0a0908 121110 1a1918
     for (int i=0; i<4; i++){
         ki.m_key[i]=enkey[i];
     }
     ki.m_iv.m_tpl_1 = 0x735e10;
     ki.m_iv.m_tpl_2 = 0xb6445d;
+    // 735e10 b6445d
     setkey.sendMessage(ki);
     //printf("enc key = set \n");
-    FILE* infile = fopen("pt_in.txt", "rb");
-    if (infile == NULL) {
-        std::cerr << "couldn't open pt_in.txt" << std::endl;
-        return 1;
+
+    infile.open("pt_in.txt",std::ios::binary);
+    if(!infile.is_open()){
+      std::cerr << "couldn't open pt_in.txt" << std::endl;
+      return 1;
     }
-    outfile = fopen("ciphermessage.txt", "wb");
-    //outfile = fopen("ciphertux.jpg", "wb");
+    //outfile = fopen("ciphermessage.txt", "wb");
+    outfile = fopen("ciphertux.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open ciphermessage.txt" << std::endl;
         return 1;
@@ -180,34 +180,34 @@ int main(int argc, char* argv[])
     // Send in all the data.
     clock_t starttime,endtime;
     starttime = clock();
-    runtest(inport,infile);
+    runtest(inport);
     endtime = clock();
     printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 
-    convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
-    //convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
+    //convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
+    convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
     /********************************* DECRYPT *****************************************/
     // reset
     // Reset the dut.
     reset.reset();
-    sleep(10);
+    sleep(1);
     indone = false;
     putcount = 0;
     gotcount = 0;
     setkey.sendMessage(ki); // key and iv stay the same
-    infile = fopen("ct_in.txt", "rb");
-    if (infile == NULL) {
-        std::cerr << "couldn't open ct_in.txt" << std::endl;
-        return 1;
+    infile.open("ct_in.txt",std::ios::binary);
+    if(!infile.is_open()){
+      std::cerr << "couldn't open ct_in.txt" << std::endl;
+      return 1;
     }
-    outfile = fopen("message_out.txt", "wb");
-    //outfile = fopen("Tux_out.jpg", "wb");
+    //outfile = fopen("message_out.txt", "wb");
+    outfile = fopen("Tux_out.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open message_out.txt" << std::endl;
         return 1;
     }
     starttime =clock();
-    runtest(inport,infile);
+    runtest(inport);
     endtime=clock();
     printf("decryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
     /********************************* FINISH *****************************************/
