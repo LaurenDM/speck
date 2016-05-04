@@ -6,15 +6,15 @@ file delete -force ./mkBridge.bit
 
 create_project mkBridge ./mkBridge -part xc7vx485t-ffg1761-2
 set_property design_mode RTL [current_fileset -srcset]
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v}
@@ -79,7 +79,7 @@ add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_qpll_reset.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_qpll_wrapper.v}
 add_file -norecurse {/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_rxeq_scan.v}
-add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v}
+add_file -norecurse {/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v}
 read_xdc ./default.xdc
 
 set_property top mkBridge [get_property srcset [current_run]]

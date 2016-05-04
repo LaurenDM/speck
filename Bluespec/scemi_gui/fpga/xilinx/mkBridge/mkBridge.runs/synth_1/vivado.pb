@@ -40,12 +40,12 @@ Pparameter declaration becomes local in %s with formal parameter declaration lis
 2442default:default8@Z8-2507
 ú
 %s*synth2å
-xStarting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.891 ; gain = 170.809
+xStarting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.887 ; gain = 170.809
 2default:default
 Œ
 synthesizing module '%s'638*oasys2
 mkBridge2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 372default:default8@Z8-638
 ∫
 synthesizing module '%s'638*oasys2
@@ -485,7 +485,7 @@ $	Parameter initGate bound to: 1'b1
 432default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28802default:default8@Z8-4446
 ÿ
 synthesizing module '%s'638*oasys2*
@@ -505,7 +505,7 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28832default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -525,11 +525,11 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28862default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28892default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -549,7 +549,7 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28922default:default8@Z8-4446
 ‹
 synthesizing module '%s'638*oasys2,
@@ -569,11 +569,11 @@ I/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v2de
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28952default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 28982default:default8@Z8-4446
 ÿ
 synthesizing module '%s'638*oasys2*
@@ -593,11 +593,11 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29012default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29042default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -687,43 +687,43 @@ MakeReset02default:default2
 402default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29412default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29442default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29472default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29502default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29532default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29562default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29592default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29622default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29652default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 29682default:default8@Z8-4446
 Ã
 synthesizing module '%s'638*oasys2
@@ -938,7 +938,7 @@ Ginstance '%s' of module '%s' requires %s connections, but only %s given350*
 MMCME2_ADV2default:default2
 332default:default2
 282default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30102default:default8@Z8-350
 ƒ
 synthesizing module '%s'638*oasys2!
@@ -954,7 +954,7 @@ K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2
 302default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30482default:default8@Z8-4446
 Œ
 synthesizing module '%s'638*oasys2.
@@ -974,7 +974,7 @@ T
 432default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30572default:default8@Z8-4446
 º
 synthesizing module '%s'638*oasys2
@@ -994,15 +994,15 @@ C
 432default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30652default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30732default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 30812default:default8@Z8-4446
 Œ
 synthesizing module '%s'638*oasys2.
@@ -1098,7 +1098,7 @@ T
 402default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 31622default:default8@Z8-4446
 é
 synthesizing module '%s'638*oasys2*
@@ -11941,7 +11941,7 @@ J
 472default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 33262default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -11961,7 +11961,7 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 33292default:default8@Z8-4446
  
 synthesizing module '%s'638*oasys2,
@@ -11989,51 +11989,51 @@ U
 532default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 33872default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 33902default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34512default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34552default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34592default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34632default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34672default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34712default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34752default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34792default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34832default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 34872default:default8@Z8-4446
 ƒ
 synthesizing module '%s'638*oasys2)
@@ -12286,11 +12286,11 @@ Ginstance '%s' of module '%s' requires %s connections, but only %s given350*
 MMCME2_ADV2default:default2
 332default:default2
 302default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 35542default:default8@Z8-350
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 36212default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -12310,7 +12310,7 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 36242default:default8@Z8-4446
  
 synthesizing module '%s'638*oasys2,
@@ -12339,12 +12339,12 @@ U
 ÷
 synthesizing module '%s'638*oasys2 
 mkDutWrapper2default:default2e
-O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v2default:default2
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v2default:default2
 392default:default8@Z8-638
 ﬁ
 synthesizing module '%s'638*oasys2$
 mkSynthesizedOFB2default:default2i
-S/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v2default:default2
+S/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v2default:default2
 412default:default8@Z8-638
 ƒ
 synthesizing module '%s'638*oasys2)
@@ -12371,7 +12371,7 @@ S
 mkSynthesizedOFB2default:default2
 642default:default2
 12default:default2i
-S/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v2default:default2
+S/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v2default:default2
 412default:default8@Z8-256
 Œ
 synthesizing module '%s'638*oasys2.
@@ -12394,7 +12394,7 @@ T
 mkDutWrapper2default:default2
 652default:default2
 12default:default2e
-O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v2default:default2
+O/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v2default:default2
 392default:default8@Z8-256
 Œ
 synthesizing module '%s'638*oasys2.
@@ -12434,27 +12434,27 @@ T
 402default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 37372default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 37402default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 37852default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 37882default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 37982default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 38012default:default8@Z8-4446
 ƒ
 synthesizing module '%s'638*oasys2)
@@ -12478,7 +12478,7 @@ S
 512default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 38282default:default8@Z8-4446
 º
 synthesizing module '%s'638*oasys2
@@ -12494,7 +12494,7 @@ K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2
 392default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 38742default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -12514,7 +12514,7 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 38772default:default8@Z8-4446
  
 synthesizing module '%s'638*oasys2,
@@ -12542,15 +12542,15 @@ U
 532default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 39352default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 39382default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 39962default:default8@Z8-4446
 Ë
 synthesizing module '%s'638*oasys2:
@@ -12570,15 +12570,15 @@ G/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v2defa
 282default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 39992default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 40442default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 40472default:default8@Z8-4446
 Õ
 synthesizing module '%s'638*oasys2
@@ -12662,43 +12662,43 @@ D/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v2default
 102652default:default8@Z8-256
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41072default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41102default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41132default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41162default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41192default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41222default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41252default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41282default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41312default:default8@Z8-4446
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41342default:default8@Z8-4446
 ‹
 synthesizing module '%s'638*oasys2.
@@ -12911,207 +12911,207 @@ Ginstance '%s' of module '%s' requires %s connections, but only %s given350*
 MMCME2_ADV2default:default2
 332default:default2
 282default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 41762default:default8@Z8-350
 ‚
 Fall outputs are unconnected for this instance and logic may be removed3605*oasys2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 42142default:default8@Z8-4446
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 65032default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 65262default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 65492default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 71172default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 71402default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 71632default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 71862default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 72182default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 72422default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 72672default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 72922default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 73172default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 74232default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 75022default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 75332default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 75532default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 75802default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 77182default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 77862default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 78112default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 78342default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 78572default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 79252default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 81402default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 82602default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 83342default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 83672default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 84392default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 86722default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 87742default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 89412default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 89862default:default8@Z8-3536
 ˛
 ?HDL ADVISOR - Pragma %s detected. Simulation mismatch may occur3412*oasys2!
 parallel_case2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 94292default:default8@Z8-3536
 ¥
 merging register '%s' into '%s'3619*oasys27
 #scemi_setkey_inport_requestF_rv_reg2default:default2>
 *scemi_processor_req_inport_requestF_rv_reg2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 53582default:default8@Z8-4471
 Õ
 merging register '%s' into '%s'3619*oasys2P
 <scemi_settabledut_dut_prb_control_control_in_requestF_rv_reg2default:default2>
 *scemi_processor_req_inport_requestF_rv_reg2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 48862default:default8@Z8-4471
 ≈
 merging register '%s' into '%s'3619*oasys2H
 4scemi_settabledut_softrst_req_inport_requestF_rv_reg2default:default2>
 *scemi_processor_req_inport_requestF_rv_reg2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 50132default:default8@Z8-4471
 ∑
 merging register '%s' into '%s'3619*oasys2:
 &scemi_shutdown_ctrl_in_requestF_rv_reg2default:default2>
 *scemi_processor_req_inport_requestF_rv_reg2default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 54792default:default8@Z8-4471
 ä
 %done synthesizing module '%s' (%s#%s)256*oasys2
 mkBridge2default:default2
 692default:default2
 12default:default2a
-K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2default:default2
+K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v2default:default2
 372default:default8@Z8-256
 ñ
 +design %s has port %s driven by constant %s3447*oasys2
@@ -13140,7 +13140,7 @@ K/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v2
 02default:defaultZ8-3917
 ù
 %s*synth2ç
-yFinished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1016.031 ; gain = 378.949
+yFinished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1016.027 ; gain = 378.949
 2default:default
 ;
 %s*synth2,
@@ -13217,28 +13217,28 @@ Processing XDC Constraints
 î
 Parsing XDC File [%s]
 179*designutils2^
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:defaultZ20-179
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:defaultZ20-179
 ⁄
 zUser defined clock exists on pin %s and will prevent any subsequent automatic derivation of generated clocks on that pin.
 3*timing2H
 scemi_clkgen_pll/CLKOUT0scemi_clkgen_pll/CLKOUT02default:default2`
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-3
 Ë
 zUser defined clock exists on pin %s and will prevent any subsequent automatic derivation of generated clocks on that pin.
 3*timing2V
 scemi_scemi_clkgen_mmcm/CLKOUT0scemi_scemi_clkgen_mmcm/CLKOUT02default:default2`
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-3
 ∞
 Deriving generated clocks
 2*timing2`
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2
 2032default:default8@Z38-2
 ù
 Finished Parsing XDC File [%s]
 178*designutils2^
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:defaultZ20-178
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:defaultZ20-178
 €
 zUser defined clock exists on pin %s and will prevent any subsequent automatic derivation of generated clocks on that pin.
 3*timing2H
@@ -13250,7 +13250,7 @@ zUser defined clock exists on pin %s and will prevent any subsequent automatic d
 É
 ŸImplementation specific constraints were found while reading constraint file [%s]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [%s].
 233*project2^
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2.
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2.
 .Xil/mkBridge_propImpl.xdc2default:defaultZ1-236
 ?
 &Completed Processing XDC Constraints
@@ -13263,7 +13263,7 @@ u
 2default:defaultZ1-111
 ≤
 %s*synth2¢
-çFinished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.758 ; gain = 956.676
+çFinished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.754 ; gain = 956.676
 2default:default
 x
 %s*synth2i
@@ -13403,11 +13403,11 @@ Tcan't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto genera
 2default:default
 ∂
 %s*synth2¶
-ëFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.758 ; gain = 956.676
+ëFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.754 ; gain = 956.676
 2default:default
 û
 %s*synth2é
-zFinished RTL Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.758 ; gain = 956.676
+zFinished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.754 ; gain = 956.676
 2default:default
 ´
 merging register '%s' into '%s'3619*oasys29
@@ -13961,11 +13961,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit       Adders := 3     
+.	   2 Input     32 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit       Adders := 3     
+.	   3 Input     32 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -13989,15 +13989,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     13 Bit       Adders := 12    
-2default:default
-Q
-%s*synth2B
 .	   3 Input     13 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     12 Bit       Adders := 3     
+.	   2 Input     13 Bit       Adders := 12    
 2default:default
 Q
 %s*synth2B
@@ -14009,11 +14005,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit       Adders := 1     
+.	   4 Input     12 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     10 Bit       Adders := 1     
+.	   2 Input     11 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -14021,11 +14017,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      9 Bit       Adders := 3     
+.	   3 Input     10 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      9 Bit       Adders := 6     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      9 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -14037,10 +14037,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      6 Bit       Adders := 2     
-2default:default
-Q
-%s*synth2B
 .	   3 Input      6 Bit       Adders := 6     
 2default:default
 Q
@@ -14049,11 +14045,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      5 Bit       Adders := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      5 Bit       Adders := 17    
+.	   4 Input      6 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
@@ -14061,7 +14053,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      5 Bit       Adders := 17    
+2default:default
+Q
+%s*synth2B
 .	   3 Input      5 Bit       Adders := 1     
+2default:default
+Q
+%s*synth2B
+.	  16 Input      5 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -14317,15 +14317,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   4 Input     32 Bit        Muxes := 5     
+2default:default
+Q
+%s*synth2B
 .	   3 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     32 Bit        Muxes := 126   
-2default:default
-Q
-%s*synth2B
-.	   4 Input     32 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -14353,6 +14353,10 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input     19 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
 .	   4 Input     19 Bit        Muxes := 1     
 2default:default
 Q
@@ -14361,7 +14365,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 9     
+.	   5 Input     18 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -14373,15 +14377,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input     18 Bit        Muxes := 8     
+.	   8 Input     16 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     16 Bit        Muxes := 46    
-2default:default
-Q
-%s*synth2B
-.	   8 Input     16 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14417,15 +14417,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      9 Bit        Muxes := 27    
-2default:default
-Q
-%s*synth2B
 .	  10 Input      9 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   6 Input      8 Bit        Muxes := 1     
+.	   2 Input      9 Bit        Muxes := 27    
 2default:default
 Q
 %s*synth2B
@@ -14437,6 +14433,10 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   6 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
@@ -14445,15 +14445,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      6 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  37 Input      6 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   8 Input      6 Bit        Muxes := 2     
+.	   7 Input      6 Bit        Muxes := 40    
 2default:default
 Q
 %s*synth2B
@@ -14461,7 +14453,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 40    
+.	   8 Input      6 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  37 Input      6 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      6 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   5 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14477,11 +14481,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      5 Bit        Muxes := 167   
+.	   3 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      5 Bit        Muxes := 1     
+.	   2 Input      5 Bit        Muxes := 167   
 2default:default
 Q
 %s*synth2B
@@ -14489,7 +14493,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      5 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 175   
 2default:default
 Q
 %s*synth2B
@@ -14497,19 +14501,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 175   
-2default:default
-Q
-%s*synth2B
 .	   5 Input      4 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 16    
-2default:default
-Q
-%s*synth2B
-.	  10 Input      3 Bit        Muxes := 2     
+.	   4 Input      3 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -14521,7 +14517,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      3 Bit        Muxes := 8     
+.	   2 Input      3 Bit        Muxes := 104   
+2default:default
+Q
+%s*synth2B
+.	  10 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -14529,11 +14529,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 104   
+.	   7 Input      3 Bit        Muxes := 16    
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 14    
+.	   7 Input      2 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -14545,11 +14545,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      2 Bit        Muxes := 8     
+.	   4 Input      2 Bit        Muxes := 14    
 2default:default
 Q
 %s*synth2B
-.	   6 Input      1 Bit        Muxes := 24    
+.	   4 Input      1 Bit        Muxes := 34    
+2default:default
+Q
+%s*synth2B
+.	  18 Input      1 Bit        Muxes := 7     
+2default:default
+Q
+%s*synth2B
+.	   8 Input      1 Bit        Muxes := 26    
 2default:default
 Q
 %s*synth2B
@@ -14557,15 +14565,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      1 Bit        Muxes := 6     
+.	   6 Input      1 Bit        Muxes := 24    
 2default:default
 Q
 %s*synth2B
-.	  32 Input      1 Bit        Muxes := 152   
-2default:default
-Q
-%s*synth2B
-.	   8 Input      1 Bit        Muxes := 26    
+.	   5 Input      1 Bit        Muxes := 67    
 2default:default
 Q
 %s*synth2B
@@ -14577,19 +14581,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 67    
+.	  10 Input      1 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	  18 Input      1 Bit        Muxes := 7     
+.	  32 Input      1 Bit        Muxes := 152   
 2default:default
 Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 1174  
-2default:default
-Q
-%s*synth2B
-.	   4 Input      1 Bit        Muxes := 34    
 2default:default
 F
 %s*synth27
@@ -14641,15 +14641,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit       Adders := 3     
-2default:default
-Q
-%s*synth2B
 .	   4 Input      6 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
 .	   3 Input      6 Bit       Adders := 5     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      6 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
@@ -14669,11 +14669,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      2 Bit       Adders := 1     
+.	   2 Input      2 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit       Adders := 2     
+.	   3 Input      2 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -14781,11 +14781,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     64 Bit        Muxes := 1     
+.	   2 Input     64 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     64 Bit        Muxes := 1     
+.	   4 Input     64 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14793,7 +14793,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 3     
+.	   3 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14801,7 +14801,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -14809,11 +14809,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     19 Bit        Muxes := 1     
+.	   4 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     19 Bit        Muxes := 1     
+.	   2 Input     19 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14833,11 +14833,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      8 Bit        Muxes := 1     
+.	   4 Input      8 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input      8 Bit        Muxes := 2     
+.	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14845,7 +14845,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      8 Bit        Muxes := 1     
+.	   6 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -14865,11 +14865,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 8     
+.	   9 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   9 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -15397,11 +15397,11 @@ B
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit       Adders := 1     
+.	   3 Input     32 Bit       Adders := 3     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit       Adders := 3     
+.	   2 Input     32 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15421,11 +15421,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     12 Bit       Adders := 1     
+.	   3 Input     12 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     12 Bit       Adders := 1     
+.	   2 Input     12 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15433,11 +15433,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     10 Bit       Adders := 1     
+.	   2 Input     10 Bit       Adders := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit       Adders := 4     
+.	   3 Input     10 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15457,11 +15457,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit       Adders := 8     
+.	   3 Input      6 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input      6 Bit       Adders := 1     
+.	   2 Input      6 Bit       Adders := 8     
 2default:default
 Q
 %s*synth2B
@@ -15569,11 +15569,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  37 Input     32 Bit        Muxes := 1     
+.	   4 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 2     
+.	  37 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15585,11 +15585,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     16 Bit        Muxes := 1     
+.	   2 Input     16 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     16 Bit        Muxes := 2     
+.	   4 Input     16 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15609,19 +15609,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      9 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      9 Bit        Muxes := 11    
 2default:default
 Q
 %s*synth2B
-.	   4 Input      8 Bit        Muxes := 16    
+.	   4 Input      9 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      8 Bit        Muxes := 2221  
+2default:default
+Q
+%s*synth2B
+.	   4 Input      8 Bit        Muxes := 16    
 2default:default
 Q
 %s*synth2B
@@ -16881,11 +16881,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -16941,11 +16941,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17049,11 +17049,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -17061,11 +17061,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -17077,19 +17077,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17205,11 +17205,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 1     
+.	  10 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	  10 Input      1 Bit        Muxes := 3     
+.	   8 Input      1 Bit        Muxes := 1     
 2default:default
 I
 %s*synth2:
@@ -17513,11 +17513,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -17573,11 +17573,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17681,11 +17681,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -17693,11 +17693,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -17709,19 +17709,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18033,11 +18033,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -18093,11 +18093,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18201,11 +18201,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -18213,11 +18213,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -18229,19 +18229,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18553,11 +18553,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -18613,11 +18613,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18721,11 +18721,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -18733,11 +18733,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -18749,19 +18749,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19073,11 +19073,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -19133,11 +19133,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19241,11 +19241,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -19253,11 +19253,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -19269,19 +19269,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19397,11 +19397,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 1     
+.	  10 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	  10 Input      1 Bit        Muxes := 3     
+.	   8 Input      1 Bit        Muxes := 1     
 2default:default
 F
 %s*synth27
@@ -19705,11 +19705,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -19765,11 +19765,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19873,11 +19873,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -19885,11 +19885,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -19901,19 +19901,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20225,11 +20225,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 F
 %s*synth27
@@ -20285,11 +20285,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20393,11 +20393,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -20405,11 +20405,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -20421,19 +20421,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20745,11 +20745,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 1     
+.	   8 Input      1 Bit        Muxes := 3     
 2default:default
 C
 %s*synth24
@@ -20805,11 +20805,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     22 Bit        Muxes := 1     
+.	   5 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input     22 Bit        Muxes := 1     
+.	   2 Input     22 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20913,11 +20913,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     18 Bit        Muxes := 3     
+.	   7 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     18 Bit        Muxes := 2     
+.	   2 Input     18 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -20925,11 +20925,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 5     
+.	   7 Input      6 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      6 Bit        Muxes := 4     
+.	   2 Input      6 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -20941,19 +20941,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 2     
+.	   7 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -24035,7 +24035,7 @@ ESequential element (%s) is unused and will be removed from module %s.3332*
 02default:defaultZ8-3917
 ™
 %s*synth2ö
-ÖFinished Cross Boundary Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.758 ; gain = 956.676
+ÖFinished Cross Boundary Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.754 ; gain = 956.676
 2default:default
 ¢
 %s*synth2í
@@ -24550,15 +24550,15 @@ Ai_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] 2default:def
 1002default:defaultZ17-14
 †
 %s*synth2ê
-|Finished Area Optimization : Time (s): cpu = 00:05:48 ; elapsed = 00:05:42 . Memory (MB): peak = 2187.070 ; gain = 1549.988
+|Finished Area Optimization : Time (s): cpu = 00:05:46 ; elapsed = 00:05:41 . Memory (MB): peak = 2188.098 ; gain = 1551.020
 2default:default
 ﬂ
 $%s for constraint at line %s of %s.
 3321*oasys2&
 Empty through list2default:default2
 1862default:default2^
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2`
-J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc2default:default2
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2`
+J/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc2default:default2
 1862default:default8@Z8-3321
 x
 %s*synth2i
@@ -24698,7 +24698,7 @@ Tcan't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto genera
 2default:default
 ∆
 %s*synth2∂
-°incorrect set of required parameters for "create_generated_clock" at line 217 of file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc
+°incorrect set of required parameters for "create_generated_clock" at line 217 of file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc
 2default:default
 i
 %s*synth2Z
@@ -24774,11 +24774,11 @@ F---------------------------------------------------------------------
 2default:default
 Ø
 %s*synth2ü
-äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:05:51 ; elapsed = 00:05:45 . Memory (MB): peak = 2187.070 ; gain = 1549.988
+äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:05:49 ; elapsed = 00:05:44 . Memory (MB): peak = 2188.098 ; gain = 1551.020
 2default:default
 ¢
 %s*synth2í
-~Finished Timing Optimization : Time (s): cpu = 00:06:31 ; elapsed = 00:06:26 . Memory (MB): peak = 2225.078 ; gain = 1587.996
+~Finished Timing Optimization : Time (s): cpu = 00:06:29 ; elapsed = 00:06:24 . Memory (MB): peak = 2226.105 ; gain = 1589.027
 2default:default
 ÿ
 Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '%s'620*oasys2
@@ -25355,7 +25355,7 @@ Rskipping %s-propagation across instance '%s' with timing assertions on %s pin '
 7\scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2 2default:defaultZ8-4480
 °
 %s*synth2ë
-}Finished Technology Mapping : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+}Finished Technology Mapping : Time (s): cpu = 00:07:22 ; elapsed = 00:07:18 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 è
 @Design %s has %s max_fanout violations that cannot be satisfied.3743*oasys2
@@ -25869,7 +25869,7 @@ z\scemi_pcie_ep/pcie_7x_v1_10_i/gt_top_i/pipe_wrapper_i/pipe_lane[2].pipe_eq.pip
 122default:defaultZ8-4560
 õ
 %s*synth2ã
-wFinished IO Insertion : Time (s): cpu = 00:07:31 ; elapsed = 00:07:26 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+wFinished IO Insertion : Time (s): cpu = 00:07:27 ; elapsed = 00:07:23 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 ;
 %s*synth2,
@@ -25898,11 +25898,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ¨
 %s*synth2ú
-áFinished Renaming Generated Instances : Time (s): cpu = 00:07:31 ; elapsed = 00:07:27 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+áFinished Renaming Generated Instances : Time (s): cpu = 00:07:27 ; elapsed = 00:07:23 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 ©
 %s*synth2ô
-ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:07:35 ; elapsed = 00:07:30 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:07:31 ; elapsed = 00:07:27 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 ¢
 %s*synth2í
@@ -26973,7 +26973,7 @@ x+------+---------------------------------------------------------------+-------
 2default:default
 ®
 %s*synth2ò
-ÉFinished Writing Synthesis Report : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+ÉFinished Writing Synthesis Report : Time (s): cpu = 00:07:33 ; elapsed = 00:07:29 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 l
 %s*synth2]
@@ -26981,7 +26981,7 @@ ISynthesis finished with 0 errors, 0 critical warnings and 2080 warnings.
 2default:default
 ¶
 %s*synth2ñ
-ÅSynthesis Optimization Complete : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+ÅSynthesis Optimization Complete : Time (s): cpu = 00:07:33 ; elapsed = 00:07:29 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 2default:default
 ^
 -Analyzing %s Unisim elements for replacement
@@ -27028,15 +27028,15 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:07:462default:default2
-00:07:412default:default2
-2256.4692default:default2
-1511.4382default:defaultZ17-268
+00:07:422default:default2
+00:07:382default:default2
+2249.4882default:default2
+1504.4612default:defaultZ17-268
 Ç
-vreport_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2256.469 ; gain = 0.000
+vreport_utilization: Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2249.488 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Fri Apr 29 15:57:25 20162default:defaultZ17-206
+Wed May  4 11:13:19 20162default:defaultZ17-206
