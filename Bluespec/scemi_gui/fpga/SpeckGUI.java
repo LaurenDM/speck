@@ -7,7 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class SpeckGUI{
-    private final static String key_filename="key.txt", iv_filename="iv.txt", message_filename="in.txt";
+    //private final static String key_filename="key.txt", iv_filename="iv.txt", message_filename="in.txt";
+    private static String key_filename, iv_filename, message_filename;
     private final static int target_length_key=27, target_length_iv=13; // lengths based on hex characters
     private static JFrame window;
     private final static String window_title = "GUI for Speck";
@@ -22,6 +23,11 @@ public class SpeckGUI{
     private static JButton submit_button;
 
     public static void main(String args[]){
+	/* populate filenames; rather do this in SpeckGUI but this is simpler for now */
+	key_filename=args[0];
+	iv_filename=args[1];
+	message_filename=args[2];
+
 	/* make sure GUI stays responsive and avoids queue by overriding Java Runnable queue */
 	java.awt.EventQueue.invokeLater(new Runnable() {
 		public void run() {
