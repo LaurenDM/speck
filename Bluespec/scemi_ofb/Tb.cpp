@@ -151,8 +151,8 @@ int main(int argc, char* argv[])
     // Reset the dut.
     reset.reset();
 
-    //convert_ascii_to_hex("message.txt","pt_in.txt");
-    convert_ascii_to_hex("Tux.jpg","pt_in.txt");
+    convert_ascii_to_hex("message.txt","pt_in.txt");
+    //convert_ascii_to_hex("Tux.jpg","pt_in.txt");
     /********************************* ENCRYPT *****************************************/
     Key_Iv ki;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
@@ -171,8 +171,8 @@ int main(int argc, char* argv[])
       std::cerr << "couldn't open pt_in.txt" << std::endl;
       return 1;
     }
-    //outfile = fopen("ciphermessage.txt", "wb");
-    outfile = fopen("ciphertux.jpg", "wb");
+    outfile = fopen("ciphermessage.txt", "wb");
+    //outfile = fopen("ciphertux.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open ciphermessage.txt" << std::endl;
         return 1;
@@ -184,13 +184,13 @@ int main(int argc, char* argv[])
     endtime = clock();
     printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 
-    //convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
-    convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
+    convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
+    //convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
     /********************************* DECRYPT *****************************************/
     // reset
     // Reset the dut.
     reset.reset();
-    sleep(1);
+    sleep(10);
     indone = false;
     putcount = 0;
     gotcount = 0;
@@ -200,8 +200,8 @@ int main(int argc, char* argv[])
       std::cerr << "couldn't open ct_in.txt" << std::endl;
       return 1;
     }
-    //outfile = fopen("message_out.txt", "wb");
-    outfile = fopen("Tux_out.jpg", "wb");
+    outfile = fopen("message_out.txt", "wb");
+    //outfile = fopen("Tux_out.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open message_out.txt" << std::endl;
         return 1;
