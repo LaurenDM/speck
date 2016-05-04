@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class SpeckGUI{
-    //private final static String key_filename="key.txt", iv_filename="iv.txt", message_filename="in.txt";
+    private static String default_key="020100 0a0908 121110 1a1918", default_iv="735e10 b6445d", default_message="Type your message here";
     private static String key_filename, iv_filename, message_filename;
     private final static int target_length_key=27, target_length_iv=13; // lengths based on hex characters
     private static JFrame window;
@@ -68,9 +68,9 @@ public class SpeckGUI{
 	center_panel = new JPanel();
 	center_panel.setLayout(new GridBagLayout());
 
-	key_input = new JTextArea("020100 0a0908 121110 1a1918",1, 60);
-	iv_input = new JTextArea("735e10 b6445d",1, 60);
-	message_input = new JTextArea("Type your message here",20, 60);
+	key_input = new JTextArea(default_key, 1, 60);
+	iv_input = new JTextArea(default_iv, 1, 60);
+	message_input = new JTextArea(default_message, 20, 60);
 
 	center_panel.add(new JLabel("Enter key:", JLabel.RIGHT), getConstraints("key_text"));
 	center_panel.add(new JScrollPane(key_input), getConstraints("key_input"));
@@ -81,13 +81,17 @@ public class SpeckGUI{
 
 	/* add buttons to boxlayout (to get them side by side), which then gets added to center_panel */
 	button_panel = new JPanel();
-	button_panel.setLayout(new BoxLayout(button_panel, BoxLayout.X_AXIS));
-	
-	submit_button = new JButton("Submit Message");
-	center_panel.add(submit_button, getConstraints("submit_button"));
-	addButtonListener();
+	//button_panel.setLayout(new BoxLayout(button_panel, BoxLayout.X_AXIS));
 
-	exit_button = new JButton("Exit Speck");
+	submit_button = new JButton("Submit");
+	addSubmitButtonListener();
+	button_panel.add(submit_button);
+
+	exit_button = new JButton("Exit");
+	addExitButtonListener();
+	button_panel.add(exit_button);
+
+	center_panel.add(button_panel, getConstraints("button_panel"));
     }
 
     private static GridBagConstraints getConstraints(String which_element){
@@ -111,7 +115,7 @@ public class SpeckGUI{
 	} else if (which_element == "message_input"){
 	    c.gridx = 2;
 	    c.gridy = 6;
-	} else if (which_element == "submit_button"){
+	} else if (which_element == "button_panel"){
 	    c.gridx = 1;
 	    c.gridy = 16;
 	}else {
@@ -121,18 +125,23 @@ public class SpeckGUI{
 	return c;
     }
 
-    private static void addButtonListener(){
-	ButtonHandler submit_listener = new ButtonHandler();
-	submit_button.addActionListener(submit_listener);
+    private static void addSubmitButtonListener(){
+	SubmitButtonHandler listener = new SubmitButtonHandler();
+	submit_button.addActionListener(listener);
     }
 
-    private static class ButtonHandler implements ActionListener{
+    private static void addExitButtonListener(){
+	ExitButtonHandler listener = new ExitButtonHandler();
+	exit_button.addActionListener(listener);
+    }
+
+    private static class SubmitButtonHandler implements ActionListener{
 	/* http://math.hws.edu/javanotes/c6/s1.html */
 	public void actionPerformed(ActionEvent e) {
 	    String key = key_input.getText();
 	    String iv = iv_input.getText();
 	    String message = message_input.getText();
-
+	    
 	    if (checkContents(key, iv, message)){
 		/* if inputs are correct, write to file for testbench */
 		writeToFile(key, key_filename);
@@ -142,6 +151,15 @@ public class SpeckGUI{
 	    }
 	}
     }
+
+    private static class ExitButtonHandler implements ActionListener{
+	public void actionPerformed(ActionEvent e) {
+	    // TODO: add prompt window (e.g. "Are you sure you wish to exit Speck?")
+	    System.err.println("Exiting..");
+	    System.exit(-1);
+	}
+    }
+
 
     private static Boolean checkContents(String key, String iv, String message){
 	// TODO: eventually make error messages window alerts
