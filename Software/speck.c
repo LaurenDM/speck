@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 #define u64 unsigned long long
 //#define u48 unsigned long long
@@ -13,6 +14,8 @@ typedef u64 word;
 #define T 23
 #define alpha 8
 #define beta 3
+
+#define TPSAMPLES 1000000
 
 
 #define MASK ((0x1<<n)-1)
@@ -88,6 +91,18 @@ void ofb(FILE* in, FILE* out, word k[], word iv[]){
     }
 }
 
+void ofbthroughput(word k[], word iv[]){
+    word in1 = 0x20796c;
+    word in2 = 0x6c6172;
+    word xorkey[2];
+    for(int i=0; i<1000000; i++){
+      encrypt(iv,xorkey,k);
+      in1 = in1^xorkey[0];
+      in2 = in2^xorkey[1];
+      iv = xorkey;
+    }
+}
+
 /******************** TestBench ***********************/
 
 int main(int argc, char* argv[]){
@@ -115,6 +130,8 @@ int main(int argc, char* argv[]){
       printf("key mismatch at index %d ! \n",i);
     }
   }
+
+  /******************* STANDARD ****************************/
   /*
   encrypt(pt,ct,k);
   printf("encrypt: ");
@@ -133,7 +150,8 @@ int main(int argc, char* argv[]){
 
   word iv[2] = {0x735e10, 0xb6445d};
 
-  FILE* in = fopen("pt_in.txt","r");
+  /******************* OFB ****************************/
+  /*FILE* in = fopen("pt_in.txt","r");
   FILE* out = fopen("ct_out.txt","w");
   ofb(in,out,k,iv);
   fclose(in);
@@ -142,5 +160,13 @@ int main(int argc, char* argv[]){
   out = fopen("pt_out.txt", "w");
   ofb(in,out,k,iv);
   fclose(out);
-  fclose(in);
+  fclose(in);*/
+
+  /******************* THROUGHPUT ****************************/
+  clock_t starttime,endtime;
+  starttime =clock();
+  expandKey(key,k);
+  ofbthroughput(k,iv);
+  endtime=clock();
+  printf("done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 }
