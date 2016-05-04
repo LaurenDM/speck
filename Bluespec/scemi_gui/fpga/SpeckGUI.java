@@ -24,7 +24,7 @@ public class SpeckGUI{
     private static JPanel center_panel, key_iv_panel, iv_panel, message_panel;
     private static JTextArea key_input, iv_input, message_input, result_output;
     private static JPanel button_panel;
-    private static JButton submit_button, exit_button;
+    private static JButton submit_button, exit_button, switch_button;
 
     public static void main(String args[]){
 	/* populate filenames; rather do this in SpeckGUI but this is simpler for now */
@@ -99,6 +99,10 @@ public class SpeckGUI{
 	button_panel.add(exit_button);
 
 	center_panel.add(button_panel, getConstraints("button_panel"));
+
+  switch_button = new JButton("<<");
+  addSwitchButtonListener();
+  center_panel.add(switch_button, getConstraints("switch"));
     }
 
     private static GridBagConstraints getConstraints(String which_element){
@@ -140,6 +144,9 @@ public class SpeckGUI{
 	    c.gridx = 3;
 	    c.gridy = 14;
       c.gridwidth = 2; // 2 columns wide
+  } else if (which_element == "switch"){
+	    c.gridx = 3;
+	    c.gridy = 4;
   } else {
 	    System.err.println("Requesting constraints for unrecognized element!\n");
 	    System.exit(-1);
@@ -155,6 +162,11 @@ public class SpeckGUI{
     private static void addExitButtonListener(){
 	ExitButtonHandler listener = new ExitButtonHandler();
 	exit_button.addActionListener(listener);
+    }
+
+    private static void addSwitchButtonListener(){
+	SwitchButtonHandler listener = new SwitchButtonHandler();
+	switch_button.addActionListener(listener);
     }
 
     private static class SubmitButtonHandler implements ActionListener{
@@ -179,6 +191,14 @@ public class SpeckGUI{
 	    // TODO: add prompt window (e.g. "Are you sure you wish to exit Speck?")
 	    System.err.println("Exiting..");
 	    System.exit(-1);
+	}
+    }
+
+    private static class SwitchButtonHandler implements ActionListener{
+	public void actionPerformed(ActionEvent e) {
+	    String ciphertext = result_output.getText();
+      result_output.setText(" ");
+      message_input.setText(ciphertext);
 	}
     }
 
