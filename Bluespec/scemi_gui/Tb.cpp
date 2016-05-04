@@ -85,28 +85,28 @@ void runtest(InportProxyT<BlockType >& inport, FILE* infile)
 
 void convert_ascii_to_hex(char filename_in[], char filename_out[]){
   // open input/output files
-  ifstream infile;
-  ofstream outfile;
-  infile.open(filename_in);
-  outfile.open(filename_out);
+  ifstream in;
+  ofstream out;
+  in.open(filename_in);
+  out.open(filename_out);
 
   // write to output file
   int digit_counter = 0;
   int n;
   char c;
   string line;
-  if (infile.is_open()){
-    while (infile.get(c)){
+  if (in.is_open()){
+    while (in.get(c)){
        digit_counter = digit_counter + 1;
        n = (unsigned char) c;
        if(n<16){ // only one hexadecimal digit
-         outfile << "0"; // we need two digits for every character
+         out << "0"; // we need two digits for every character
        }
-       outfile << hex << n; // regular character write
+       out << hex << n; // regular character write
        if (digit_counter == num_chars_per_word){
-          outfile << " "; // adding space after first word
+          out << " "; // adding space after first word
        } else if (digit_counter == 2*num_chars_per_word){
-          outfile << "\n"; // start writing on new line
+          out << "\n"; // start writing on new line
           digit_counter = 0;
        }
     }
@@ -116,17 +116,17 @@ void convert_ascii_to_hex(char filename_in[], char filename_out[]){
   // pad with zeros to get full blocks
   if(digit_counter !=0){
     while(digit_counter < 2*num_chars_per_word){
-      outfile << "00";
+      out << "00";
       digit_counter=digit_counter+1;
       if(digit_counter==num_chars_per_word){
-        outfile << " ";
+        out << " ";
       }
     }
-    outfile << "\n";
+    out << "\n";
   }
-  outfile << "0 0 \n"; // indicate end of file
-  infile.close();
-  outfile.close();
+  out << "0 0 \n"; // indicate end of file
+  in.close();
+  out.close();
 }
 
 int main(int argc, char* argv[])
