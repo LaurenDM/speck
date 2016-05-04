@@ -6,12 +6,18 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/* based on hard-coded n=24, m=4
+   where n = 24 bits = 6 hex digits
+         m = 4 words = 24 hex digits
+   therefore key size=24 hex digits; iv size = 12 hex digits
+*/
+
 public class SpeckGUI{
     private final static String key_filename="key.txt", iv_filename="iv.txt", message_filename="in.txt";
-    private final static int target_length_key=12, target_length_iv=6; // lengths based on ASCII characters
+    private final static int target_length_key=24, target_length_iv=12;
     private static JFrame window;
     private final static String window_title = "GUI for Speck";
-    private final static int window_width=400, window_height=300;
+    private final static int window_width=500, window_height=300;
     private static JPanel content_container;
 
     /* components for content container frame*/
@@ -61,15 +67,15 @@ public class SpeckGUI{
 	center_panel = new JPanel();
 	center_panel.setLayout(new GridBagLayout());
         	
-	key_input = new JTextArea(1, 15);
-	iv_input = new JTextArea(1, 15);
-	message_input = new JTextArea(10, 15);
+	key_input = new JTextArea(1, 22);
+	iv_input = new JTextArea(1, 22);
+	message_input = new JTextArea(12, 22);
 	
-	center_panel.add(new JLabel("Enter key:", JLabel.RIGHT), getConstraints("key_text"));
+	center_panel.add(new JLabel("Enter key (hex):", JLabel.RIGHT), getConstraints("key_text"));
 	center_panel.add(new JScrollPane(key_input), getConstraints("key_input"));
-	center_panel.add(new JLabel("Enter IV:", JLabel.RIGHT), getConstraints("iv_text"));
+	center_panel.add(new JLabel("Enter IV (hex):", JLabel.RIGHT), getConstraints("iv_text"));
 	center_panel.add(new JScrollPane(iv_input), getConstraints("iv_input"));
-	center_panel.add(new JLabel("Enter message:", JLabel.RIGHT), getConstraints("message_text"));
+	center_panel.add(new JLabel("Enter message (ASCII):", JLabel.RIGHT), getConstraints("message_text"));
 	center_panel.add(new JScrollPane(message_input), getConstraints("message_input"));
 
 	submit_button = new JButton("Submit");
