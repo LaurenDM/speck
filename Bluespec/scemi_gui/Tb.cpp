@@ -92,9 +92,8 @@ void convert_ascii_to_hex(char filename_in[], char filename_out[]){
 
   // write to output file
   int digit_counter = 0;
-  int n;
+  unsigned int n;
   char c;
-  string line;
   if (in.is_open()){
     while (in.get(c)){
        digit_counter = digit_counter + 1;
