@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2u
-aTime (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1832.598 ; gain = 4.0202default:default
+aTime (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1832.598 ; gain = 4.0202default:default
 X
 
 Starting %s Task
@@ -216,7 +216,7 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
 00:00:222default:default2
-00:00:202default:default2
+00:00:192default:default2
 1964.6212default:default2
 136.0432default:defaultZ17-268
 4
@@ -232,7 +232,7 @@ A
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
-00:00:00.532default:default2
+00:00:00.522default:default2
 00:00:00.602default:default2
 1965.6212default:default2
 0.0002default:defaultZ17-268

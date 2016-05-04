@@ -58,7 +58,7 @@ source mkBridge.tcl
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPDispatcher.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkTLPArbiter.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10.v
-#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v
+#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncReset0.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v
@@ -77,15 +77,15 @@ source mkBridge.tcl
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v
 #   /opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v
-#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v
-#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v
+#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v
+#   /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v
 # }
-# read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc
-# set_property used_in_implementation false [get_files /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]
+# read_xdc /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc
+# set_property used_in_implementation false [get_files /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc]
 # set_param synth.vivado.isSynthRun true
 # set_property verilog_define BSV_TOP=mkBridge [current_fileset]
-# set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
-# set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/mkBridge [current_project]
+# set_property webtalk.parent_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/mkBridge/mkBridge.cache/wt [current_project]
+# set_property parent.project_dir /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/mkBridge [current_project]
 # synth_design -top mkBridge -part xc7vx485tffg1761-2 -fsm_extraction off
 Command: synth_design -top mkBridge -part xc7vx485tffg1761-2 -fsm_extraction off
 
@@ -98,9 +98,9 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pci
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_pcie_pipe_lane with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_pcie_pipe_lane.v:103]
 WARNING: [Synth 8-2507] parameter declaration becomes local in pcie_7x_v1_10_gt_top with formal parameter declaration list [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/pcie_7x_v1_10_gt_top.v:244]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.891 ; gain = 170.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.887 ; gain = 170.809
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:37]
+INFO: [Synth 8-638] synthesizing module 'mkBridge' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:37]
 INFO: [Synth 8-638] synthesizing module 'SyncWire' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
 	Parameter width bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncWire' (1#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncWire.v:31]
@@ -186,30 +186,30 @@ INFO: [Synth 8-638] synthesizing module 'MakeClock' [/opt/bluespec/Bluespec-2014
 	Parameter initGate bound to: 1'b1 
 INFO: [Synth 8-4472] Detected and applied attribute KEEP = TRUE [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:68]
 INFO: [Synth 8-256] done synthesizing module 'MakeClock' (11#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog.Vivado/MakeClock.v:43]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2880]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2880]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: -1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter' (12#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2883]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2883]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized0' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 0 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized0' (12#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2886]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2889]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2886]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2889]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 100 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized1' (12#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2892]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2892]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiLinkTypeParameter' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v:28]
 	Parameter link_type bound to: 4'b0111 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiLinkTypeParameter' (13#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiLinkTypeParameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2895]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2898]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2895]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2898]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt64Parameter' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v:28]
 	Parameter n bound to: 64'b0000000000000000000000000000000000000000000000000000000000000001 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt64Parameter' (14#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt64Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2901]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2904]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2901]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2904]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized2' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized2' (14#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
@@ -225,16 +225,16 @@ INFO: [Synth 8-256] done synthesizing module 'MakeResetA' (17#1) [/opt/bluespec/
 INFO: [Synth 8-638] synthesizing module 'MakeReset0' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v:40]
 	Parameter init bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'MakeReset0' (18#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeReset0.v:40]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2941]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2944]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2947]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2950]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2953]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2956]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2959]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2962]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2965]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:2968]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2941]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2944]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2947]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2950]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2953]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2956]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2959]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2962]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2965]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:2968]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:15994]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
@@ -285,20 +285,20 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/opt/xilinx/vivado2014.1/V
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (19#1) [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:15994]
-WARNING: [Synth 8-350] instance 'scemi_clkgen_pll' of module 'MMCME2_ADV' requires 33 connections, but only 28 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3010]
+WARNING: [Synth 8-350] instance 'scemi_clkgen_pll' of module 'MMCME2_ADV' requires 33 connections, but only 28 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3010]
 INFO: [Synth 8-638] synthesizing module 'ResetInverter' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v:30]
 INFO: [Synth 8-256] done synthesizing module 'ResetInverter' (20#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ResetInverter.v:30]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3048]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3048]
 INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized0' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
 	Parameter RSTDELAY bound to: 2 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized0' (20#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3057]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3057]
 INFO: [Synth 8-638] synthesizing module 'SyncBit05' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v:43]
 	Parameter init bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'SyncBit05' (21#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncBit05.v:43]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3065]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3073]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3081]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3065]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3073]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3081]
 INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
 	Parameter RSTDELAY bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized1' (21#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
@@ -317,7 +317,7 @@ INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized2' [/opt/blues
 	Parameter RSTDELAY bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized2' (23#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
 INFO: [Synth 8-256] done synthesizing module 'MakeResetA__parameterized0' (23#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v:40]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3162]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3162]
 INFO: [Synth 8-638] synthesizing module 'xilinx_v7_pcie_wrapper' [/opt/bluespec/Bluespec-2014.07.A/lib/board_support/bluenoc/xilinx/VC707/verilog/pcie_7x_v1_10/source/xilinx_v7_pcie_wrapper.v:8]
 	Parameter PL_FAST_TRAIN bound to: FALSE - type: string 
 	Parameter PCIE_EXT_CLK bound to: TRUE - type: string 
@@ -2931,28 +2931,28 @@ INFO: [Synth 8-638] synthesizing module 'SyncHandshake' [/opt/bluespec/Bluespec-
 INFO: [Synth 8-256] done synthesizing module 'SyncHandshake' (62#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncHandshake.v:41]
 INFO: [Synth 8-638] synthesizing module 'SyncPulse' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v:47]
 INFO: [Synth 8-256] done synthesizing module 'SyncPulse' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncPulse.v:47]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3326]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3326]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized3' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 2 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized3' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3329]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3329]
 INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized0' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
 	Parameter dataWidth bound to: 48 - type: integer 
 	Parameter depth bound to: 2 - type: integer 
 	Parameter indxWidth bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized0' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3387]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3390]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3451]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3455]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3459]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3463]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3467]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3471]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3475]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3479]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3483]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3487]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3387]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3390]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3451]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3455]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3459]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3463]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3467]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3471]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3475]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3479]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3483]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3487]
 INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized6' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v:51]
 	Parameter width bound to: 22 - type: integer 
 	Parameter guarded bound to: 1 - type: integer 
@@ -3011,28 +3011,28 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized1' [/opt/xilin
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV__parameterized1' (63#1) [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:15994]
-WARNING: [Synth 8-350] instance 'scemi_scemi_clkgen_mmcm' of module 'MMCME2_ADV' requires 33 connections, but only 30 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3554]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3621]
+WARNING: [Synth 8-350] instance 'scemi_scemi_clkgen_mmcm' of module 'MMCME2_ADV' requires 33 connections, but only 30 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3554]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3621]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized4' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized4' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3624]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3624]
 INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
 	Parameter dataWidth bound to: 144 - type: integer 
 	Parameter depth bound to: 2 - type: integer 
 	Parameter indxWidth bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized1' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
-INFO: [Synth 8-638] synthesizing module 'mkDutWrapper' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v:39]
-INFO: [Synth 8-638] synthesizing module 'mkSynthesizedOFB' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v:41]
+INFO: [Synth 8-638] synthesizing module 'mkDutWrapper' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v:39]
+INFO: [Synth 8-638] synthesizing module 'mkSynthesizedOFB' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v:41]
 INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized8' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v:51]
 	Parameter width bound to: 48 - type: integer 
 	Parameter guarded bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized8' (63#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v:51]
-INFO: [Synth 8-256] done synthesizing module 'mkSynthesizedOFB' (64#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkSynthesizedOFB.v:41]
+INFO: [Synth 8-256] done synthesizing module 'mkSynthesizedOFB' (64#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkSynthesizedOFB.v:41]
 INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized3' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
 	Parameter RSTDELAY bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized3' (64#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
-INFO: [Synth 8-256] done synthesizing module 'mkDutWrapper' (65#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkDutWrapper.v:39]
+INFO: [Synth 8-256] done synthesizing module 'mkDutWrapper' (65#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkDutWrapper.v:39]
 INFO: [Synth 8-638] synthesizing module 'MakeResetA__parameterized1' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v:40]
 	Parameter RSTDELAY bound to: 6 - type: integer 
 	Parameter init bound to: 1'b0 
@@ -3040,38 +3040,38 @@ INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized4' [/opt/blues
 	Parameter RSTDELAY bound to: 6 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized4' (65#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncResetA.v:43]
 INFO: [Synth 8-256] done synthesizing module 'MakeResetA__parameterized1' (65#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/MakeResetA.v:40]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3737]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3740]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3785]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3788]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3798]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3801]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3737]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3740]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3785]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3788]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3798]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3801]
 INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized9' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v:51]
 	Parameter width bound to: 19 - type: integer 
 	Parameter guarded bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized9' (65#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/FIFO2.v:51]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3828]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3828]
 INFO: [Synth 8-638] synthesizing module 'ProbeHook' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v:39]
 INFO: [Synth 8-256] done synthesizing module 'ProbeHook' (66#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/ProbeHook.v:39]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3874]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3874]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized5' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized5' (66#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3877]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3877]
 INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized2' [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
 	Parameter dataWidth bound to: 1 - type: integer 
 	Parameter depth bound to: 2 - type: integer 
 	Parameter indxWidth bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized2' (66#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Verilog/SyncFIFO.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3935]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3938]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3996]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3935]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3938]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3996]
 INFO: [Synth 8-638] synthesizing module 'mkSceMiUInt32Parameter__parameterized6' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
 	Parameter n bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mkSceMiUInt32Parameter__parameterized6' (66#1) [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkSceMiUInt32Parameter.v:28]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:3999]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4044]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4047]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:3999]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4044]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4047]
 INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:10382]
 	Parameter CLKCM_CFG bound to: TRUE - type: string 
 	Parameter CLKRCV_TRST bound to: TRUE - type: string 
@@ -3089,16 +3089,16 @@ INFO: [Synth 8-638] synthesizing module 'IBUFDS' [/opt/xilinx/vivado2014.1/Vivad
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-256] done synthesizing module 'IBUFDS' (68#1) [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:10265]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4107]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4110]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4113]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4116]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4119]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4122]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4125]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4128]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4131]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4134]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4107]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4110]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4113]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4116]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4119]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4122]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4125]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4128]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4131]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4134]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized2' [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:15994]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
@@ -3131,7 +3131,7 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized2' [/opt/xilin
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 5.000000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
@@ -3149,53 +3149,53 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized2' [/opt/xilin
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV__parameterized2' (68#1) [/opt/xilinx/vivado2014.1/Vivado/2014.1/scripts/rt/data/unisim_comp.v:15994]
-WARNING: [Synth 8-350] instance 'usrClk_mmcm_pll' of module 'MMCME2_ADV' requires 33 connections, but only 28 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4176]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4214]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:6503]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:6526]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:6549]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7117]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7140]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7163]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7186]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7218]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7242]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7267]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7292]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7317]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7423]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7502]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7533]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7553]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7580]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7718]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7786]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7811]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7834]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7857]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:7925]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8140]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8260]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8334]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8367]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8439]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8672]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8774]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8941]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:8986]
-INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:9429]
-INFO: [Synth 8-4471] merging register 'scemi_setkey_inport_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:5358]
-INFO: [Synth 8-4471] merging register 'scemi_settabledut_dut_prb_control_control_in_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:4886]
-INFO: [Synth 8-4471] merging register 'scemi_settabledut_softrst_req_inport_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:5013]
-INFO: [Synth 8-4471] merging register 'scemi_shutdown_ctrl_in_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:5479]
-INFO: [Synth 8-256] done synthesizing module 'mkBridge' (69#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/vlog_dut/mkBridge.v:37]
+WARNING: [Synth 8-350] instance 'usrClk_mmcm_pll' of module 'MMCME2_ADV' requires 33 connections, but only 28 given [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4176]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4214]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:6503]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:6526]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:6549]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7117]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7140]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7163]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7186]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7218]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7242]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7267]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7292]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7317]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7423]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7502]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7533]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7553]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7580]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7718]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7786]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7811]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7834]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7857]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:7925]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8140]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8260]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8334]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8367]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8439]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8672]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8774]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8941]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:8986]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:9429]
+INFO: [Synth 8-4471] merging register 'scemi_setkey_inport_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:5358]
+INFO: [Synth 8-4471] merging register 'scemi_settabledut_dut_prb_control_control_in_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:4886]
+INFO: [Synth 8-4471] merging register 'scemi_settabledut_softrst_req_inport_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:5013]
+INFO: [Synth 8-4471] merging register 'scemi_shutdown_ctrl_in_requestF_rv_reg' into 'scemi_processor_req_inport_requestF_rv_reg' [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:5479]
+INFO: [Synth 8-256] done synthesizing module 'mkBridge' (69#1) [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/vlog_dut/mkBridge.v:37]
 WARNING: [Synth 8-3917] design mkBridge has port leds[7] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[6] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1016.031 ; gain = 378.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1016.027 ; gain = 378.949
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -3220,14 +3220,14 @@ Loading io standards from /opt/xilinx/vivado2014.1/Vivado/2014.1/data/./parts/xi
 Loading device configuration modes from /opt/xilinx/vivado2014.1/Vivado/2014.1/data/parts/xilinx/virtex7/ConfigModes.xml
 
 Processing XDC Constraints
-Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]
-WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
-WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
-INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:203]
-Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]
+Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc]
+WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc:203]
+WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc:203]
+INFO: [Timing 38-2] Deriving generated clocks [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc:203]
+Finished Parsing XDC File [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc]
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_clkgen_pll/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
 WARNING: [Timing 38-3] User defined clock exists on pin scemi_scemi_clkgen_mmcm/CLKOUT0 and will prevent any subsequent automatic derivation of generated clocks on that pin.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mkBridge_propImpl.xdc].
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mkBridge_propImpl.xdc].
 Resolution: To avoid this message, exclude constraints listed in [.Xil/mkBridge_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -3244,7 +3244,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 
@@ -3286,11 +3286,11 @@ can't read "CLKOUT4": no such variable at line NOLINE of file NONE (auto generat
 can't read "CLKOUT5": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto generated)
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished RTL Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 INFO: [Synth 8-4471] merging register 'pbb_dma_dma_read_req_tlp_valids_1_reg' into 'pbb_dma_dma_read_req_tlp_valids_0_reg' [/opt/bluespec/Bluespec-2014.07.A/lib/Libraries/mkPCIEtoBNoCSceMi_4.v:10205]
@@ -3406,29 +3406,29 @@ Detailed RTL Component Info :
 	   2 Input     22 Bit       Adders := 8     
 	   2 Input     19 Bit       Adders := 2     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
-	   4 Input     12 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 3     
+	   2 Input     13 Bit       Adders := 12    
 	   3 Input     12 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   4 Input     12 Bit       Adders := 3     
 	   2 Input     11 Bit       Adders := 1     
-	   3 Input     10 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 6     
-	   3 Input      9 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 6     
+	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 10    
 	   2 Input      7 Bit       Adders := 3     
 	   4 Input      6 Bit       Adders := 2     
-	   3 Input      6 Bit       Adders := 6     
 	   2 Input      6 Bit       Adders := 14    
+	   3 Input      6 Bit       Adders := 6     
 	  16 Input      5 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 17    
-	   4 Input      5 Bit       Adders := 2     
 	   3 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 17    
 	   2 Input      4 Bit       Adders := 24    
 	   2 Input      3 Bit       Adders := 13    
-	   2 Input      2 Bit       Adders := 29    
 	   3 Input      2 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 29    
 	   2 Input      1 Bit       Adders := 12    
 +---XORs : 
 	   2 Input     24 Bit         XORs := 6     
@@ -3487,76 +3487,76 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit        Muxes := 4     
 	   2 Input     49 Bit        Muxes := 1     
 	   2 Input     48 Bit        Muxes := 1     
-	  37 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 5     
 	   3 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 126   
-	   4 Input     32 Bit        Muxes := 5     
+	  37 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 2     
-	  27 Input     24 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 105   
-	   2 Input     22 Bit        Muxes := 11    
+	  27 Input     24 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 8     
+	   2 Input     22 Bit        Muxes := 11    
 	   2 Input     20 Bit        Muxes := 3     
-	   4 Input     19 Bit        Muxes := 1     
 	   7 Input     19 Bit        Muxes := 8     
 	   2 Input     19 Bit        Muxes := 9     
+	   4 Input     19 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 16    
-	   2 Input     18 Bit        Muxes := 33    
 	   5 Input     18 Bit        Muxes := 8     
-	   2 Input     16 Bit        Muxes := 46    
-	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 33    
 	   4 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 46    
 	   2 Input     15 Bit        Muxes := 16    
 	   2 Input     14 Bit        Muxes := 16    
 	   2 Input     13 Bit        Muxes := 17    
 	   2 Input     12 Bit        Muxes := 20    
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 10    
-	   4 Input      9 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 27    
 	  10 Input      9 Bit        Muxes := 2     
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2267  
 	   6 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 18    
-	   2 Input      8 Bit        Muxes := 2267  
 	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 16    
-	   4 Input      6 Bit        Muxes := 2     
 	  37 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 2     
+	   7 Input      6 Bit        Muxes := 40    
 	   8 Input      6 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 147   
-	   7 Input      6 Bit        Muxes := 40    
-	   6 Input      5 Bit        Muxes := 8     
 	   4 Input      5 Bit        Muxes := 9     
 	   7 Input      5 Bit        Muxes := 2     
-	   2 Input      5 Bit        Muxes := 167   
 	   5 Input      5 Bit        Muxes := 1     
 	   8 Input      5 Bit        Muxes := 8     
 	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 167   
+	   6 Input      5 Bit        Muxes := 8     
+	   5 Input      4 Bit        Muxes := 8     
 	   7 Input      4 Bit        Muxes := 8     
 	   2 Input      4 Bit        Muxes := 175   
-	   5 Input      4 Bit        Muxes := 8     
-	   7 Input      3 Bit        Muxes := 16    
-	  10 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 8     
+	   4 Input      3 Bit        Muxes := 8     
 	  32 Input      3 Bit        Muxes := 8     
 	   9 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 8     
-	   8 Input      3 Bit        Muxes := 8     
+	   7 Input      3 Bit        Muxes := 16    
+	  10 Input      3 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 104   
+	   7 Input      2 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 60    
 	   4 Input      2 Bit        Muxes := 14    
 	  32 Input      2 Bit        Muxes := 8     
-	   2 Input      2 Bit        Muxes := 60    
-	   7 Input      2 Bit        Muxes := 8     
-	   6 Input      1 Bit        Muxes := 24    
-	  13 Input      1 Bit        Muxes := 6     
-	  10 Input      1 Bit        Muxes := 6     
+	  18 Input      1 Bit        Muxes := 7     
 	  32 Input      1 Bit        Muxes := 152   
-	   8 Input      1 Bit        Muxes := 26    
 	   7 Input      1 Bit        Muxes := 151   
 	   3 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 67    
-	  18 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 1174  
 	   4 Input      1 Bit        Muxes := 34    
+	   2 Input      1 Bit        Muxes := 1174  
+	  10 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 26    
+	   5 Input      1 Bit        Muxes := 67    
+	  13 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 24    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -3578,10 +3578,10 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 6     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 3     
-	   4 Input      6 Bit       Adders := 2     
 	   3 Input      6 Bit       Adders := 5     
-	   3 Input      5 Bit       Adders := 1     
+	   4 Input      6 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
 	   4 Input      5 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 1     
@@ -3612,8 +3612,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input    128 Bit        Muxes := 2     
 	   5 Input     74 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     49 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 3     
@@ -3622,25 +3622,25 @@ Detailed RTL Component Info :
 	   2 Input     19 Bit        Muxes := 1     
 	   4 Input     19 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 4     
 	   8 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 4     
 	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 3     
 	   4 Input      6 Bit        Muxes := 2     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 8     
 	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 14    
-	   4 Input      1 Bit        Muxes := 17    
 	   5 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 28    
+	   4 Input      1 Bit        Muxes := 17    
 Module FIFO2__parameterized0__4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -3769,11 +3769,11 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 3     
 	   2 Input     30 Bit       Adders := 2     
-	   2 Input     13 Bit       Adders := 12    
 	   3 Input     13 Bit       Adders := 3     
-	   4 Input     12 Bit       Adders := 3     
+	   2 Input     13 Bit       Adders := 12    
 	   2 Input     12 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
+	   4 Input     12 Bit       Adders := 3     
 	   2 Input     11 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 4     
@@ -3781,10 +3781,10 @@ Detailed RTL Component Info :
 	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 8     
 	   3 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 8     
 	  16 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 5     
 	   2 Input      3 Bit       Adders := 1     
 	   3 Input      2 Bit       Adders := 3     
 +---Registers : 
@@ -3809,23 +3809,23 @@ Detailed RTL Component Info :
 	   2 Input    128 Bit        Muxes := 2     
 	   2 Input    105 Bit        Muxes := 2     
 	   2 Input     98 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 123   
 	  37 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 123   
 	   2 Input     30 Bit        Muxes := 2     
-	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     13 Bit        Muxes := 9     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 8     
-	   4 Input      9 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 11    
-	   4 Input      8 Bit        Muxes := 16    
+	   4 Input      9 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 2221  
+	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      7 Bit        Muxes := 3     
-	  37 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
+	  37 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 33    
 	   2 Input      3 Bit        Muxes := 6     
@@ -4131,14 +4131,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4152,13 +4152,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4184,15 +4184,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_qpll_drp__1 
 Detailed RTL Component Info : 
@@ -4215,11 +4215,11 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_qpll_wrapper__1 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__2 
@@ -4289,14 +4289,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4310,13 +4310,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4342,15 +4342,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__3 
 Detailed RTL Component Info : 
@@ -4419,14 +4419,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__3 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4440,13 +4440,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4472,15 +4472,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__4 
 Detailed RTL Component Info : 
@@ -4549,14 +4549,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4570,13 +4570,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4602,15 +4602,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__5 
 Detailed RTL Component Info : 
@@ -4679,14 +4679,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__5 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4700,13 +4700,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4732,15 +4732,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_qpll_drp 
 Detailed RTL Component Info : 
@@ -4763,11 +4763,11 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   8 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
 Module pcie_7x_v1_10_qpll_wrapper 
 Detailed RTL Component Info : 
 Module pcie_7x_v1_10_gt_wrapper__6 
@@ -4837,14 +4837,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4858,13 +4858,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -4890,15 +4890,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__7 
 Detailed RTL Component Info : 
@@ -4967,14 +4967,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -4988,13 +4988,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -5020,15 +5020,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper__8 
 Detailed RTL Component Info : 
@@ -5097,14 +5097,14 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 4     
-	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
 Module pcie_7x_v1_10_rxeq_scan 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -5118,13 +5118,13 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 1     
 	   5 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 8     
@@ -5150,15 +5150,15 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
 	   7 Input      6 Bit        Muxes := 4     
-	   4 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
 	   7 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
 Module pcie_7x_v1_10_gt_wrapper 
 Detailed RTL Component Info : 
@@ -5942,7 +5942,7 @@ WARNING: [Synth 8-3917] design mkBridge has port leds[5] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[4] driven by constant 0
 WARNING: [Synth 8-3917] design mkBridge has port leds[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:26 . Memory (MB): peak = 1593.758 ; gain = 956.676
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:27 . Memory (MB): peak = 1593.754 ; gain = 956.676
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6082,7 +6082,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/scemi_settabledut_dut_prb_control_prb_str/\data0_reg_reg[16] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:05:48 ; elapsed = 00:05:42 . Memory (MB): peak = 2187.070 ; gain = 1549.988
+Finished Area Optimization : Time (s): cpu = 00:05:47 ; elapsed = 00:05:42 . Memory (MB): peak = 2187.098 ; gain = 1550.020
 ---------------------------------------------------------------------------------
 
 
@@ -6093,7 +6093,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] Empty through list for constraint at line 186 of /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc:186]
+WARNING: [Synth 8-3321] Empty through list for constraint at line 186 of /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc. [/mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc:186]
 can't read "CLKFBOUT": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT0": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT0B": no such variable at line NOLINE of file NONE (auto generated)
@@ -6128,7 +6128,7 @@ can't read "CLKOUT3B": no such variable at line NOLINE of file NONE (auto genera
 can't read "CLKOUT4": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT5": no such variable at line NOLINE of file NONE (auto generated)
 can't read "CLKOUT6": no such variable at line NOLINE of file NONE (auto generated)
-incorrect set of required parameters for "create_generated_clock" at line 217 of file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_ofb/fpga/xilinx/default.xdc
+incorrect set of required parameters for "create_generated_clock" at line 217 of file /mnt/nfs/var/nfs/ldemeyer/speck/Bluespec/scemi_gui/fpga/xilinx/default.xdc
 ---------------------------------------------------------------------
 Usage:
   create_generated_clock
@@ -6148,11 +6148,11 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:51 ; elapsed = 00:05:45 . Memory (MB): peak = 2187.070 ; gain = 1549.988
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:50 ; elapsed = 00:05:45 . Memory (MB): peak = 2187.098 ; gain = 1550.020
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:31 ; elapsed = 00:06:26 . Memory (MB): peak = 2225.078 ; gain = 1587.996
+Finished Timing Optimization : Time (s): cpu = 00:06:30 ; elapsed = 00:06:26 . Memory (MB): peak = 2226.105 ; gain = 1589.027
 ---------------------------------------------------------------------------------
 
 
@@ -6291,7 +6291,7 @@ INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \scemi_bridge/pbb_dma_wr_buffer_queue_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:07:26 ; elapsed = 00:07:22 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Finished Technology Mapping : Time (s): cpu = 00:07:23 ; elapsed = 00:07:20 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 ---------------------------------------------------------------------------------
 
 
@@ -6417,7 +6417,7 @@ WARNING: [Synth 8-3295] tying undriven pin \scemi_pcie_ep/pcie_7x_v1_10_i/gt_top
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4560] design has 13 instantiated BUFGs while the limit set by the -bufg synthesis option is 12
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:31 ; elapsed = 00:07:26 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Finished IO Insertion : Time (s): cpu = 00:07:27 ; elapsed = 00:07:24 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 ---------------------------------------------------------------------------------
 
 
@@ -6432,7 +6432,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:31 ; elapsed = 00:07:27 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:28 ; elapsed = 00:07:24 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 ---------------------------------------------------------------------------------
 
 
@@ -6440,7 +6440,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:07:31 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:35 ; elapsed = 00:07:30 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:31 ; elapsed = 00:07:28 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -6720,11 +6720,11 @@ Report Instance Areas:
 |211   |  scemi_user_reset_half                                        |SyncResetA__parameterized5             |     3|
 +------+---------------------------------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:33 ; elapsed = 00:07:30 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 ---------------------------------------------------------------------------------
 
 Synthesis finished with 0 errors, 0 critical warnings and 2080 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:07:37 ; elapsed = 00:07:33 . Memory (MB): peak = 2255.469 ; gain = 1618.387
+Synthesis Optimization Complete : Time (s): cpu = 00:07:33 ; elapsed = 00:07:30 . Memory (MB): peak = 2248.488 ; gain = 1611.410
 INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -6739,8 +6739,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 695 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:46 ; elapsed = 00:07:41 . Memory (MB): peak = 2256.469 ; gain = 1511.438
+synth_design: Time (s): cpu = 00:07:42 ; elapsed = 00:07:39 . Memory (MB): peak = 2249.488 ; gain = 1504.461
 # write_checkpoint mkBridge.dcp
 # report_utilization -file mkBridge_utilization_synth.rpt -pb mkBridge_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2256.469 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 29 15:57:25 2016...
+report_utilization: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2249.488 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May  4 16:16:20 2016...
