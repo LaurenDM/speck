@@ -1,4 +1,4 @@
-
+#include <exception>
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
@@ -18,6 +18,8 @@ typedef u24 word;
 typedef BitT<24> scemiword;
 
 FILE* outfile = NULL;
+FILE* outfile2 = NULL;
+ifstream infile;
 
 bool indone = false;
 long int putcount = 0;
@@ -40,39 +42,38 @@ void out_cb(void* x, const BlockType& block_in)
     word block[2];
     //printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
     if (gotcount < putcount) {
-        if(block_in.m_tpl_1.get()!=0 && block_in.m_tpl_2.get()!=0) {
           block[0] = block_in.m_tpl_1.get(); block[1] = block_in.m_tpl_2.get();
           print_ascii_from_hex(block);
+          fprintf(outfile2,"%lx %lx\n",block[0],block[1]);
           gotcount++;
-        }
     } else if (indone && outfile) {
         //printf("closing outfile \n");
         fclose(outfile);
+        fclose(outfile2);
         outfile = NULL;
     }
 
 }
 
-void runtest(InportProxyT<BlockType >& inport, FILE* infile)
+void runtest(InportProxyT<BlockType >& inport)
 {
     word in1, in2;
     while (outfile) {
         if (!indone) {
             //printf("scanning, gotcount = %ld, putcount= %ld  \n",gotcount,putcount);
-            fscanf(infile,"%lx %lx",&in1, &in2);
-
-            if (in1 == 0 && in2 == 0) { // we will use 0's to indicate end of plaintexts/ciphertexts
-                //printf("end of file \n");
-                indone = true;
-                fclose(infile);
-                infile = NULL;
-            } else {
-                //printf("sending input %lx %lx \n",in1,in2);
-                BlockType block;
-                block.m_tpl_1 = BitT<24>(in1);
-                block.m_tpl_2 = BitT<24>(in2);
-                putcount++;
-                inport.sendMessage(block);
+            //fscanf(infile,"%lx %lx",&in1, &in2);
+            if(infile >> std::hex>> in1){
+              BlockType block;
+              block.m_tpl_1 = BitT<24>(in1);
+              infile >> std::hex >> in2;
+              block.m_tpl_2 = BitT<24>(in2);
+              putcount++;
+              //printf("sending %lx %lx \n",in1,in2);
+              inport.sendMessage(block);
+            }
+            else{
+              indone=true;
+              infile.close();
             }
         }
         else{
@@ -83,12 +84,12 @@ void runtest(InportProxyT<BlockType >& inport, FILE* infile)
     }
 }
 
-void convert_ascii_to_hex(char filename_in[], char filename_out[]){
+void convert_ascii_to_hex(char infilename[], char outfilename[]){
   // open input/output files
   ifstream in;
   ofstream out;
-  in.open(filename_in);
-  out.open(filename_out);
+  in.open(infilename,std::ios::binary);
+  out.open(outfilename);
 
   // write to output file
   int digit_counter = 0;
@@ -96,14 +97,14 @@ void convert_ascii_to_hex(char filename_in[], char filename_out[]){
   char c;
   if (in.is_open()){
     while (in.get(c)){
-       digit_counter = digit_counter + 1;
        n = (unsigned char) c;
+       digit_counter = digit_counter + 1;
        if(n<16){ // only one hexadecimal digit
-         out << "0"; // we need two digits for every character
+          out << "0"; // we need two digits for every character
        }
        out << hex << n; // regular character write
        if (digit_counter == num_chars_per_word){
-          out << " "; // adding space after first word
+           out << " "; // adding space after first word
        } else if (digit_counter == 2*num_chars_per_word){
           out << "\n"; // start writing on new line
           digit_counter = 0;
@@ -123,7 +124,6 @@ void convert_ascii_to_hex(char filename_in[], char filename_out[]){
     }
     out << "\n";
   }
-  out << "0 0 \n"; // indicate end of file
   in.close();
   out.close();
 }
@@ -154,36 +154,44 @@ int main(int argc, char* argv[])
     reset.reset();
 
     convert_ascii_to_hex("in.txt","pt_in.txt");
+    //convert_ascii_to_hex("Tux.jpg","pt_in.txt");
+
     /********************************* SET KEYS *****************************************/
     Key_Iv ki;
-    FILE* infile = fopen("key.txt","rb");
+    FILE* in = fopen("key.txt","rb");
     word readword;
     for (int i=0; i<4; i++){
-        fscanf(infile,"%lx",&readword);
+        fscanf(in,"%lx",&readword);
         ki.m_key[i]=readword;
     }
-    fclose(infile);
-    infile = fopen("iv.txt","rb");
-    fscanf(infile, "%lx", &readword);
+    fclose(in);
+    in = fopen("iv.txt","rb");
+    fscanf(in, "%lx", &readword);
     ki.m_iv.m_tpl_1 = readword;
-    fscanf(infile, "%lx", &readword);
+    fscanf(in, "%lx", &readword);
     ki.m_iv.m_tpl_2 = readword;
-    fclose(infile);
+    fclose(in);
     setkey.sendMessage(ki);
     //printf("enc key = set \n");
     /********************************* ENCRYPT *****************************************/
-    infile = fopen("pt_in.txt", "rb");
-    if (infile == NULL) {
-        std::cerr << "couldn't open pt_in.txt" << std::endl;
-        return 1;
+    infile.open("pt_in.txt");
+    if(!infile.is_open()){
+      std::cerr << "couldn't open pt_in.txt" << std::endl;
+      return 1;
     }
     outfile = fopen("out.txt", "wb");
+    //outfile = fopen("ciphertux.jpg", "wb");
     if (outfile == NULL) {
-        std::cerr << "couldn't open ciphermessage.txt" << std::endl;
+        std::cerr << "couldn't open out.txt" << std::endl;
+        return 1;
+    }
+    outfile2 = fopen("ct_out.txt", "wb");
+    if (outfile == NULL) {
+        std::cerr << "couldn't open ct_out.txt" << std::endl;
         return 1;
     }
     // Send in all the data.
-    runtest(inport,infile);
+    runtest(inport);
 
     /********************************* FINISH *****************************************/
     std::cout << "shutting down..." << std::endl;
