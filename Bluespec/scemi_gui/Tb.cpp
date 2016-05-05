@@ -44,7 +44,7 @@ void out_cb(void* x, const BlockType& block_in)
     if (gotcount < putcount) {
           block[0] = block_in.m_tpl_1.get(); block[1] = block_in.m_tpl_2.get();
           print_ascii_from_hex(block);
-          fprintf(outfile2,"%lx %lx\n",block[0],block[1]);
+          fprintf(outfile2,"%06lx %06lx\n",block[0],block[1]);
           gotcount++;
     } else if (indone && outfile) {
         //printf("closing outfile \n");
