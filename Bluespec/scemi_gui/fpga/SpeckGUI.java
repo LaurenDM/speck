@@ -8,6 +8,7 @@ import java.lang.StringBuilder;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.*;
 
 public class SpeckGUI{
     private static String default_key="020100 0a0908 121110 1a1918", default_iv="735e10 b6445d";
@@ -198,7 +199,7 @@ public class SpeckGUI{
 	public void actionPerformed(ActionEvent e) {
 	    String ciphertext = result_output.getText();
       result_output.setText(" ");
-      message_input.setText(ciphertext);
+      message_input.setText(readFromFile(out_filename));
 	}
     }
 
@@ -220,15 +221,12 @@ public class SpeckGUI{
     	// reference: http://www.mkyong.com/java/how-to-write-to-file-in-java-bufferedwriter-example/
     	try {
     	    // if file doesnt exists, then create it
-    	    File file_out = new File(filename);
-    	    if (!file_out.exists()) {
-    		      file_out.createNewFile();
-    	    }
+    	    FileOutputStream file_out = new FileOutputStream(filename);
 
 	    // write contents to file
-    	    FileWriter fw = new FileWriter(file_out.getAbsoluteFile());
-    	    BufferedWriter bw = new BufferedWriter(fw);
-    	    bw.write(String.format("%s\n", contents));
+    	    OutputStreamWriter ow = new OutputStreamWriter(file_out, "ISO-8859-1");
+    	    BufferedWriter bw = new BufferedWriter(ow);
+    	    bw.write(contents.toCharArray());
     	    bw.close();
     	} catch (IOException e){
     	    System.err.println("IO Exception!");
@@ -240,20 +238,23 @@ public class SpeckGUI{
       //reference: http://stackoverflow.com/questions/4716503/reading-a-plain-text-file-in-java
       String everything = " ";
       try{
-        File file_in = new File(filename);
-        if(!file_in.exists()) {
-          return " ";
-        }
+        FileInputStream file_in = new FileInputStream(filename);
 
-        FileReader fr = new FileReader(file_in.getAbsoluteFile());
-        BufferedReader br = new BufferedReader(fr);
+        InputStreamReader ir = new InputStreamReader(file_in, "ISO-8859-1");
+        BufferedReader br = new BufferedReader(ir);
         StringBuilder sb = new StringBuilder();
-        String line = br.readLine();
+        /*String line = br.readLine();
 
         while (line != null) {
           sb.append(line);
           sb.append(System.getProperty("line.separator"));
           line = br.readLine();
+        }*/
+        int r = br.read();
+        while(r!=-1){
+          char ch = (char) r;
+          sb.append(ch);
+          r=br.read();
         }
         everything = sb.toString();
       } catch (IOException e){
