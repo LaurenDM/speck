@@ -32,7 +32,7 @@ public class SpeckGUI{
 	key_filename=args[0];
 	iv_filename=args[1];
 	message_filename=args[2];
-  out_filename=args[3];
+	out_filename=args[3];
 
 	/* make sure GUI stays responsive and avoids queue by overriding Java Runnable queue */
 	java.awt.EventQueue.invokeLater(new Runnable() {
@@ -76,7 +76,9 @@ public class SpeckGUI{
 	key_input = new JTextArea(default_key, 1, 30);
 	iv_input = new JTextArea(default_iv, 1, 30);
 	message_input = new JTextArea(readFromFile(message_filename), 20,30);
-  result_output = new JTextArea(readFromFile(out_filename),20,30);
+	message_input.setLineWrap(true);
+	result_output = new JTextArea(readFromFile(out_filename),20,30);
+	result_output.setLineWrap(true);
 
 	center_panel.add(new JLabel("  Enter key:  ", JLabel.RIGHT), getConstraints("key_text"));
 	center_panel.add(new JScrollPane(key_input), getConstraints("key_input"));
