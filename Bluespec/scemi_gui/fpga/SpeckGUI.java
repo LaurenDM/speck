@@ -201,7 +201,7 @@ public class SpeckGUI{
 	public void actionPerformed(ActionEvent e) {
 	    String ciphertext = result_output.getText();
       result_output.setText(" ");
-      message_input.setText(readFromFile(out_filename));
+      message_input.setText(ciphertext);
 	}
     }
 
