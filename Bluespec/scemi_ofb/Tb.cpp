@@ -18,6 +18,7 @@ typedef u24 word;
 typedef BitT<24> scemiword;
 
 FILE* outfile = NULL;
+FILE* outfile2 = NULL;
 ifstream infile;
 
 bool indone = false;
@@ -41,14 +42,14 @@ void out_cb(void* x, const BlockType& block_in)
     word block[2];
     //printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
     if (gotcount < putcount) {
-        if(block_in.m_tpl_1.get()!=0 && block_in.m_tpl_2.get()!=0) {
           block[0] = block_in.m_tpl_1.get(); block[1] = block_in.m_tpl_2.get();
           print_ascii_from_hex(block);
+          fprintf(outfile2,"%lx %lx\n",block[0],block[1]);
           gotcount++;
-        }
     } else if (indone && outfile) {
         //printf("closing outfile \n");
         fclose(outfile);
+        fclose(outfile2);
         outfile = NULL;
     }
 
@@ -67,6 +68,7 @@ void runtest(InportProxyT<BlockType >& inport)
               infile >> std::hex >> in2;
               block.m_tpl_2 = BitT<24>(in2);
               putcount++;
+              //printf("sending %lx %lx \n",in1,in2);
               inport.sendMessage(block);
             }
             else{
@@ -166,7 +168,7 @@ int main(int argc, char* argv[])
     setkey.sendMessage(ki);
     //printf("enc key = set \n");
 
-    infile.open("pt_in.txt",std::ios::binary);
+    infile.open("pt_in.txt");
     if(!infile.is_open()){
       std::cerr << "couldn't open pt_in.txt" << std::endl;
       return 1;
@@ -175,6 +177,11 @@ int main(int argc, char* argv[])
     //outfile = fopen("ciphertux.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open ciphermessage.txt" << std::endl;
+        return 1;
+    }
+    outfile2 = fopen("ct_out.txt", "wb");
+    if (outfile == NULL) {
+        std::cerr << "couldn't open ct_out.txt" << std::endl;
         return 1;
     }
     // Send in all the data.
@@ -187,15 +194,14 @@ int main(int argc, char* argv[])
     convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
     //convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
     /********************************* DECRYPT *****************************************/
-    // reset
     // Reset the dut.
     reset.reset();
-    sleep(10);
+    sleep(1);
     indone = false;
     putcount = 0;
     gotcount = 0;
     setkey.sendMessage(ki); // key and iv stay the same
-    infile.open("ct_in.txt",std::ios::binary);
+    infile.open("ct_in.txt");
     if(!infile.is_open()){
       std::cerr << "couldn't open ct_in.txt" << std::endl;
       return 1;
@@ -204,6 +210,11 @@ int main(int argc, char* argv[])
     //outfile = fopen("Tux_out.jpg", "wb");
     if (outfile == NULL) {
         std::cerr << "couldn't open message_out.txt" << std::endl;
+        return 1;
+    }
+    outfile2 = fopen("pt_out.txt", "wb");
+    if (outfile == NULL) {
+        std::cerr << "couldn't open pt_out.txt" << std::endl;
         return 1;
     }
     starttime =clock();
