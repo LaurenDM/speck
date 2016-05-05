@@ -6,15 +6,15 @@ import Printf::*;
 import Throughput::*;
 import OFB::*;
 
-typedef 10 NB;
+typedef 2 NB;
 
 typedef enum { Keyset, Encrypt, Decrypt, Check, Finish } Status deriving (Bits, Eq);
 
-module mkSpeckTest3(Empty); // this test tests the OFB implementation
+module mkSpeckTest(Empty); // this test tests the OFB implementation
     OperationMode#(N,M,T) ofb <- mkOFB();
 
     Vector#(NB,Block#(N)) plaintext = newVector();
-    plaintext[0] = tuple2('h6d2073, 'h696874);
+    /*plaintext[0] = tuple2('h6d2073, 'h696874);
     plaintext[1] = tuple2('h20796c, 'h6c6172);
     plaintext[2] = tuple2('h83e5a0, 'h12d53f);
     plaintext[3] = tuple2('h6574a8, 'h694c42);
@@ -23,9 +23,11 @@ module mkSpeckTest3(Empty); // this test tests the OFB implementation
     plaintext[6] = tuple2('h65776f, 'h68202c);
     plaintext[7] = tuple2('h656761, 'h737520);
     plaintext[8] = tuple2('h656d69, 'h74206e);
-    plaintext[9] = tuple2('h69202c, 'h726576);
+    plaintext[9] = tuple2('h0a0000, 'h000000);*/
+    plaintext[0] = tuple2('h6c616c, 'h696c61);
+    plaintext[1] = tuple2('h0a0000, 'h000000);
     Vector#(NB,Block#(N)) ciphertext = newVector();
-    ciphertext[0] = tuple2('hb5cdcb, 'hba36a5);
+    /*ciphertext[0] = tuple2('hb5cdcb, 'hba36a5);
     ciphertext[1] = tuple2('he3634c, 'h396bda);
     ciphertext[2] = tuple2('h26061b, 'hc496ac);
     ciphertext[3] = tuple2('h8e1493, 'he3f373);
@@ -34,7 +36,9 @@ module mkSpeckTest3(Empty); // this test tests the OFB implementation
     ciphertext[6] = tuple2('hf506d4, 'h9c66ba);
     ciphertext[7] = tuple2('h571eb4, 'h9bbb66);
     ciphertext[8] = tuple2('h13c236, 'hfb4849);
-    ciphertext[9] = tuple2('h92ebc3, 'h62e379);
+    ciphertext[9] = tuple2('hf1cbef, 'h10860f);*/
+    ciphertext[0] = tuple2('hb48cd4, 'hba32b0);
+    ciphertext[1] = tuple2('hc91a20, 'h550aa8);
     Vector#(M, UInt#(N)) key = newVector();
     key[0] = 'h020100;
     key[1] = 'h0a0908;
@@ -114,7 +118,7 @@ module mkSpeckTest3(Empty); // this test tests the OFB implementation
 endmodule
 
 
-module mkSpeckTest(Empty); // this test tests the throughput implementation
+module mkSpeckTest2(Empty); // this test tests the throughput implementation
     //OperationMode#(N,M,T) ofb <- mkOFB();
     //SetKeyIV#(N,M,T) tp <- mkOpModeThroughputTest(ofb);
     EncryptDecrypt#(N,M,T) encrypt <- mkEncrypt_unfold();

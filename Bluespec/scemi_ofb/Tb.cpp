@@ -17,7 +17,9 @@ using namespace std;
 typedef u24 word;
 typedef BitT<24> scemiword;
 
-FILE* outfile = NULL;
+//FILE* outfile = NULL;
+ofstream outfile;
+FILE* outfile2 = NULL;
 ifstream infile;
 
 bool indone = false;
@@ -31,7 +33,14 @@ void print_ascii_from_hex(word block[]){
   for(int b=0; b<2; b++){
     for(int i=0; i<num_chars_per_word; i++){
       int n = (block[b]>>(N-8*(i+1)))&0x0000FF; // take 2 hexadecimal digits at a time
-      fprintf(outfile,"%c",static_cast<char>(n));
+      //fprintf(outfile,"%c",static_cast<char>(n));
+      outfile << static_cast<char>(n);
+      if(block[b]==0){
+        printf("block 0 -> %c \n",static_cast<char>(n));
+      }
+      if(gotcount > putcount-6){
+        printf("last characters: %c \n",static_cast<char>(n));
+      }
     }
   }
 }
@@ -41,15 +50,16 @@ void out_cb(void* x, const BlockType& block_in)
     word block[2];
     //printf("receiving output, gotcount = %ld, putcount = %ld \n",gotcount,putcount);
     if (gotcount < putcount) {
-        if(block_in.m_tpl_1.get()!=0 && block_in.m_tpl_2.get()!=0) {
           block[0] = block_in.m_tpl_1.get(); block[1] = block_in.m_tpl_2.get();
           print_ascii_from_hex(block);
+          fprintf(outfile2,"%06lx %06lx\n",block[0],block[1]);
           gotcount++;
-        }
-    } else if (indone && outfile) {
+    } else if (indone && outfile.is_open()) {
         //printf("closing outfile \n");
-        fclose(outfile);
-        outfile = NULL;
+        //fclose(outfile);
+        outfile.close();
+        fclose(outfile2);
+        //outfile = NULL;
     }
 
 }
@@ -57,7 +67,7 @@ void out_cb(void* x, const BlockType& block_in)
 void runtest(InportProxyT<BlockType >& inport)
 {
     word in1, in2;
-    while (outfile) {
+    while (outfile.is_open()) {
         if (!indone) {
             //printf("scanning, gotcount = %ld, putcount= %ld  \n",gotcount,putcount);
             //fscanf(infile,"%lx %lx",&in1, &in2);
@@ -67,6 +77,7 @@ void runtest(InportProxyT<BlockType >& inport)
               infile >> std::hex >> in2;
               block.m_tpl_2 = BitT<24>(in2);
               putcount++;
+              //printf("sending %lx %lx \n",in1,in2);
               inport.sendMessage(block);
             }
             else{
@@ -87,7 +98,7 @@ void convert_ascii_to_hex(char infilename[], char outfilename[]){
   ifstream in;
   ofstream out;
   in.open(infilename,std::ios::binary);
-  out.open(outfilename);
+  out.open(outfilename,std::ios::binary);
 
   // write to output file
   int digit_counter = 0;
@@ -171,10 +182,17 @@ int main(int argc, char* argv[])
       std::cerr << "couldn't open pt_in.txt" << std::endl;
       return 1;
     }
-    outfile = fopen("ciphermessage.txt", "wb");
+    //outfile = fopen("ciphermessage.txt", "wb");
+    outfile.open("ciphermessage.txt",std::ios::binary);
     //outfile = fopen("ciphertux.jpg", "wb");
-    if (outfile == NULL) {
+    //if (outfile == NULL) {
+    if(!outfile.is_open()){
         std::cerr << "couldn't open ciphermessage.txt" << std::endl;
+        return 1;
+    }
+    outfile2 = fopen("ct_out.txt", "wb");
+    if (outfile2 == NULL) {
+        std::cerr << "couldn't open ct_out.txt" << std::endl;
         return 1;
     }
     // Send in all the data.
@@ -187,10 +205,9 @@ int main(int argc, char* argv[])
     convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
     //convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
     /********************************* DECRYPT *****************************************/
-    // reset
     // Reset the dut.
     reset.reset();
-    sleep(10);
+    sleep(1);
     indone = false;
     putcount = 0;
     gotcount = 0;
@@ -200,10 +217,17 @@ int main(int argc, char* argv[])
       std::cerr << "couldn't open ct_in.txt" << std::endl;
       return 1;
     }
-    outfile = fopen("message_out.txt", "wb");
+    //outfile = fopen("message_out.txt", "wb");
+    outfile.open("message_out.txt",std::ios::binary);
     //outfile = fopen("Tux_out.jpg", "wb");
-    if (outfile == NULL) {
+    //if (outfile == NULL) {
+    if(!outfile.is_open()){
         std::cerr << "couldn't open message_out.txt" << std::endl;
+        return 1;
+    }
+    outfile2 = fopen("pt_out.txt", "wb");
+    if (outfile2 == NULL) {
+        std::cerr << "couldn't open pt_out.txt" << std::endl;
         return 1;
     }
     starttime =clock();
