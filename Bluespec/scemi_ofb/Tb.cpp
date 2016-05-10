@@ -162,8 +162,8 @@ int main(int argc, char* argv[])
     // Reset the dut.
     reset.reset();
 
-    convert_ascii_to_hex("message.txt","pt_in.txt");
-    //convert_ascii_to_hex("Tux.jpg","pt_in.txt");
+    //convert_ascii_to_hex("message.txt","pt_in.txt");
+    convert_ascii_to_hex("Tux.jpg","pt_in.txt");
     /********************************* ENCRYPT *****************************************/
     Key_Iv ki;
     word enkey[4] = {0x020100, 0x0a0908, 0x121110, 0x1a1918};
@@ -183,8 +183,8 @@ int main(int argc, char* argv[])
       return 1;
     }
     //outfile = fopen("ciphermessage.txt", "wb");
-    outfile.open("ciphermessage.txt",std::ios::binary);
-    //outfile = fopen("ciphertux.jpg", "wb");
+    //outfile.open("ciphermessage.txt",std::ios::binary);
+    outfile.open("ciphertux.jpg", std::ios::binary);
     //if (outfile == NULL) {
     if(!outfile.is_open()){
         std::cerr << "couldn't open ciphermessage.txt" << std::endl;
@@ -202,8 +202,8 @@ int main(int argc, char* argv[])
     endtime = clock();
     printf("encryption done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
 
-    convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
-    //convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
+    //convert_ascii_to_hex("ciphermessage.txt","ct_in.txt");
+    convert_ascii_to_hex("ciphertux.jpg","ct_in.txt");
     /********************************* DECRYPT *****************************************/
     // Reset the dut.
     reset.reset();
@@ -218,8 +218,8 @@ int main(int argc, char* argv[])
       return 1;
     }
     //outfile = fopen("message_out.txt", "wb");
-    outfile.open("message_out.txt",std::ios::binary);
-    //outfile = fopen("Tux_out.jpg", "wb");
+    //outfile.open("message_out.txt",std::ios::binary);
+    outfile.open("Tux_out.jpg", std::ios::binary);
     //if (outfile == NULL) {
     if(!outfile.is_open()){
         std::cerr << "couldn't open message_out.txt" << std::endl;

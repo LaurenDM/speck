@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.*;
 
 public class SpeckGUI{
-    private static String default_key="020100 0a0908 121110 1a1918", default_iv="735e10 b6445d";
+    //private static String default_key="020100 0a0908 121110 1a1918", default_iv="735e10 b6445d";
     private static String key_filename, iv_filename, message_filename, out_filename;
     private final static int target_length_key=27, target_length_iv=13; // lengths based on hex characters
     private static JFrame window;
@@ -73,8 +73,8 @@ public class SpeckGUI{
 	center_panel = new JPanel();
 	center_panel.setLayout(new GridBagLayout());
 
-	key_input = new JTextArea(default_key, 1, 30);
-	iv_input = new JTextArea(default_iv, 1, 30);
+	key_input = new JTextArea(readFromFile(key_filename), 1, 30);
+	iv_input = new JTextArea(readFromFile(iv_filename), 1, 30);
 	message_input = new JTextArea(readFromFile(message_filename), 20,30);
 	message_input.setLineWrap(true);
 	result_output = new JTextArea(readFromFile(out_filename),20,30);
@@ -119,37 +119,37 @@ public class SpeckGUI{
 	    c.gridy = 2;
       c.gridwidth = 2; // 2 columns wide
 	} else if (which_element == "iv_text"){
-	    c.gridx = 3;
-	    c.gridy = 2;
+	    c.gridx = 0;
+	    c.gridy = 4;
 	} else if (which_element == "iv_input"){
-	    c.gridx = 4;
-	    c.gridy = 2;
+	    c.gridx = 1;
+	    c.gridy = 4;
       c.gridwidth = 2; // 2 columns wide
 	} else if (which_element == "message_text"){
 	    c.gridx = 0;
-	    c.gridy = 4;
+	    c.gridy = 6;
       c.gridheight = 10; // 10 rows high
 	} else if (which_element == "message_input"){
 	    c.gridx = 1;
-	    c.gridy = 4;
+	    c.gridy = 6;
       c.gridwidth = 2; // 2 columns wide
       c.gridheight = 10; // 10 rows high
 	}else if (which_element == "result_text"){
       c.gridx = 3;
-      c.gridy = 4;
+      c.gridy = 6;
       c.gridheight = 10; // 10 rows high
   } else if (which_element == "result_output"){
       c.gridx = 4;
-      c.gridy = 4;
+      c.gridy = 6;
       c.gridwidth = 2; // 2 columns wide
       c.gridheight = 10; // 10 rows high
 	} else if (which_element == "button_panel"){
 	    c.gridx = 3;
-	    c.gridy = 14;
+	    c.gridy = 16;
       c.gridwidth = 2; // 2 columns wide
   } else if (which_element == "switch"){
 	    c.gridx = 3;
-	    c.gridy = 4;
+	    c.gridy = 6;
   } else {
 	    System.err.println("Requesting constraints for unrecognized element!\n");
 	    System.exit(-1);
