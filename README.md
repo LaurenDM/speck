@@ -1,7 +1,7 @@
 # Speck
 
 
-Tis repository contains a Bluespec implementation for the NSA lightweight crypto family SPECK.\\
+Tis repository contains a Bluespec implementation for the NSA lightweight crypto family SPECK.
 
 For our demo:
 - 'cd Bluespec/scemi_gui'
