@@ -66,6 +66,7 @@ void convert_ascii_to_hex(){
 }
 
 int main(){
+  printf("NULL: %c \n",static_cast<char>(0));
   convert_ascii_to_hex();
 
   FILE* infile = fopen("pt_in.txt","rb");
@@ -92,6 +93,9 @@ int main(){
       print_ascii_from_hex(outfile,block);
     }
   }
+  fclose(outfile);
+  outfile=fopen("test.txt","wb");
+  fprintf(outfile,"NULL: %c \n",static_cast<char>(0));
   fclose(outfile);
 
   return 0;

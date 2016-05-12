@@ -81,7 +81,7 @@ void decrypt(word ct[], word pt[], word k[]){
 void ofb(FILE* in, FILE* out, word k[], word iv[]){
     word in1, in2;
     word xorkey[2];
-    for(int i=0; i<10; i++){
+    for(int i=0; i<2; i++){
         encrypt(iv,xorkey,k);
         fscanf(in,"%llx %llx",&in1, &in2);
         //printf("in %d: %llx %llx \n",i,in1,in2);
@@ -151,7 +151,7 @@ int main(int argc, char* argv[]){
   word iv[2] = {0x735e10, 0xb6445d};
 
   /******************* OFB ****************************/
-  /*FILE* in = fopen("pt_in.txt","r");
+  FILE* in = fopen("pt_in.txt","r");
   FILE* out = fopen("ct_out.txt","w");
   ofb(in,out,k,iv);
   fclose(in);
@@ -160,13 +160,13 @@ int main(int argc, char* argv[]){
   out = fopen("pt_out.txt", "w");
   ofb(in,out,k,iv);
   fclose(out);
-  fclose(in);*/
+  fclose(in);
 
   /******************* THROUGHPUT ****************************/
-  clock_t starttime,endtime;
+  /*clock_t starttime,endtime;
   starttime =clock();
   expandKey(key,k);
   ofbthroughput(k,iv);
   endtime=clock();
-  printf("done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);
+  printf("done, duration = %f seconds \n",((float) endtime-starttime)/CLOCKS_PER_SEC);*/
 }

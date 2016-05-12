@@ -64,15 +64,15 @@ void convert_ascii_to_hex(char infilename[], char outfilename[]){
 }
 
 int main() {
-    /*ifstream in;
+    ifstream in;
     ofstream out;
     in.open("apple.jpg",std::ios::binary);
-    out.open("test.jpg");
+    out.open("test.txt");
     char c;
     while (in.get(c)){
        out << c;
     }
-    return 0;*/
+    return 0;
 
     convert_ascii_to_hex("iceland.jpg","test.txt");
 
