@@ -1,0 +1,6 @@
+- 'common': bluespec source files
+- 'scemi_original': Scemilayer and testbench for SPECK algorithm as is (inputs are files of hexadecimal plaintext blocks)
+- 'scemi_throughput': Scemilayer and testbench for measuring throughput (inputs fed from hardware)
+- 'scemi_ofb': Scemilayer and testbench for SPECK in OFB mode of operation (inputs are message files, encoded and split into blocks before fed to FPGA)
+- 'scemi_ofb_throughput': Scemilayer and testbench for measuring throughput for OFB mode of operation
+- 'scemi_gui': similar to 'scemi_ofb' but with a GUI
